@@ -224,23 +224,28 @@ nav ul li a:active{
 
 /* mostrar submenú al hover */
 .main-ul > li:hover .main-ul-dropdown {
-    display: flex;
+    display: block;
+    padding: 0;
 }
 
 /* links del submenú */
 .main-ul-dropdown li {
-    padding-left: 10px;
-    padding-top: 10px;
+    display: flex;
+    padding: 10px 10px;
     background-color: white;
-    
+    line-height: 1.2;
+    border: 1px solid #8F91F5;
+    margin-top: 2px;
+    align-content: center;
+    transition: background-color 0.5s;
+}
+.main-ul-dropdown li:hover{
+    background-color: #8f91f577;
 }
 
 .main-ul-dropdown li a {
     text-decoration: none;
-    color:#8F91F5;
-}
-.main-ul-dropdown li a:hover{
-    color:#8f91f577
+    color: #8F91F5
 }
 
 .menu-toggle {
@@ -253,6 +258,8 @@ nav ul li a:active{
 .how-to-buy{
     display: flex;
     flex-direction: column;
+    font-weight: 500;
+    color: #7576d4
 }
 
 @media (max-width: 768px) {
