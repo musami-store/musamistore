@@ -1,24 +1,4 @@
 const PRODUCTS = {
-    "collar-diseño-corazon": {
-        title: 'Collar con diseño de corazón',
-        price: 774,
-        images: ["Products/Collar con diseño de corazón.png"]
-    },
-    "collar-cadena-clavicula-sol": {
-        title: 'Collar de cadena de clavícula con sol',
-        price: 1424,
-        images: ["Products/Collar de cadena de clavícula con sol.png"]
-    },
-    "collar-estilo-bohemio-multicolor": {
-        title: 'Collar de estilo bohemio multicolor',
-        price: 1549,
-        images: ["Products/Collar de estilo bohemio multicolor.png"]
-    },
-    "pendientes-con-estrella": {
-        title: 'Pendientes con estrella',
-        price: 1099,
-        images: ["Products/Pendientes con estrella.png"]
-    },
     "aros-argolla-punta-gruesa":{
         title: 'Aros',
         variants: {
@@ -589,5 +569,237 @@ const PRODUCTS = {
                 images: ["Products/argollas-corazon-colores-1.jpg", "Products/argollas-corazon-colores-2.jpg"]
             },
         }
+    },
+    "collar-cadena-mariposas": {
+        title: 'Collar',
+        variants: {
+            "dorado":{
+                label:"Dorado",
+                price: 1500,
+                images:[
+                    "Products/collar-cadena-mariposas-1.jpg", "Products/collar-cadena-mariposas-2.jpg",
+                    "Products/collar-cadena-mariposas-3.jpg", "Products/collar-cadena-mariposas-4.jpg"
+                ]
+            },
+            "plateado":{
+                label:"Plateado - AGOTADO",
+                price: 1500,
+                images:[
+                    "Products/collar-cadena-mariposas-1.jpg", "Products/collar-cadena-mariposas-2.jpg",
+                    "Products/collar-cadena-mariposas-3.jpg", "Products/collar-cadena-mariposas-4.jpg"
+                ]
+            },
+        }
+    },
+    "collar-cadena-perla-rosa": {
+        title: 'Collar',
+        price: 1500,
+        images: ["Products/collar-cadena-perla-rosa-1.jpg", "Products/collar-cadena-perla-rosa-2.jpg"]
+    },
+    'collar-cadena-perlas': {
+        title: 'Collar',
+        price: 2000,
+        images: [
+            "Products/collar-cadena-perlas-1.jpg", "Products/collar-cadena-perlas-2.jpg", 
+            "Products/collar-cadena-perlas-3.jpg", "Products/collar-cadena-perlas-4.jpg"
+        ]
+    },
+    'collar-luna': {
+        title: 'Collar',
+        price: 2000,
+        images: ["Products/collar-luna.jpg"]
+    },
+    'collar-perlas-cadena': {
+        title: 'Collar',
+        variants:{
+            'dorado':{
+                label:"Dorado",
+                price: 1600,
+                images: [
+                    "Products/collar-perlas-cadena-1.jpg", "Products/collar-perlas-cadena-2.jpg",
+                    "Products/collar-perlas-cadena-3.jpg", "Products/collar-perlas-cadena-4.jpg",
+                    "Products/collar-perlas-cadena-5.jpg"
+                ]
+            },
+            'plateado':{
+                label:"Plateado",
+                price: 1600,
+                images: [
+                    "Products/collar-perlas-cadena-1.jpg", "Products/collar-perlas-cadena-2.jpg",
+                    "Products/collar-perlas-cadena-3.jpg", "Products/collar-perlas-cadena-4.jpg",
+                    "Products/collar-perlas-cadena-5.jpg"
+                ]
+            }
+        }
+    },
+    'collar-luna-estrella-sol': {
+        title: 'Collar',
+        variants: {
+            'sol':{
+                label: "Diseño Sol",
+                price: 1600,
+                images: [
+                    "Products/collar-luna-estrella-sol-3.jpg", "Products/collar-luna-estrella-sol-4.jpg",
+                    "Products/collar-luna-estrella-sol-1.jpg", "Products/collar-luna-estrella-sol-2.jpg"
+                ]
+            },
+            'luna':{
+                label: "Diseño Luna - AGOTADO",
+                price: 1600,
+                images: [
+                    "Products/collar-luna-estrella-sol-1.jpg", "Products/collar-luna-estrella-sol-2.jpg",
+                    "Products/collar-luna-estrella-sol-3.jpg", "Products/collar-luna-estrella-sol-4.jpg"
+                ]
+            }
+        }
+    },
+    'anillos-set-10-v1': {
+        title: 'Set 10 Anillos',
+        price: 2000,
+        images: [
+            "Products/anillos-set-10-v1-1.jpg", "Products/anillos-set-10-v1-2.jpg",
+            "Products/anillos-set-10-v1-3.jpg", "Products/anillos-set-10-v1-4.jpg"
+        ]
+    },
+    'pulseras-set-10-v1': {
+        title: 'Set 10 Pulseras',
+        price: 2800,
+        images: [
+            "Products/pulseras-set-10-v1-1.jpg", "Products/pulseras-set-10-v1-2.jpg",
+            "Products/pulseras-set-10-v1-3.jpg"
+        ]
+    },
+    'pulseras-set-10-v2': {
+        title: 'Set 10 Pulseras',
+        price: 2800,
+        images: [
+            "Products/pulseras-set-10-v2-1.jpg", "Products/pulseras-set-10-v2-2.jpg",
+            "Products/pulseras-set-10-v2-3.jpg"
+        ]
+    },
+    'pulseras-piedras-colores': {
+        title: 'Pulseras',
+        variants: {
+            "verde": {
+                label: "Verde",
+                price: 1300,
+                images: [
+                    "Products/pulseras-piedras-colores-1.jpg", "Products/pulseras-piedras-colores-2.jpg",
+                    "Products/pulseras-piedras-colores-3.jpg"
+                ]
+            },
+            "morado": {
+                label: "Morado",
+                price: 1300,
+                images: [
+                    "Products/pulseras-piedras-colores-1.jpg", "Products/pulseras-piedras-colores-2.jpg",
+                    "Products/pulseras-piedras-colores-3.jpg"
+                ]
+            },
+            "rosado": {
+                label: "Rosado",
+                price: 1300,
+                images: [
+                    "Products/pulseras-piedras-colores-1.jpg", "Products/pulseras-piedras-colores-2.jpg",
+                    "Products/pulseras-piedras-colores-3.jpg"
+                ]
+            },
+            "azul": {
+                label: "Azul",
+                price: 1300,
+                images: [
+                    "Products/pulseras-piedras-colores-1.jpg", "Products/pulseras-piedras-colores-2.jpg",
+                    "Products/pulseras-piedras-colores-3.jpg"
+                ]
+            },
+            "blanco": {
+                label: "Blanco",
+                price: 1300,
+                images: [
+                    "Products/pulseras-piedras-colores-1.jpg", "Products/pulseras-piedras-colores-2.jpg",
+                    "Products/pulseras-piedras-colores-3.jpg"
+                ]
+            },
+            "rojo": {
+                label: "Rojo",
+                price: 1300,
+                images: [
+                    "Products/pulseras-piedras-colores-1.jpg", "Products/pulseras-piedras-colores-2.jpg",
+                    "Products/pulseras-piedras-colores-3.jpg"
+                ]
+            },
+        }
+    },
+    "collar-diseño-corazon-calado": {
+        title: 'Collar con diseño de corazón calado',
+        price: 1800,
+        images: ["Products/Collar con diseño de corazón.png"]
+    },
+    "collar-cadena-clavicula-sol": {
+        title: 'Collar de cadena de clavícula con sol',
+        price: 2500,
+        images: ["Products/Collar de cadena de clavícula con sol.png"]
+    },
+    "collar-estilo-bohemio-multicolor": {
+        title: 'Collar de estilo bohemio multicolor',
+        price: 2800,
+        images: ["Products/Collar de estilo bohemio multicolor.png"]
+    },
+    "aros-con-estrella": {
+        title: 'Aros con estrella',
+        price: 2200,
+        images: ["Products/Pendientes con estrella.png"]
+    },
+    "pulsera-estrella-opalo-coreano": {
+        title: 'Pulsera de estrella de ópalo',
+        price: 2500,
+        images: [
+            "Products/pulsera-estrella-opalo-coreano-1.webp", "Products/pulsera-estrella-opalo-coreano-2.webp",
+            "Products/pulsera-estrella-opalo-coreano-3.webp"
+        ]
+    },
+    "set-5-pulseras-v1": {
+        title: 'Set 5 Pulseras',
+        price: 2800,
+        images: [
+            "Products/set-5-pulseras-v1-1.webp", "Products/set-5-pulseras-v1-2.webp",
+            "Products/set-5-pulseras-v1-3.webp", "Products/set-5-pulseras-v1-4.webp"
+        ]
+    },
+    "set-6-anillos-v1": {
+        title: 'Set 6 Anillos',
+        variants: {
+            "dorado": {
+                label: "Dorado",
+                price: 2300,
+                images: [
+                    "Products/set-6-anillos-v1-4.webp", "Products/set-6-anillos-v1-5.webp", 
+                    "Products/set-6-anillos-v1-6.webp"
+                ]
+            },
+            "plateado": {
+                label: "Plateado",
+                price: 2300,
+                images: [
+                    "Products/set-6-anillos-v1-1.webp", "Products/set-6-anillos-v1-2.webp", 
+                    "Products/set-6-anillos-v1-3.webp"
+                ]
+            }
+        },
+    },
+    "aros-metalico-corazon": {
+        title: 'Aros metálicos de corazón',
+        price: 1800,
+        images: [
+            "Products/aros-metalico-corazon-1.webp", "Products/aros-metalico-corazon-2.webp",
+            "Products/aros-metalico-corazon-3.webp"
+        ]
+    },
+    "scrunchie-leopardo": {
+        title: 'Scrunchie leopardo',
+        price: 2800,
+        images: [
+            "Products/scrunchie-leopardo-1.webp", "Products/scrunchie-leopardo-2.webp"
+        ]
     }
 }

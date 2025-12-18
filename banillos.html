@@ -11,9 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-    <title>Musami Store - Favoritos</title>
+    <title>Musami Store</title>
 </head>
-<body class="favorites-page">
+<script src="script.js" defer></script>
+<script src="products.js" defer></script>
+<body>
     <div class="s-header">
         <div class="social-media">
             <ul>
@@ -170,8 +172,9 @@
     </div>
 
     <main>
-        <h1>Mis Favoritos</h1>
-        <div id="favorites-container" class="product-grid"></div>
+        <div class="product-grid">
+            <div class="product-card" data-id="anillos-set-10-v1"></div>
+        </div>
     </main>
 
     <!-- Lightbox overlay -->
@@ -187,7 +190,5 @@
         </div>
     </div>
 
-    <script src="script.js" defer></script>
-    <script src="products.js" defer></script>
 </body>
 </html>
