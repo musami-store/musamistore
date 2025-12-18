@@ -108,5 +108,75 @@ const PRODUCTS = {
                 images: ["Products/aros-flor-hojas-mantel-2.jpg", "Products/aros-flor-hojas-mantel-1.jpg", "Products/aros-flor-hojas-mantel-3.jpg", "Products/aros-flor-hojas-mantel-4.jpg"]
             }
         }
+    },
+    "argollas-normal-v1":{
+        title: 'Argollas',
+        variants: {
+            "dorado":{
+                label: "Dorado",
+                price: 1000,
+                images: ["Products/argollas-normal-v1-1.jpg", "Products/argollas-normal-v1-2.jpg", "Products/argollas-normal-v1-3.jpg", "Products/argollas-normal-v1-4.jpg"]
+            },
+            "plateado":{
+                label: "Plateado - AGOTADO",
+                price: 1000,
+                images: ["Products/argollas-normal-v1-1.jpg", "Products/argollas-normal-v1-3.jpg", "Products/argollas-normal-v1-2.jpg", "Products/argollas-normal-v1-4.jpg"]
+            },
+        }
+    },
+    "argollas-espiral-cadena":{
+        title: 'Argollas',
+        variants: {
+            "dorado-grande":{
+                label: "Dorado - 5cm diametro",
+                price: 1200,
+                images: ["Products/argollas-espiral-cadena-1.jpg", "Products/argollas-espiral-cadena-4.jpg", "Products/argollas-espiral-cadena-3.jpg", "Products/argollas-espiral-cadena-2.jpg"]
+            },
+            "dorado-mediano":{
+                label: "Dorado - 4cm diametro",
+                price: 1000,
+                images: ["Products/argollas-espiral-cadena-3.jpg", "Products/argollas-espiral-cadena-4.jpg", "Products/argollas-espiral-cadena-1.jpg", "Products/argollas-espiral-cadena-2.jpg"]
+            },
+            "plateado":{
+                label: "Plateado - 4cm diametro - AGOTADO",
+                price: 1000,
+                images: ["Products/argollas-espiral-cadena-2.jpg", "Products/argollas-espiral-cadena-1.jpg", "Products/argollas-espiral-cadena-3.jpg", "Products/argollas-espiral-cadena-4.jpg"]
+            },
+        }
+    },
+    "argollas-espiral-v1":{
+        title: 'Argollas',
+        variants: {
+            "dorado":{
+                label: "Dorado",
+                price: 1200,
+                images: ["Products/argollas-espiral-v1-1.jpg", "Products/argollas-espiral-v1-4.jpg", "Products/argollas-espiral-v1-5.jpg", "Products/argollas-espiral-v1-6.jpg", "Products/argollas-espiral-cadena-2.jpg", "Products/argollas-espiral-cadena-3.jpg"]
+            },
+            "plateado":{
+                label: "Plateado - AGOTADO",
+                price: 1200,
+                images: ["Products/argollas-espiral-v1-1.jpg", "Products/argollas-espiral-v1-2.jpg", "Products/argollas-espiral-v1-3.jpg", "Products/argollas-espiral-v1-4.jpg", "Products/argollas-espiral-cadena-5.jpg", "Products/argollas-espiral-cadena-6.jpg"]
+            },
+        }
+    },
+    "argollas-perlas":{
+        title: 'Argollas',
+        variants: {
+            "dorado":{
+                label: "Dorado",
+                price: 1400,
+                images: ["Products/argollas-perlas-1.jpg", "Products/argollas-perlas-3.jpg", "Products/argollas-perlas-2.jpg", "Products/argollas-perlas-4.jpg"]
+            },
+            "plateado":{
+                label: "Plateado - AGOTADO",
+                price: 1400,
+                images: ["Products/argollas-perlas-1.jpg", "Products/argollas-perlas-2.jpg", "Products/argollas-perlas-3.jpg", "Products/argollas-perlas-4.jpg"]
+            },
+        }  
+    },
+    "argollas-corazones":{
+        title: 'Argollas',
+        price: 1000,
+        images: ["Products/argollas-corazones-1.jpg", "Products/argollas-corazones-2.jpg", "Products/argollas-corazones-3.jpg", "Products/argollas-corazones-4.jpg"]
     }
 }
