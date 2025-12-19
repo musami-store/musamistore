@@ -31,6 +31,14 @@ button {
 #logo{
     height:180px
 }
+@media (max-width: 1444px){
+    #logo{
+        height: 130px;
+    }
+    nav{
+        margin-top: 0;
+    }
+}
 
 .site-header {
     position: sticky;

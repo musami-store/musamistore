@@ -30,7 +30,7 @@ const PRODUCTS = {
         }
     },
     "aros-argolla-circulo-corazon":{
-        title: 'Argollas',
+        title: 'Argollas (AGOTADO)',
         variants: {
             "dorado": {
                 label: "Dorado",
@@ -1057,15 +1057,39 @@ const PRODUCTS = {
     },
     "pinche-peludito": {
         title: 'Pinche (tiburón) felpa',
-        price: 1,
-        images: [
-            "Products/pinche-peludito-1.webp", "Products/pinche-peludito-2.webp",
-            "Products/pinche-peludito-3.webp", "Products/pinche-peludito-4.webp",
-            "Products/pinche-peludito-5.webp"
-        ]
+        variants:{
+            "negro":{
+                label: "Negro",
+                price: 1700,
+                images: [
+                    "Products/pinche-peludito-1.webp", "Products/pinche-peludito-2.webp",
+                    "Products/pinche-peludito-3.webp", "Products/pinche-peludito-4.webp",
+                    "Products/pinche-peludito-5.webp"
+                ]
+            },
+            "cafe":{
+                label: 'Marrón',
+                price: 1700,
+                images: [
+                    "Products/pinche-peludito-1.webp", "Products/pinche-peludito-2.webp",
+                    "Products/pinche-peludito-3.webp", "Products/pinche-peludito-4.webp",
+                    "Products/pinche-peludito-5.webp"
+                ]
+            },
+            "blanco":{
+                label: 'Blanco',
+                price: 1700,
+                images: [
+                    "Products/pinche-peludito-1.webp", "Products/pinche-peludito-2.webp",
+                    "Products/pinche-peludito-3.webp", "Products/pinche-peludito-4.webp",
+                    "Products/pinche-peludito-5.webp"
+                ]
+            }
+        }
+        
     },
     "aros-corazon-flores": {
-        title: 'Aros corazón',
+        title: 'Aros corazón (AGOTADO)',
         price: 1,
         images: [
             "Products/aros-corazon-flores-1.webp", "Products/aros-corazon-flores-2.webp",
@@ -1124,11 +1148,6 @@ const PRODUCTS = {
             "Products/aros-girasol-3.webp"
         ]
     },
-    "aros-luna-estrella": {
-        title: 'Aros',
-        price: 1,
-        images: ["Products/aros-luna-estrella.webp"]
-    },
     "aros-colores": {
         title: 'Aros',
         variants:{
@@ -1170,6 +1189,204 @@ const PRODUCTS = {
                 images: [
                     "Products/aros-colores-1.webp", "Products/aros-colores-2.webp",
                     "Products/aros-colores-3.webp"
+                ]
+            },
+        }
+    },
+    "set-aros-oro-diseño": {
+        title: 'Aros',
+        variants:{
+            "diseño-1":{
+                label: "Diseño 1",
+                price: 1,
+                images: [
+                    "Products/set-aros-oro-diseño-1.webp", "Products/set-aros-oro-diseño-numbers.webp.png",
+                    "Products/set-aros-oro-diseño-2.webp", "Products/set-aros-oro-diseño-3.webp",
+                    "Products/set-aros-oro-diseño-4.webp", "Products/set-aros-oro-diseño-5.webp"
+                ]
+            },
+            "diseño-2":{
+                label: "Diseño 2",
+                price: 1,
+                images: [
+                    "Products/set-aros-oro-diseño-1.webp", "Products/set-aros-oro-diseño-numbers.webp.png",
+                    "Products/set-aros-oro-diseño-2.webp", "Products/set-aros-oro-diseño-3.webp",
+                    "Products/set-aros-oro-diseño-4.webp", "Products/set-aros-oro-diseño-5.webp"
+                ]
+            },
+            "diseño-3":{
+                label: "Diseño 3",
+                price: 1,
+                images: [
+                    "Products/set-aros-oro-diseño-1.webp", "Products/set-aros-oro-diseño-numbers.webp.png",
+                    "Products/set-aros-oro-diseño-2.webp", "Products/set-aros-oro-diseño-3.webp",
+                    "Products/set-aros-oro-diseño-4.webp", "Products/set-aros-oro-diseño-5.webp"
+                ]
+            },
+            "diseño-4":{
+                label: "Diseño 4",
+                price: 1,
+                images: [
+                    "Products/set-aros-oro-diseño-1.webp", "Products/set-aros-oro-diseño-numbers.webp.png",
+                    "Products/set-aros-oro-diseño-2.webp", "Products/set-aros-oro-diseño-3.webp",
+                    "Products/set-aros-oro-diseño-4.webp", "Products/set-aros-oro-diseño-5.webp"
+                ]
+            },
+            "diseño-5":{
+                label: "Diseño 5",
+                price: 1,
+                images: [
+                    "Products/set-aros-oro-diseño-1.webp", "Products/set-aros-oro-diseño-numbers.webp.png",
+                    "Products/set-aros-oro-diseño-2.webp", "Products/set-aros-oro-diseño-3.webp",
+                    "Products/set-aros-oro-diseño-4.webp", "Products/set-aros-oro-diseño-5.webp"
+                ]
+            },
+        }
+    },
+    "aros-esfera-rosa":{
+        title: 'Aros',
+        price: 1,
+        images: [
+            "Products/aros-esfera-rosa-1.webp", "Products/aros-esfera-rosa-numbers.webp.png",
+            "Products/aros-esfera-rosa-2.webp", "Products/aros-esfera-rosa-3.webp"
+        ]
+    },
+    "set-aros-perla-blanca":{
+        title: 'Aros',
+        variants: {
+            "diseño-1": {
+                label: 'Diseño 1',
+                price: 1,
+                images: [
+                    "Products/set-aros-perla-blanca-1.webp", "Products/set-aros-perla-blanca-numbers.png",
+                    "Products/set-aros-perla-blanca-2.webp"
+                ]
+            },
+            "diseño-2": {
+                label: 'Diseño 2',
+                price: 1,
+                images: [
+                    "Products/set-aros-perla-blanca-1.webp", "Products/set-aros-perla-blanca-numbers.png",
+                    "Products/set-aros-perla-blanca-2.webp"
+                ]
+            },
+            "diseño-3": {
+                label: 'Diseño 3',
+                price: 1,
+                images: [
+                    "Products/set-aros-perla-blanca-1.webp", "Products/set-aros-perla-blanca-numbers.png",
+                    "Products/set-aros-perla-blanca-2.webp"
+                ]
+            },
+            "diseño-4": {
+                label: 'Diseño 4',
+                price: 1,
+                images: [
+                    "Products/set-aros-perla-blanca-1.webp", "Products/set-aros-perla-blanca-numbers.png",
+                    "Products/set-aros-perla-blanca-2.webp"
+                ]
+            },
+            "diseño-5": {
+                label: 'Diseño 5',
+                price: 1,
+                images: [
+                    "Products/set-aros-perla-blanca-1.webp", "Products/set-aros-perla-blanca-numbers.png",
+                    "Products/set-aros-perla-blanca-2.webp"
+                ]
+            }
+        }
+    },
+    "set-aros-oro-rojo": {
+        title: 'Aros',
+        variants:{
+            "diseño-1":{
+                label: "Diseño 1",
+                price: 1,
+                images: [
+                    "Products/set-aros-oro-rojo-1.webp", "Products/set-aros-oro-diseño-numbers.webp.png",
+                    "Products/set-aros-oro-rojo-2.webp", "Products/set-aros-oro-rojo-3.webp",
+                    "Products/set-aros-oro-rojo-4.webp", "Products/set-aros-oro-rojo-5.webp",
+                    "Products/set-aros-oro-rojo-6.webp"
+                ]
+            },
+            "diseño-2":{
+                label: "Diseño 2",
+                price: 1,
+                images: [
+                    "Products/set-aros-oro-rojo-1.webp", "Products/set-aros-oro-diseño-numbers.webp.png",
+                    "Products/set-aros-oro-rojo-2.webp", "Products/set-aros-oro-rojo-3.webp",
+                    "Products/set-aros-oro-rojo-4.webp", "Products/set-aros-oro-rojo-5.webp",
+                    "Products/set-aros-oro-rojo-6.webp"
+                ]
+            },
+            "diseño-3":{
+                label: "Diseño 3",
+                price: 1,
+                images: [
+                    "Products/set-aros-oro-rojo-1.webp", "Products/set-aros-oro-diseño-numbers.webp.png",
+                    "Products/set-aros-oro-rojo-2.webp", "Products/set-aros-oro-rojo-3.webp",
+                    "Products/set-aros-oro-rojo-4.webp", "Products/set-aros-oro-rojo-5.webp",
+                    "Products/set-aros-oro-rojo-6.webp"
+                ]
+            },
+            "diseño-4":{
+                label: "Diseño 4",
+                price: 1,
+                images: [
+                    "Products/set-aros-oro-rojo-1.webp", "Products/set-aros-oro-diseño-numbers.webp.png",
+                    "Products/set-aros-oro-rojo-2.webp", "Products/set-aros-oro-rojo-3.webp",
+                    "Products/set-aros-oro-rojo-4.webp", "Products/set-aros-oro-rojo-5.webp",
+                    "Products/set-aros-oro-rojo-6.webp"
+                ]
+            },
+            "diseño-5":{
+                label: "Diseño 5",
+                price: 1,
+                images: [
+                    "Products/set-aros-oro-rojo-1.webp", "Products/set-aros-oro-diseño-numbers.webp.png",
+                    "Products/set-aros-oro-rojo-2.webp", "Products/set-aros-oro-rojo-3.webp",
+                    "Products/set-aros-oro-rojo-4.webp", "Products/set-aros-oro-rojo-5.webp",
+                    "Products/set-aros-oro-rojo-6.webp"
+                ]
+            },
+        }
+    },
+    "moño-colores":{
+        title: 'Par de pinches de lazo',
+        variants: {
+            "negro":{
+                label: 'Negro',
+                price: 1500,
+                images: [
+                    "Products/moño-colores-1.webp", "Products/moño-colores-2.webp"
+                ]
+            },
+            "rojo":{
+                label: 'Rojo',
+                price: 1500,
+                images: [
+                    "Products/moño-colores-1.webp", "Products/moño-colores-2.webp"
+                ]
+            },
+            "blanco":{
+                label: 'Blanco',
+                price: 1500,
+                images: [
+                    "Products/moño-colores-1.webp", "Products/moño-colores-2.webp"
+                ]
+            },
+            "gris":{
+                label: 'Gris',
+                price: 1500,
+                images: [
+                    "Products/moño-colores-1.webp", "Products/moño-colores-2.webp"
+                ]
+            },
+            "rosado":{
+                label: 'Rosado',
+                price: 1500,
+                images: [
+                    "Products/moño-colores-1.webp", "Products/moño-colores-2.webp"
                 ]
             },
         }
