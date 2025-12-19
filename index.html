@@ -16,66 +16,124 @@
 <script src="script.js" defer></script>
 <script src="products.js" defer></script>
 <body>
-    <div class="s-header">
-        <div class="social-media">
+    <div class="site-header">
+        <div class="s-header">
+            <div class="social-media">
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/musami_store/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a href="index.html">
+            <img id="logo" src="LogotipoMusamí.png"></a>
+            
+            <div class="cart-favorites">
+                <div class="cart">
+                        <a href="#" id="cart-btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+
+                        <div class="cart-dropdown">
+                            <!-- se llena por JS -->
+                        </div>
+                </div>
+                <div class="favorites">
+                    <a href="favorites.html" id="favorites-btn">
+                        <i class="fa-solid fa-heart"></i>
+                        <span class="favorites-count">0</span>
+                    </a>
+                </div>
+            </div>
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <header>
+            <nav>
+                <ul class="main-ul">
+                    <li>
+                        <a href="#" class="main-categories"><strong>¿CÓMO COMPRAR?</strong><i class="fa-solid fa-caret-down"></i></a>
+                        <ul class="main-ul-dropdown">
+                            <li style="color:#8F91F5; padding: 10px" class="how-to-buy">
+                                <p>¡Bienvenid@ a la pagina web de nuestra tienda Musamí!</p>
+                                <p>Para comprar solo debes navegar por la pagina en las distintas secciones de acuerdo a tus preferencias. 
+                                Si te interesa comprar algún producto, agregalo a tu carrito y una vez lista tu selección de productos toma captura de pantalla y 
+                                envíala al chat de nuestro instagram @musami_store</p>
+
+                                <p>En la pagina de inicio encontrarás la última actualización disponible, es decir, los últimos productos publicados.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="main-categories"><strong>MAQUILLAJE</strong><i class="fa-solid fa-caret-down"></i></a>
+                        <ul class="main-ul-dropdown">
+                            <li><a href="">CEJAS</a></li>
+                            <li><a href="">OJOS</a></li>
+                            <li><a href="">LABIOS</a></li>
+                            <li><a href="">ROSTRO</a></li>
+                            <li><a href="">HERRAMIENTAS DE BELLEZA</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="main-categories"><strong>BISUTERÍA</strong><i class="fa-solid fa-caret-down"></i></a>
+                        <ul class="main-ul-dropdown">
+                            <li><a href="banillos.html">ANILLOS</a></li>
+                            <li><a href="bcollares.html">COLLARES</a></li>
+                            <li><a href="bpulseras.html">PULSERAS</a></li>
+                            <li><a href="">TOBILLERAS</a></li>
+                            <li><a href="baros.html">AROS</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="main-categories"><strong>PLATA ESTERLINA</strong><i class="fa-solid fa-caret-down"></i></a>
+                        <ul class="main-ul-dropdown">
+                            <li><a href="">ANILLOS</a></li>
+                            <li><a href="">COLLARES</a></li>
+                            <li><a href="">PULSERAS</a></li>
+                            <li><a href="">TOBILLERAS</a></li>
+                            <li><a href="">AROS</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="main-categories"><strong>ACCESORIOS</strong><i class="fa-solid fa-caret-down"></i></a>
+                        <ul class="main-ul-dropdown">
+                            <li><a href="">SCRUNCHYS</a></li>
+                            <li><a href="">PINCHES</a></li>
+                            <li><a href="">CINTILLOS</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div id="mobile-menu" class="mobile-menu">
             <ul>
                 <li>
-                    <a href="https://www.instagram.com/musami_store/">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <i class="fa-solid fa-phone"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <a href="index.html">
-        <img id="logo" src="LogotipoMusamí.png"></a>
-        
-        <div class="cart-favorites">
-            <div class="cart">
-                    <a href="#" id="cart-btn">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="cart-count">0</span>
-                    </a>
-
-                    <div class="cart-dropdown">
-                        <!-- se llena por JS -->
-                    </div>
-            </div>
-            <div class="favorites">
-                <a href="favorites.html" id="favorites-btn">
-                    <i class="fa-solid fa-heart"></i>
-                    <span class="favorites-count">0</span>
-                </a>
-            </div>
-        </div>
-        <div class="menu-toggle">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-    </div>
-
-    <header>
-        <nav>
-            <ul class="main-ul">
-                <li>
-                    <a href="#" class="main-categories"><strong>¿CÓMO COMPRAR?</strong><i class="fa-solid fa-caret-down"></i></a>
-                    <ul class="main-ul-dropdown">
+                    <span class="mobile-category">¿CÓMO COMPRAR?<i class="fa-solid fa-caret-down"></i></span>
+                    <ul class="mobile-submenu">
                         <li style="color:#8F91F5; padding: 10px" class="how-to-buy">
-                            <p>¡Bienvenid@ a la pagina web de nuestra tienda Musamí!</p>
-                            <p>Para comprar solo debes navegar por la pagina en las distintas secciones de acuerdo a tus preferencias. 
-                            Si te interesa comprar algún producto, agregalo a tu carrito y una vez lista tu selección de productos toma captura de pantalla y 
-                            envíala al chat de nuestro instagram @musami_store</p>
+                                <p>¡Bienvenid@ a la pagina web de nuestra tienda Musamí!</p>
+                                <p>Para comprar solo debes navegar por la pagina en las distintas secciones de acuerdo a tus preferencias. 
+                                Si te interesa comprar algún producto, agregalo a tu carrito y una vez lista tu selección de productos toma captura de pantalla y 
+                                envíala al chat de nuestro instagram @musami_store</p>
 
-                            <p>En la pagina de inicio encontrarás la última actualización disponible, es decir, los últimos productos publicados.</p>
+                                <p>En la pagina de inicio encontrarás la última actualización disponible, es decir, los últimos productos publicados.</p>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="main-categories"><strong>MAQUILLAJE</strong><i class="fa-solid fa-caret-down"></i></a>
-                    <ul class="main-ul-dropdown">
+                    <span class="mobile-category">MAQUILLAJE<i class="fa-solid fa-caret-down"></i></span>
+                    <ul class="mobile-submenu">
                         <li><a href="">CEJAS</a></li>
                         <li><a href="">OJOS</a></li>
                         <li><a href="">LABIOS</a></li>
@@ -83,9 +141,9 @@
                         <li><a href="">HERRAMIENTAS DE BELLEZA</a></li>
                     </ul>
                 </li>
-                 <li>
-                    <a href="#" class="main-categories"><strong>BISUTERÍA</strong><i class="fa-solid fa-caret-down"></i></a>
-                    <ul class="main-ul-dropdown">
+                <li>
+                    <span class="mobile-category">BISUTERÍA<i class="fa-solid fa-caret-down"></i></span>
+                    <ul class="mobile-submenu">
                         <li><a href="banillos.html">ANILLOS</a></li>
                         <li><a href="bcollares.html">COLLARES</a></li>
                         <li><a href="bpulseras.html">PULSERAS</a></li>
@@ -94,8 +152,8 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="main-categories"><strong>PLATA ESTERLINA</strong><i class="fa-solid fa-caret-down"></i></a>
-                    <ul class="main-ul-dropdown">
+                    <span class="mobile-category">PLATA ESTERLINA<i class="fa-solid fa-caret-down"></i></span>
+                    <ul class="mobile-submenu">
                         <li><a href="">ANILLOS</a></li>
                         <li><a href="">COLLARES</a></li>
                         <li><a href="">PULSERAS</a></li>
@@ -104,74 +162,18 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="main-categories"><strong>ACCESORIOS</strong><i class="fa-solid fa-caret-down"></i></a>
-                    <ul class="main-ul-dropdown">
+                    <span class="mobile-category">ACCESORIOS<i class="fa-solid fa-caret-down"></i></span>
+                    <ul class="mobile-submenu">
                         <li><a href="">SCRUNCHYS</a></li>
                         <li><a href="">PINCHES</a></li>
                         <li><a href="">CINTILLOS</a></li>
                     </ul>
                 </li>
             </ul>
-        </nav>
-    </header>
-    
-    <div id="mobile-menu" class="mobile-menu">
-        <ul>
-            <li>
-                <span class="mobile-category">¿CÓMO COMPRAR?<i class="fa-solid fa-caret-down"></i></span>
-                <ul class="mobile-submenu">
-                    <li style="color:#8F91F5; padding: 10px" class="how-to-buy">
-                            <p>¡Bienvenid@ a la pagina web de nuestra tienda Musamí!</p>
-                            <p>Para comprar solo debes navegar por la pagina en las distintas secciones de acuerdo a tus preferencias. 
-                            Si te interesa comprar algún producto, agregalo a tu carrito y una vez lista tu selección de productos toma captura de pantalla y 
-                            envíala al chat de nuestro instagram @musami_store</p>
-
-                            <p>En la pagina de inicio encontrarás la última actualización disponible, es decir, los últimos productos publicados.</p>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <span class="mobile-category">MAQUILLAJE<i class="fa-solid fa-caret-down"></i></span>
-                <ul class="mobile-submenu">
-                    <li><a href="">CEJAS</a></li>
-                    <li><a href="">OJOS</a></li>
-                    <li><a href="">LABIOS</a></li>
-                    <li><a href="">ROSTRO</a></li>
-                    <li><a href="">HERRAMIENTAS DE BELLEZA</a></li>
-                </ul>
-            </li>
-            <li>
-                <span class="mobile-category">BISUTERÍA<i class="fa-solid fa-caret-down"></i></span>
-                <ul class="mobile-submenu">
-                    <li><a href="banillos.html">ANILLOS</a></li>
-                    <li><a href="bcollares.html">COLLARES</a></li>
-                    <li><a href="bpulseras.html">PULSERAS</a></li>
-                    <li><a href="">TOBILLERAS</a></li>
-                    <li><a href="baros.html">AROS</a></li>
-                </ul>
-            </li>
-            <li>
-                <span class="mobile-category">PLATA ESTERLINA<i class="fa-solid fa-caret-down"></i></span>
-                <ul class="mobile-submenu">
-                    <li><a href="">ANILLOS</a></li>
-                    <li><a href="">COLLARES</a></li>
-                    <li><a href="">PULSERAS</a></li>
-                    <li><a href="">TOBILLERAS</a></li>
-                    <li><a href="">AROS</a></li>
-                </ul>
-            </li>
-            <li>
-                <span class="mobile-category">ACCESORIOS<i class="fa-solid fa-caret-down"></i></span>
-                <ul class="mobile-submenu">
-                    <li><a href="">SCRUNCHYS</a></li>
-                    <li><a href="">PINCHES</a></li>
-                    <li><a href="">CINTILLOS</a></li>
-                </ul>
-            </li>
-        </ul>
+        </div>
     </div>
-
     <main>
+        <h1>Inicio</h1>
         <div class="product-grid">
             <div class="product-card" data-id="collar-diseño-corazon-calado"></div>
             <div class="product-card" data-id="collar-cadena-clavicula-sol"></div>
@@ -182,6 +184,48 @@
             <div class="product-card" data-id="set-6-anillos-v1"></div>
             <div class="product-card" data-id="aros-metalico-corazon"></div>
             <div class="product-card" data-id="scrunchie-leopardo"></div>
+            <div class="product-card" data-id="collar-borla-cruzado"></div>
+            <div class="product-card" data-id="aros-perlas-circulares"></div>
+            <div class="product-card" data-id="aros-diseño-corazon-estrella"></div>
+            <div class="product-card" data-id="almohadillas-reutilizables-desmaquillaje"></div>
+            <div class="product-card" data-id="esponja-de-maquillaje-tonos-rosa"></div>
+            <div class="product-card" data-id="pinche-flor"></div>
+            <div class="product-card" data-id="collar-doble-luna-estrella"></div>
+            <div class="product-card" data-id="aros-corazon-arrugado"></div>
+            <div class="product-card" data-id="aros-corazon-resplandor"></div>
+            <div class="product-card" data-id="paleta-sombras-9-v1"></div>
+            <div class="product-card" data-id="cinturones-negro-cafe"></div>
+            <div class="product-card" data-id="set-20-anillos"></div>
+            <div class="product-card" data-id="collar-doble-perla"></div>
+            <div class="product-card" data-id="aros-resina-cafe"></div>
+            <div class="product-card" data-id="collar-estilo-bohemio"></div>
+            <div class="product-card" data-id="set-18-aros"></div>
+            <div class="product-card" data-id="set-28-anillos"></div>
+            <div class="product-card" data-id="collar-aquamarina"></div>
+            <div class="product-card" data-id="collar-flor-cafe"></div>
+            <div class="product-card" data-id="aros-corazon-azul"></div>
+            <div class="product-card" data-id="aros-flor-oro"></div>
+            <div class="product-card" data-id="aros-corazon-metalico"></div>
+            <div class="product-card" data-id="aros-leopardo-metalico"></div>
+            <div class="product-card" data-id="aros-perlas-pequeñas"></div>
+            <div class="product-card" data-id="aros-doble-perla"></div>
+            <div class="product-card" data-id="aros-colgante-estrella"></div>
+            <div class="product-card" data-id="pinche-peludito"></div>
+            <div class="product-card" data-id="aros-corazon-flores"></div>
+            <div class="product-card" data-id="pulsera-estrella-luna"></div>
+            <div class="product-card" data-id="aros-espiral-perlas"></div>
+            <div class="product-card" data-id="collar-sol-perla"></div>
+            <div class="product-card" data-id="collar-sol"></div>
+            <div class="product-card" data-id="aros-piedras-colores"></div>
+            <div class="product-card" data-id="aros-corazon-diseño"></div>
+            <div class="product-card" data-id="aros-girasol"></div>
+            <div class="product-card" data-id="aros-luna-estrella"></div>
+            <div class="product-card" data-id="aros-colores"></div>
+            <div class="product-card" data-id=""></div>
+            <div class="product-card" data-id=""></div>
+            <div class="product-card" data-id=""></div>
+            <div class="product-card" data-id=""></div>
+            <div class="product-card" data-id=""></div>
         </div>
     </main>
 

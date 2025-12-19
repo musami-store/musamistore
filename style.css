@@ -13,7 +13,7 @@ body::after {
     background-size: contain;
     background-repeat: no-repeat;
     pointer-events: none;
-    z-index: -10;
+    z-index: 11;
 }
 body::before {
     left: 0;
@@ -30,6 +30,13 @@ button {
 
 #logo{
     height:180px
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white
 }
 
 .s-header{
@@ -100,7 +107,7 @@ header{
 nav{
     display: flex;
     justify-content: center;
-    margin-top: 30px
+    margin-top: 20px;
 }
 nav ul{
     display:flex;
@@ -269,7 +276,8 @@ nav ul li a:active{
         body::after {
             width: 90px;
             height: 90px;
-            z-index: -10;
+            z-index: 10;
+            opacity: 0;
         }
     }
 
@@ -367,6 +375,9 @@ nav ul li a:active{
 
 .cart-dropdown.open {
     display: flex;
+    max-height: 350px;
+    overflow: scroll;
+    box-shadow: 5px 5px 10px #7576d4
 }
 
 .cart-item {
@@ -750,7 +761,11 @@ h1{
 body.cart-page {
     font-family: "Montserrat"
 }
-body.cart-page main h1{
+h1{
+    justify-self: center;
+    color: #7576d4
+}
+h2{
     justify-self: center;
     color: #7576d4
 }

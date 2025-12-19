@@ -801,5 +801,377 @@ const PRODUCTS = {
         images: [
             "Products/scrunchie-leopardo-1.webp", "Products/scrunchie-leopardo-2.webp"
         ]
+    },
+    "collar-borla-cruzado": {
+        title: 'Collar de borla cruzado',
+        price: 2200,
+        images: [
+            "Products/collar-borla-cruzado-1.webp", "Products/collar-borla-cruzado-2.webp",
+            "Products/collar-borla-cruzado-3.webp", "Products/collar-borla-cruzado-4.webp"
+        ]
+    },
+    "aros-perlas-circulares":{
+        title: 'Argollas de perlas',
+        price: 1800,
+        images: [
+            "Products/aros-perlas-circulares-1.webp", "Products/aros-perlas-circulares-2.webp"
+        ]
+    },
+    "aros-diseño-corazon-estrella": {
+        title: 'Aros',
+        variants: {
+            "corazon":{
+                label: "Corazón",
+                price: 1,
+                images: [
+                    "Products/aros-diseño-corazon-estrella-1.webp", "Products/aros-diseño-corazon-estrella-2.webp",
+                    "Products/aros-diseño-corazon-estrella-3.webp"
+                ]
+            },
+            "estrella":{
+                label: "Estrella",
+                price: 1,
+                images: [
+                    "Products/aros-diseño-corazon-estrella-1.webp", "Products/aros-diseño-corazon-estrella-2.webp",
+                    "Products/aros-diseño-corazon-estrella-3.webp"
+                ]
+            }
+        }
+    },
+    "almohadillas-reutilizables-desmaquillaje":{
+        title: 'Almohadillas reutilizables para desmaquillaje',
+        price: 1,
+        images: [
+            "Products/almohadillas-reutilizables-desmaquillaje-1.webp", "Products/almohadillas-reutilizables-desmaquillaje-2.webp",
+            "Products/almohadillas-reutilizables-desmaquillaje-3.webp", "Products/almohadillas-reutilizables-desmaquillaje-4.webp"
+        ]
+    },
+    "esponja-de-maquillaje-tonos-rosa": {
+        title: 'Esponja de maquillaje',
+        price: 1,
+        images: [
+            "Products/esponja-de-maquillaje-tonos-rosa-1.webp", "Products/esponja-de-maquillaje-tonos-rosa-2.webp",
+            "Products/esponja-de-maquillaje-tonos-rosa-3.webp"
+        ]
+    },
+    "pinche-flor":{
+        title: 'Pinche de flor',
+        price: 1,
+        images: [
+            "Products/pinche-flor-1.webp", "Products/pinche-flor-2.webp"
+        ]
+    },
+    "collar-doble-luna-estrella":{
+        title: 'Collar doble de luna y estrella',
+        price: 1,
+        images: [
+            "Products/collar-doble-luna-estrella-1.webp", "Products/collar-doble-luna-estrella-2.webp",
+            "Products/collar-doble-luna-estrella-3.webp"
+        ]
+    },
+    "aros-corazon-arrugado":{
+        title: 'Aros',
+        price: 1,
+        images: [
+            "Products/aros-corazon-arrugado-1.webp", "Products/aros-corazon-arrugado-2.webp"
+        ]
+    },
+    "aros-corazon-resplandor":{
+        title: 'Aros de corazón divergente',
+        variants:{
+            "dorado":{
+                label: "Dorado",
+                price: 1,
+                images: [
+                    "Products/aros-corazon-resplandor-1.webp", "Products/aros-corazon-resplandor-2.webp",
+                    "Products/aros-corazon-resplandor-3.webp", "Products/aros-corazon-resplandor-4.webp",
+                    "Products/aros-corazon-resplandor-5.webp"
+                ]
+            },
+            "plateado":{
+                label: "Plateado",
+                price: 1,
+                images: [
+                    "Products/aros-corazon-resplandor-1.webp", "Products/aros-corazon-resplandor-2.webp",
+                    "Products/aros-corazon-resplandor-3.webp", "Products/aros-corazon-resplandor-4.webp",
+                    "Products/aros-corazon-resplandor-5.webp"
+                ]
+            }
+        }
+    },
+    "paleta-sombras-9-v1": {
+        title: 'Paleta de sombras 9 colores',
+        price: 1,
+        images: [
+            "Products/paleta-sombras-9-v1-1.webp", "Products/paleta-sombras-9-v1-2.webp",
+            "Products/paleta-sombras-9-v1-3.webp"
+        ]
+    },
+    "cinturones-negro-cafe": {
+        title: 'Cinturones',
+        variants: {
+            "negro": {
+                label: 'Negro',
+                price: 1,
+                images: [
+                    "Products/cinturones-negro-cafe-1.webp", "Products/cinturones-negro-cafe-2.webp",
+                    "Products/cinturones-negro-cafe-3.webp"
+                ]
+            },
+            "cafe": {
+                label: 'Café',
+                price: 1,
+                images: [
+                    "Products/cinturones-negro-cafe-1.webp", "Products/cinturones-negro-cafe-2.webp",
+                    "Products/cinturones-negro-cafe-3.webp"
+                ]
+            }
+        }
+    },
+    "set-20-anillos": {
+        title: 'Set 20 Anillos',
+        price: 1,
+        images: [
+            "Products/set-20-anillos-1.webp", "Products/set-20-anillos-2.webp",
+            "Products/set-20-anillos-3.webp", "Products/set-20-anillos-4.webp"
+        ]
+    },
+    "collar-doble-perla": {
+        title: 'Collar',
+        price: 1,
+        images: [
+            "Products/collar-doble-perla-1.webp", "Products/collar-doble-perla-2.webp",
+            "Products/collar-doble-perla-3.webp"
+        ]
+    },
+    "aros-resina-cafe": {
+        title: 'Aros',
+        price: 1,
+        images: [
+            "Products/aros-resina-cafe-1.webp", "Products/aros-resina-cafe-2.webp"
+        ]
+    },
+    "collar-estilo-bohemio": {
+        title: 'Collar de estilo bohemio',
+        price: 1,
+        images: [
+            "Products/collar-estilo-bohemio-1.webp", "Products/collar-estilo-bohemio-2.webp",
+            "Products/collar-estilo-bohemio-3.webp"
+        ]
+    },
+    "set-18-aros": {
+        title: 'Set 18 Aros',
+        variants: {
+            "plateado": {
+                label: "Plateado",
+                price: 1,
+                images: [
+                    "Products/set-18-aros-1.webp", "Products/set-18-aros-2.webp",
+                    "Products/set-18-aros-3.webp"
+                ]
+            },
+            "dorado": {
+                label: "Dorado",
+                price: 1,
+                images: [
+                    "Products/set-18-aros-1.webp", "Products/set-18-aros-2.webp",
+                    "Products/set-18-aros-3.webp"
+                ]
+            }
+        }
+    },
+    "set-28-anillos": {
+        title: 'Set 28 Aros',
+        price: 1,
+        images: [
+            "Products/set-28-anillos-1.webp", "Products/set-28-anillos-2.webp",
+            "Products/set-28-anillos-3.webp"
+        ]
+    },
+    "collar-aquamarina": {
+        title: 'Collar aquamarina',
+        price: 1,
+        images: [
+            "Products/collar-aquamarina-1.webp", "Products/collar-aquamarina-2.webp",
+            "Products/collar-aquamarina-3.webp"
+        ]
+    },
+    "collar-flor-cafe": {
+        title: 'Collar flor',
+        price: 1,
+        images: [
+            "Products/collar-flor-cafe-1.webp", "Products/collar-flor-cafe-2.webp"
+        ]
+    },
+    "aros-corazon-azul": {
+        title: 'Aros corazón',
+        price: 1,
+        images: [
+            "Products/aros-corazon-azul-1.webp", "Products/aros-corazon-azul-2.webp",
+            "Products/aros-corazon-azul-3.webp"
+        ]
+    },
+    "aros-flor-oro": {
+        title: 'Aros flor',
+        price: 1,
+        images: [
+            "Products/aros-flor-oro.webp"
+        ]
+    },
+    "aros-corazon-metalico": {
+        title: 'Aros corazón',
+        price: 1,
+        images: [
+            "Products/aros-corazon-metalico-1.webp", "Products/aros-corazon-metalico-2.webp"
+        ]
+    },
+    "aros-leopardo-metalico": {
+        title: 'Aros',
+        price: 1,
+        images: [
+            "Products/aros-leopardo-metalico-1.webp", "Products/aros-leopardo-metalico-2.webp"
+        ]
+    },
+    "aros-perlas-pequeñas": {
+        title: 'Aros',
+        price: 1,
+        images: [
+            "Products/aros-perlas-pequeñas-1.webp", "Products/aros-perlas-pequeñas-2.webp"
+        ]
+    },
+    "aros-doble-perla": {
+        title: 'Aros',
+        price: 1,
+        images: [
+            "Products/aros-doble-perla-1.webp", "Products/aros-doble-perla-2.webp",
+            "Products/aros-diseño-corazon-estrella-3.webp"
+        ]
+    },
+    "aros-colgante-estrella": {
+        title: 'Aros estrella',
+        price: 1,
+        images: [
+            "Products/aros-colgante-estrella-1.webp", "Products/aros-colgante-estrella-2.webp",
+            "Products/aros-colgante-estrella-3.webp"
+        ]
+    },
+    "pinche-peludito": {
+        title: 'Pinche (tiburón) felpa',
+        price: 1,
+        images: [
+            "Products/pinche-peludito-1.webp", "Products/pinche-peludito-2.webp",
+            "Products/pinche-peludito-3.webp", "Products/pinche-peludito-4.webp",
+            "Products/pinche-peludito-5.webp"
+        ]
+    },
+    "aros-corazon-flores": {
+        title: 'Aros corazón',
+        price: 1,
+        images: [
+            "Products/aros-corazon-flores-1.webp", "Products/aros-corazon-flores-2.webp",
+            "Products/aros-corazon-flores-3.webp"
+        ]
+    },
+    "pulsera-estrella-luna": {
+        title: 'Pulsera de estrella y luna',
+        price: 1,
+        images: [
+            "Products/pulsera-estrella-luna.webp"
+        ]
+    },
+    "aros-espiral-perlas": {
+        title: 'Aros',
+        price: 1,
+        images: [
+            "Products/aros-espiral-perlas-1.webp", "Products/aros-espiral-perlas-2.webp",
+            "Products/aros-espiral-perlas-3.webp"
+        ]
+    },
+    "collar-sol-perla": {
+        title: 'Collar sol',
+        price: 1,
+        images: [
+            "Products/collar-sol-perla-1.webp", "Products/collar-sol-perla-2.webp"
+        ]
+    },
+    "collar-sol": {
+        title: 'Collar sol',
+        price: 1,
+        images: [
+            "Products/collar-sol-1.webp", "Products/collar-sol-2.webp"
+        ]
+    },
+    "aros-piedras-colores":{
+        title: 'Aros',
+        price: 1,
+        images: [
+            "Products/aros-piedras-colores-1.webp", "Products/aros-piedras-colores-2.webp",
+            "Products/aros-piedras-colores-3.webp"
+        ]
+    },
+    "aros-corazon-diseño": {
+        title: 'Aros',
+        price: 1,
+        images: [
+            "Products/aros-corazon-diseño-1.webp", "Products/aros-corazon-diseño-2.webp"
+        ]
+    },
+    "aros-girasol": {
+        title: 'Aros',
+        price: 1,
+        images: [
+            "Products/aros-girasol-1.webp", "Products/aros-girasol-2.webp",
+            "Products/aros-girasol-3.webp"
+        ]
+    },
+    "aros-luna-estrella": {
+        title: 'Aros',
+        price: 1,
+        images: ["Products/aros-luna-estrella.webp"]
+    },
+    "aros-colores": {
+        title: 'Aros',
+        variants:{
+            "diseño-1":{
+                label: "Color 1",
+                price: 1,
+                images: [
+                    "Products/aros-colores-1.webp", "Products/aros-colores-2.webp",
+                    "Products/aros-colores-3.webp"
+                ]
+            },
+            "diseño-2":{
+                label: "Color 2",
+                price: 1,
+                images: [
+                    "Products/aros-colores-1.webp", "Products/aros-colores-2.webp",
+                    "Products/aros-colores-3.webp"
+                ]
+            },
+            "diseño-3":{
+                label: "Color 3",
+                price: 1,
+                  images: [
+                    "Products/aros-colores-1.webp", "Products/aros-colores-2.webp",
+                    "Products/aros-colores-3.webp"
+                ]
+            },
+            "diseño-4":{
+                label: "Color 4",
+                price: 1,
+                images: [
+                    "Products/aros-colores-1.webp", "Products/aros-colores-2.webp",
+                    "Products/aros-colores-3.webp"
+                ]
+            },
+            "diseño-5":{
+                label: "Color 5",
+                price: 1,
+                images: [
+                    "Products/aros-colores-1.webp", "Products/aros-colores-2.webp",
+                    "Products/aros-colores-3.webp"
+                ]
+            },
+        }
     }
 }
