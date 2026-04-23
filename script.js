@@ -94,17 +94,57 @@ function addToCart(productId, variantKey=null, qty=1){
     const data = variantKey ? product.variants[variantKey] : product;
 
     const existing = CART.find(item => item.id===productId && item.variant===variantKey);
-    if(existing) existing.qty += qty;
-    else CART.push({id:productId, variant:variantKey, qty, price:data.price, title:product.title, image:data.images[0]});
+
+    const currentQty = existing ? existing.qty : 0;
+    const newQty = currentQty + qty;
+
+    if (newQty > data.stock) {
+        alert("No hay suficiente stock");
+        return;
+    }
+
+    if(existing) existing.qty = newQty;
+    else CART.push({
+        id:productId,
+        variant:variantKey,
+        qty,
+        price:data.price,
+        title:product.title,
+        image:data.images[0]
+    });
 
     saveCart();
     renderCart();
 }
 function updateCartItem(index, delta){
-    CART[index].qty += delta;
-    if(CART[index].qty<=0) CART.splice(index,1);
+    const item = CART[index];
+    if (!item) return;
+
+    const product = PRODUCTS[item.id];
+    const data = item.variant 
+        ? product.variants[item.variant] 
+        : product;
+
+    const newQty = item.qty + delta;
+
+    // ❌ No permitir menos de 1
+    if (newQty <= 0){
+        removeCartItem(index);
+        return;
+    }
+
+    // ❌ No permitir más que el stock
+    if (newQty > data.stock){
+        return; // o muestra mensaje si quieres
+    }
+
+    item.qty = newQty;
+
     saveCart();
+
+    // 🔁 IMPORTANTE: refrescar TODO
     renderCart();
+    renderCartPage?.();
 }
 function removeCartItem(index){
     CART.splice(index,1);
@@ -391,8 +431,39 @@ document.addEventListener("DOMContentLoaded", () => {
         initSliders();
     }
 
+    const category = document.body.dataset.category;
+
+    if(category){
+        renderCategory(category);
+    }
+
     updateFavoritesCount();
 });
+
+function renderCategory(categoryName){
+    const container = document.querySelector(".product-grid");
+    if(!container) return;
+
+    container.innerHTML = "";
+
+    Object.entries(PRODUCTS).forEach(([id, product]) => {
+
+        const categories = Array.isArray(product.category)
+            ? product.category
+            : [product.category];
+
+        if (!categories.includes(categoryName)) return;
+
+        const card = document.createElement("div");
+        card.classList.add("product-card");
+        card.dataset.id = id;
+
+        renderProductCard(card, product);
+        container.appendChild(card);
+    });
+
+    initSliders();
+}
 
 /* =========================
    EVENTOS GLOBALES

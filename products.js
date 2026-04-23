@@ -733,7 +733,9 @@ const PRODUCTS = {
     "collar-diseño-corazon-calado": {
         title: 'Collar con diseño de corazón calado',
         price: 1800,
-        images: ["Products/Collar con diseño de corazón.png"]
+        images: ["Products/Collar con diseño de corazón.png"],
+        stock: 5,
+        category: "bisuteria/aros"
     },
     "collar-cadena-clavicula-sol": {
         title: 'Collar de cadena de clavícula con sol',
