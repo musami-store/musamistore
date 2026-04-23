@@ -534,3 +534,20 @@ const mobileMenu = document.getElementById("mobile-menu");
 menuToggle.addEventListener("click", () => {
     mobileMenu.classList.toggle("open");
 });
+
+let lastScroll = 0;
+const header = document.querySelector(".site-header");
+
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll && currentScroll > 50) {
+         // bajando
+        header.classList.add("hidden");
+    } else {
+        // subiendo
+        header.classList.remove("hidden");
+    }
+
+    lastScroll = currentScroll;
+});
