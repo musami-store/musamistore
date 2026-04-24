@@ -5,7 +5,7 @@
 }
 body{
     font-family: "Montserrat";
-    background: linear-gradient(to bottom, #FFFFFF 50%, #9dd8ff 100%);
+    background: linear-gradient(to bottom, #FFFFFF 50%, var(--color-hover) 100%);
     background-attachment: fixed;
     overflow-x: hidden;
 }
@@ -37,7 +37,8 @@ button {
 }
 
 #logo{
-    height:160px
+    height:160px;
+    transform: translateY(24px);
 }
 @media (max-width: 1444px){
     #logo{
@@ -55,6 +56,7 @@ button {
     background-color: white;
     transition: transform 0.3s ease;
     overflow: visible;
+    background-color: #e3e4ff;
 }
 .site-header::before{
     content:"";
@@ -69,7 +71,7 @@ button {
     background:url("decoracion.svg") center/cover no-repeat;
 
     pointer-events: none;
-    z-index:5;
+    z-index:-1;
 }
 .site-header.hidden {
     transform: translateY(-100%);
@@ -320,6 +322,7 @@ nav ul li a:active{
     .site-header::before{
         height: 120px;
         transform: translateY(-25px);
+        background-color: #e3e4ff;
     }
 
     /* header superior */
