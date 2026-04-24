@@ -64,7 +64,7 @@ button {
     left:0;
     
     width:100%;
-    height:120px; 
+    height:150px; 
 
     background:url("decoracion.svg") center/cover no-repeat;
 
@@ -318,6 +318,7 @@ nav ul li a:active{
     }
 
     .site-header::before{
+        height: 120px;
         transform: translateY(-25px);
     }
 
@@ -455,10 +456,10 @@ nav ul li a:active{
     width: 24px;
     height: 24px;
     border: none;
-    background-color: #9DDDF9
+    background-color: var(--color-hover)
 }
 .cart-item-controls button:hover{
-    background-color: #9dddf985
+    background-color: #84BAF885
 }
 
 .cart-remove {
@@ -669,7 +670,7 @@ h1{
 
 /* botón carrito */
 .add-to-cart {
-    background-color: #9DDDF9;
+    background-color: var(--color-hover);
     border: none;
     padding: 14px 14px;
     cursor: pointer;
@@ -679,7 +680,7 @@ h1{
     transition: background-color 0.5s;
 }
 .add-to-cart:hover{
-    background-color: #9dddf985;
+    background-color: #84BAF885;
 }
 
 .add-to-cart i {
@@ -688,7 +689,7 @@ h1{
 }
 
 .add-to-favorites {
-    background-color: #9DDDF9;
+    background-color: var(--color-hover);;
     border: none;
     padding: 14px 14px;
     cursor: pointer;
@@ -1055,10 +1056,10 @@ h2{
     width: 24px;
     height: 24px;
     border: none;
-    background-color: #9DDDF9
+    background-color: var(--color-hover);
 } 
 .cart-item-controls-page  button:hover {
-    background-color: #9dddf986
+    background-color: #84BAF886
 } 
 .cart-item-controls-page {
     display: flex;
