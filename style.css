@@ -10,7 +10,21 @@ body{
     overflow-x: hidden;
 }
 body{
-    margin:0
+    margin:0;
+    --sb-track-color: #ffffff;
+    --sb-thumb-color: #4648bb;
+    --sb-size: 13px;
+}
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 1px;
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 1px;
 }
 body::before,
 body::after {
@@ -415,6 +429,18 @@ nav ul li a:active{
     padding: 15px;
     z-index: 100;
 }
+.cart-dropdown::-webkit-scrollbar{
+    width:8px;
+}
+
+.cart-dropdown::-webkit-scrollbar-track{
+    background:#fff;
+}
+
+.cart-dropdown::-webkit-scrollbar-thumb{
+    background:#4648bb;
+    border-radius:10px;
+}
 
 .cart-dropdown.open {
     display: flex;
@@ -438,6 +464,7 @@ nav ul li a:active{
     border: 1px;
     border-color: var(--color-border);
     border-style: solid;
+    border-radius: 4px;
 }
 
 .cart-item-info {
@@ -459,7 +486,8 @@ nav ul li a:active{
     width: 24px;
     height: 24px;
     border: none;
-    background-color: var(--color-hover)
+    background-color: var(--color-hover);
+    color: white;
 }
 .cart-item-controls button:hover{
     background-color: #84BAF885
@@ -578,6 +606,7 @@ h1{
     height: 300px; /* o el alto que quieras para cada card */
     overflow: hidden;
     touch-action: pan-y;
+    border-radius: 8px;
 }
 
 .product-slider .slider-track {
@@ -842,10 +871,11 @@ h2{
 }
 
 .cart-item-list img {
-    width: 100px;
+    min-width: 100px;
     height: 100px;
     object-fit: cover;
-    border: 1px solid var(--color-border)
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
 }
 
 .cart-item-info-page {
@@ -881,7 +911,6 @@ h2{
         height:200px;
         aspect-ratio: 1 / 1;
         overflow: hidden;
-        border-radius: 8px;
     }
     .product-slider img {
         height: 100% !important
@@ -1036,8 +1065,8 @@ h2{
 
     .cart-item img {
         width: 100px; /* o el ancho que quieras */
-        height: auto;
-        object-fit: contain;
+        height: 100px;
+        object-fit: cover;
     }
 
     .cart-item-controls-page {
@@ -1063,6 +1092,7 @@ h2{
     height: 24px;
     border: none;
     background-color: var(--color-hover);
+    color: white;
 } 
 .cart-item-controls-page  button:hover {
     background-color: #84BAF886
@@ -1096,4 +1126,5 @@ h2{
     font-weight: bold;
     font-size: 1.2rem;
     margin-top: 1rem;
+    color: var(--color-border)
 }
