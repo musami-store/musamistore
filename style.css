@@ -52,7 +52,7 @@ button {
 
 #logo{
     height:160px;
-    transform: translateY(24px);
+    transform: translateY(32px);
 }
 @media (max-width: 1444px){
     #logo{
