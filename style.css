@@ -68,7 +68,7 @@ button {
     width:100%;
     height:150px; 
 
-    background:url("decoracion.svg") center/cover no-repeat;
+    background:url("decoracion.png") center/cover no-repeat;
 
     pointer-events: none;
     z-index:-1;

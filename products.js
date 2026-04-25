@@ -735,7 +735,6 @@ const PRODUCTS = {
         price: 1800,
         images: ["Products/Collar con diseño de corazón.png"],
         stock: 5,
-        category: "bisuteria/aros"
     },
     "collar-cadena-clavicula-sol": {
         title: 'Collar de cadena de clavícula con sol',

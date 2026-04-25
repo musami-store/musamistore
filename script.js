@@ -431,28 +431,33 @@ document.addEventListener("DOMContentLoaded", () => {
         initSliders();
     }
 
-    const category = document.body.dataset.category;
-
-    if(category){
-        renderCategory(category);
+    if(document.body.dataset.category){
+        renderCategory();
     }
 
     updateFavoritesCount();
 });
 
-function renderCategory(categoryName){
+function renderCategory(){
     const container = document.querySelector(".product-grid");
     if(!container) return;
+
+    const pageCategory = document.body.dataset.category;
+    const pageSubcategory = document.body.dataset.subcategory;
 
     container.innerHTML = "";
 
     Object.entries(PRODUCTS).forEach(([id, product]) => {
 
-        const categories = Array.isArray(product.category)
-            ? product.category
-            : [product.category];
+        // Debe coincidir categoría principal sí o sí
+        if(product.category !== pageCategory) return;
 
-        if (!categories.includes(categoryName)) return;
+        // Si la página tiene subcategoría,
+        // el producto también debe coincidir
+        if(
+            pageSubcategory &&
+            product.subcategory !== pageSubcategory
+        ) return;
 
         const card = document.createElement("div");
         card.classList.add("product-card");
