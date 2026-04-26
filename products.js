@@ -1,4 +1,5 @@
 const PRODUCTS = {
+    //#region PRIMEROS PRODUCTOS
     "aros-argolla-punta-gruesa":{
         title: 'Aros',
         variants: {
@@ -1392,4 +1393,6 @@ const PRODUCTS = {
             },
         }
     }
+    //#endregion
+    
 }
