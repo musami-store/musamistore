@@ -1687,7 +1687,7 @@ const PRODUCTS = {
         subcategory: "Aros"
     },
     "argollas-2.10":{
-        title: "?",
+        title: "Argollas trenzadas",
         variants:{
             "dorado chicas":{
                 label: "Dorado pequeñas",
@@ -1818,8 +1818,8 @@ const PRODUCTS = {
         category: "Bisuteria",
         subcategory: "Aros"
     },
-    "argollas-2.16":{
-        title: "?",
+    "aros-2.16":{
+        title: "Aros",
         variants:{
             "dorado":{
                 label: "Dorado - AGOTADO",
@@ -1833,6 +1833,174 @@ const PRODUCTS = {
                 images:["Products/2. Aros/16a (plateado) $800.jpg", "Products/2. Aros/16b.jpg", "Products/2. Aros/16c.jpg", "Products/2. Aros/16d.jpg"],
                 stock: 1
             },
-        }
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-2.17":{
+        title: "Aros variedad",
+        variants:{
+            "4":{
+                label: "04 - AGOTADO",
+                price: 800,
+                images: ["Products/2. Aros/17a (disponible solo 05) $800.jpg", "Products/2. Aros/17b.jpg"],
+                stock: 0
+            },
+            "5":{
+                label: "05 Print vaca",
+                price: 800,
+                images: ["Products/2. Aros/17a (disponible solo 05) $800.jpg", "Products/2. Aros/17b.jpg"],
+                stock: 1
+            },
+            "6":{
+                label: "06 - AGOTADO",
+                price: 800,
+                images: ["Products/2. Aros/17a (disponible solo 05) $800.jpg", "Products/2. Aros/17b.jpg"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-2.18":{
+        title: "Aros candado",
+        price: 1700,
+        images: ["Products/2. Aros/18a $1.700.jpg", "Products/2. Aros/18b.jpg", "Products/2. Aros/18c.jpg", "Products/2. Aros/18d.jpg", "Products/2. Aros/18e.jpg", "Products/2. Aros/18f.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-2.19":{
+        title: "Argollas pequeñas",
+        price: 1200,
+        images: ["Products/2. Aros/19a $1.200.jpg", "Products/2. Aros/19b.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-2.20":{
+        title: "Set de aros x 3",
+        price: 1000,
+        images: ["Products/2. Aros/20a $1.000.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-2.21":{
+        title: "Aro",
+        variants:{
+            "dorado":{
+                label: "Dorado",
+                price: 800,
+                images:["Products/2. Aros/21a (dorado y plateado) $800.jpg", "Products/2. Aros/21b.jpg", "Products/2. Aros/21c.jpg", "Products/2. Aros/21d.jpg", "Products/2. Aros/21e.jpg", "Products/2. Aros/21f.jpg", "Products/2. Aros/21g.jpg"],
+                stock: 1
+            },
+            "plateado":{
+                label: "Plateado",
+                price: 800,
+                images:["Products/2. Aros/21a (dorado y plateado) $800.jpg", "Products/2. Aros/21b.jpg", "Products/2. Aros/21c.jpg", "Products/2. Aros/21d.jpg", "Products/2. Aros/21e.jpg", "Products/2. Aros/21f.jpg", "Products/2. Aros/21g.jpg"],
+                stock: 1
+            },
+            "negro":{
+                label: "Negro - AGOTADO",
+                price: 800,
+                images:["Products/2. Aros/21a (dorado y plateado) $800.jpg", "Products/2. Aros/21b.jpg", "Products/2. Aros/21c.jpg", "Products/2. Aros/21d.jpg", "Products/2. Aros/21e.jpg", "Products/2. Aros/21f.jpg", "Products/2. Aros/21g.jpg"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-2.22":{
+        title: "Set de aros x 4",
+        price: 1500,
+        images: ["Products/2. Aros/22a $1.500.jpg", "Products/2. Aros/22b.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-2.23":{
+        title: "Aros ojo",
+        price: 2800,
+        images: ["Products/2. Aros/23a $2.800.jpg", "Products/2. Aros/23b.jpg", "Products/2. Aros/23c.jpg", "Products/2. Aros/23d.jpg", "Products/2. Aros/23e.jpg", "Products/2. Aros/23f.jpg", "Products/2. Aros/23g.jpg", "Products/2. Aros/23h.jpg", "Products/2. Aros/23i.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-2.24":{
+        title: "Aros ojo",
+        price: 1800,
+        images: ["Products/2. Aros/24a $1.800.jpg", "Products/2. Aros/24b.jpg", "Products/2. Aros/24c.jpg", "Products/2. Aros/24d.jpg", "Products/2. Aros/24e.jpg", "Products/2. Aros/24f.jpg", "Products/2. Aros/24g.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "pendientes-2.25":{
+        title: "Pendientes piercing",
+        variants:{
+            "plateado":{
+                label: "Plateado",
+                price: 1200,
+                images: ["Products/2. Aros/25a (plateado) $1.200.jpg", "Products/2. Aros/25b.jpg", "Products/2. Aros/25c.jpg", "Products/2. Aros/25d.jpg"],
+                stock: 1
+            },
+            "dorado":{
+                label: "Dorado - AGOTADO",
+                price: 1200,
+                images: ["Products/2. Aros/25a (plateado) $1.200.jpg", "Products/2. Aros/25b.jpg", "Products/2. Aros/25c.jpg", "Products/2. Aros/25d.jpg"],
+                stock: 0
+            },
+            "rose gold":{
+                label: "Rose gold - AGOTADO",
+                price: 1200,
+                images: ["Products/2. Aros/25a (plateado) $1.200.jpg", "Products/2. Aros/25b.jpg", "Products/2. Aros/25c.jpg", "Products/2. Aros/25d.jpg"],
+                stock: 0
+            }
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-2.26":{
+        title: "Set de aros x 5",
+        price: 1500,
+        images: ["Products/2. Aros/26a $1.500.jpg", "Products/2. Aros/26b.jpg", "Products/2. Aros/26c.jpg", "Products/2. Aros/26d.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-2.27":{
+        title: "Aros luna",
+        price: 1200,
+        images: ["Products/2. Aros/27a $1.200.jpg", "Products/2. Aros/27b.jpg", "Products/2. Aros/27c.jpg", "Products/2. Aros/27d.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "piercing-2.28":{
+        title: "Piercing nariz falso",
+        variants:{
+            "plateado":{
+                label: "Plateado",
+                price: 1000,
+                images: ["Products/2. Aros/28a (plateado) $1.000.jpg", "Products/2. Aros/28b.jpg", "Products/2. Aros/28c.jpg", "Products/2. Aros/28d.jpg", "Products/2. Aros/28e.jpg"],
+                stock: 1,
+            },
+            "dorado":{
+                label: "Dorado - AGOTADO",
+                price: 1000,
+                images: ["Products/2. Aros/28a (plateado) $1.000.jpg", "Products/2. Aros/28b.jpg", "Products/2. Aros/28c.jpg", "Products/2. Aros/28d.jpg", "Products/2. Aros/28e.jpg"],
+                stock: 0,
+            }
+        },
+        category: "Bisuteria",
+        subcategory: "Aros",
+    },
+    "aros-2.29":{
+        title: "Aros perla",
+        price: 800,
+        images: ["Products/2. Aros/29a $800.jpg", "Products/2. Aros/29b.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
     }
 }
