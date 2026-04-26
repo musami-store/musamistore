@@ -2002,5 +2002,377 @@ const PRODUCTS = {
         stock: 1,
         category: "Bisuteria",
         subcategory: "Aros"
+    },
+    "aros-1.1":{
+        title: "Aros perla colgante",
+        variants:{
+            "plateado":{
+                label: "Plateado",
+                price: 1500,
+                images: ["Products/1. Aros/1a (plateado) $1.500.jpg", "Products/1. Aros/1b.jpg", "Products/1. Aros/1c.jpg", "Products/1. Aros/1d.jpg"],
+                stock: 1
+            },
+            "dorado":{                
+                label: "Dorado - AGOTADO",
+                price: 1500,
+                images: ["Products/1. Aros/1a (plateado) $1.500.jpg", "Products/1. Aros/1b.jpg", "Products/1. Aros/1c.jpg", "Products/1. Aros/1d.jpg"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-1.2":{
+        title: "Argollas de corazón",
+        price: 1500,
+        images: ["Products/1. Aros/2a $1.500.jpg", "Products/1. Aros/2b.jpg", "Products/1. Aros/2c.jpg", "Products/1. Aros/2d.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-1.3":{
+        title: "Aros limón",
+        variants:{
+            "rosa":{
+                label: "Rosa",
+                price: 2000,
+                images:["Products/1. Aros/3a (rosa) $2.000.jpg"],
+                stock: 1,
+            },
+            "amarillo":{
+                label: "Amarillo - AGOTADO",
+                price: 2000,
+                images:["Products/1. Aros/3a (rosa) $2.000.jpg"],
+                stock: 0,
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-1.4":{
+        title: "Argollas cadena 4cm",
+        price: 1500,
+        images: ["Products/1. Aros/4a (revisar medida).jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-1.5":{
+        title: "Argollas plata envejecida",
+        price: 1500,
+        images: ["Products/1. Aros/5a $1.500.jpg", "Products/1. Aros/5b.jpg", "Products/1. Aros/5c.jpg", "Products/1. Aros/5d.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-1.6":{
+        title: "Aros colgantes",
+        price: 1800,
+        images: ["Products/1. Aros/6a $1.800.jpg", "Products/1. Aros/6b.jpg", "Products/1. Aros/6c.jpg", "Products/1. Aros/6d.jpg", "Products/1. Aros/6e.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-1.7":{
+        title: "Argollas lisas 4,5cm",
+        variants:{
+            "dorado":{
+                label: "Dorado",
+                price: 1000,
+                images: ["Products/1. Aros/7a (DOR) $1.000 4,5cm.jpg", "Products/1. Aros/7b.jpg", "Products/1. Aros/7c.jpg", "Products/1. Aros/7d.jpg"],
+                stock: 1
+            },
+            "plateado":{
+                label: "Plateado - AGOTADO",
+                price: 1000,
+                images: ["Products/1. Aros/7a (DOR) $1.000 4,5cm.jpg", "Products/1. Aros/7b.jpg", "Products/1. Aros/7c.jpg", "Products/1. Aros/7d.jpg"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-1.8":{
+        title: "Argollas",
+        variants:{
+            "dorado chicas":{
+                label: "Dorado 4cm",
+                price: 1000,
+                images: ["Products/1. Aros/8a (DOR) $1.200 y $1.000 5cm y 4cm.jpg", "Products/1. Aros/8b.jpg", "Products/1. Aros/8c.jpg", "Products/1. Aros/8d.jpg"],
+                stock: 1,
+            },
+            "dorado":{
+                label: "Dorado 5cm",
+                price: 1200,
+                images: ["Products/1. Aros/8a (DOR) $1.200 y $1.000 5cm y 4cm.jpg", "Products/1. Aros/8b.jpg", "Products/1. Aros/8c.jpg", "Products/1. Aros/8d.jpg"],
+                stock: 1,
+            },
+            "plateado chicas":{
+                label: "Plateado 4cm - AGOTADO",
+                price: 1000,
+                images: ["Products/1. Aros/8a (DOR) $1.200 y $1.000 5cm y 4cm.jpg", "Products/1. Aros/8b.jpg", "Products/1. Aros/8c.jpg", "Products/1. Aros/8d.jpg"],
+                stock: 0,
+            },
+            "plateado":{
+                label: "Plateado 5cm - AGOTADO",
+                price: 1200,
+                images: ["Products/1. Aros/8a (DOR) $1.200 y $1.000 5cm y 4cm.jpg", "Products/1. Aros/8b.jpg", "Products/1. Aros/8c.jpg", "Products/1. Aros/8d.jpg"],
+                stock: 0,
+            }
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-1.9":{
+        title: "Argollas prensadas 4cm",
+        variants:{
+            "dorado":{
+                label: "Dorado",
+                price: 1200,
+                images: ["Products/1. Aros/9a (DOR) $1.200 4cm.jpg", "Products/1. Aros/9b.jpg", "Products/1. Aros/9c.jpg", "Products/1. Aros/9d.jpg", "Products/1. Aros/9e.jpg", "Products/1. Aros/9f.jpg"],
+                stock: 1,
+            },
+            "plateado":{
+                label: "Plateado - AGOTADO",
+                price: 1200,
+                images: ["Products/1. Aros/9a (DOR) $1.200 4cm.jpg", "Products/1. Aros/9b.jpg", "Products/1. Aros/9c.jpg", "Products/1. Aros/9d.jpg", "Products/1. Aros/9e.jpg", "Products/1. Aros/9f.jpg"],
+                stock: 0,
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-1.10":{
+        title: "Argollas con perlas 3cm",
+        variants:{
+            "dorado":{
+                label: "Dorado",
+                price: 1400,
+                images: ["Products/1. Aros/10a - Argollas con perlas (DOR) $1.400 - 3cm.jpg", "Products/1. Aros/10b.jpg", "Products/1. Aros/10c.jpg", "Products/1. Aros/10d.jpg"],
+                stock: 1,
+            },
+            "plateado":{
+                label: "Plateado - AGOTADO",
+                price: 1400,
+                images: ["Products/1. Aros/10a - Argollas con perlas (DOR) $1.400 - 3cm.jpg", "Products/1. Aros/10b.jpg", "Products/1. Aros/10c.jpg", "Products/1. Aros/10d.jpg"],
+                stock: 0,
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-1.11":{
+        title: "Argollas con diseño corazón",
+        price: 1000,
+        images: ["Products/1. Aros/11a Argollas con diseño corazón $1.000.jpg", "Products/1. Aros/11b.jpg", "Products/1. Aros/11c.jpg", "Products/1. Aros/11d.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-1.12":{
+        title: "Argollas con perlas incrustadas",
+        price: 1200,
+        images: ["Products/1. Aros/12a.jpg", "Products/1. Aros/12b.jpg", "Products/1. Aros/12c.jpg", "Products/1. Aros/12d.jpg", "Products/1. Aros/12e.jpg", "Products/1. Aros/12f.jpg", "Products/1. Aros/12g.jpg", "Products/1. Aros/12h.jpg", "Products/1. Aros/12i.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-1.13":{
+        title: "Argollas corazón",
+        price: 1500,
+        images: ["Products/1. Aros/13a.jpg", "Products/1. Aros/13b.jpg", "Products/1. Aros/13c.jpg", "Products/1. Aros/13d.jpg", "Products/1. Aros/13e.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-1.14":{
+        title: "Argollas",
+        variants:{
+            "plateado":{
+                label: "Plateado",
+                price: 1200,
+                images: ["Products/1. Aros/14a (PLA) $1.200.jpg", "Products/1. Aros/14b.jpg", "Products/1. Aros/14c.jpg", "Products/1. Aros/14d.jpg", "Products/1. Aros/14e.jpg", "Products/1. Aros/14f.jpg", "Products/1. Aros/14g.jpg", "Products/1. Aros/14h.jpg"],
+                stock: 1
+            },
+            "dorado":{
+                label: "Dorado - AGOTADO",
+                price: 1200,
+                images: ["Products/1. Aros/14a (PLA) $1.200.jpg", "Products/1. Aros/14b.jpg", "Products/1. Aros/14c.jpg", "Products/1. Aros/14d.jpg", "Products/1. Aros/14e.jpg", "Products/1. Aros/14f.jpg", "Products/1. Aros/14g.jpg", "Products/1. Aros/14h.jpg"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-1.15":{
+        title: "Argollas trenzadas",
+        price: 1000,
+        images: ["Products/1. Aros/15a $1.000.jpg", "Products/1. Aros/15b.jpg", "Products/1. Aros/15c.jpg", "Products/1. Aros/15d.jpg", "Products/1. Aros/15e.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-3.1":{
+        title: "Aros",
+        variants:{
+            "rosa":{
+                label: "Rosa",
+                price: 1500,
+                images: ["Products/3. Aros coloridos/1a (ROS-NEG) $1.500.jpg", "Products/3. Aros coloridos/1b.jpg", "Products/3. Aros coloridos/1c.jpg", "Products/3. Aros coloridos/1d.jpg"],
+                stock: 1
+            },
+            "negro":{
+                label: "Negro",
+                price: 1500,
+                images: ["Products/3. Aros coloridos/1a (ROS-NEG) $1.500.jpg", "Products/3. Aros coloridos/1b.jpg", "Products/3. Aros coloridos/1c.jpg", "Products/3. Aros coloridos/1d.jpg"],
+                stock: 1
+            },
+            "coral":{
+                label: "Coral - AGOTADO",
+                price: 1500,
+                images: ["Products/3. Aros coloridos/1a (ROS-NEG) $1.500.jpg", "Products/3. Aros coloridos/1b.jpg", "Products/3. Aros coloridos/1c.jpg", "Products/3. Aros coloridos/1d.jpg"],
+                stock: 0
+            },
+            "amarillo":{
+                label: "Amarillo - AGOTADO",
+                price: 1500,
+                images: ["Products/3. Aros coloridos/1a (ROS-NEG) $1.500.jpg", "Products/3. Aros coloridos/1b.jpg", "Products/3. Aros coloridos/1c.jpg", "Products/3. Aros coloridos/1d.jpg"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-3.2":{
+        title: "Aros",
+        variants:{
+            "rosa":{
+                label: "Rosa",
+                price: 1500,
+                images: ["Products/3. Aros coloridos/2a (ROS-AMA-BEI) $1.500.jpg", "Products/3. Aros coloridos/2b.jpg", "Products/3. Aros coloridos/2c.jpg", "Products/3. Aros coloridos/2d.jpg", "Products/3. Aros coloridos/2e.jpg"],
+                stock: 1
+            },
+            "amarillo":{
+                label: "Amarillo",
+                price: 1500,
+                images: ["Products/3. Aros coloridos/2a (ROS-AMA-BEI) $1.500.jpg", "Products/3. Aros coloridos/2b.jpg", "Products/3. Aros coloridos/2c.jpg", "Products/3. Aros coloridos/2d.jpg", "Products/3. Aros coloridos/2e.jpg"],
+                stock: 1
+            },
+            "beige":{
+                label: "Beige",
+                price: 1500,
+                images: ["Products/3. Aros coloridos/2a (ROS-AMA-BEI) $1.500.jpg", "Products/3. Aros coloridos/2b.jpg", "Products/3. Aros coloridos/2c.jpg", "Products/3. Aros coloridos/2d.jpg", "Products/3. Aros coloridos/2e.jpg"],
+                stock: 1
+            },
+            "blanco":{
+                label: "Blanco - AGOTADO",
+                price: 1500,
+                images: ["Products/3. Aros coloridos/2a (ROS-AMA-BEI) $1.500.jpg", "Products/3. Aros coloridos/2b.jpg", "Products/3. Aros coloridos/2c.jpg", "Products/3. Aros coloridos/2d.jpg", "Products/3. Aros coloridos/2e.jpg"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-3.3":{
+        title: "Aros colgantes",
+        variants:{
+            "tricolor":{
+                label: "Tricolor",
+                price: 1200,
+                images: ["Products/3. Aros coloridos/3a $1.200 (tricolor).jpg", "Products/3. Aros coloridos/3b.jpg", "Products/3. Aros coloridos/3c.jpg"],
+                stock: 1
+            },
+            "negro":{
+                label: "Negro - AGOTADO",
+                price: 1200,
+                images: ["Products/3. Aros coloridos/3a $1.200 (tricolor).jpg", "Products/3. Aros coloridos/3b.jpg", "Products/3. Aros coloridos/3c.jpg"],
+                stock: 0
+            },
+            "azul":{
+                label: "Azul - AGOTADO",
+                price: 1200,
+                images: ["Products/3. Aros coloridos/3a $1.200 (tricolor).jpg", "Products/3. Aros coloridos/3b.jpg", "Products/3. Aros coloridos/3c.jpg"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-3.4":{
+        title: "Aros colgantes",
+        price: 1200,
+        images: ["Products/3. Aros coloridos/4a $1.200.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-3.5":{
+        title: "Aros",
+        price: 1500,
+        images: ["Products/3. Aros coloridos/5a $1.500.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-3.6":{
+        title: "Argollas resina",
+        variants:{
+            "1":{
+                label: "Modelo 01 - AGOTADO",
+                price: 1300,
+                images: ["Products/3. Aros coloridos/6a (02-03) $1.300.jpg", "Products/3. Aros coloridos/6b.jpg", "Products/3. Aros coloridos/6c.jpg", "Products/3. Aros coloridos/6d.jpg", "Products/3. Aros coloridos/6e.jpg", "Products/3. Aros coloridos/6f.jpg", "Products/3. Aros coloridos/6g.jpg"],
+                stock:0
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 1300,
+                images: ["Products/3. Aros coloridos/6a (02-03) $1.300.jpg", "Products/3. Aros coloridos/6b.jpg", "Products/3. Aros coloridos/6c.jpg", "Products/3. Aros coloridos/6d.jpg", "Products/3. Aros coloridos/6e.jpg", "Products/3. Aros coloridos/6f.jpg", "Products/3. Aros coloridos/6g.jpg"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 1300,
+                images: ["Products/3. Aros coloridos/6a (02-03) $1.300.jpg", "Products/3. Aros coloridos/6b.jpg", "Products/3. Aros coloridos/6c.jpg", "Products/3. Aros coloridos/6d.jpg", "Products/3. Aros coloridos/6e.jpg", "Products/3. Aros coloridos/6f.jpg", "Products/3. Aros coloridos/6g.jpg"],
+                stock: 1
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-3.7":{
+        title: "Aros resina",
+        price: 1500,
+        images: ["Products/3. Aros coloridos/7a $1.500.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-3.8":{
+        title: "Aros",
+        price: 1300,
+        images: ["Products/3. Aros coloridos/8a $1.300.jpg", "Products/3. Aros coloridos/8b.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-3.9":{
+        title: "Aros resina",
+        variants:{
+            "gris":{
+                label: "Gris",
+                price: 1500,
+                images: ["Products/3. Aros coloridos/9a (GRIS) $1.500.jpg", "Products/3. Aros coloridos/9b.jpg"],
+                stock: 1
+            },
+            "blanco":{
+                label: "Blanco - AGOTADO",
+                price: 1500,
+                images: ["Products/3. Aros coloridos/9a (GRIS) $1.500.jpg", "Products/3. Aros coloridos/9b.jpg"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
     }
 }
