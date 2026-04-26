@@ -656,7 +656,7 @@ h1{
 .product-title {
     font-size: 14px;
     font-weight: 500;
-    color: #333;
+    color: var(--color-border);
 }
 
 .product-price {
