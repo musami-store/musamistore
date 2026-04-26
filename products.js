@@ -1817,5 +1817,22 @@ const PRODUCTS = {
         },
         category: "Bisuteria",
         subcategory: "Aros"
+    },
+    "argollas-2.16":{
+        title: "?",
+        variants:{
+            "dorado":{
+                label: "Dorado - AGOTADO",
+                price: 800,
+                images:["Products/2. Aros/16a (plateado) $800.jpg", "Products/2. Aros/16b.jpg", "Products/2. Aros/16c.jpg", "Products/2. Aros/16d.jpg"],
+                stock: 0
+            },
+            "plateado":{
+                label: "Plateado",
+                price: 800,
+                images:["Products/2. Aros/16a (plateado) $800.jpg", "Products/2. Aros/16b.jpg", "Products/2. Aros/16c.jpg", "Products/2. Aros/16d.jpg"],
+                stock: 1
+            },
+        }
     }
 }
