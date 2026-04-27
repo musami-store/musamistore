@@ -944,6 +944,9 @@ h2{
     .product-slider img {
         height: 100% !important
     }
+    .variant-selector{
+        font-size: 11px;
+    }
     .slider-track{
         width: 100%;
         height: 100%;
