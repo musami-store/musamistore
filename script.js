@@ -556,3 +556,129 @@ window.addEventListener("scroll", () => {
 
     lastScroll = currentScroll;
 });
+
+document
+.getElementById("save-order-image")
+?.addEventListener("click",generateOrderImage);
+
+
+async function generateOrderImage(){
+
+if(!CART.length){
+alert("Carrito vacío");
+return;
+}
+
+const orderImage =
+document.getElementById("order-image");
+
+let html = `
+<div style="
+background:white;
+padding:40px;
+width:800px;
+font-family:Arial;
+border-radius:20px;
+">
+
+<div style="text-align:center;margin-bottom:30px;">
+<img
+src="logo.svg"
+style="
+width:260px;
+height:auto;
+">
+</div>
+<h3>Resumen de pedido</h3>
+<hr>
+`;
+
+CART.forEach(item=>{
+
+html += `
+<div style="
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+gap:25px;
+">
+
+<div style="
+display:flex;
+align-items:center;
+gap:20px;
+">
+
+<img
+src="${item.image}"
+style="
+width:70px;
+height:70px;
+object-fit:cover;
+border-radius:12px;
+"
+>
+
+<div>
+<div>
+${item.title}
+${item.variant ? ` (${item.variant})` : ""}
+</div>
+
+<div style="
+font-size:14px;
+opacity:.7;
+">
+Cantidad: ${item.qty}
+</div>
+
+</div>
+
+</div>
+
+<div>
+$${(item.price * item.qty)
+.toLocaleString("es-CL")}
+</div>
+
+</div>
+`;
+
+});
+
+html += `
+<hr>
+
+<h2>
+Total:
+$${CART.reduce(
+(total,item)=>
+total + (item.price * item.qty),
+0
+).toLocaleString("es-CL")}
+</h2>
+
+</div>
+`;
+
+orderImage.innerHTML=html;
+
+
+const canvas=
+await html2canvas(orderImage,{
+scale:2,
+backgroundColor:"#ffffff"
+});
+
+const image=
+canvas.toDataURL("image/png");
+
+const a=
+document.createElement("a");
+
+a.href=image;
+a.download="pedido-musami.png";
+a.click();
+
+}
