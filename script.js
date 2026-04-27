@@ -99,7 +99,10 @@ function addToCart(productId, variantKey=null, qty=1){
     const newQty = currentQty + qty;
 
     if (newQty > data.stock) {
-        alert("No hay suficiente stock");
+        showToast(
+"No hay suficiente stock",
+"error"
+);
         return;
     }
 
@@ -113,6 +116,7 @@ function addToCart(productId, variantKey=null, qty=1){
         image:data.images[0]
     });
 
+    showToast("Añadido al carrito");
     saveCart();
     renderCart();
 }
@@ -247,12 +251,27 @@ function updateFavoritesCount() {
 }
 
 function toggleFavorite(productId) {
-    const index = FAVORITES.indexOf(productId);
-    if(index >= 0) FAVORITES.splice(index,1);
-    else FAVORITES.push(productId);
 
-    saveFavorites();
-    updateFavoritesCount();
+const index = FAVORITES.indexOf(productId);
+
+if(index >= 0){
+    FAVORITES.splice(index,1);
+
+    showToast(
+      "♡ Quitado de favoritos"
+    );
+
+}else{
+    FAVORITES.push(productId);
+
+    showToast(
+      "♥ Agregado a favoritos"
+    );
+}
+
+saveFavorites();
+updateFavoritesCount();
+
 }
 
 /* =========================
@@ -329,6 +348,20 @@ function initSliders(){
     document.querySelectorAll('.product-slider').forEach(slider=>{
         const track = slider.querySelector('.slider-track');
         const images = track.children;
+        if(images.length <= 1){
+            slider.querySelector('.next')?.style.setProperty(
+                'display',
+                'none'
+            );
+
+            slider.querySelector('.prev')?.style.setProperty(
+                'display',
+                'none'
+            );
+
+            return;
+        }
+        
         let index=0;
 
         const update = ()=> track.style.transform=`translateX(-${index*100}%)`;
@@ -368,6 +401,16 @@ function initLightboxTrigger(card){
             if(!lightboxTrack) return;
             lightboxTrack.innerHTML = lbImages.map(src=>`<img src="${src}">`).join("");
             lightboxTitle.textContent = product.title;
+            const lbPrev = lightbox.querySelector(".prev");
+            const lbNext = lightbox.querySelector(".next");
+
+            if(lbImages.length <=1){
+                lbPrev.style.display="none";
+                lbNext.style.display="none";
+            }else{
+                lbPrev.style.display="";
+                lbNext.style.display="";
+            }
             lightbox.classList.add("open");
         });
     });
@@ -565,7 +608,7 @@ document
 async function generateOrderImage(){
 
 if(!CART.length){
-alert("Carrito vacío");
+showToast("No se puede generar imagen: Carrito vacío", "error")
 return;
 }
 
@@ -678,7 +721,63 @@ const a=
 document.createElement("a");
 
 a.href=image;
-a.download="pedido-musami.png";
+a.download="Pedido Musamí store.png";
 a.click();
+showToast("Pedido descargado")
+}
+
+
+
+//TOAST
+
+function showToast(
+message,
+type="success",
+duration=2000
+){
+
+let container =
+document.getElementById(
+"toast-container"
+);
+
+// si no existe lo crea solo
+if(!container){
+
+container =
+document.createElement("div");
+
+container.id="toast-container";
+
+document.body.appendChild(
+container
+);
+
+}
+
+const toast =
+document.createElement("div");
+
+toast.className=`toast ${type}`;
+toast.textContent=message;
+
+container.appendChild(toast);
+
+
+// fuerza reflow
+toast.offsetHeight;
+
+toast.classList.add("show");
+
+
+setTimeout(()=>{
+
+toast.classList.remove("show");
+
+setTimeout(()=>{
+toast.remove();
+},300);
+
+},duration);
 
 }

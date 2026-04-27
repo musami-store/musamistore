@@ -2036,13 +2036,13 @@ const PRODUCTS = {
             "rosa":{
                 label: "Rosa",
                 price: 2000,
-                images:["Products/1. Aros/3a (rosa) $2.000.jpg"],
+                images:["Products/1. Aros/3a (rosa) $2.000.jpg", "Products/1. Aros/3b.jpg", "Products/1. Aros/3c.jpg"],
                 stock: 1,
             },
             "amarillo":{
                 label: "Amarillo - AGOTADO",
                 price: 2000,
-                images:["Products/1. Aros/3a (rosa) $2.000.jpg"],
+                images:["Products/1. Aros/3a (rosa) $2.000.jpg", "Products/1. Aros/3b.jpg", "Products/1. Aros/3c.jpg"],
                 stock: 0,
             },
         },
