@@ -619,8 +619,7 @@ let html = `
 <div style="
 background:white;
 padding:40px;
-width:800px;
-font-family:Arial;
+width:460px;
 border-radius:20px;
 ">
 
@@ -630,9 +629,10 @@ src="logo.svg"
 style="
 width:260px;
 height:auto;
+z-index:999;
 ">
 </div>
-<h3>Resumen de pedido</h3>
+<h3 style="color:#4648bb;">Resumen de pedido</h3>
 <hr>
 `;
 
@@ -653,18 +653,23 @@ align-items:center;
 gap:20px;
 ">
 
+<div>
 <img
 src="${item.image}"
 style="
-width:70px;
-height:70px;
 object-fit:cover;
 border-radius:12px;
+width:70px;
+height:70px
 "
 >
+</div>
 
 <div>
-<div>
+<div style="
+color: #84BAF8;
+font-weight: bolder;
+">
 ${item.title}
 ${item.variant ? ` (${item.variant})` : ""}
 </div>
@@ -680,7 +685,7 @@ Cantidad: ${item.qty}
 
 </div>
 
-<div>
+<div style="color: green;">
 $${(item.price * item.qty)
 .toLocaleString("es-CL")}
 </div>

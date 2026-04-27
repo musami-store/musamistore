@@ -1404,7 +1404,7 @@ const PRODUCTS = {
                 stock: 0
             },
             "dorado": {
-                label: "Dorado - AGOTADO",
+                label: "Dorado",
                 price: 1500,
                 images: ["Products/2. Aros/1a (dorado) $1.300.jpg", "Products/2. Aros/1b.jpg", "Products/2. Aros/1c.jpg", "Products/2. Aros/1d.jpg", "Products/2. Aros/1e.jpg", "Products/2. Aros/1f.jpg", "Products/2. Aros/1g.jpg", "Products/2. Aros/1h.jpg", "Products/2. Aros/1i.jpg", "Products/2. Aros/1j.jpg"],
                 stock: 1
@@ -1512,49 +1512,49 @@ const PRODUCTS = {
         title: "Argollas variedad diseños",
         variants: {
             "a": {
-                label: "Variante A - AGOTADO",
+                label: "Modelo A - AGOTADO",
                 price: 500,
                 images: ["Products/2. Aros/7h.jpg", "Products/2. Aros/7g.jpg", "Products/2. Aros/7f.jpg", "Products/2. Aros/7d.jpg", "Products/2. Aros/7e.jpg", "Products/2. Aros/7b.jpg", "Products/2. Aros/7c.jpg", "Products/2. Aros/7a.jpg"],
                 stock: 0,
             },
             "b": {
-                label: "Variante B - AGOTADO",
+                label: "Modelo B - AGOTADO",
                 price: 1300,
                 images: ["Products/2. Aros/7h.jpg", "Products/2. Aros/7g.jpg", "Products/2. Aros/7f.jpg", "Products/2. Aros/7d.jpg", "Products/2. Aros/7e.jpg", "Products/2. Aros/7b.jpg", "Products/2. Aros/7c.jpg", "Products/2. Aros/7a.jpg"],
                 stock: 0,
             },
             "1": {
-                label: "Variante 01",
+                label: "Modelo 01",
                 price: 700,
                 images: ["Products/2. Aros/7h.jpg", "Products/2. Aros/7g.jpg", "Products/2. Aros/7f.jpg", "Products/2. Aros/7d.jpg", "Products/2. Aros/7e.jpg", "Products/2. Aros/7b.jpg", "Products/2. Aros/7c.jpg", "Products/2. Aros/7a.jpg"],
                 stock: 1,
             },
             "2": {
-                label: "Variante 02 - AGOTADO",
+                label: "Modelo 02 - AGOTADO",
                 price: 700,
                 images: ["Products/2. Aros/7h.jpg", "Products/2. Aros/7g.jpg", "Products/2. Aros/7f.jpg", "Products/2. Aros/7d.jpg", "Products/2. Aros/7e.jpg", "Products/2. Aros/7b.jpg", "Products/2. Aros/7c.jpg", "Products/2. Aros/7a.jpg"],
                 stock: 0,
             },
             "3": {
-                label: "Variante 03",
+                label: "Modelo 03",
                 price: 700,
                 images: ["Products/2. Aros/7h.jpg", "Products/2. Aros/7g.jpg", "Products/2. Aros/7f.jpg", "Products/2. Aros/7d.jpg", "Products/2. Aros/7e.jpg", "Products/2. Aros/7b.jpg", "Products/2. Aros/7c.jpg", "Products/2. Aros/7a.jpg"],
                 stock: 1,
             },
             "4": {
-                label: "Variante 04",
+                label: "Modelo 04",
                 price: 700,
                 images: ["Products/2. Aros/7h.jpg", "Products/2. Aros/7g.jpg", "Products/2. Aros/7f.jpg", "Products/2. Aros/7d.jpg", "Products/2. Aros/7e.jpg", "Products/2. Aros/7b.jpg", "Products/2. Aros/7c.jpg", "Products/2. Aros/7a.jpg"],
                 stock: 1,
             },
             "5": {
-                label: "Variante 05 - AGOTADO",
+                label: "Modelo 05 - AGOTADO",
                 price: 700,
                 images: ["Products/2. Aros/7h.jpg", "Products/2. Aros/7g.jpg", "Products/2. Aros/7f.jpg", "Products/2. Aros/7d.jpg", "Products/2. Aros/7e.jpg", "Products/2. Aros/7b.jpg", "Products/2. Aros/7c.jpg", "Products/2. Aros/7a.jpg"],
                 stock: 0,
             },
             "6": {
-                label: "Variante 06 - AGOTADO",
+                label: "Modelo 06 - AGOTADO",
                 price: 700,
                 images: ["Products/2. Aros/7h.jpg", "Products/2. Aros/7g.jpg", "Products/2. Aros/7f.jpg", "Products/2. Aros/7d.jpg", "Products/2. Aros/7e.jpg", "Products/2. Aros/7b.jpg", "Products/2. Aros/7c.jpg", "Products/2. Aros/7a.jpg"],
                 stock: 0,
