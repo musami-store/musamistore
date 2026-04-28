@@ -411,6 +411,10 @@ nav ul li a:active{
     .s-header .cart{
         margin-right:0;
     }
+    .banner p{
+        margin:0;
+        font-size: 12px;
+    }
 }
 
 .cart {
@@ -1256,4 +1260,18 @@ background:rgba(139, 46, 46, .45);
 
 .toast.info{
 background:rgba(86, 125, 170, .45)
+}
+
+.banner{
+    background-color: var(--color-border);
+    color: white;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    margin:0;
+    display: flex;
+
+}
+.banner p{
+    margin:0;
 }

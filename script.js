@@ -612,6 +612,17 @@ showToast("No se puede generar imagen: Carrito vacío", "error")
 return;
 }
 
+const ahora = new Date();
+
+const fechaFormateada = ahora.toLocaleString('es-ES', {
+  day: '2-digit',
+  month: '2-digit',
+  year: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: false
+}).replace(',', ' -');
+
 const orderImage =
 document.getElementById("order-image");
 
@@ -624,6 +635,22 @@ border-radius:20px;
 ">
 
 <div style="text-align:center;margin-bottom:30px;">
+
+<p style="
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;         /* Elimina márgenes por defecto */
+  margin-right:8px;
+  margin-top: 8px;
+  color: #4648bb;
+  z-index: 999;      /* Lo mantiene por encima de todo */
+  pointer-events: none; /* Opcional: permite hacer clic a través del texto */
+">
+${fechaFormateada}
+</p>
+
+
 <img
 src="logo.svg"
 style="
