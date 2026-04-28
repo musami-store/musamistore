@@ -412,7 +412,6 @@ nav ul li a:active{
         margin-right:0;
     }
     .banner p{
-        margin:0;
         font-size: 12px;
     }
 }
@@ -1264,14 +1263,30 @@ background:rgba(86, 125, 170, .45)
 
 .banner{
     background-color: var(--color-border);
-    color: white;
-    height: 30px;
-    align-items: center;
-    justify-content: center;
-    margin:0;
-    display: flex;
-
+    color:white;
+    height:30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden; /* importante para ocultar la animación */
 }
+
 .banner p{
     margin:0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.banner p.slide-out{
+    transform: translateY(-30px);
+    opacity:0;
+}
+
+.banner p.slide-in{
+    transform: translateY(30px);
+    opacity:0;
+}
+
+.banner p.show{
+    transform: translateY(0);
+    opacity:1;
 }
