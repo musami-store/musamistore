@@ -282,9 +282,8 @@ nav ul li a:active{
     left: 0;
     display: none;
     flex-direction: column;
-    background-color: none;
     padding: 10px 0;
-    min-width: 160px;
+    width: 100%;
     z-index: 1000;
 }
 
@@ -1174,14 +1173,18 @@ small{
 
 #save-order-image{
     background-color: var(--color-border);
-    color: white;
-    border: none;
+    color: var(--color-border);
+    background-color: white;
+    border:1px;
+    border-color: var(--color-border);
+    border-style: solid;
+    font-weight: 700;
+    transition: background-color 0.5s;
     font-size: 16px;
     padding: 15px;
-    border-radius: 4px;
 }
 #save-order-image:hover{
-    background-color: #4648bb85;
+    background-color: var(--color-hover-transparent);
     cursor:pointer
 }
 

@@ -2374,5 +2374,258 @@ const PRODUCTS = {
         },
         category: "Bisuteria",
         subcategory: "Aros"
+    },
+    "argollas-3.10":{
+        title: "Argolla triple",
+        variants:{
+            "rojo":{
+                label: "Rojo aterciopelado",
+                price: 1600,
+                images: ["Products/3. Aros coloridos/10b.webp", "Products/3. Aros coloridos/10c.webp"],
+                stock: 1
+            },
+            "rosa":{
+                label: "Rosa - AGOTADO",
+                price: 1600,
+                images: ["Products/3. Aros coloridos/10b.webp", "Products/3. Aros coloridos/10c.webp"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-3.11":{
+        title: "Aros colgantes",
+        variants:{
+            "rosa":{
+                label: "Rosa",
+                price: 1800,
+                images: ["Products/3. Aros coloridos/11a (ROSA) $1.800.webp", "Products/3. Aros coloridos/11b.webp", "Products/3. Aros coloridos/11c.webp", "Products/3. Aros coloridos/11c.webp", "Products/3. Aros coloridos/11d.webp", "Products/3. Aros coloridos/11e.webp"],
+                stock: 1
+            },
+            "negro":{
+                label: "Negro - AGOTADO",
+                price: 1800,
+                images: ["Products/3. Aros coloridos/11a (ROSA) $1.800.webp", "Products/3. Aros coloridos/11b.webp", "Products/3. Aros coloridos/11c.webp", "Products/3. Aros coloridos/11c.webp", "Products/3. Aros coloridos/11d.webp", "Products/3. Aros coloridos/11e.webp"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-3.12":{
+        title: "Aros floreados",
+        price: 1700,
+        images: ["Products/3. Aros coloridos/12a $1.700.jpg", "Products/3. Aros coloridos/12b.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-3.13":{
+        title: "Argollas",
+        price: 1500,
+        images: ["Products/3. Aros coloridos/13a $1.500.jpg", "Products/3. Aros coloridos/13b.jpg", "Products/3. Aros coloridos/13c.jpg", "Products/3. Aros coloridos/13d.jpg", "Products/3. Aros coloridos/13e.jpg", "Products/3. Aros coloridos/13f.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-3.14":{
+        title: "Argollas",
+        variants:{
+            "rosa":{
+                label: "Rosa",
+                price: 1500,
+                images: ["Products/3. Aros coloridos/14a (ROSA-VERDE) $1.500.jpg", "Products/3. Aros coloridos/14b.jpg", "Products/3. Aros coloridos/14c.jpg", "Products/3. Aros coloridos/14d.jpg", "Products/3. Aros coloridos/14e.jpg", "Products/3. Aros coloridos/14f.jpg", "Products/3. Aros coloridos/14g.jpg", "Products/3. Aros coloridos/14h.jpg", "Products/3. Aros coloridos/14i.jpg", "Products/3. Aros coloridos/14j.jpg"],
+                stock: 1
+            },
+            "verde":{
+                label: "Verde",
+                price: 1500,
+                images: ["Products/3. Aros coloridos/14a (ROSA-VERDE) $1.500.jpg", "Products/3. Aros coloridos/14b.jpg", "Products/3. Aros coloridos/14c.jpg", "Products/3. Aros coloridos/14d.jpg", "Products/3. Aros coloridos/14e.jpg", "Products/3. Aros coloridos/14f.jpg", "Products/3. Aros coloridos/14g.jpg", "Products/3. Aros coloridos/14h.jpg", "Products/3. Aros coloridos/14i.jpg", "Products/3. Aros coloridos/14j.jpg"],
+                stock: 1
+            }
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-3.15":{
+        title: "Argollas",
+        price: 1300,
+        images: ["Products/3. Aros coloridos/15a $1.300.jpg", "Products/3. Aros coloridos/15b.jpg", "Products/3. Aros coloridos/15c.jpg", "Products/3. Aros coloridos/15d.jpg", "Products/3. Aros coloridos/15e.jpg", "Products/3. Aros coloridos/15f.jpg", "Products/3. Aros coloridos/15g.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-3.16":{
+        title: "Argollas variedad",
+        variants:{
+            "1":{
+                label: "Modelo 01",
+                price: 1300,
+                images: ["Products/3. Aros coloridos/16a (01-02-03-05) $1.300.jpg", "Products/3. Aros coloridos/16b.jpg", "Products/3. Aros coloridos/16c.jpg", "Products/3. Aros coloridos/16d.jpg"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 1300,
+                images: ["Products/3. Aros coloridos/16a (01-02-03-05) $1.300.jpg", "Products/3. Aros coloridos/16b.jpg", "Products/3. Aros coloridos/16c.jpg", "Products/3. Aros coloridos/16d.jpg"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 1300,
+                images: ["Products/3. Aros coloridos/16a (01-02-03-05) $1.300.jpg", "Products/3. Aros coloridos/16b.jpg", "Products/3. Aros coloridos/16c.jpg", "Products/3. Aros coloridos/16d.jpg"],
+                stock: 1
+            },
+            "4":{
+                label: "Modelo 04 - AGOTADO",
+                price: 1300,
+                images: ["Products/3. Aros coloridos/16a (01-02-03-05) $1.300.jpg", "Products/3. Aros coloridos/16b.jpg", "Products/3. Aros coloridos/16c.jpg", "Products/3. Aros coloridos/16d.jpg"],
+                stock: 0
+            },
+            "5":{
+                label: "Modelo 05",
+                price: 1300,
+                images: ["Products/3. Aros coloridos/16a (01-02-03-05) $1.300.jpg", "Products/3. Aros coloridos/16b.jpg", "Products/3. Aros coloridos/16c.jpg", "Products/3. Aros coloridos/16d.jpg"],
+                stock: 1
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-3.17":{
+        title: "Argollas variedad",
+        variants:{
+            "1":{
+                label: "Modelo 01",
+                price: 1300,
+                images: ["Products/3. Aros coloridos/17a (todos disponibles) $1.300.jpg", "Products/3. Aros coloridos/17b.jpg", "Products/3. Aros coloridos/17c.jpg", "Products/3. Aros coloridos/17d.jpg"],
+                stock: 1,
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 1300,
+                images: ["Products/3. Aros coloridos/17a (todos disponibles) $1.300.jpg", "Products/3. Aros coloridos/17b.jpg", "Products/3. Aros coloridos/17c.jpg", "Products/3. Aros coloridos/17d.jpg"],
+                stock: 1,
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 1300,
+                images: ["Products/3. Aros coloridos/17a (todos disponibles) $1.300.jpg", "Products/3. Aros coloridos/17b.jpg", "Products/3. Aros coloridos/17c.jpg", "Products/3. Aros coloridos/17d.jpg"],
+                stock: 1,
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 1300,
+                images: ["Products/3. Aros coloridos/17a (todos disponibles) $1.300.jpg", "Products/3. Aros coloridos/17b.jpg", "Products/3. Aros coloridos/17c.jpg", "Products/3. Aros coloridos/17d.jpg"],
+                stock: 1,
+            },
+            "5":{
+                label: "Modelo 05",
+                price: 1300,
+                images: ["Products/3. Aros coloridos/17a (todos disponibles) $1.300.jpg", "Products/3. Aros coloridos/17b.jpg", "Products/3. Aros coloridos/17c.jpg", "Products/3. Aros coloridos/17d.jpg"],
+                stock: 1,
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-3.18":{
+        title: "Argollas variedad",
+        variants:{
+            "1":{
+                label: "Modelo 01",
+                price: 1200,
+                images: ["Products/3. Aros coloridos/18a (1-2-5-7-8-9) $1.200.jpg", "Products/3. Aros coloridos/18b.jpg", "Products/3. Aros coloridos/18c.jpg", "Products/3. Aros coloridos/18d.jpg"],
+                stock:1
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 1200,
+                images: ["Products/3. Aros coloridos/18a (1-2-5-7-8-9) $1.200.jpg", "Products/3. Aros coloridos/18b.jpg", "Products/3. Aros coloridos/18c.jpg", "Products/3. Aros coloridos/18d.jpg"],
+                stock:1
+            },
+            "3":{
+                label: "Modelo 03 - AGOTADO",
+                price: 1200,
+                images: ["Products/3. Aros coloridos/18a (1-2-5-7-8-9) $1.200.jpg", "Products/3. Aros coloridos/18b.jpg", "Products/3. Aros coloridos/18c.jpg", "Products/3. Aros coloridos/18d.jpg"],
+                stock:0
+            },
+            "4":{
+                label: "Modelo 04 - AGOTADO",
+                price: 1200,
+                images: ["Products/3. Aros coloridos/18a (1-2-5-7-8-9) $1.200.jpg", "Products/3. Aros coloridos/18b.jpg", "Products/3. Aros coloridos/18c.jpg", "Products/3. Aros coloridos/18d.jpg"],
+                stock:0
+            },
+            "5":{
+                label: "Modelo 05",
+                price: 1200,
+                images: ["Products/3. Aros coloridos/18a (1-2-5-7-8-9) $1.200.jpg", "Products/3. Aros coloridos/18b.jpg", "Products/3. Aros coloridos/18c.jpg", "Products/3. Aros coloridos/18d.jpg"],
+                stock:1
+            },
+            "6":{
+                label: "Modelo 06 - AGOTADO",
+                price: 1200,
+                images: ["Products/3. Aros coloridos/18a (1-2-5-7-8-9) $1.200.jpg", "Products/3. Aros coloridos/18b.jpg", "Products/3. Aros coloridos/18c.jpg", "Products/3. Aros coloridos/18d.jpg"],
+                stock:0
+            },
+            "7":{
+                label: "Modelo 07",
+                price: 1200,
+                images: ["Products/3. Aros coloridos/18a (1-2-5-7-8-9) $1.200.jpg", "Products/3. Aros coloridos/18b.jpg", "Products/3. Aros coloridos/18c.jpg", "Products/3. Aros coloridos/18d.jpg"],
+                stock:1
+            },
+            "8":{
+                label: "Modelo 08",
+                price: 1200,
+                images: ["Products/3. Aros coloridos/18a (1-2-5-7-8-9) $1.200.jpg", "Products/3. Aros coloridos/18b.jpg", "Products/3. Aros coloridos/18c.jpg", "Products/3. Aros coloridos/18d.jpg"],
+                stock:1
+            },
+            "9":{
+                label: "Modelo 09",
+                price: 1200,
+                images: ["Products/3. Aros coloridos/18a (1-2-5-7-8-9) $1.200.jpg", "Products/3. Aros coloridos/18b.jpg", "Products/3. Aros coloridos/18c.jpg", "Products/3. Aros coloridos/18d.jpg"],
+                stock:1
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-3.19":{
+        title: "Argollas corazón",
+        variants:{
+            "rosa":{
+                label: "Rosa",
+                price: 1500,
+                images: ["Products/3. Aros coloridos/19a (ros-ver-ama-azu) $1.500.jpg", "Products/3. Aros coloridos/19b.jpg", "Products/3. Aros coloridos/19c.jpg"],
+                stock: 1
+            },
+            "verde":{
+                label: "Verde",
+                price: 1500,
+                images: ["Products/3. Aros coloridos/19a (ros-ver-ama-azu) $1.500.jpg", "Products/3. Aros coloridos/19b.jpg", "Products/3. Aros coloridos/19c.jpg"],
+                stock: 1
+            },
+            "amarillo":{
+                label: "Amarillo",
+                price: 1500,
+                images: ["Products/3. Aros coloridos/19a (ros-ver-ama-azu) $1.500.jpg", "Products/3. Aros coloridos/19b.jpg", "Products/3. Aros coloridos/19c.jpg"],
+                stock: 1
+            },
+            "azul":{
+                label: "Azul",
+                price: 1500,
+                images: ["Products/3. Aros coloridos/19a (ros-ver-ama-azu) $1.500.jpg", "Products/3. Aros coloridos/19b.jpg", "Products/3. Aros coloridos/19c.jpg"],
+                stock: 1
+            },
+            "morado":{
+                label: "Morado - AGOTADO",
+                price: 1500,
+                images: ["Products/3. Aros coloridos/19a (ros-ver-ama-azu) $1.500.jpg", "Products/3. Aros coloridos/19b.jpg", "Products/3. Aros coloridos/19c.jpg"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
     }
 }
