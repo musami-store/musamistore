@@ -2627,5 +2627,372 @@ const PRODUCTS = {
         },
         category: "Bisuteria",
         subcategory: "Aros"
+    },
+    "anillos-4-2.1":{
+        title: "Set de anillos x 8",
+        price: 2500,
+        images: ["Products/4. Collares, anillos y pulseras/4.2 Anillos/1a Set x8 $2.500.jpg", "Products/4. Collares, anillos y pulseras/4.2 Anillos/1b.jpg", "Products/4. Collares, anillos y pulseras/4.2 Anillos/1c.jpg"],
+        stock:1,
+        category: "Bisuteria",
+        subcategory: "Anillos"
+    },
+    "anillos-4-2.2":{
+        title: "Set de anillos x 13",
+        price: 2500,
+        images: ["Products/4. Collares, anillos y pulseras/4.2 Anillos/2a Set x13 $2.500.jpg", "Products/4. Collares, anillos y pulseras/4.2 Anillos/2b.jpg", "Products/4. Collares, anillos y pulseras/4.2 Anillos/2c.jpg"],
+        stock:1,
+        category: "Bisuteria",
+        subcategory: "Anillos"
+    },
+    "anillos-4-2.3":{
+        title: "Set de anillos x",
+        price: 2000,
+        images: ["Products/4. Collares, anillos y pulseras/4.2 Anillos/3a Set x10 $2.000.jpg", "Products/4. Collares, anillos y pulseras/4.2 Anillos/3b.jpg", "Products/4. Collares, anillos y pulseras/4.2 Anillos/3c.jpg", "Products/4. Collares, anillos y pulseras/4.2 Anillos/3d.jpg", "Products/4. Collares, anillos y pulseras/4.2 Anillos/3e.jpg"],
+        stock:1,
+        category: "Bisuteria",
+        subcategory: "Anillos"
+    },
+    "pulseras-4-3.1":{
+        title: "Pulsera perla",
+        price: 800,
+        images: ["Products/4. Collares, anillos y pulseras/4.3 Pulseras/1.a (pla) $800.jpg", "Products/4. Collares, anillos y pulseras/4.3 Pulseras/1.b.jpg", "Products/4. Collares, anillos y pulseras/4.3 Pulseras/1.c.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Pulseras"
+    },
+    "pulseras-4-3.2":{
+        title: "Set pulseras de pareja",
+        price: 2800,
+        images: ["Products/4. Collares, anillos y pulseras/4.3 Pulseras/2.a Pulseras pareja x2 $2.800.jpg", "Products/4. Collares, anillos y pulseras/4.3 Pulseras/2.b.jpg", "Products/4. Collares, anillos y pulseras/4.3 Pulseras/2.c.jpg", "Products/4. Collares, anillos y pulseras/4.3 Pulseras/2.d.jpg"],
+        stock:1,
+        category: "Bisuteria",
+        subcategory: "Pulseras"
+    },
+    "pulseras-4-3.3":{
+        title: "Pulseras mariposa",
+        price: 1500,
+        images: ["Products/4. Collares, anillos y pulseras/4.3 Pulseras/3.a $1.500.jpg", "Products/4. Collares, anillos y pulseras/4.3 Pulseras/3.b.jpg", "Products/4. Collares, anillos y pulseras/4.3 Pulseras/3.c.jpg", "Products/4. Collares, anillos y pulseras/4.3 Pulseras/3.d.jpg"],
+        stock:1,
+        category: "Bisuteria",
+        subcategory: "Pulseras"
+    },
+    "pulseras-4-3.4":{
+        title: "Set pulseras x 10",
+        price: 2800,
+        images: ["Products/4. Collares, anillos y pulseras/4.3 Pulseras/4.a Set x10 $2.800.jpg", "Products/4. Collares, anillos y pulseras/4.3 Pulseras/4.b.jpg", "Products/4. Collares, anillos y pulseras/4.3 Pulseras/4.c.jpg", "Products/4. Collares, anillos y pulseras/4.3 Pulseras/4.d.jpg"],
+        stock:1,
+        category: "Bisuteria",
+        subcategory: "Pulseras"
+    },
+    "collares-4-1.1":{
+        title: "Collar sol",
+        price: 1800,
+        images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/002.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/001.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/000.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-1.2":{
+        title: "Collar doble perlas",
+        variants:{
+            "dorado":{
+                label: "Dorado",
+                price: 2000,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/008.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/004.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/005.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/006.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/007.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/003.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/009.jpg"],
+                stock:1
+            },
+            "plateado":{
+                label: "Plateado",
+                price: 2000,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/008.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/004.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/005.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/006.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/007.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/003.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/009.jpg"],
+                stock:1
+            }
+        },
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-1.3":{
+        title: "Collar doble moneda",
+        variants:{
+            "plateado":{
+                label: "Plateado",
+                price: 2000,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/017.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/011.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/012.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/013.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/014.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/015.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/016.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/010.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/018.webp"],
+                stock: 1
+            },
+            "dorado":{
+                label: "Dorado - AGOTADO",
+                price: 2000,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/017.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/011.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/012.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/013.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/014.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/015.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/016.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/010.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/018.webp"],
+                stock: 0
+            }
+        },
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-1.4":{
+        title: "Collar",
+        variants:{
+            "luna":{
+                label: "Luna",
+                price: 2000,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/023.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/020.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/021.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/022.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/019.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/024.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/025.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/026.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/027.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/028.webp"],
+                stock:1
+            },
+            "rayo":{
+                label: "Rayo - AGOTADO",
+                price: 2000,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/023.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/020.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/021.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/022.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/019.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/024.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/025.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/026.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/027.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/028.webp"],
+                stock:0
+            },
+            "corazon":{
+                label: "Corazón - AGOTADO",
+                price: 2000,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/023.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/020.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/021.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/022.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/019.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/024.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/025.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/026.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/027.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/028.webp"],
+                stock:0
+            },
+            "estrella":{
+                label: "Estrella - AGOTADO",
+                price: 2000,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/023.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/020.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/021.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/022.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/019.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/024.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/025.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/026.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/027.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/028.webp"],
+                stock:0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-1.5":{
+        title: "Collar colorido",
+        variants:{
+            "plateado":{
+                label: "Plateado",
+                price: 2200,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/032.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/030.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/031.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/029.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/033.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/034.webp"],
+                stock: 1
+            },
+            "dorado":{
+                label: "Dorado - AGOTADO",
+                price: 2200,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/032.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/030.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/031.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/029.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/033.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/034.webp"],
+                stock: 0
+            }
+        },
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-1.6":{
+        title: "Collar rosas",
+        price: 1800,
+        images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/038.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/035.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/036.webp", "Products/4. Collares, anillos y pulseras/4.1 Collares/037.webp"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-1.7":{
+        title: "Collar cruz",
+        variants:{
+            "dorado":{
+                label: "Dorado",
+                price: 1800,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/044.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/039.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/040.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/041.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/042.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/043.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/045.jpg"],
+                stock:1
+            },
+            "plateado":{
+                label: "Plateado",
+                price: 1800,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/044.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/039.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/040.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/041.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/042.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/043.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/045.jpg"],
+                stock:1
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-1.8":{
+        title: "Collar cadena serpiente",
+        price: 1200,
+        images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/050.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/046.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/047.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/048.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/049.jpg"],
+        stock:1,
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-1.9":{
+        title: "Collar perlas",
+        price: 2000,
+        images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/054.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/051.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/052.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/053.jpg"],
+        stock:1,
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-1.10":{
+        title: "Collar doble",
+        variants:{
+            "dorado":{
+                label: "Dorado",
+                price: 2000,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/062.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/055.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/056.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/057.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/058.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/059.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/060.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/061.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/063.jpg"],
+                stock:1
+            },
+            "plateado":{
+                label: "Plateado - AGOTADO",
+                price: 2000,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/062.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/055.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/056.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/057.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/058.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/059.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/060.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/061.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/063.jpg"],
+                stock:0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-1.11":{
+        title: "Collar moneda",
+        price: 1800,
+        images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/068.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/064.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/065.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/066.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/067.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/069.jpg"],
+        stock:1,
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-1.12":{
+        title: "Collar punto de luz",
+        variants:{
+            "plateado":{
+                label: "Plateado",
+                price: 1500,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/073.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/070.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/071.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/072.jpg"],
+                stock:1
+            },
+            "dorado":{
+                label: "Dorado - AGOTADO",
+                price: 1500,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/073.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/070.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/071.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/072.jpg"],
+                stock:0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-1.13":{
+        title: "Collar piedra",
+        variants:{
+            "rosa plateado":{
+                label: "Piedra rosa - plateado",
+                price: 1500,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/078.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/074.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/075.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/076.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/077.jpg"],
+                stock:1
+            },
+            "rosa dorado":{
+                label: "Piedra rosa - dorado",
+                price: 1500,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/078.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/074.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/075.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/076.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/077.jpg"],
+                stock:1
+            },
+            "blanco plateado":{
+                label: "Piedra blanca - plateado - AGOTADO",
+                price: 1500,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/078.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/074.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/075.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/076.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/077.jpg"],
+                stock:0
+            },
+            "blanco dorado":{
+                label: "Piedra blanca - dorado - AGOTADO",
+                price: 1500,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/078.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/074.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/075.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/076.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/077.jpg"],
+                stock:0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-1.14":{
+        title: "Cadena piedra morada",
+        price: 2200,
+        images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/082.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/079.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/080.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/081.jpg"],
+        stock:1,
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-1.15":{
+        title: "Collar doble",
+        variants:{
+            "rosa":{
+                label: "Rosa",
+                price: 1500,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/086.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/083.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/084.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/085.jpg"],
+                stock: 1
+            },
+            "blanco":{
+                label: "Blanco - AGOTADO",
+                price: 1500,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/086.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/083.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/084.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/085.jpg"],
+                stock: 0
+            },
+            "verde":{
+                label: "Verde - AGOTADO",
+                price: 1500,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/086.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/083.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/084.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/085.jpg"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-1.16":{
+        title: "Collar mariposas",
+        variants:{
+            "dorado":{
+                label: "Dorado",
+                price: 1500,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/089.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/087.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/088.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/090.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/091.jpg"],
+                stock:1
+            },
+            "plateado":{
+                label: "Plateado",
+                price: 1500,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/089.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/087.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/088.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/090.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/091.jpg"],
+                stock:1
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-1.17":{
+        title: "Collar cuádruple",
+        price: 2000,
+        images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/094.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/092.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/093.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-1.18":{
+        title: "Collar piedra negra",
+        price: 1000,
+        images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/096.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/095.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/097.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-1.19":{
+        title: "Collar perlas",
+        variants:{
+            "plateado":{
+                label: "Plateado",
+                price: 1200,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/101.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/097.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/098.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/099.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/100.jpg"],
+                stock:1
+            },
+            "dorado":{
+                label: "Dorado - AGOTADO",
+                price: 1200,
+                images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/101.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/097.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/098.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/099.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/100.jpg"],
+                stock:0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-1.20":{
+        title: "Collar triple",
+        price: 1800,
+        images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/102.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Collares"
     }
 }
