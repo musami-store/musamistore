@@ -2994,5 +2994,72 @@ const PRODUCTS = {
         stock: 1,
         category: "Bisuteria",
         subcategory: "Collares"
+    },
+    "collares-p.1":{
+        title: "Collar estrella",
+        variants:{
+            "plateado":{
+                label: "Plateado",
+                price: 2200,
+                images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1a Collar Estrella(PLA) $2.200.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1b.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1c.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1d.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1e.png"],
+                stock:1
+            },
+            "dorado":{
+                label: "Dorado - AGOTADO",
+                price: 2200,
+                images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1a Collar Estrella(PLA) $2.200.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1b.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1c.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1d.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1e.png"],
+                stock:0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-p.2":{
+        title: "Collar",
+        price: 1500,
+        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/2a Collar $1.500.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/2b.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/2c.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/2d.png"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-p.3":{
+        title: "Collar doble luna y estrella",
+        price: 1800,
+        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3a Collar doble Luna y Estrella $1.800.jpg", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3b.jpg", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3c.jpg", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3d.jpg", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3e.jpg", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3f.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-p.4":{
+        title: "Collar dije corazón",
+        price: 1800,
+        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/4a Collar dije corazón$1.800.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/4b.jpg", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/4c.jpg", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/4d.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-p.5":{
+        title: "Collar piedras coloridas",
+        price: 2500,
+        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/5a Collar piedras coloridas $2.500.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/5b.jpg", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/5c.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-p.6":{
+        title: "Collar estrellas",
+        price: 2200,
+        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/6a Collar Estrellas$2.200.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/6b.jpg", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/6c.jpg", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/6d.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-p.7":{
+        title: "Pulsera luna y estrellas",
+        price: 2000,
+        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/7a Pulsera Luna y Estrellas $2.000.webp"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Pulseras"
     }
 }
