@@ -753,7 +753,7 @@ const a=
 document.createElement("a");
 
 a.href=image;
-a.download="Pedido Musamí store.png";
+a.download="Pedido Musamí.cl.png";
 a.click();
 showToast("Pedido descargado")
 }
