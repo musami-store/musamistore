@@ -1606,13 +1606,13 @@ const PRODUCTS = {
             "plateado":{
                 label: "Plateado",
                 price: 2200,
-                images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1a Collar Estrella(PLA) $2.200.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1b.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1c.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1d.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1e.PNG"],
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/1a Collar Estrella(PLA) $2.200.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/1b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/1c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/1d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/1e.PNG"],
                 stock:1
             },
             "dorado":{
                 label: "Dorado - AGOTADO",
                 price: 2200,
-                images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1a Collar Estrella(PLA) $2.200.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1b.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1c.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1d.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1e.PNG"],
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/1a Collar Estrella(PLA) $2.200.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/1b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/1c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/1d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/1e.PNG"],
                 stock:0
             },
         },
@@ -1622,7 +1622,7 @@ const PRODUCTS = {
     "collares-p.2":{
         title: "Collar",
         price: 1500,
-        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/2a Collar $1.500.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/2b.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/2c.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/2d.PNG"],
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/2a Collar $1.500.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/2b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/2c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/2d.PNG"],
         stock: 1,
         category: "Bisuteria",
         subcategory: "Collares"
@@ -1630,7 +1630,7 @@ const PRODUCTS = {
     "collares-p.3":{
         title: "Collar doble luna y estrella",
         price: 1800,
-        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3a Collar doble Luna y Estrella $1.800.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3b.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3c.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3d.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3e.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3f.JPG"],
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/3a Collar doble Luna y Estrella $1.800.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/3b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/3c.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/3d.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/3e.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/3f.JPG"],
         stock: 1,
         category: "Bisuteria",
         subcategory: "Collares"
@@ -1638,7 +1638,7 @@ const PRODUCTS = {
     "collares-p.4":{
         title: "Collar dije corazón",
         price: 1800,
-        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/4a Collar dije corazón$1.800.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/4b.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/4c.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/4d.JPG"],
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/4a Collar dije corazón$1.800.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/4b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/4c.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/4d.JPG"],
         stock: 1,
         category: "Bisuteria",
         subcategory: "Collares"
@@ -1646,7 +1646,7 @@ const PRODUCTS = {
     "collares-p.5":{
         title: "Collar piedras coloridas",
         price: 2500,
-        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/5a Collar piedras coloridas $2.500.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/5b.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/5c.JPG"],
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/5a Collar piedras coloridas $2.500.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/5b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/5c.JPG"],
         stock: 1,
         category: "Bisuteria",
         subcategory: "Collares"
@@ -1654,7 +1654,7 @@ const PRODUCTS = {
     "collares-p.6":{
         title: "Collar estrellas",
         price: 2200,
-        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/6a Collar Estrellas$2.200.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/6b.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/6c.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/6d.JPG"],
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/6a Collar Estrellas$2.200.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/6b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/6c.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/6d.JPG"],
         stock: 1,
         category: "Bisuteria",
         subcategory: "Collares"
@@ -1662,7 +1662,7 @@ const PRODUCTS = {
     "collares-p.7":{
         title: "Pulsera luna y estrellas",
         price: 2000,
-        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/7a Pulsera Luna y Estrellas $2.000.webp"],
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/7a Pulsera Luna y Estrellas $2.000.webp"],
         stock: 1,
         category: "Bisuteria",
         subcategory: "Pulseras"
