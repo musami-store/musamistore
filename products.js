@@ -1397,17 +1397,17 @@ const PRODUCTS = {
     "argollas-2.1":{
         title: 'Argollas perlas incrustadas',
         variants: {
-            "plateado": {
-                label: "Plateado - AGOTADO",
-                price: 1300,
-                images: ["Products/2. Aros/1a (dorado) $1.300.jpg", "Products/2. Aros/1b.jpg", "Products/2. Aros/1c.jpg", "Products/2. Aros/1d.jpg", "Products/2. Aros/1e.jpg", "Products/2. Aros/1f.jpg", "Products/2. Aros/1g.jpg", "Products/2. Aros/1h.jpg", "Products/2. Aros/1i.jpg", "Products/2. Aros/1j.jpg"],
-                stock: 0
-            },
             "dorado": {
                 label: "Dorado",
                 price: 1500,
                 images: ["Products/2. Aros/1a (dorado) $1.300.jpg", "Products/2. Aros/1b.jpg", "Products/2. Aros/1c.jpg", "Products/2. Aros/1d.jpg", "Products/2. Aros/1e.jpg", "Products/2. Aros/1f.jpg", "Products/2. Aros/1g.jpg", "Products/2. Aros/1h.jpg", "Products/2. Aros/1i.jpg", "Products/2. Aros/1j.jpg"],
                 stock: 1
+            },
+            "plateado": {
+                label: "Plateado - AGOTADO",
+                price: 1300,
+                images: ["Products/2. Aros/1a (dorado) $1.300.jpg", "Products/2. Aros/1b.jpg", "Products/2. Aros/1c.jpg", "Products/2. Aros/1d.jpg", "Products/2. Aros/1e.jpg", "Products/2. Aros/1f.jpg", "Products/2. Aros/1g.jpg", "Products/2. Aros/1h.jpg", "Products/2. Aros/1i.jpg", "Products/2. Aros/1j.jpg"],
+                stock: 0
             }
         },
         category: "Bisuteria",
@@ -1492,17 +1492,17 @@ const PRODUCTS = {
     "argollas-2.6":{
         title: "Argollas trenzadas - mediana",
         variants: {
-            "plateado": {
-                label: "Plateado - AGOTADO",
-                price: 1000,
-                images: ["Products/2. Aros/6a (solo dorado) $1.000.jpg", "Products/2. Aros/6b.jpg", "Products/2. Aros/6c.jpg", "Products/2. Aros/6d.jpg", "Products/2. Aros/6e.jpg", "Products/2. Aros/6f.jpg"],
-                stock: 0,
-            },
             "dorado": {
                 label: "Dorado",
                 price: 1000,
                 images: ["Products/2. Aros/6a (solo dorado) $1.000.jpg", "Products/2. Aros/6b.jpg", "Products/2. Aros/6c.jpg", "Products/2. Aros/6d.jpg", "Products/2. Aros/6e.jpg", "Products/2. Aros/6f.jpg"],
                 stock: 1,
+            },
+            "plateado": {
+                label: "Plateado - AGOTADO",
+                price: 1000,
+                images: ["Products/2. Aros/6a (solo dorado) $1.000.jpg", "Products/2. Aros/6b.jpg", "Products/2. Aros/6c.jpg", "Products/2. Aros/6d.jpg", "Products/2. Aros/6e.jpg", "Products/2. Aros/6f.jpg"],
+                stock: 0,
             }
         },
         category: "Bisuteria",
@@ -1821,18 +1821,18 @@ const PRODUCTS = {
     "aros-2.16":{
         title: "Aros",
         variants:{
-            "dorado":{
-                label: "Dorado - AGOTADO",
-                price: 800,
-                images:["Products/2. Aros/16a (plateado) $800.jpg", "Products/2. Aros/16b.jpg", "Products/2. Aros/16c.jpg", "Products/2. Aros/16d.jpg"],
-                stock: 0
-            },
             "plateado":{
                 label: "Plateado",
                 price: 800,
                 images:["Products/2. Aros/16a (plateado) $800.jpg", "Products/2. Aros/16b.jpg", "Products/2. Aros/16c.jpg", "Products/2. Aros/16d.jpg"],
                 stock: 1
             },
+            "dorado":{
+                label: "Dorado - AGOTADO",
+                price: 800,
+                images:["Products/2. Aros/16a (plateado) $800.jpg", "Products/2. Aros/16b.jpg", "Products/2. Aros/16c.jpg", "Products/2. Aros/16d.jpg"],
+                stock: 0
+            }
         },
         category: "Bisuteria",
         subcategory: "Aros"
@@ -1840,17 +1840,17 @@ const PRODUCTS = {
     "aros-2.17":{
         title: "Aros variedad",
         variants:{
-            "4":{
-                label: "04 - AGOTADO",
-                price: 800,
-                images: ["Products/2. Aros/17a (disponible solo 05) $800.jpg", "Products/2. Aros/17b.jpg"],
-                stock: 0
-            },
             "5":{
                 label: "05 Print vaca",
                 price: 800,
                 images: ["Products/2. Aros/17a (disponible solo 05) $800.jpg", "Products/2. Aros/17b.jpg"],
                 stock: 1
+            },
+            "4":{
+                label: "04 - AGOTADO",
+                price: 800,
+                images: ["Products/2. Aros/17a (disponible solo 05) $800.jpg", "Products/2. Aros/17b.jpg"],
+                stock: 0
             },
             "6":{
                 label: "06 - AGOTADO",
