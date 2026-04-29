@@ -1638,7 +1638,7 @@ const PRODUCTS = {
     "collares-p.4":{
         title: "Collar dije corazón",
         price: 1800,
-        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/4a Collar dije corazón$1.800.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/4b.jpg", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/4c.jpg", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/4d.jpg"],
+        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/4a Collar dije corazón$1.800.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/4b.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/4c.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/4d.JPG"],
         stock: 1,
         category: "Bisuteria",
         subcategory: "Collares"
@@ -1646,7 +1646,7 @@ const PRODUCTS = {
     "collares-p.5":{
         title: "Collar piedras coloridas",
         price: 2500,
-        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/5a Collar piedras coloridas $2.500.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/5b.jpg", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/5c.jpg"],
+        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/5a Collar piedras coloridas $2.500.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/5b.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/5c.JPG"],
         stock: 1,
         category: "Bisuteria",
         subcategory: "Collares"
@@ -1654,7 +1654,7 @@ const PRODUCTS = {
     "collares-p.6":{
         title: "Collar estrellas",
         price: 2200,
-        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/6a Collar Estrellas$2.200.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/6b.jpg", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/6c.jpg", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/6d.jpg"],
+        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/6a Collar Estrellas$2.200.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/6b.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/6c.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/6d.JPG"],
         stock: 1,
         category: "Bisuteria",
         subcategory: "Collares"
