@@ -1606,13 +1606,13 @@ const PRODUCTS = {
             "plateado":{
                 label: "Plateado",
                 price: 2200,
-                images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1a Collar Estrella(PLA) $2.200.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1b.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1c.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1d.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1e.png"],
+                images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1a Collar Estrella(PLA) $2.200.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1b.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1c.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1d.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1e.PNG"],
                 stock:1
             },
             "dorado":{
                 label: "Dorado - AGOTADO",
                 price: 2200,
-                images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1a Collar Estrella(PLA) $2.200.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1b.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1c.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1d.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1e.png"],
+                images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1a Collar Estrella(PLA) $2.200.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1b.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1c.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1d.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/1e.PNG"],
                 stock:0
             },
         },
@@ -1622,7 +1622,7 @@ const PRODUCTS = {
     "collares-p.2":{
         title: "Collar",
         price: 1500,
-        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/2a Collar $1.500.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/2b.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/2c.png", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/2d.png"],
+        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/2a Collar $1.500.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/2b.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/2c.PNG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/2d.PNG"],
         stock: 1,
         category: "Bisuteria",
         subcategory: "Collares"
@@ -1630,7 +1630,7 @@ const PRODUCTS = {
     "collares-p.3":{
         title: "Collar doble luna y estrella",
         price: 1800,
-        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3a Collar doble Luna y Estrella $1.800.jpg", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3b.jpg", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3c.jpg", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3d.jpg", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3e.jpg", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3f.jpg"],
+        images: ["Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3a Collar doble Luna y Estrella $1.800.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3b.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3c.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3d.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3e.JPG", "Products/Portada/NEW; Aros, Collares y pulsera/Collares y pulsera/3f.JPG"],
         stock: 1,
         category: "Bisuteria",
         subcategory: "Collares"
