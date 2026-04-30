@@ -693,22 +693,21 @@ let html = `
 <div style="
 background:white;
 padding:40px;
-width:460px;
+width: 460px;
+max-width: 100%;
+box-sizing: border-box;
 border-radius:20px;
+position: relative;
 ">
 
 <div style="text-align:center;margin-bottom:30px;">
 
 <p style="
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 0;         /* Elimina márgenes por defecto */
-  margin-right:8px;
-  margin-top: 8px;
-  color: #4648bb;
-  z-index: 999;      /* Lo mantiene por encima de todo */
-  pointer-events: none; /* Opcional: permite hacer clic a través del texto */
+position:absolute;
+top:0px;
+right:8px;
+color:#4648bb;
+z-index:2;
 ">
 ${fechaFormateada}
 </p>
@@ -719,7 +718,8 @@ src="logo.svg"
 style="
 width:260px;
 height:auto;
-z-index:999;
+position: relative;
+z-index:2;
 ">
 </div>
 <h3 style="color:#4648bb;">Resumen de pedido</h3>
@@ -788,7 +788,11 @@ $${(item.price * item.qty)
 html += `
 <hr>
 
-<h2>
+<h2 style="
+text-align:center;
+color:#84BAF8;
+margin-top:20px;
+">
 Total:
 $${CART.reduce(
 (total,item)=>
@@ -800,10 +804,20 @@ total + (item.price * item.qty),
 </div>
 `;
 
-orderImage.innerHTML=html;
+orderImage.innerHTML = html;
 
+// 👇 ESPERAR A QUE CARGUE EL LOGO (y cualquier img)
+const images = orderImage.querySelectorAll("img");
 
-const canvas=
+await Promise.all([...images].map(img => {
+  return new Promise(resolve => {
+    if (img.complete) resolve();
+    else img.onload = resolve;
+  });
+}));
+
+// 👇 RECIÉN AQUÍ generas la imagen
+const canvas =
 await html2canvas(orderImage,{
 scale:2,
 backgroundColor:"#ffffff"
