@@ -1920,5 +1920,138 @@ const PRODUCTS = {
         stock: 1,
         category: "PlataEsterlina",
         subcategory: "Collares"
+    },
+    "aros-5-3.11":{
+        title: "Aros avión plata",
+        price: 4000,
+        images: ["Products/5. Plata esterlina/5.3 Plata nueva/11a Aros avión plata $4.000.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/11b.JPG", "Products/5. Plata esterlina/5.3 Plata nueva/11c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/11d.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/11e.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/11f.JPG", "Products/5. Plata esterlina/5.3 Plata nueva/11g.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/11h.JPG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Aros"
+    },
+    "aros-5-3.12":{
+        title: "Aros plata $3.800.JPG",
+        price: 3800,
+        images: ["Products/5. Plata esterlina/5.3 Plata nueva/12a Aros plata $3.800.JPG", "Products/5. Plata esterlina/5.3 Plata nueva/12b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/12c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/12d.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/12e.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/12f.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/12g.PNG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Aros"
+    },
+    "aros-5-3.13":{
+        title: "Aros piercing",
+        price: 3500,
+        images: ["Products/5. Plata esterlina/5.3 Plata nueva/13a Aros piercing $3.500.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/13b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/13c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/13d.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/13e.PNG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Aros"
+    },
+    "argollas-5-3.14":{
+        title: "Argollas plata",
+        price: 4000,
+        images: ["Products/5. Plata esterlina/5.3 Plata nueva/14a Argollas plata $4.000.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/14b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/14c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/14d.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/14e.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/14f.PNG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Aros"
+    },
+    "aros-5-3.15":{
+        title: "Aros plata",
+        price: 3500,
+        images: ["Products/5. Plata esterlina/5.3 Plata nueva/15a Aros plata $3.500.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/15b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/15c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/15d.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/15e.PNG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Aros"
+    },
+    "aros-5-3.16":{
+        title: "Aros plata",
+        price: 4000,
+        images: ["Products/5. Plata esterlina/5.3 Plata nueva/16a Aros plata esterlina $4.000.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/16b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/16c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/16d.PNG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Aros"
+    },
+    "aros-5-3.17":{
+        title: "Aros plata",
+        price: 3500,
+        images: ["Products/5. Plata esterlina/5.3 Plata nueva/17a Aros plata $3.500.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/17b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/17c.PNG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Aros"
+    },
+    "aros-5-3.18":{
+        title: "Aros plata",
+        price: 4000,
+        images: ["Products/5. Plata esterlina/5.3 Plata nueva/18a Aros plata $4.000.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/18b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/18c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/18d.PNG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Aros" 
+    },
+    "argollas-5-3.19":{
+        title: "Argollas estrella",
+        price: 5000,
+        images: ["Products/5. Plata esterlina/5.3 Plata nueva/19 a Argollas estrella $5.000.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/19b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/19c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/20a Aros plata $4.000.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/20b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/20c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/20d.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/20e.PNG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Aros"
+    },
+    "aros-5-3.20":{
+        title: "Aros plata",
+        price: 4000,
+        images: ["Products/5. Plata esterlina/5.3 Plata nueva/20a Aros plata $4.000.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/20b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/20c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/20d.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/20e.PNG"],
+        category: "PlataEsterlina",
+        subcategory: "Aros"
+    },
+    "pulseras-5-2.1":{
+        title: "Pulsera charms plata",
+        price: 5800,
+        images: ["Products/5. Plata esterlina/5.2 Plata/1a Pulsera charms plata $5.800.jpg", "Products/5. Plata esterlina/5.2 Plata/1b.jpg", "Products/5. Plata esterlina/5.2 Plata/1c.jpg", "Products/5. Plata esterlina/5.2 Plata/1d.jpg", "Products/5. Plata esterlina/5.2 Plata/1e.jpg"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Pulseras"
+    },
+    "pulseras-5-2.2":{
+        title: "Pulsera margaritas plata",
+        price: 4000,
+        images: ["Products/5. Plata esterlina/5.2 Plata/2a Pulsera Margaritas plata $4.000.webp", "Products/5. Plata esterlina/5.2 Plata/2b.webp", "Products/5. Plata esterlina/5.2 Plata/2c.webp", "Products/5. Plata esterlina/5.2 Plata/2d.webp", "Products/5. Plata esterlina/5.2 Plata/2e.webp", "Products/5. Plata esterlina/5.2 Plata/2f.webp"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Pulseras"
+    },
+    "collares-5-2.3":{
+        title: "Collar doble plata",
+        price: 4000,
+        images: ["Products/5. Plata esterlina/5.2 Plata/3a Collar doble plata $4.000.jpg", "Products/5. Plata esterlina/5.2 Plata/3b.jpg"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Collares"
+    },
+    "collares-5-2.4":{
+        title: "Collar plata",
+        price: 4500,
+        images: ["Products/5. Plata esterlina/5.2 Plata/4a Collar plata $4.500.jpg", "Products/5. Plata esterlina/5.2 Plata/4b.jpg", "Products/5. Plata esterlina/5.2 Plata/4c.jpg", "Products/5. Plata esterlina/5.2 Plata/4d.jpg"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Collares"
+    },
+    "anillos-5-2.5":{
+        title: "Anillo cinturón de corazón - ajustable - plata",
+        price: 3500,
+        images: ["Products/5. Plata esterlina/5.2 Plata/5a Anillo cinturón de corazón - ajustable - plata $3.500.webp", "Products/5. Plata esterlina/5.2 Plata/5b.webp", "Products/5. Plata esterlina/5.2 Plata/5c.webp", "Products/5. Plata esterlina/5.2 Plata/5d.webp", "Products/5. Plata esterlina/5.2 Plata/5e.webp", "Products/5. Plata esterlina/5.2 Plata/5f.webp", "Products/5. Plata esterlina/5.2 Plata/5g.webp", "Products/5. Plata esterlina/5.2 Plata/5h.webp", "Products/5. Plata esterlina/5.2 Plata/5i.webp", "Products/5. Plata esterlina/5.2 Plata/5j.webp"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Anillos"
+    },
+    "anillos-5-2.6":{
+        title: "Anillo ajustable plata",
+        price: 1,
+        images: ["Products/5. Plata esterlina/5.2 Plata/6a Anillo ajustable plata.webp", "Products/5. Plata esterlina/5.2 Plata/6b.webp", "Products/5. Plata esterlina/5.2 Plata/6c.webp", "Products/5. Plata esterlina/5.2 Plata/6d.webp", "Products/5. Plata esterlina/5.2 Plata/6e.webp", "Products/5. Plata esterlina/5.2 Plata/6f.webp", "Products/5. Plata esterlina/5.2 Plata/6g.webp"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Anillos"
+    },
+    "anillos-5-2.7":{
+        title: "Anillo ajustable plata",
+        variants:{
+            ""
+        }
     }
 }
