@@ -1,4 +1,5 @@
 const PRODUCTS = {
+    ///BISUTERÍA
     "argollas-2.1":{
         title: 'Argollas perlas incrustadas',
         variants: {
@@ -1666,5 +1667,258 @@ const PRODUCTS = {
         stock: 1,
         category: "Bisuteria",
         subcategory: "Pulseras"
+    },
+    "aros-p.1":{
+        title: "Candado corazón",
+        price: 2500,
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/1a Candado Corazón $2.500.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/1b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/1c.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/1d.JPG"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p.2":{
+        title: "Aros piedritas",
+        price: 2800,
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/2a Aros piedritas $2.800.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/2b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/2c.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/2d.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/2e.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/2f.JPG"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p.3":{
+        title: "Aros perlas",
+        price: 1600,
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/3a Aros perlas $1.600.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/3b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/3c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/3d.PNG"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-p.4":{
+        title: "Argollas perlas incrustadas",
+        price: 2500,
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/4a Argollas perlas incrustadas $2.500.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/4b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/4c.PNG"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p.5":{
+        title: "Aros perlas corazón",
+        price: 1700,
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/5a Aros perlas corazón $1.700.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/5b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/5c.PNG"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p.6":{
+        title: "Aros print",
+        price: 2500,
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/6a Aros print $2.500.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/6b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/6c.PNG"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p.7":{
+        title: "Aros corazón",
+        price: 1500,
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/7a Aros corazón $1.500.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/7b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/7c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/7d.PNG"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p.8":{
+        title: "Aros corazón floreado",
+        price: 2500,
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/8a Aros corazón floreado $2.500.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/8b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/8c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/8d.PNG"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p.9":{
+        title: "Aros corazón",
+        price: 2300,
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/9a Aros corazón $2.300.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/9b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/9c.PNG"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p.10":{
+        title: "Aros flor",
+        price: 1700,
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/10a Aros flor $1.700.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/10b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/10c.PNG"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p.11":{
+        title: "Aros flor",
+        price: 2300,
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/11a Aros flor $2.300.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/11b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/11c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/1d.PNG"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-p.12":{
+        title: "Argollas perlas - AGOTADO",
+        price: 1700,
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/12a Argollas perlas (agotado) $1.700.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/12b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/12c.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/12d.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/12e.JPG"],
+        stock: 0,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-p.13":{
+        title: "Argollas forma corazón",
+        price: 2000,
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/13a Argollas forma corazón $2.000.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/13b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/13c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/13d.PNG"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-p.14":{
+        title: "Argollas con estrellas colgantes",
+        price: 2200,
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/14a Argollas con estrellas colgantes $2.200.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/14b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/14c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/14d.PNG"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p.15":{
+        title: "Aros azules",
+        price: 1900,
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/15a Aros azules $1.900.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/15b.PNG"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-psummer.1":{
+        title: "Aros corazón destellos",
+        variants:{
+            "plateado":{
+                label: "Plateado",
+                price: 2500,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/1a Aros Corazón destellos (PLA) $2.500.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/1b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/1c.webp", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/1d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/1e.webp", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/1f.PNG"],
+                stock: 1
+            },
+            "dorado":{
+                label: "Dorado - AGOTADO",
+                price: 2500,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/1a Aros Corazón destellos (PLA) $2.500.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/1b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/1c.webp", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/1d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/1e.webp", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/1f.PNG"],
+                stock: 0
+            }
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-psummer.2":{
+        title: "Aros sol",
+        price: 2000,
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/2 a Aros Sol $2.000.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/2b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/2c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/2d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/2e.PNG"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "collares-psummer.3":{
+        title: "Collar sol",
+        price: 2000,
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/3a Collar Sol $1.700.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/3b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/3c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/3d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/3e.PNG"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-psummer.4":{
+        title: "Collar",
+        price: 3000,
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/4a Collar $3.000.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/4b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/4c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/4d.PNG"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-psummer.5":{
+        title: "Collar summer",
+        price: 2500,
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/5a Collar Summer $2.500.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/5b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/5c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/5d.PNG"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+
+    ///PLATA ESTERLINA
+    "pulseras-5-3.1":{
+        title: "Pulsera plata",
+        price: 4000,
+        images: ["Products/5. Plata esterlina/5.3 Plata nueva/1a Pulsera plata $4.000.JPG", "Products/5. Plata esterlina/5.3 Plata nueva/1b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/1c.JPG", "Products/5. Plata esterlina/5.3 Plata nueva/1d.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/1e.PNG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Pulseras"
+    },
+    "pulseras-5-3.2":{
+        title: "Pulsera corazones plata",
+        price: 1,
+        images: ["Products/5. Plata esterlina/5.3 Plata nueva/2a Pulsera corazones plata.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/2b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/2c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/2d.PNG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Pulseras"
+    },
+    "anillos-5-3.3":{
+        title: "Anillo antiestrés y ansiedad plata",
+        price: 4000,
+        images: ["Products/5. Plata esterlina/5.3 Plata nueva/3a Anillo antiestrés y ansiedad plata $4.000.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/3b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/3c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/3d.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/3e.PNG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Anillos"
+    },
+    "anillos-5-3.4":{
+        title: "Anillo ajustable plata",
+        price: 3500,
+        images: ["Products/5. Plata esterlina/5.3 Plata nueva/4a Anillo ajustable plata $3.500.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/4b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/4c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/4d.PNG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Anillos"
+    },
+    "anillos-5-3.5":{
+        title: "Anillo ajustable plata",
+        price: 4500,
+        images: ["Products/5. Plata esterlina/5.3 Plata nueva/5a Anillo ajustable plata $4.500.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/5b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/5c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/5d.PNG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Anillos"
+    },
+    "collares-5-3.6":{
+        title: "Collar plata",
+        price: 4000,
+        images: ["Products/5. Plata esterlina/5.3 Plata nueva/6a Collar plata $4.000.jpg", "Products/5. Plata esterlina/5.3 Plata nueva/6b.jpg", "Products/5. Plata esterlina/5.3 Plata nueva/6c.jpg", "Products/5. Plata esterlina/5.3 Plata nueva/6d.jpg", "Products/5. Plata esterlina/5.3 Plata nueva/6e.jpg"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Collares"
+    },
+    "collares-5-3.7":{
+        title: "Collar plata",
+        price: 4000,
+        images: ["Products/5. Plata esterlina/5.3 Plata nueva/7a Collar plata $4.000.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/7b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/7c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/7d.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/7e.PNG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Collares"
+    },
+    "collares-5-3.8":{
+        title: "Collar plata",
+        price: 4200,
+        images: ["Products/5. Plata esterlina/5.3 Plata nueva/8a Collar plata $4.200.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/8b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/8c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/8d.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/8e.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/8f.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/8g.PNG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Collares"
+    },
+    "collares-5-3.9":{
+        title: "Collar doble plata",
+        price: 4500,
+        images: ["Products/5. Plata esterlina/5.3 Plata nueva/9a Collar doble plata $4.500.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/9b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/9c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/9d.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/9e.PNG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Collares"
+    },
+    "collares-5-3.10":{
+        title: "Collar avión plata",
+        price: 4000,
+        images: ["Products/5. Plata esterlina/5.3 Plata nueva/10a Collar avión plata $4.000.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/10b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/10c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/10d.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/10e.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/10f.PNG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Collares"
     }
 }
