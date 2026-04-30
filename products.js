@@ -2047,11 +2047,5 @@ const PRODUCTS = {
         stock: 1,
         category: "PlataEsterlina",
         subcategory: "Anillos"
-    },
-    "anillos-5-2.7":{
-        title: "Anillo ajustable plata",
-        variants:{
-            ""
-        }
     }
 }
