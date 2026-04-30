@@ -290,6 +290,12 @@ function renderProductCard(card, product){
             <button class="slider-btn next"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
         <h3 class="product-title">${product.title}</h3>
+
+        ${product.brand ? `
+        <p class="product-brand">
+        ${product.brand}
+        </p>
+        ` : ""}
         ${product.variants ? `
             <select class="variant-selector">
                 ${Object.entries(product.variants).map(([k,v])=>`<option value="${k}">${v.label}</option>`).join("")}

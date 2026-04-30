@@ -694,6 +694,12 @@ h1{
     font-size: 14px;
     font-weight: 500;
     color: var(--color-border);
+    margin-bottom: 0;
+}
+.product-brand{
+    font-size:12px;
+    opacity:.6;
+    margin: 0;
 }
 
 .product-price {

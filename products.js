@@ -2233,5 +2233,99 @@ const PRODUCTS = {
         stock: 1,
         category: "Maquillaje",
         subcategory: "Ojos"
-    }
+    },
+    "ojos-make-1.2":{
+        title: "Máscara de pestañas",
+        price: 4500,
+        brand: "O.TWO.O",
+        images: ["Products/Portada/1. Make up y accesorios nuevos/2a Máscara de pestañas O.TWO.O $4.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/2b.JPG", "Products/Portada/1. Make up y accesorios nuevos/2c.png", "Products/Portada/1. Make up y accesorios nuevos/2d.png", "Products/Portada/1. Make up y accesorios nuevos/2e.PNG", "Products/Portada/1. Make up y accesorios nuevos/2f.PNG", "Products/Portada/1. Make up y accesorios nuevos/2g.PNG"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-make-1.3":{
+        title: "Paleta de sombras glitter",
+        price: 3500,
+        images: ["Products/Portada/1. Make up y accesorios nuevos/3a Paleta de sombras glitter $3.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/3b.PNG", "Products/Portada/1. Make up y accesorios nuevos/3c.PNG"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "herramientas-make-1.4":{
+        title: "Esponja de maquillaje",
+        variants:{
+            "rosa":{
+                label: "Rosa",
+                price: 1200,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/4a Esponja de maquillaje (rosa y lila con rosa) $1.200.PNG", "Products/Portada/1. Make up y accesorios nuevos/4b.PNG", "Products/Portada/1. Make up y accesorios nuevos/4c.PNG", "Products/Portada/1. Make up y accesorios nuevos/4d.PNG", "Products/Portada/1. Make up y accesorios nuevos/4e.PNG", "Products/Portada/1. Make up y accesorios nuevos/4f.PNG"],
+                stock: 1
+            },
+            "lila-rosa":{
+                label: "Lila con rosa",
+                price: 1200,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/4a Esponja de maquillaje (rosa y lila con rosa) $1.200.PNG", "Products/Portada/1. Make up y accesorios nuevos/4b.PNG", "Products/Portada/1. Make up y accesorios nuevos/4c.PNG", "Products/Portada/1. Make up y accesorios nuevos/4d.PNG", "Products/Portada/1. Make up y accesorios nuevos/4e.PNG", "Products/Portada/1. Make up y accesorios nuevos/4f.PNG"],
+                stock: 1
+            },
+            "naranjo":{
+                label: "Naranjo - AGOTADO",
+                price: 1200,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/4a Esponja de maquillaje (rosa y lila con rosa) $1.200.PNG", "Products/Portada/1. Make up y accesorios nuevos/4b.PNG", "Products/Portada/1. Make up y accesorios nuevos/4c.PNG", "Products/Portada/1. Make up y accesorios nuevos/4d.PNG", "Products/Portada/1. Make up y accesorios nuevos/4e.PNG", "Products/Portada/1. Make up y accesorios nuevos/4f.PNG"],
+                stock: 0
+            },
+            "rosa-blanco":{
+                label: "Rosa con blanco - AGOTADO",
+                price: 1200,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/4a Esponja de maquillaje (rosa y lila con rosa) $1.200.PNG", "Products/Portada/1. Make up y accesorios nuevos/4b.PNG", "Products/Portada/1. Make up y accesorios nuevos/4c.PNG", "Products/Portada/1. Make up y accesorios nuevos/4d.PNG", "Products/Portada/1. Make up y accesorios nuevos/4e.PNG", "Products/Portada/1. Make up y accesorios nuevos/4f.PNG"],
+                stock: 0
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Herramientas"
+    },
+    "herramientas-make-1.5":{
+        title: "Mini esponja de maqullaje",
+        variants: {
+            "beige":{
+                label: "Beige",
+                price: 400,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
+                stock: 1
+            },
+            "rosa claro":{
+                label: "Rosa claor",
+                price: 400,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
+                stock: 1
+            },
+            "rosa":{
+                label: "Rosa",
+                price: 400,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
+                stock: 1
+            },
+            "morado":{
+                label: "Morado",
+                price: 400,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
+                stock: 1
+            },
+            "gris":{
+                label: "Gris",
+                price: 400,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
+                stock: 1
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Herramientas"
+    },
+    "herramientas-make-1.6":{
+        title: "Discos desmaquillantes",
+        price: 500,
+        images: ["Products/Portada/1. Make up y accesorios nuevos/6a Discos desmaquillantes $500.PNG", "Products/Portada/1. Make up y accesorios nuevos/6b.JPG", "Products/Portada/1. Make up y accesorios nuevos/6c.PNG", "Products/Portada/1. Make up y accesorios nuevos/6d.PNG"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Herramientas"
+    },
+    
 }
