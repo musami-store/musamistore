@@ -1788,6 +1788,14 @@ const PRODUCTS = {
         category: "Bisuteria",
         subcategory: "Aros"
     },
+    "aros-p.16":{
+        title: "Set aros x2",
+        price: 3000,
+        images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/16a Set aros x2 $3.000.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/16b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/16c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/16d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/16e.PNG"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
     "aros-psummer.1":{
         title: "Aros corazón destellos",
         variants:{
@@ -1851,7 +1859,7 @@ const PRODUCTS = {
     },
     "pulseras-5-3.2":{
         title: "Pulsera corazones plata",
-        price: 1,
+        price: 4000,
         images: ["Products/5. Plata esterlina/5.3 Plata nueva/2a Pulsera corazones plata.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/2b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/2c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/2d.PNG"],
         stock: 1,
         category: "PlataEsterlina",
@@ -2042,7 +2050,7 @@ const PRODUCTS = {
     },
     "anillos-5-2.6":{
         title: "Anillo ajustable plata",
-        price: 1,
+        price: 3500,
         images: ["Products/5. Plata esterlina/5.2 Plata/6a Anillo ajustable plata.webp", "Products/5. Plata esterlina/5.2 Plata/6b.webp", "Products/5. Plata esterlina/5.2 Plata/6c.webp", "Products/5. Plata esterlina/5.2 Plata/6d.webp", "Products/5. Plata esterlina/5.2 Plata/6e.webp", "Products/5. Plata esterlina/5.2 Plata/6f.webp", "Products/5. Plata esterlina/5.2 Plata/6g.webp"],
         stock: 1,
         category: "PlataEsterlina",
@@ -2169,7 +2177,7 @@ const PRODUCTS = {
     },
     "aros-5-1.2":{
         title: "Aros corazón perla plata",
-        price: 1,
+        price: 2800,
         images: ["Products/5. Plata esterlina/5.1 Plata rezagada/2a Aros corazón perla plata.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/2b.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/2c.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/2d.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/2e.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/2f.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/2g.jpg"],
         stock: 1,
         category: "PlataEsterlina",
@@ -2351,6 +2359,12 @@ const PRODUCTS = {
             },
             "rosa":{
                 label: "Rosa - AGOTADO",
+                price: 1500,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/7a Par de pinches (rojo, gris y blanco) $1.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/7b.PNG", "Products/Portada/1. Make up y accesorios nuevos/7c.PNG"],
+                stock: 0
+            },
+            "negro":{
+                label: "Negro - AGOTADO",
                 price: 1500,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/7a Par de pinches (rojo, gris y blanco) $1.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/7b.PNG", "Products/Portada/1. Make up y accesorios nuevos/7c.PNG"],
                 stock: 0

@@ -668,171 +668,97 @@ document.addEventListener("click", e => {
 });
 
 
-async function generateOrderImage(){
+async function generateOrderImage() {
+  if (!CART.length) {
+    showToast("No se puede generar imagen: Carrito vacío", "error");
+    return;
+  }
 
-if(!CART.length){
-showToast("No se puede generar imagen: Carrito vacío", "error")
-return;
-}
+  const ahora = new Date();
+  const fechaFormateada = ahora.toLocaleString('es-ES', {
+    day: '2-digit', month: '2-digit', year: 'numeric',
+    hour: '2-digit', minute: '2-digit', hour12: false
+  }).replace(',', ' -');
 
-const ahora = new Date();
+  const orderImage = document.getElementById("order-image");
 
-const fechaFormateada = ahora.toLocaleString('es-ES', {
-  day: '2-digit',
-  month: '2-digit',
-  year: 'numeric',
-  hour: '2-digit',
-  minute: '2-digit',
-  hour12: false
-}).replace(',', ' -');
+  // 1. MODIFICADO: Estructura más sólida (sin absolute para evitar saltos en móvil)
+  let html = `
+    <div id="render-container" style="background:white; padding:40px; width:460px; box-sizing:border-box; border-radius:20px;">
+      <div style="display:flex; justify-content:flex-end; font-size:14px; color:#4648bb; transform:translate(27px, -27px)">
+        ${fechaFormateada}
+      </div>
+      <div style="text-align:center; margin-bottom:30px;">
+        <img src="logoticket.png" style="width:260px; height:auto; display:inline-block;"> 
+      </div>
+      <h3 style="color:#4648bb; margin-top:0;">Resumen de pedido</h3>
+      <hr style="border:0; border-top:1px solid #eee;">
+  `;
 
-const orderImage =
-document.getElementById("order-image");
-
-let html = `
-<div style="
-background:white;
-padding:40px;
-width: 460px;
-max-width: 100%;
-box-sizing: border-box;
-border-radius:20px;
-position: relative;
-">
-
-<div style="text-align:center;margin-bottom:30px;">
-
-<p style="
-position:absolute;
-top:0px;
-right:8px;
-color:#4648bb;
-z-index:2;
-">
-${fechaFormateada}
-</p>
-
-
-<img
-src="logo.svg"
-style="
-width:260px;
-height:auto;
-position: relative;
-z-index:2;
-">
-</div>
-<h3 style="color:#4648bb;">Resumen de pedido</h3>
-<hr>
-`;
-
-CART.forEach(item=>{
-
-html += `
-<div style="
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 0;
-gap:25px;
-">
-
-<div style="
-display:flex;
-align-items:center;
-gap:20px;
-">
-
-<div>
-<img
-src="${item.image}"
-style="
-object-fit:cover;
-border-radius:12px;
-width:70px;
-height:70px
-"
->
-</div>
-
-<div>
-<div style="
-color: #84BAF8;
-font-weight: bolder;
-">
-${item.title}
-${item.variant ? ` (${item.variant})` : ""}
-</div>
-
-<div style="
-font-size:14px;
-opacity:.7;
-">
-Cantidad: ${item.qty}
-</div>
-
-</div>
-
-</div>
-
-<div style="color: green;">
-$${(item.price * item.qty)
-.toLocaleString("es-CL")}
-</div>
-
-</div>
-`;
-
-});
-
-html += `
-<hr>
-
-<h2 style="
-text-align:center;
-color:#84BAF8;
-margin-top:20px;
-">
-Total:
-$${CART.reduce(
-(total,item)=>
-total + (item.price * item.qty),
-0
-).toLocaleString("es-CL")}
-</h2>
-
-</div>
-`;
-
-orderImage.innerHTML = html;
-
-// 👇 ESPERAR A QUE CARGUE EL LOGO (y cualquier img)
-const images = orderImage.querySelectorAll("img");
-
-await Promise.all([...images].map(img => {
-  return new Promise(resolve => {
-    if (img.complete) resolve();
-    else img.onload = resolve;
+  CART.forEach(item => {
+    html += `
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:15px 0; gap:15px; border-bottom:1px solid #f9f9f9;">
+        <div style="display:flex; align-items:center; gap:15px;">
+          <img src="${item.image}" style="object-fit:cover; border-radius:12px; width:60px; height:60px; min-width:60px;">
+          <div>
+            <div style="color:#84BAF8; font-weight:bolder; font-size:16px;">
+              ${item.title}${item.variant ? ` (${item.variant})` : ""}
+            </div>
+            <div style="font-size:13px; opacity:.7;">Cantidad: ${item.qty}</div>
+          </div>
+        </div>
+        <div style="color:green; font-weight:bold; white-space:nowrap;">
+          $${(item.price * item.qty).toLocaleString("es-CL")}
+        </div>
+      </div>
+    `;
   });
-}));
 
-// 👇 RECIÉN AQUÍ generas la imagen
-const canvas =
-await html2canvas(orderImage,{
-scale:2,
-backgroundColor:"#ffffff"
-});
+  html += `
+    <h2 style="text-align:center; color:#84BAF8; margin-top:25px;">
+      Total: $${CART.reduce((total, item) => total + (item.price * item.qty), 0).toLocaleString("es-CL")}
+    </h2>
+    </div>
+  `;
 
-const image=
-canvas.toDataURL("image/png");
+  orderImage.innerHTML = html;
 
-const a=
-document.createElement("a");
+  // 2. MODIFICADO: Esperar a que las imágenes carguen con un pequeño margen extra para móvil
+  const images = orderImage.querySelectorAll("img");
+  await Promise.all([...images].map(img => {
+    return new Promise(resolve => {
+      if (img.complete) resolve();
+      else {
+        img.onload = resolve;
+        img.onerror = resolve; // Evitar que se bloquee si una imagen falla
+      }
+    });
+  }));
 
-a.href=image;
-a.download="Pedido Musamí.cl.png";
-a.click();
-showToast("Pedido descargado")
+  // Pequeña pausa extra para asegurar el renderizado del motor móvil
+  await new Promise(r => setTimeout(r, 300));
+
+  // 3. MODIFICADO: Configuración de html2canvas optimizada
+  const canvas = await html2canvas(orderImage, {
+    scale: 2,
+    backgroundColor: "#ffffff",
+    useCORS: true, // Crucial para imágenes de productos si vienen de otro dominio
+    allowTaint: true,
+    logging: false,
+    width: 460, // Forzamos el ancho exacto
+  });
+
+  try {
+    const image = canvas.toDataURL("image/png");
+    const a = document.createElement("a");
+    a.href = image;
+    a.download = "Pedido Musamí.cl.png";
+    a.click();
+    showToast("Pedido descargado");
+  } catch (err) {
+    console.error("Error generando imagen:", err);
+    showToast("Error al generar imagen", "error");
+  }
 }
 
 
