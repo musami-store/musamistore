@@ -2498,5 +2498,189 @@ const PRODUCTS = {
             },
         },
         category: "Accesorios"
+    },
+    "herramientas-6.1":{
+        title: "Set x7 brochas de maquillaje",
+        price: 5500,
+        images: ["Products/6. Maquillaje/3. Herramientas de belleza/1a Set x7 brochas de maquillaje $5.500.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/1b.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Herramientas"
+    },
+    "herramientas-6.2":{
+        title: "Set x12 brochas de maquillaje",
+        brand: "Anmor",
+        price: 13500,
+        images: ["Products/6. Maquillaje/3. Herramientas de belleza/2a Set x12 brochas de maquillaje anmor $13.500.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/2b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/2c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/2d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/2e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/2f.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Herramientas"
+    },
+    "herramientas-6.3":{
+        title: "Set x15 brochas de maquillaje",
+        brand: "Docolor",
+        price: 15000,
+        images: ["Products/6. Maquillaje/3. Herramientas de belleza/3a Set brochas de maquillaje x15 docolor $15.000.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/3b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/3c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/3d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/3e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/3f.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Herramientas"
+    },
+    "herramientas-6.4":{
+        title: "Set x12 brochas de maquillaje",
+        brand: "DUcare",
+        price: 1300,
+        images: ["Products/6. Maquillaje/3. Herramientas de belleza/4a Set x12 brochas de maquillaje DUcare $13.000.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/4b.png", "Products/6. Maquillaje/3. Herramientas de belleza/4c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/4d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/4e.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Herramientas"
+    },
+    "herramientas-6.5":{
+        title:  "Set x7 brochas de maquillaje",
+        brand: "Maange",
+        variants:{
+            "dorado":{
+                label: "Dorado",
+                price: 6500,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/5a Set de brochas de maquillaje (dor y mor) Maange x7 $6.500.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5f.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5g.jpg"],
+                stock: 1
+            },
+            "morado":{
+                label: "Morado",
+                price: 6500,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/5a Set de brochas de maquillaje (dor y mor) Maange x7 $6.500.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5f.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5g.jpg"],
+                stock: 1
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Herramientas"
+    },
+    "herramientas-6.6":{
+        title: "Set x6 brochas de maquillaje",
+        brand: "Maange",
+        price: 6000,
+        images: ["Products/6. Maquillaje/3. Herramientas de belleza/6a Brochas de maquillaje x6 Maange $6.000.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/6b.png", "Products/6. Maquillaje/3. Herramientas de belleza/6c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/6d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/6e.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Herramientas"
+    },
+    "herramientas-6.7":{
+        title: "Brocha de ojos doble",
+        brand: "Imagic",
+        price: 1800,
+        images: ["Products/6. Maquillaje/3. Herramientas de belleza/7a Brocha de ojos doble Imagic $1.800.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/7b.png", "Products/6. Maquillaje/3. Herramientas de belleza/7c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/7d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/7e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/7f.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Herramientas"
+    },
+    "herramientas-6.8":{
+        title: "Set x7 brochas + estuche",
+        variants: {
+            "rosa":{
+                label: "Rosa",
+                price: 6500,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/8a Set de 7 brochas +estuche (rosado y celeste) $6.500.png", "Products/6. Maquillaje/3. Herramientas de belleza/8b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/8c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/8d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/8e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/8f.jpg"],
+                stock: 1
+            },
+            "celeste":{
+                label: "Celeste",
+                price: 6500,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/8a Set de 7 brochas +estuche (rosado y celeste) $6.500.png", "Products/6. Maquillaje/3. Herramientas de belleza/8b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/8c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/8d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/8e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/8f.jpg"],
+                stock: 1
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Herramientas"
+    },
+    "herramientas-6.9":{
+        title: "Set x12 brochas de maquillaje",
+        variants: {
+            "rosa plateado":{
+                label: "Rosa plateado",
+                price: 5800,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/9a Set de 12 brochas MAANGE $5.800 (Rosa con plateado).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9e.jpg"],
+                stock: 1
+            },
+            "rosa dorado":{
+                label: "Rosa dorado - AGOTADO",
+                price: 5800,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/9a Set de 12 brochas MAANGE $5.800 (Rosa con plateado).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9e.jpg"],
+                stock: 0
+            },
+            "negro":{
+                label: "Negro - AGOTADO",
+                price: 5800,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/9a Set de 12 brochas MAANGE $5.800 (Rosa con plateado).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9e.jpg"],
+                stock: 0
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Herramientas"
+    },
+    "ojos-6.10":{
+        title: "Set x3 pares de pestañas",
+        variants:{
+            "y3-1":{
+                label: "Y3-1",
+                price: 0,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/10a Set x3 pares de pestañas Maange (Y3-1).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10f.jpg"],
+                stock: 1
+            },
+            "y3-2":{
+                label: "Y3-2 - AGOTADO",
+                price: 0,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/10a Set x3 pares de pestañas Maange (Y3-1).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10f.jpg"],
+                stock: 0
+            },
+            "y3-3":{
+                label: "Y3-3 - AGOTADO",
+                price: 0,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/10a Set x3 pares de pestañas Maange (Y3-1).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10f.jpg"],
+                stock: 0
+            },
+            "y3-4":{
+                label: "Y3-4 - AGOTADO",
+                price: 0,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/10a Set x3 pares de pestañas Maange (Y3-1).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10f.jpg"],
+                stock: 0
+            },
+            "y3-5":{
+                label: "Y3-5 - AGOTADO",
+                price: 0,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/10a Set x3 pares de pestañas Maange (Y3-1).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10f.jpg"],
+                stock: 0
+            },
+            "y3-6":{
+                label: "Y3-6 - AGOTADO",
+                price: 0,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/10a Set x3 pares de pestañas Maange (Y3-1).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10f.jpg"],
+                stock: 0
+            },
+            "y3-7":{
+                label: "Y3-7 - AGOTADO",
+                price: 0,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/10a Set x3 pares de pestañas Maange (Y3-1).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10f.jpg"],
+                stock: 0
+            },
+            "y3-8":{
+                label: "Y3-8 - AGOTADO",
+                price: 0,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/10a Set x3 pares de pestañas Maange (Y3-1).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10f.jpg"],
+                stock: 0
+            },
+            "y3-9":{
+                label: "Y3-9 - AGOTADO",
+                price: 0,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/10a Set x3 pares de pestañas Maange (Y3-1).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10f.jpg"],
+                stock: 0
+            },
+            "y3-10":{
+                label: "Y3-10 - AGOTADO",
+                price: 0,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/10a Set x3 pares de pestañas Maange (Y3-1).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10f.jpg"],
+                stock: 0
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Ojos"
     }
 }

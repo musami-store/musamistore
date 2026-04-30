@@ -687,6 +687,16 @@ h1{
     .slider-btn {
         display: none;
     }
+    .slider-track .product-card {
+        width: 160px;
+    }
+    .product-slider-btn {
+        display: none;
+    }
+    .product-slider-container::before,
+    .product-slider-container::after {
+        width: 30px;
+    }
 }
 
 
@@ -1307,4 +1317,99 @@ background:rgba(86, 125, 170, .45)
 .banner p.show{
     transform: translateY(0);
     opacity:1;
+}
+
+/*PRODUCT SLIDERS*/
+
+.product-slider-section {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.product-slider-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.product-slider-container::before,
+.product-slider-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.product-slider-container.show-left::before {
+    opacity: 1;
+}
+
+.product-slider-container.show-right::after {
+    opacity: 1;
+}
+
+.product-slider-container::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, transparent 45%);
+}
+
+.product-slider-container::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0.95) 0%, transparent 45%);
+}
+
+.product-slider-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px;
+    scroll-snap-type: x proximity;
+}
+.product-slider-track .product-card {
+    flex: 0 0 auto;
+    width: 250px;
+    scroll-snap-align: start;
+}
+
+.product-slider-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor: pointer;
+    padding: 6px 10px;
+    font-size: 16px;
+    border-color: var(--color-border);
+    transform: scale(1.2);
+    align-self: center;
+}
+.product-slider-btn.prev{
+    left: -15px;
+    z-index: 99;
+}
+.product-slider-btn.next{
+    right: -15px;
+    z-index: 99;
+}
+.product-slider-track::-webkit-scrollbar {
+    height: var(--sb-size); /* importante: height, no width */
+}
+
+.product-slider-track::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 1px;
+}
+
+.product-slider-track::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 1px;
 }
