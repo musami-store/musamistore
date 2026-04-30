@@ -1,6 +1,69 @@
-/* =========================
-   BASE DE DATOS DE PRODUCTOS
-   ========================= */
+async function loadHeader() {
+    const placeholder = document.getElementById("header-placeholder");
+    if (!placeholder) return;
+
+    try {
+        const res = await fetch("header.html");
+        const html = await res.text();
+
+        placeholder.outerHTML = html;
+
+        // 🔥 IMPORTANTE: inicializar cosas del header aquí
+        initCartDropdown();
+        renderCart();
+        updateFavoritesCount();
+
+    } catch (err) {
+        console.error("Error cargando header:", err);
+    }
+
+    // MENU
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", () => {
+            mobileMenu.classList.toggle("open");
+        });
+    }
+
+    // SCROLL HEADER
+    let lastScroll = 0;
+    const header = document.querySelector(".site-header");
+
+    if (header) {
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > lastScroll && currentScroll > 50) {
+                header.classList.add("hidden");
+            } else {
+                header.classList.remove("hidden");
+            }
+
+            lastScroll = currentScroll;
+        });
+    }
+
+    document
+    .getElementById("save-order-image")
+    ?.addEventListener("click", generateOrderImage);
+
+    const mobileCategories = document.querySelectorAll(".mobile-category");
+
+    mobileCategories.forEach(cat => {
+        cat.addEventListener("click", () => {
+            const submenu = cat.nextElementSibling;
+            if (!submenu) return;
+
+            document.querySelectorAll(".mobile-submenu").forEach(sm => {
+                if (sm !== submenu) sm.classList.remove("open");
+            });
+
+            submenu.classList.toggle("open");
+        });
+    });
+}
 
 
 /* =========================
@@ -87,7 +150,6 @@ function initCartDropdown() {
         cartDropdown.classList.toggle("open");
     });
 }
-initCartDropdown();
 
 function addToCart(productId, variantKey=null, qty=1){
     const product = PRODUCTS[productId];
@@ -442,6 +504,8 @@ lightboxTrack?.addEventListener("touchend",e=>{
    INICIALIZACIÓN
    ========================= */
 document.addEventListener("DOMContentLoaded", () => {
+
+    loadHeader();
     loadCart();
     loadFavorites();
 
@@ -565,50 +629,6 @@ document.addEventListener("click", e => {
         renderCartPage();
     }
 });
-
-
-const mobileCategories = document.querySelectorAll(".mobile-category");
-mobileCategories.forEach(cat => {
-    cat.addEventListener("click", e => {
-        const submenu = cat.nextElementSibling;
-        if (!submenu) return;
-
-        // cerrar otros submenus
-        document.querySelectorAll(".mobile-submenu").forEach(sm => {
-            if (sm !== submenu) sm.classList.remove("open");
-        });
-
-        submenu.classList.toggle("open");
-    });
-});
-
-// botón hamburguesa
-const menuToggle = document.querySelector(".menu-toggle");
-const mobileMenu = document.getElementById("mobile-menu");
-menuToggle.addEventListener("click", () => {
-    mobileMenu.classList.toggle("open");
-});
-
-let lastScroll = 0;
-const header = document.querySelector(".site-header");
-
-window.addEventListener("scroll", () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll > lastScroll && currentScroll > 50) {
-         // bajando
-        header.classList.add("hidden");
-    } else {
-        // subiendo
-        header.classList.remove("hidden");
-    }
-
-    lastScroll = currentScroll;
-});
-
-document
-.getElementById("save-order-image")
-?.addEventListener("click",generateOrderImage);
 
 
 async function generateOrderImage(){
