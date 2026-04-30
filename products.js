@@ -2047,5 +2047,180 @@ const PRODUCTS = {
         stock: 1,
         category: "PlataEsterlina",
         subcategory: "Anillos"
-    }
+    },
+    "anillos-5-2.7":{
+        title: "Anillo ajustable plata",
+        variants:{
+            "corazones":{
+                label: "Modelo corazones",
+                price: 3500,
+                images: ["Products/5. Plata esterlina/5.2 Plata/7a Anillo ajustable plata (variante corazones) $3.500.jpg", "Products/5. Plata esterlina/5.2 Plata/7b.jpg", "Products/5. Plata esterlina/5.2 Plata/7c.jpg", "Products/5. Plata esterlina/5.2 Plata/7d.jpg", "Products/5. Plata esterlina/5.2 Plata/7e.jpg"],
+                stock: 1
+            },
+            "estrellas":{
+                label: "Modelo estrellas - AGOTADO",
+                price: 4000,
+                images: ["Products/5. Plata esterlina/5.2 Plata/7a Anillo ajustable plata (variante corazones) $3.500.jpg", "Products/5. Plata esterlina/5.2 Plata/7b.jpg", "Products/5. Plata esterlina/5.2 Plata/7c.jpg", "Products/5. Plata esterlina/5.2 Plata/7d.jpg", "Products/5. Plata esterlina/5.2 Plata/7e.jpg"],
+                stock: 0
+            }
+        },
+        category: "PlataEsterlina",
+        subcategory: "Anillos"
+    },
+    "aros-5-2.8":{
+        title: "Aros gatos en luna plata",
+        price: 4000,
+        images: ["Products/5. Plata esterlina/5.2 Plata/8a Aros gatos en luna plata $4.000.jpg", "Products/5. Plata esterlina/5.2 Plata/8b.jpg", "Products/5. Plata esterlina/5.2 Plata/8c.jpg"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Aros" 
+    },
+    "aros-5-2.9":{
+        title: "Set aros plata",
+        price: 3500,
+        images: ["Products/5. Plata esterlina/5.2 Plata/9a Set aros plata $3.500.jpg", "Products/5. Plata esterlina/5.2 Plata/9b.jpg", "Products/5. Plata esterlina/5.2 Plata/9c.jpg", "Products/5. Plata esterlina/5.2 Plata/9d.jpg"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Aros"
+    },
+    "aros-5-2.10":{
+        title: "Aros punto de luz plata",
+        variants: {
+            "5mm":{
+                label: "5mm",
+                price: 3200,
+                images: ["Products/5. Plata esterlina/5.2 Plata/10a Aros punto de luz plata (5mm y 4mm) $3.200 y $3.000.jpg", "Products/5. Plata esterlina/5.2 Plata/10b.jpg", "Products/5. Plata esterlina/5.2 Plata/10c.jpg", "Products/5. Plata esterlina/5.2 Plata/10d.jpg", "Products/5. Plata esterlina/5.2 Plata/10e.jpg", "Products/5. Plata esterlina/5.2 Plata/10f.jpg"],
+                stock: 1
+            },
+            "4mm":{
+                label: "4mm",
+                price: 3000,
+                images: ["Products/5. Plata esterlina/5.2 Plata/10a Aros punto de luz plata (5mm y 4mm) $3.200 y $3.000.jpg", "Products/5. Plata esterlina/5.2 Plata/10b.jpg", "Products/5. Plata esterlina/5.2 Plata/10c.jpg", "Products/5. Plata esterlina/5.2 Plata/10d.jpg", "Products/5. Plata esterlina/5.2 Plata/10e.jpg", "Products/5. Plata esterlina/5.2 Plata/10f.jpg"],
+                stock: 1
+            },
+            "3mm":{
+                label: "3mm - AGOTADO",
+                price: 2800,
+                images: ["Products/5. Plata esterlina/5.2 Plata/10a Aros punto de luz plata (5mm y 4mm) $3.200 y $3.000.jpg", "Products/5. Plata esterlina/5.2 Plata/10b.jpg", "Products/5. Plata esterlina/5.2 Plata/10c.jpg", "Products/5. Plata esterlina/5.2 Plata/10d.jpg", "Products/5. Plata esterlina/5.2 Plata/10e.jpg", "Products/5. Plata esterlina/5.2 Plata/10f.jpg"],
+                stock: 0
+            }
+        },
+        category: "PlataEsterlina",
+        subcategory: "Aros"
+    },
+    "aros-5-2.11":{
+        title: "Aros plata",
+        price: 3500,
+        images: ["Products/5. Plata esterlina/5.2 Plata/11a Aros plata $3.300.webp", "Products/5. Plata esterlina/5.2 Plata/11b.webp", "Products/5. Plata esterlina/5.2 Plata/11c.webp", "Products/5. Plata esterlina/5.2 Plata/11d.webp", "Products/5. Plata esterlina/5.2 Plata/11e.webp"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Aros"
+    },
+    "aros-5-2.12":{
+        title: "Aros plata",
+        price: 1,
+        images: ["Products/5. Plata esterlina/5.2 Plata/12a Aros plata.webp", "Products/5. Plata esterlina/5.2 Plata/12b.webp", "Products/5. Plata esterlina/5.2 Plata/12c.webp", "Products/5. Plata esterlina/5.2 Plata/12d.webp", "Products/5. Plata esterlina/5.2 Plata/12e.webp"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Aros"
+    },
+    "aros-5-2.13":{
+        title: "Aros plata",
+        price: 3800,
+        images: ["Products/5. Plata esterlina/5.2 Plata/13a Aros plata $3.800.webp", "Products/5. Plata esterlina/5.2 Plata/13b.jpg", "Products/5. Plata esterlina/5.2 Plata/13c.webp", "Products/5. Plata esterlina/5.2 Plata/13d.webp", "Products/5. Plata esterlina/5.2 Plata/13e.webp", "Products/5. Plata esterlina/5.2 Plata/13f.webp"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Aros"
+    },
+    "aros-5-2.14":{
+        title: "Aros plata",
+        variants:{
+            "plateado":{
+                label: "Plateado",
+                price: 4000,
+                images: ["Products/5. Plata esterlina/5.2 Plata/14a Aros plata (PLA) $4.000.webp", "Products/5. Plata esterlina/5.2 Plata/14b.webp", "Products/5. Plata esterlina/5.2 Plata/14c.webp", "Products/5. Plata esterlina/5.2 Plata/14d.webp", "Products/5. Plata esterlina/5.2 Plata/14e.webp", "Products/5. Plata esterlina/5.2 Plata/14f.webp"],
+                stock: 1
+            },
+            "dorado":{
+                label: "Dorado - AGOTADO",
+                price: 4000,
+                images: ["Products/5. Plata esterlina/5.2 Plata/14a Aros plata (PLA) $4.000.webp", "Products/5. Plata esterlina/5.2 Plata/14b.webp", "Products/5. Plata esterlina/5.2 Plata/14c.webp", "Products/5. Plata esterlina/5.2 Plata/14d.webp", "Products/5. Plata esterlina/5.2 Plata/14e.webp", "Products/5. Plata esterlina/5.2 Plata/14f.webp"],
+                stock: 0
+            },
+        },
+        category: "PlataEsterlina",
+        subcategory: "Aros"
+    },
+    "aros-5-2.15":{
+        title: "Aros plata",
+        price: 2500,
+        images: ["Products/5. Plata esterlina/5.2 Plata/15a Aros plata $2.500.jpg", "Products/5. Plata esterlina/5.2 Plata/15b.jpg"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Aros"
+    },
+    "anillos-5-1.1":{
+        title: "Anillo ajustable luna plata",
+        price: 4000,
+        images: ["Products/5. Plata esterlina/5.1 Plata rezagada/1a Anillo ajustable Luna plata $4.000.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/1b.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/1c.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/1d.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/1e.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/1f.jpg"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Anillos"
+    },
+    "aros-5-1.2":{
+        title: "Aros corazón perla plata",
+        price: 1,
+        images: ["Products/5. Plata esterlina/5.1 Plata rezagada/2a Aros corazón perla plata.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/2b.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/2c.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/2d.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/2e.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/2f.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/2g.jpg"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Aros"
+    },
+    "arps-5-1.3":{
+        title: "Aros luna plata",
+        price: 4000,
+        images: ["Products/5. Plata esterlina/5.1 Plata rezagada/3a Aros Luna plata $4.000.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/3b.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/3c.jpg"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Aros"
+    },
+    "aros-5-1.4":{
+        title: "Aros luna plata",
+        price: 4800,
+        images: ["Products/5. Plata esterlina/5.1 Plata rezagada/4a Aros Luna plata $4.800.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/4b.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/4c.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/4d.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/4e.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/4f.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/4g.jpg"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Aros"
+    },
+    "collares-5-1.5":{
+        title: "Collar luna plata",
+        price: 4500,
+        images: ["Products/5. Plata esterlina/5.1 Plata rezagada/5a Collar Luna plata $4.500.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/5b.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/5c.jpg", "Products/5. Plata esterlina/5.1 Plata rezagada/5d.jpg"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Collares"
+    },
+    "collares-5-1.6":{
+        title: "Collar plata",
+        price: 4500,
+        images: ["Products/5. Plata esterlina/5.1 Plata rezagada/6a Collar plata $4.500.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/6b.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/6c.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/6d.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/6e.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/6f.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/6g.PNG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Collares"
+    },
+    "collares-5-1.7":{
+        title: "Collar corazón plata",
+        price: 4200,
+        images: ["Products/5. Plata esterlina/5.1 Plata rezagada/7a Collar corazón plata $4.200.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/7b.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/7c.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/7d.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/7e.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/7f.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/7g.PNG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Collares"
+    },
+    "collares-5-1.8":{
+        title: "Collar flores",
+        price: 4000,
+        images: ["Products/5. Plata esterlina/5.1 Plata rezagada/8a Collar flores $4.000.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/8b.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/8c.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/8d.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/8e.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/8f.PNG"],
+        stock: 1,
+        category: "PlataEsterlina",
+        subcategory: "Collares"
+    } 
 }
