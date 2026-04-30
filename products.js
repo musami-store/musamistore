@@ -2218,9 +2218,20 @@ const PRODUCTS = {
     "collares-5-1.8":{
         title: "Collar flores",
         price: 4000,
-        images: ["Products/5. Plata esterlina/5.1 Plata rezagada/8a Collar flores $4.000.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/8b.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/8c.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/8d.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/8e.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/8f.PNG"],
+        images: ["Products/5. Plata esterlina/5.1 Plata rezagada/8a Collar flores $4.000.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/8b.png", "Products/5. Plata esterlina/5.1 Plata rezagada/8c.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/8d.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/8e.PNG", "Products/5. Plata esterlina/5.1 Plata rezagada/8f.PNG"],
         stock: 1,
         category: "PlataEsterlina",
         subcategory: "Collares"
-    } 
+    },
+
+
+    ///MAQUILLAJE
+    "ojos-make-1.1":{
+        title: "Delineador punta pincel",
+        price: 4500,
+        images: ["Products/Portada/1. Make up y accesorios nuevos/1a Delineador punta pincel $4.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/1b.PNG", "Products/Portada/1. Make up y accesorios nuevos/1c.PNG", "Products/Portada/1. Make up y accesorios nuevos/1d.PNG", "Products/Portada/1. Make up y accesorios nuevos/1e.JPG", "Products/Portada/1. Make up y accesorios nuevos/1f.PNG"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    }
 }
