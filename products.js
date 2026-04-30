@@ -2229,6 +2229,7 @@ const PRODUCTS = {
     "ojos-make-1.1":{
         title: "Delineador punta pincel",
         price: 4500,
+        brand: "O.TWO.O",
         images: ["Products/Portada/1. Make up y accesorios nuevos/1a Delineador punta pincel $4.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/1b.PNG", "Products/Portada/1. Make up y accesorios nuevos/1c.PNG", "Products/Portada/1. Make up y accesorios nuevos/1d.PNG", "Products/Portada/1. Make up y accesorios nuevos/1e.JPG", "Products/Portada/1. Make up y accesorios nuevos/1f.PNG"],
         stock: 1,
         category: "Maquillaje",
@@ -2327,5 +2328,161 @@ const PRODUCTS = {
         category: "Maquillaje",
         subcategory: "Herramientas"
     },
-    
+    "pinches-make-1.7":{
+        title: "Par de pinches",
+        variants:{
+            "rojo":{
+                label: "Rojo",
+                price: 1500,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/7a Par de pinches (rojo, gris y blanco) $1.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/7b.PNG", "Products/Portada/1. Make up y accesorios nuevos/7c.PNG"],
+                stock: 1
+            },
+            "gris":{
+                label: "Gris",
+                price: 1500,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/7a Par de pinches (rojo, gris y blanco) $1.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/7b.PNG", "Products/Portada/1. Make up y accesorios nuevos/7c.PNG"],
+                stock: 1
+            },
+            "blanco":{
+                label: "Blanco",
+                price: 1500,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/7a Par de pinches (rojo, gris y blanco) $1.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/7b.PNG", "Products/Portada/1. Make up y accesorios nuevos/7c.PNG"],
+                stock: 1
+            },
+            "rosa":{
+                label: "Rosa - AGOTADO",
+                price: 1500,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/7a Par de pinches (rojo, gris y blanco) $1.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/7b.PNG", "Products/Portada/1. Make up y accesorios nuevos/7c.PNG"],
+                stock: 0
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Pinches"
+    },
+    "pinches-make-1.8":{
+        title: "Pinches",
+        variants:{
+            "rosa":{
+                label: "Rosa",
+                price: 1500,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/8a Pinches (rosado, rosa-claro y rojo) (burdeo-ago) $1.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/8b.PNG"],
+                stock: 1
+            },
+            "rosa claro":{
+                label: "Rosa claro",
+                price: 1500,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/8a Pinches (rosado, rosa-claro y rojo) (burdeo-ago) $1.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/8b.PNG"],
+                stock: 1
+            },
+            "rojo":{
+                label: "Rojo",
+                price: 1500,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/8a Pinches (rosado, rosa-claro y rojo) (burdeo-ago) $1.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/8b.PNG"],
+                stock: 1
+            },
+            "burdeo":{
+                label: "Burdeo - AGOTADO",
+                price: 1500,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/8a Pinches (rosado, rosa-claro y rojo) (burdeo-ago) $1.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/8b.PNG"],
+                stock: 0
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Pinches"
+    },
+    "pinches-make-1.9":{
+        title: "Moño",
+        variants:{
+            "negro":{
+                label: "Negro - AGOTADO",
+                price: 2000,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/9a (agotado) Moño $2.000.PNG", "Products/Portada/1. Make up y accesorios nuevos/9b.PNG"],
+                stock: 0
+            },
+            "blanco":{
+                label: "Blanco - AGOTADO",
+                price: 2000,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/9a (agotado) Moño $2.000.PNG", "Products/Portada/1. Make up y accesorios nuevos/9b.PNG"],
+                stock: 0
+            }
+        },
+        category: "Accesorios",
+        subcategory: "Pinches"
+    },
+    "pinches-make-1.10":{
+        title: "Trabas felpa",
+        variants:{
+            "cafe":{
+                label: "Café",
+                price: 1800,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/10a Trabas felpa (Café y negro) $1.800.PNG", "Products/Portada/1. Make up y accesorios nuevos/10b.PNG", "Products/Portada/1. Make up y accesorios nuevos/10c.PNG", "Products/Portada/1. Make up y accesorios nuevos/10d.PNG", "Products/Portada/1. Make up y accesorios nuevos/10e.PNG", "Products/Portada/1. Make up y accesorios nuevos/10f.PNG", "Products/Portada/1. Make up y accesorios nuevos/10g.PNG", "Products/Portada/1. Make up y accesorios nuevos/10h.PNG"],
+                stock: 1
+            },
+            "negro":{
+                label: "Negro",
+                price: 1800,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/10a Trabas felpa (Café y negro) $1.800.PNG", "Products/Portada/1. Make up y accesorios nuevos/10b.PNG", "Products/Portada/1. Make up y accesorios nuevos/10c.PNG", "Products/Portada/1. Make up y accesorios nuevos/10d.PNG", "Products/Portada/1. Make up y accesorios nuevos/10e.PNG", "Products/Portada/1. Make up y accesorios nuevos/10f.PNG", "Products/Portada/1. Make up y accesorios nuevos/10g.PNG", "Products/Portada/1. Make up y accesorios nuevos/10h.PNG"],
+                stock: 1
+            },
+            "blanco":{
+                label: "Blanco - AGOTADO",
+                price: 1800,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/10a Trabas felpa (Café y negro) $1.800.PNG", "Products/Portada/1. Make up y accesorios nuevos/10b.PNG", "Products/Portada/1. Make up y accesorios nuevos/10c.PNG", "Products/Portada/1. Make up y accesorios nuevos/10d.PNG", "Products/Portada/1. Make up y accesorios nuevos/10e.PNG", "Products/Portada/1. Make up y accesorios nuevos/10f.PNG", "Products/Portada/1. Make up y accesorios nuevos/10g.PNG", "Products/Portada/1. Make up y accesorios nuevos/10h.PNG"],
+                stock: 0
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Pinches"
+    },
+    "pinches-make-1.11":{
+        title: "Trabas flores",
+        variants:{
+            "azul":{
+                label: "Azul",
+                price: 1200,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/11a Trabas flores (azul, blanco y rosa) $1.200.PNG", "Products/Portada/1. Make up y accesorios nuevos/11b.PNG", "Products/Portada/1. Make up y accesorios nuevos/11c.PNG", "Products/Portada/1. Make up y accesorios nuevos/11d.PNG"],
+                stock: 1
+            },
+            "blanco":{
+                label: "Blanco",
+                price: 1200,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/11a Trabas flores (azul, blanco y rosa) $1.200.PNG", "Products/Portada/1. Make up y accesorios nuevos/11b.PNG", "Products/Portada/1. Make up y accesorios nuevos/11c.PNG", "Products/Portada/1. Make up y accesorios nuevos/11d.PNG"],
+                stock: 1
+            },
+            "rosa":{
+                label: "Rosa",
+                price: 1200,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/11a Trabas flores (azul, blanco y rosa) $1.200.PNG", "Products/Portada/1. Make up y accesorios nuevos/11b.PNG", "Products/Portada/1. Make up y accesorios nuevos/11c.PNG", "Products/Portada/1. Make up y accesorios nuevos/11d.PNG"],
+                stock: 1
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Pinches"
+    },
+    "scrunchies-make-1.12":{
+        title: "Scrunchie print",
+        price: 2300,
+        images: ["Products/Portada/1. Make up y accesorios nuevos/12a Scrunchie print $2.300.webp", "Products/Portada/1. Make up y accesorios nuevos/12b.webp"],
+        stock: 1,
+        category: "Accesorios",
+        subcategory: "Scrunchies"
+    },
+    "cinturon-make-1.13":{
+        title: "Cinturón 132cm",
+        variants:{
+            "negro":{
+                label: "Negro",
+                price: 5500,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/13a Cinturón (negro y café talla 132cm) $5.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/13b.png", "Products/Portada/1. Make up y accesorios nuevos/13c.PNG"],
+                stock:  1
+            },
+            "cafe":{
+                label: "Café",
+                price: 5500,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/13a Cinturón (negro y café talla 132cm) $5.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/13b.png", "Products/Portada/1. Make up y accesorios nuevos/13c.PNG"],
+                stock:  1
+            },
+        },
+        category: "Accesorios"
+    }
 }

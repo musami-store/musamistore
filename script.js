@@ -63,6 +63,43 @@ async function loadHeader() {
             submenu.classList.toggle("open");
         });
     });
+
+    const messages = [
+        "ENTREGAS PRESENCIALES EN VALDIVIA Y LOS LAGOS",
+        "ENVÍOS A TODO CHILE CONTINENTAL",
+        "PAGOS POR TRANSFERENCIA O EFECTIVO",
+    ];
+
+    const text = document.getElementById("banner-text");
+
+    let index = 0;
+
+    function changeBanner(){
+
+        text.classList.remove("show");
+        text.classList.add("slide-out");
+
+        setTimeout(() => {
+
+            index = (index + 1) % messages.length;
+
+            text.textContent = messages[index];
+
+            // Entra desde abajo
+            text.classList.remove("slide-out");
+            text.classList.add("slide-in");
+
+            setTimeout(()=>{
+                text.classList.remove("slide-in");
+                text.classList.add("show");
+            },50);
+
+        },500);
+    }
+
+    text.classList.add("show");
+
+    setInterval(changeBanner,4000);
 }
 
 
@@ -839,40 +876,3 @@ toast.remove();
 },duration);
 
 }
-
-const messages = [
-    "ENTREGAS PRESENCIALES EN VALDIVIA Y LOS LAGOS",
-    "ENVÍOS A TODO CHILE CONTINENTAL",
-    "PAGA CON TRANSFERENCIA O EFECTIVO",
-];
-
-const text = document.getElementById("banner-text");
-
-let index = 0;
-
-function changeBanner(){
-
-    text.classList.remove("show");
-    text.classList.add("slide-out");
-
-    setTimeout(() => {
-
-        index = (index + 1) % messages.length;
-
-        text.textContent = messages[index];
-
-        // Entra desde abajo
-        text.classList.remove("slide-out");
-        text.classList.add("slide-in");
-
-        setTimeout(()=>{
-            text.classList.remove("slide-in");
-            text.classList.add("show");
-        },50);
-
-    },500);
-}
-
-text.classList.add("show");
-
-setInterval(changeBanner,4000);
