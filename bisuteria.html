@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/55b77e803d.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./diamond.svg">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <title>Musami Store</title>
+</head>
+<script src="script.js" defer></script>
+<script src="products.js" defer></script>
+<body data-category="Bisuteria">
+    <div id="header-placeholder"></div>
+
+    <main>
+        <h1>Bisutería</h1>
+        <div class="product-grid">
+        </div>
+    </main>
+
+    <!-- Lightbox overlay -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <button id="lightbox-close">&times;</button>
+            <div class="lightbox-slider">
+                <div class="lightbox-track"></div>
+                <button class="slider-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="slider-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <p class="lightbox-title"></p>
+        </div>
+    </div>
+
+</body>
+</html>
