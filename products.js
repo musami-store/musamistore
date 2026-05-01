@@ -3489,7 +3489,7 @@ const PRODUCTS = {
     },
     "ojos-make-1.2":{
         title: "Máscara de pestañas",
-        price: 4500,
+        price: 4490,
         brand: "O.TWO.O",
         images: ["Products/Portada/1. Make up y accesorios nuevos/2a Máscara de pestañas O.TWO.O $4.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/2b.JPG", "Products/Portada/1. Make up y accesorios nuevos/2c.png", "Products/Portada/1. Make up y accesorios nuevos/2d.png", "Products/Portada/1. Make up y accesorios nuevos/2e.PNG", "Products/Portada/1. Make up y accesorios nuevos/2f.PNG", "Products/Portada/1. Make up y accesorios nuevos/2g.PNG"],
         stock: 10,
@@ -3498,7 +3498,7 @@ const PRODUCTS = {
     },
     "ojos-make-1.3":{
         title: "Paleta de sombras glitter",
-        price: 3500,
+        price: 3490,
         images: ["Products/Portada/1. Make up y accesorios nuevos/3a Paleta de sombras glitter $3.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/3b.PNG", "Products/Portada/1. Make up y accesorios nuevos/3c.PNG"],
         stock: 1,
         category: "Maquillaje",
@@ -3509,25 +3509,25 @@ const PRODUCTS = {
         variants:{
             "rosa":{
                 label: "Rosa",
-                price: 1200,
+                price: 1190,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/4a Esponja de maquillaje (rosa y lila con rosa) $1.200.PNG", "Products/Portada/1. Make up y accesorios nuevos/4b.PNG", "Products/Portada/1. Make up y accesorios nuevos/4c.PNG", "Products/Portada/1. Make up y accesorios nuevos/4d.PNG", "Products/Portada/1. Make up y accesorios nuevos/4e.PNG", "Products/Portada/1. Make up y accesorios nuevos/4f.PNG"],
                 stock: 1
             },
             "lila-rosa":{
                 label: "Lila con rosa",
-                price: 1200,
+                price: 1190,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/4a Esponja de maquillaje (rosa y lila con rosa) $1.200.PNG", "Products/Portada/1. Make up y accesorios nuevos/4b.PNG", "Products/Portada/1. Make up y accesorios nuevos/4c.PNG", "Products/Portada/1. Make up y accesorios nuevos/4d.PNG", "Products/Portada/1. Make up y accesorios nuevos/4e.PNG", "Products/Portada/1. Make up y accesorios nuevos/4f.PNG"],
                 stock: 1
             },
             "naranjo":{
                 label: "Naranjo - AGOTADO",
-                price: 1200,
+                price: 1190,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/4a Esponja de maquillaje (rosa y lila con rosa) $1.200.PNG", "Products/Portada/1. Make up y accesorios nuevos/4b.PNG", "Products/Portada/1. Make up y accesorios nuevos/4c.PNG", "Products/Portada/1. Make up y accesorios nuevos/4d.PNG", "Products/Portada/1. Make up y accesorios nuevos/4e.PNG", "Products/Portada/1. Make up y accesorios nuevos/4f.PNG"],
                 stock: 0
             },
             "rosa-blanco":{
                 label: "Rosa con blanco - AGOTADO",
-                price: 1200,
+                price: 1190,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/4a Esponja de maquillaje (rosa y lila con rosa) $1.200.PNG", "Products/Portada/1. Make up y accesorios nuevos/4b.PNG", "Products/Portada/1. Make up y accesorios nuevos/4c.PNG", "Products/Portada/1. Make up y accesorios nuevos/4d.PNG", "Products/Portada/1. Make up y accesorios nuevos/4e.PNG", "Products/Portada/1. Make up y accesorios nuevos/4f.PNG"],
                 stock: 0
             },
@@ -3540,43 +3540,43 @@ const PRODUCTS = {
         variants: {
             "beige":{
                 label: "Beige",
-                price: 400,
+                price: 390,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
                 stock: 3
             },
             "rosa claro":{
                 label: "Rosa claro",
-                price: 400,
+                price: 390,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
                 stock: 2
             },
             "rosa":{
                 label: "Rosado",
-                price: 400,
+                price: 390,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
                 stock: 3
             },
             "morado":{
                 label: "Morado",
-                price: 400,
+                price: 390,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
                 stock: 5
             },
             "gris":{
                 label: "Gris",
-                price: 400,
+                price: 390,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
                 stock: 4
             },
             "melocotón":{
                 label: "Melocotón",
-                price: 400,
+                price: 390,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
                 stock: 6
             },
             "lila":{
                 label: "Lila",
-                price: 400,
+                price: 390,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
                 stock: 4
             },
@@ -3586,7 +3586,7 @@ const PRODUCTS = {
     },
     "herramientas-make-1.6":{
         title: "Discos desmaquillantes",
-        price: 500,
+        price: 490,
         images: ["Products/Portada/1. Make up y accesorios nuevos/6a Discos desmaquillantes $500.PNG", "Products/Portada/1. Make up y accesorios nuevos/6b.JPG", "Products/Portada/1. Make up y accesorios nuevos/6c.PNG", "Products/Portada/1. Make up y accesorios nuevos/6d.PNG"],
         stock: 15,
         category: "Maquillaje",
@@ -3597,31 +3597,31 @@ const PRODUCTS = {
         variants:{
             "rojo":{
                 label: "Rojo",
-                price: 1500,
+                price: 1490,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/7a Par de pinches (rojo, gris y blanco) $1.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/7b.PNG", "Products/Portada/1. Make up y accesorios nuevos/7c.PNG"],
                 stock: 1
             },
             "gris":{
                 label: "Gris",
-                price: 1500,
+                price: 1490,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/7a Par de pinches (rojo, gris y blanco) $1.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/7b.PNG", "Products/Portada/1. Make up y accesorios nuevos/7c.PNG"],
                 stock: 1
             },
             "blanco":{
                 label: "Blanco",
-                price: 1500,
+                price: 1490,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/7a Par de pinches (rojo, gris y blanco) $1.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/7b.PNG", "Products/Portada/1. Make up y accesorios nuevos/7c.PNG"],
                 stock: 1
             },
             "rosa":{
                 label: "Rosa - AGOTADO",
-                price: 1500,
+                price: 1490,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/7a Par de pinches (rojo, gris y blanco) $1.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/7b.PNG", "Products/Portada/1. Make up y accesorios nuevos/7c.PNG"],
                 stock: 0
             },
             "negro":{
                 label: "Negro - AGOTADO",
-                price: 1500,
+                price: 1490,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/7a Par de pinches (rojo, gris y blanco) $1.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/7b.PNG", "Products/Portada/1. Make up y accesorios nuevos/7c.PNG"],
                 stock: 0
             },
@@ -3634,25 +3634,25 @@ const PRODUCTS = {
         variants:{
             "rosa":{
                 label: "Rosa",
-                price: 1500,
+                price: 1490,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/8a Pinches (rosado, rosa-claro y rojo) (burdeo-ago) $1.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/8b.PNG"],
                 stock: 1
             },
             "rosa claro":{
                 label: "Rosa claro",
-                price: 1500,
+                price: 1490,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/8a Pinches (rosado, rosa-claro y rojo) (burdeo-ago) $1.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/8b.PNG"],
                 stock: 1
             },
             "rojo":{
                 label: "Rojo",
-                price: 1500,
+                price: 1490,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/8a Pinches (rosado, rosa-claro y rojo) (burdeo-ago) $1.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/8b.PNG"],
                 stock: 1
             },
             "burdeo":{
                 label: "Burdeo - AGOTADO",
-                price: 1500,
+                price: 1490,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/8a Pinches (rosado, rosa-claro y rojo) (burdeo-ago) $1.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/8b.PNG"],
                 stock: 0
             },
@@ -3665,13 +3665,13 @@ const PRODUCTS = {
         variants:{
             "negro":{
                 label: "Negro - AGOTADO",
-                price: 2000,
+                price: 1990,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/9a (agotado) Moño $2.000.PNG", "Products/Portada/1. Make up y accesorios nuevos/9b.PNG"],
                 stock: 0
             },
             "blanco":{
                 label: "Blanco - AGOTADO",
-                price: 2000,
+                price: 1990,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/9a (agotado) Moño $2.000.PNG", "Products/Portada/1. Make up y accesorios nuevos/9b.PNG"],
                 stock: 0
             }
@@ -3684,19 +3684,19 @@ const PRODUCTS = {
         variants:{
             "cafe":{
                 label: "Café",
-                price: 1800,
+                price: 1790,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/10a Trabas felpa (Café y negro) $1.800.PNG", "Products/Portada/1. Make up y accesorios nuevos/10b.PNG", "Products/Portada/1. Make up y accesorios nuevos/10c.PNG", "Products/Portada/1. Make up y accesorios nuevos/10d.PNG", "Products/Portada/1. Make up y accesorios nuevos/10e.PNG", "Products/Portada/1. Make up y accesorios nuevos/10f.PNG", "Products/Portada/1. Make up y accesorios nuevos/10g.PNG", "Products/Portada/1. Make up y accesorios nuevos/10h.PNG"],
                 stock: 1
             },
             "negro":{
                 label: "Negro",
-                price: 1800,
+                price: 1790,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/10a Trabas felpa (Café y negro) $1.800.PNG", "Products/Portada/1. Make up y accesorios nuevos/10b.PNG", "Products/Portada/1. Make up y accesorios nuevos/10c.PNG", "Products/Portada/1. Make up y accesorios nuevos/10d.PNG", "Products/Portada/1. Make up y accesorios nuevos/10e.PNG", "Products/Portada/1. Make up y accesorios nuevos/10f.PNG", "Products/Portada/1. Make up y accesorios nuevos/10g.PNG", "Products/Portada/1. Make up y accesorios nuevos/10h.PNG"],
                 stock: 1
             },
             "blanco":{
                 label: "Blanco - AGOTADO",
-                price: 1800,
+                price: 1790,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/10a Trabas felpa (Café y negro) $1.800.PNG", "Products/Portada/1. Make up y accesorios nuevos/10b.PNG", "Products/Portada/1. Make up y accesorios nuevos/10c.PNG", "Products/Portada/1. Make up y accesorios nuevos/10d.PNG", "Products/Portada/1. Make up y accesorios nuevos/10e.PNG", "Products/Portada/1. Make up y accesorios nuevos/10f.PNG", "Products/Portada/1. Make up y accesorios nuevos/10g.PNG", "Products/Portada/1. Make up y accesorios nuevos/10h.PNG"],
                 stock: 0
             },
@@ -3709,19 +3709,19 @@ const PRODUCTS = {
         variants:{
             "azul":{
                 label: "Azul",
-                price: 1200,
+                price: 1190,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/11a Trabas flores (azul, blanco y rosa) $1.200.PNG", "Products/Portada/1. Make up y accesorios nuevos/11b.PNG", "Products/Portada/1. Make up y accesorios nuevos/11c.PNG", "Products/Portada/1. Make up y accesorios nuevos/11d.PNG"],
                 stock: 1
             },
             "blanco":{
                 label: "Blanco",
-                price: 1200,
+                price: 1190,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/11a Trabas flores (azul, blanco y rosa) $1.200.PNG", "Products/Portada/1. Make up y accesorios nuevos/11b.PNG", "Products/Portada/1. Make up y accesorios nuevos/11c.PNG", "Products/Portada/1. Make up y accesorios nuevos/11d.PNG"],
                 stock: 1
             },
             "rosa":{
                 label: "Rosa",
-                price: 1200,
+                price: 1190,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/11a Trabas flores (azul, blanco y rosa) $1.200.PNG", "Products/Portada/1. Make up y accesorios nuevos/11b.PNG", "Products/Portada/1. Make up y accesorios nuevos/11c.PNG", "Products/Portada/1. Make up y accesorios nuevos/11d.PNG"],
                 stock: 1
             },
@@ -3731,7 +3731,7 @@ const PRODUCTS = {
     },
     "scrunchies-make-1.12":{
         title: "Scrunchie print",
-        price: 2300,
+        price: 2290,
         images: ["Products/Portada/1. Make up y accesorios nuevos/12a Scrunchie print $2.300.webp", "Products/Portada/1. Make up y accesorios nuevos/12b.webp"],
         stock: 1,
         category: "Accesorios",
@@ -3742,13 +3742,13 @@ const PRODUCTS = {
         variants:{
             "negro":{
                 label: "Negro",
-                price: 5500,
+                price: 5490,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/13a Cinturón (negro y café talla 132cm) $5.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/13b.png", "Products/Portada/1. Make up y accesorios nuevos/13c.PNG"],
                 stock:  1
             },
             "cafe":{
                 label: "Café",
-                price: 5500,
+                price: 5490,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/13a Cinturón (negro y café talla 132cm) $5.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/13b.png", "Products/Portada/1. Make up y accesorios nuevos/13c.PNG"],
                 stock:  1
             },
@@ -3757,7 +3757,7 @@ const PRODUCTS = {
     },
     "herramientas-6.1":{
         title: "Set x7 brochas de maquillaje",
-        price: 5500,
+        price: 5490,
         images: ["Products/6. Maquillaje/3. Herramientas de belleza/1a Set x7 brochas de maquillaje $5.500.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/1b.jpg"],
         stock: 1,
         category: "Maquillaje",
@@ -3766,7 +3766,7 @@ const PRODUCTS = {
     "herramientas-6.2":{
         title: "Set x12 brochas de maquillaje",
         brand: "Anmor",
-        price: 13500,
+        price: 13490,
         images: ["Products/6. Maquillaje/3. Herramientas de belleza/2a Set x12 brochas de maquillaje anmor $13.500.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/2b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/2c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/2d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/2e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/2f.jpg"],
         stock: 1,
         category: "Maquillaje",
@@ -3775,7 +3775,7 @@ const PRODUCTS = {
     "herramientas-6.3":{
         title: "Set x15 brochas de maquillaje",
         brand: "Docolor",
-        price: 15000,
+        price: 14990,
         images: ["Products/6. Maquillaje/3. Herramientas de belleza/3a Set brochas de maquillaje x15 docolor $15.000.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/3b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/3c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/3d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/3e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/3f.jpg"],
         stock: 1,
         category: "Maquillaje",
@@ -3784,7 +3784,7 @@ const PRODUCTS = {
     "herramientas-6.4":{
         title: "Set x12 brochas de maquillaje",
         brand: "DUcare",
-        price: 1300,
+        price: 1290,
         images: ["Products/6. Maquillaje/3. Herramientas de belleza/4a Set x12 brochas de maquillaje DUcare $13.000.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/4b.png", "Products/6. Maquillaje/3. Herramientas de belleza/4c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/4d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/4e.jpg"],
         stock: 1,
         category: "Maquillaje",
@@ -3796,13 +3796,13 @@ const PRODUCTS = {
         variants:{
             "dorado":{
                 label: "Dorado",
-                price: 6500,
+                price: 6490,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/5a Set de brochas de maquillaje (dor y mor) Maange x7 $6.500.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5f.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5g.jpg"],
                 stock: 1
             },
             "morado":{
                 label: "Morado",
-                price: 6500,
+                price: 6490,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/5a Set de brochas de maquillaje (dor y mor) Maange x7 $6.500.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5f.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/5g.jpg"],
                 stock: 1
             },
@@ -3813,7 +3813,7 @@ const PRODUCTS = {
     "herramientas-6.6":{
         title: "Set x6 brochas de maquillaje",
         brand: "Maange",
-        price: 6000,
+        price: 5990,
         images: ["Products/6. Maquillaje/3. Herramientas de belleza/6a Brochas de maquillaje x6 Maange $6.000.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/6b.png", "Products/6. Maquillaje/3. Herramientas de belleza/6c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/6d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/6e.jpg"],
         stock: 1,
         category: "Maquillaje",
@@ -3822,7 +3822,7 @@ const PRODUCTS = {
     "herramientas-6.7":{
         title: "Brocha de ojos doble",
         brand: "Imagic",
-        price: 1800,
+        price: 1790,
         images: ["Products/6. Maquillaje/3. Herramientas de belleza/7a Brocha de ojos doble Imagic $1.800.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/7b.png", "Products/6. Maquillaje/3. Herramientas de belleza/7c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/7d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/7e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/7f.jpg"],
         stock: 1,
         category: "Maquillaje",
@@ -3833,13 +3833,13 @@ const PRODUCTS = {
         variants: {
             "rosa":{
                 label: "Rosa",
-                price: 6500,
+                price: 6490,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/8a Set de 7 brochas +estuche (rosado y celeste) $6.500.png", "Products/6. Maquillaje/3. Herramientas de belleza/8b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/8c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/8d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/8e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/8f.jpg"],
                 stock: 1
             },
             "celeste":{
                 label: "Celeste",
-                price: 6500,
+                price: 6490,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/8a Set de 7 brochas +estuche (rosado y celeste) $6.500.png", "Products/6. Maquillaje/3. Herramientas de belleza/8b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/8c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/8d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/8e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/8f.jpg"],
                 stock: 1
             },
@@ -3852,19 +3852,19 @@ const PRODUCTS = {
         variants: {
             "rosa plateado":{
                 label: "Rosa plateado",
-                price: 5800,
+                price: 5790,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/9a Set de 12 brochas MAANGE $5.800 (Rosa con plateado).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9e.jpg"],
                 stock: 1
             },
             "rosa dorado":{
                 label: "Rosa dorado - AGOTADO",
-                price: 5800,
+                price: 5790,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/9a Set de 12 brochas MAANGE $5.800 (Rosa con plateado).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9e.jpg"],
                 stock: 0
             },
             "negro":{
                 label: "Negro - AGOTADO",
-                price: 5800,
+                price: 5790,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/9a Set de 12 brochas MAANGE $5.800 (Rosa con plateado).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/9e.jpg"],
                 stock: 0
             },
@@ -3877,61 +3877,61 @@ const PRODUCTS = {
         variants:{
             "y3-1":{
                 label: "Y3-1",
-                price: 0,
+                price: 2490,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/10a Set x3 pares de pestañas Maange (Y3-1).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10f.jpg"],
                 stock: 1
             },
             "y3-2":{
                 label: "Y3-2 - AGOTADO",
-                price: 0,
+                price: 2490,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/10a Set x3 pares de pestañas Maange (Y3-1).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10f.jpg"],
                 stock: 0
             },
             "y3-3":{
                 label: "Y3-3 - AGOTADO",
-                price: 0,
+                price: 2490,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/10a Set x3 pares de pestañas Maange (Y3-1).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10f.jpg"],
                 stock: 0
             },
             "y3-4":{
                 label: "Y3-4 - AGOTADO",
-                price: 0,
+                price: 2490,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/10a Set x3 pares de pestañas Maange (Y3-1).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10f.jpg"],
                 stock: 0
             },
             "y3-5":{
                 label: "Y3-5 - AGOTADO",
-                price: 0,
+                price: 2490,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/10a Set x3 pares de pestañas Maange (Y3-1).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10f.jpg"],
                 stock: 0
             },
             "y3-6":{
                 label: "Y3-6 - AGOTADO",
-                price: 0,
+                price: 2490,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/10a Set x3 pares de pestañas Maange (Y3-1).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10f.jpg"],
                 stock: 0
             },
             "y3-7":{
                 label: "Y3-7 - AGOTADO",
-                price: 0,
+                price: 2490,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/10a Set x3 pares de pestañas Maange (Y3-1).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10f.jpg"],
                 stock: 0
             },
             "y3-8":{
                 label: "Y3-8 - AGOTADO",
-                price: 0,
+                price: 2490,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/10a Set x3 pares de pestañas Maange (Y3-1).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10f.jpg"],
                 stock: 0
             },
             "y3-9":{
                 label: "Y3-9 - AGOTADO",
-                price: 0,
+                price: 2490,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/10a Set x3 pares de pestañas Maange (Y3-1).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10f.jpg"],
                 stock: 0
             },
             "y3-10":{
                 label: "Y3-10 - AGOTADO",
-                price: 0,
+                price: 2490,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/10a Set x3 pares de pestañas Maange (Y3-1).jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/10f.jpg"],
                 stock: 0
             },
@@ -3952,25 +3952,25 @@ const PRODUCTS = {
         variants:{
             "a01":{
                 label: "Modelo A01",
-                price: 800,
+                price: 790,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/12a Brocha biselada (AGO B01) $800.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12e.jpg"],
                 stock: 1
             },
             "b01":{
                 label: "Modelo B01 - AGOTADO",
-                price: 800,
+                price: 790,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/12a Brocha biselada (AGO B01) $800.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12e.jpg"],
                 stock: 0
             },
             "a02":{
                 label: "Modelo A02",
-                price: 800,
+                price: 790,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/12a Brocha biselada (AGO B01) $800.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12e.jpg"],
                 stock: 1
             },
             "b02":{
                 label: "Modelo B02",
-                price: 800,
+                price: 790,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/12a Brocha biselada (AGO B01) $800.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12e.jpg"],
                 stock: 1
             },
