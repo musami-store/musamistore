@@ -3371,7 +3371,7 @@ const PRODUCTS = {
     },
     "aros-5-2.12":{
         title: "Aros plata",
-        price: 1,
+        price: 3490,
         images: ["Products/5. Plata esterlina/5.2 Plata/12a Aros plata.webp", "Products/5. Plata esterlina/5.2 Plata/12b.webp", "Products/5. Plata esterlina/5.2 Plata/12c.webp", "Products/5. Plata esterlina/5.2 Plata/12d.webp", "Products/5. Plata esterlina/5.2 Plata/12e.webp"],
         stock: 1,
         category: "PlataEsterlina",
