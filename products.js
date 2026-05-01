@@ -3483,7 +3483,7 @@ const PRODUCTS = {
         price: 4500,
         brand: "O.TWO.O",
         images: ["Products/Portada/1. Make up y accesorios nuevos/1a Delineador punta pincel $4.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/1b.PNG", "Products/Portada/1. Make up y accesorios nuevos/1c.PNG", "Products/Portada/1. Make up y accesorios nuevos/1d.PNG", "Products/Portada/1. Make up y accesorios nuevos/1e.JPG", "Products/Portada/1. Make up y accesorios nuevos/1f.PNG"],
-        stock: 1,
+        stock: 11,
         category: "Maquillaje",
         subcategory: "Ojos"
     },
@@ -3492,7 +3492,7 @@ const PRODUCTS = {
         price: 4500,
         brand: "O.TWO.O",
         images: ["Products/Portada/1. Make up y accesorios nuevos/2a Máscara de pestañas O.TWO.O $4.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/2b.JPG", "Products/Portada/1. Make up y accesorios nuevos/2c.png", "Products/Portada/1. Make up y accesorios nuevos/2d.png", "Products/Portada/1. Make up y accesorios nuevos/2e.PNG", "Products/Portada/1. Make up y accesorios nuevos/2f.PNG", "Products/Portada/1. Make up y accesorios nuevos/2g.PNG"],
-        stock: 1,
+        stock: 10,
         category: "Maquillaje",
         subcategory: "Ojos"
     },
@@ -3542,31 +3542,43 @@ const PRODUCTS = {
                 label: "Beige",
                 price: 400,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
-                stock: 1
+                stock: 3
             },
             "rosa claro":{
-                label: "Rosa claor",
+                label: "Rosa claro",
                 price: 400,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
-                stock: 1
+                stock: 2
             },
             "rosa":{
-                label: "Rosa",
+                label: "Rosado",
                 price: 400,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
-                stock: 1
+                stock: 3
             },
             "morado":{
                 label: "Morado",
                 price: 400,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
-                stock: 1
+                stock: 5
             },
             "gris":{
                 label: "Gris",
                 price: 400,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
-                stock: 1
+                stock: 4
+            },
+            "melocotón":{
+                label: "Melocotón",
+                price: 400,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
+                stock: 6
+            },
+            "lila":{
+                label: "Lila",
+                price: 400,
+                images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
+                stock: 4
             },
         },
         category: "Maquillaje",
@@ -3576,7 +3588,7 @@ const PRODUCTS = {
         title: "Discos desmaquillantes",
         price: 500,
         images: ["Products/Portada/1. Make up y accesorios nuevos/6a Discos desmaquillantes $500.PNG", "Products/Portada/1. Make up y accesorios nuevos/6b.JPG", "Products/Portada/1. Make up y accesorios nuevos/6c.PNG", "Products/Portada/1. Make up y accesorios nuevos/6d.PNG"],
-        stock: 1,
+        stock: 15,
         category: "Maquillaje",
         subcategory: "Herramientas"
     },
@@ -3965,5 +3977,122 @@ const PRODUCTS = {
         },
         category: "Maquillaje",
         subcategory: "Herramientas"
+    },
+    "ojos-6-1.1":{
+        title: "Paleta de sombras Jupiter",
+        brand: "Beauty Glazed",
+        price: 5490,
+        images: ["Products/6. Maquillaje/1. Paletas de sombras/1a Paleta de sombras Beauty Glazed (Jupiter) $5.490.jpg", "Products/6. Maquillaje/1. Paletas de sombras/1b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/1c.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-6-1.2":{
+        title: "Paleta de sombras Mars",
+        brand: "Beauty Glazed",
+        price: 5490,
+        images: ["Products/6. Maquillaje/1. Paletas de sombras/2a Paleta de sombras Beauty Glazed (Mars) $5.490.jpg", "Products/6. Maquillaje/1. Paletas de sombras/2b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/2c.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-6-1.3":{
+        title: "Paleta 18 sombras Aromas",
+        brand: "UCANBE",
+        price: 9490,
+        images: ["Products/6. Maquillaje/1. Paletas de sombras/3a Paleta 18 sombras Aromas UCANBE $9.490.jpg", "Products/6. Maquillaje/1. Paletas de sombras/3b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/3c.jpg", "Products/6. Maquillaje/1. Paletas de sombras/3d.jpg", "Products/6. Maquillaje/1. Paletas de sombras/3e.jpg", "Products/6. Maquillaje/1. Paletas de sombras/3f.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-6-1.4":{
+        title: "Paleta 35 sombras",
+        brand: "IMAGIC",
+        price: 15490,
+        images: ["Products/6. Maquillaje/1. Paletas de sombras/4a Paleta 35 sombras IMAGIC $15.490.jpg", "Products/6. Maquillaje/1. Paletas de sombras/4b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/4c.jpg", "Products/6. Maquillaje/1. Paletas de sombras/4d.jpg", "Products/6. Maquillaje/1. Paletas de sombras/4e.jpg", "Products/6. Maquillaje/1. Paletas de sombras/4f.jpg", "Products/6. Maquillaje/1. Paletas de sombras/4g.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-6-1.5":{
+        title: "Paleta de sombra Chalice",
+        brand: "IMAGIC",
+        price: 13490,
+        images: ["Products/6. Maquillaje/1. Paletas de sombras/5a Paleta de sombras Chalice IMAGIC $13.490.jpg", "Products/6. Maquillaje/1. Paletas de sombras/5b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/5c.jpg", "Products/6. Maquillaje/1. Paletas de sombras/5d.jpg", "Products/6. Maquillaje/1. Paletas de sombras/5e.jpg", "Products/6. Maquillaje/1. Paletas de sombras/5f.jpg", "Products/6. Maquillaje/1. Paletas de sombras/5g.jpg", "Products/6. Maquillaje/1. Paletas de sombras/5h.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-6-1.6":{
+        title: "Paleta de sombras",
+        brand: "Beauty Glazed",
+        price: 5490,
+        images: ["Products/6. Maquillaje/1. Paletas de sombras/6a Paleta de sombras Beauty Glazed $5.490.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6c.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6d.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6e.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6f.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6g.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6h.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6i.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Ojos" 
+    },
+    "ojos-6-1.7":{
+        title: "Paleta de sombras Berry",
+        brand: "UCANBE",
+        price: 6490,
+        images: ["Products/6. Maquillaje/1. Paletas de sombras/7a Paleta de sombras UCANBE (Berry) $6.490.jpg", "Products/6. Maquillaje/1. Paletas de sombras/7b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/7c.jpg", "Products/6. Maquillaje/1. Paletas de sombras/7d.jpg", "Products/6. Maquillaje/1. Paletas de sombras/7e.jpg", "Products/6. Maquillaje/1. Paletas de sombras/7f.jpg", "Products/6. Maquillaje/1. Paletas de sombras/7g.jpg", "Products/6. Maquillaje/1. Paletas de sombras/7h.jpg", "Products/6. Maquillaje/1. Paletas de sombras/7i.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-6-1.8":{
+        title: "Paleta de 40 sombras Spotlight",
+        brand: "UCANBE",
+        price: 12490,
+        images: ["Products/6. Maquillaje/1. Paletas de sombras/8a Paleta de 40 sombras Spotlight UCANBE  $12.490.jpg", "Products/6. Maquillaje/1. Paletas de sombras/8b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/8c.jpg", "Products/6. Maquillaje/1. Paletas de sombras/8d.jpg", "Products/6. Maquillaje/1. Paletas de sombras/8e.jpg", "Products/6. Maquillaje/1. Paletas de sombras/8f.jpg", "Products/6. Maquillaje/1. Paletas de sombras/8g.jpg", "Products/6. Maquillaje/1. Paletas de sombras/8h.jpg", "Products/6. Maquillaje/1. Paletas de sombras/8i.jpg", "Products/6. Maquillaje/1. Paletas de sombras/8j.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-6-1.9":{
+        title: "Paleta de sombras Splah of hues",
+        brand: "Beauty Creations",
+        price: 6990,
+        images: ["Products/6. Maquillaje/1. Paletas de sombras/9a Paleta de sombras Splah of hues Beauty Creations $6.990.jpg", "Products/6. Maquillaje/1. Paletas de sombras/9b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/9c.jpg", "Products/6. Maquillaje/1. Paletas de sombras/9d.jpg", "Products/6. Maquillaje/1. Paletas de sombras/9e.jpg", "Products/6. Maquillaje/1. Paletas de sombras/9f.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-6-1.10":{
+        title: "Paleta de 20 sombras The roaring 20's",
+        brand: "Rude",
+        price: 10990,
+        images: ["Products/6. Maquillaje/1. Paletas de sombras/10a Paleta de 20 sombras The roaring 20's Rude $10.990.jpg", "Products/6. Maquillaje/1. Paletas de sombras/10b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/10c.jpg", "Products/6. Maquillaje/1. Paletas de sombras/10d.jpg", "Products/6. Maquillaje/1. Paletas de sombras/10e.jpg", "Products/6. Maquillaje/1. Paletas de sombras/10f.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-6-1.11":{
+        title: "Paleta de 35 sombras Jasmine",
+        brand: "Beauty Creations",
+        price: 12490,
+        images: ["Products/6. Maquillaje/1. Paletas de sombras/11a Paleta de 35 sombras Jasmine Beauty Creations $12.490.jpg", "Products/6. Maquillaje/1. Paletas de sombras/11b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/11c.jpg", "Products/6. Maquillaje/1. Paletas de sombras/11d.jpg", "Products/6. Maquillaje/1. Paletas de sombras/11e.jpg", "Products/6. Maquillaje/1. Paletas de sombras/11f.jpg", "Products/6. Maquillaje/1. Paletas de sombras/11g.jpg", "Products/6. Maquillaje/1. Paletas de sombras/11h.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-6-1.12":{
+        title: "Paleta de 40 sombras Color vibes",
+        brand: "Beauty Glazed",
+        price: 12490,
+        images: ["Products/6. Maquillaje/1. Paletas de sombras/12a Paleta de 40 sombras Color Vibes Beauty Glazed $12.490.jpg", "Products/6. Maquillaje/1. Paletas de sombras/12b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/12c.jpg", "Products/6. Maquillaje/1. Paletas de sombras/12d.jpg", "Products/6. Maquillaje/1. Paletas de sombras/12e.jpg", "Products/6. Maquillaje/1. Paletas de sombras/12f.jpg", "Products/6. Maquillaje/1. Paletas de sombras/12g.jpg", "Products/6. Maquillaje/1. Paletas de sombras/12h.jpg", "Products/6. Maquillaje/1. Paletas de sombras/12i.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-6-1.13":{
+        title: "Libro paleta de sombras Color shades",
+        brand: "Beauty Glazed",
+        price: 16490,
+        images: ["Products/6. Maquillaje/1. Paletas de sombras/13a Libro paleta de sombras Color shades Beauty Glazed $16.490.jpg", "Products/6. Maquillaje/1. Paletas de sombras/13b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/13c.jpg", "Products/6. Maquillaje/1. Paletas de sombras/13d.jpg", "Products/6. Maquillaje/1. Paletas de sombras/13e.jpg", "Products/6. Maquillaje/1. Paletas de sombras/13f.jpg", "Products/6. Maquillaje/1. Paletas de sombras/13g.jpg", "Products/6. Maquillaje/1. Paletas de sombras/13h.jpg", "Products/6. Maquillaje/1. Paletas de sombras/13i.jpg", "Products/6. Maquillaje/1. Paletas de sombras/13j.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Ojos"
     }
 }
