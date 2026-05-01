@@ -3926,5 +3926,44 @@ const PRODUCTS = {
         },
         category: "Maquillaje",
         subcategory: "Ojos"
+    },
+    "herramientas-6.11":{
+        title: "Brocha doble biselada",
+        price: 790,
+        images: ["Products/6. Maquillaje/3. Herramientas de belleza/11a Brocha doble biselada $790.JPG", "Products/6. Maquillaje/3. Herramientas de belleza/11b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/11c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/11d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/11e.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/11f.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Herramientas"
+    },
+    "herramientas-6.12":{
+        title: "Brocha biselada",
+        variants:{
+            "a01":{
+                label: "Modelo A01",
+                price: 800,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/12a Brocha biselada (AGO B01) $800.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12e.jpg"],
+                stock: 1
+            },
+            "b01":{
+                label: "Modelo B01 - AGOTADO",
+                price: 800,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/12a Brocha biselada (AGO B01) $800.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12e.jpg"],
+                stock: 0
+            },
+            "a02":{
+                label: "Modelo A02",
+                price: 800,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/12a Brocha biselada (AGO B01) $800.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12e.jpg"],
+                stock: 1
+            },
+            "b02":{
+                label: "Modelo B02",
+                price: 800,
+                images: ["Products/6. Maquillaje/3. Herramientas de belleza/12a Brocha biselada (AGO B01) $800.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12e.jpg"],
+                stock: 1
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Herramientas"
     }
 }
