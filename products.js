@@ -1847,6 +1847,1026 @@ const PRODUCTS = {
         category: "Bisuteria",
         subcategory: "Collares"
     },
+    "aros-p-2.1":{
+        title: "Aros variedad",
+        variants: {
+            "1":{
+                label: "Modelo 01",
+                price: 790,
+                images: ["Products/Portada/2. Sets no publicados/1a Aros variedad (AGO 3-5-6-7-13).PNG", "Products/Portada/2. Sets no publicados/1b.JPG", "Products/Portada/2. Sets no publicados/1c.JPG", "Products/Portada/2. Sets no publicados/1d.JPG", "Products/Portada/2. Sets no publicados/1e.PNG"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 1190,
+                images: ["Products/Portada/2. Sets no publicados/1a Aros variedad (AGO 3-5-6-7-13).PNG", "Products/Portada/2. Sets no publicados/1b.JPG", "Products/Portada/2. Sets no publicados/1c.JPG", "Products/Portada/2. Sets no publicados/1d.JPG", "Products/Portada/2. Sets no publicados/1e.PNG"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03 - AGOTADO",
+                price: 1390,
+                images: ["Products/Portada/2. Sets no publicados/1a Aros variedad (AGO 3-5-6-7-13).PNG", "Products/Portada/2. Sets no publicados/1b.JPG", "Products/Portada/2. Sets no publicados/1c.JPG", "Products/Portada/2. Sets no publicados/1d.JPG", "Products/Portada/2. Sets no publicados/1e.PNG"],
+                stock: 0
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 1290,
+                images: ["Products/Portada/2. Sets no publicados/1a Aros variedad (AGO 3-5-6-7-13).PNG", "Products/Portada/2. Sets no publicados/1b.JPG", "Products/Portada/2. Sets no publicados/1c.JPG", "Products/Portada/2. Sets no publicados/1d.JPG", "Products/Portada/2. Sets no publicados/1e.PNG"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05 - AGOTADO",
+                price: 1390,
+                images: ["Products/Portada/2. Sets no publicados/1a Aros variedad (AGO 3-5-6-7-13).PNG", "Products/Portada/2. Sets no publicados/1b.JPG", "Products/Portada/2. Sets no publicados/1c.JPG", "Products/Portada/2. Sets no publicados/1d.JPG", "Products/Portada/2. Sets no publicados/1e.PNG"],
+                stock: 0
+            },
+            "6":{
+                label: "Modelo 06 - AGOTADO",
+                price: 990,
+                images: ["Products/Portada/2. Sets no publicados/1a Aros variedad (AGO 3-5-6-7-13).PNG", "Products/Portada/2. Sets no publicados/1b.JPG", "Products/Portada/2. Sets no publicados/1c.JPG", "Products/Portada/2. Sets no publicados/1d.JPG", "Products/Portada/2. Sets no publicados/1e.PNG"],
+                stock: 0
+            },
+            "7":{
+                label: "Modelo 07 - AGOTADO",
+                price: 1290,
+                images: ["Products/Portada/2. Sets no publicados/1a Aros variedad (AGO 3-5-6-7-13).PNG", "Products/Portada/2. Sets no publicados/1b.JPG", "Products/Portada/2. Sets no publicados/1c.JPG", "Products/Portada/2. Sets no publicados/1d.JPG", "Products/Portada/2. Sets no publicados/1e.PNG"],
+                stock: 0
+            },
+            "8":{
+                label: "Modelo 08",
+                price: 1190,
+                images: ["Products/Portada/2. Sets no publicados/1a Aros variedad (AGO 3-5-6-7-13).PNG", "Products/Portada/2. Sets no publicados/1b.JPG", "Products/Portada/2. Sets no publicados/1c.JPG", "Products/Portada/2. Sets no publicados/1d.JPG", "Products/Portada/2. Sets no publicados/1e.PNG"],
+                stock: 1
+            },
+            "9":{
+                label: "Modelo 09",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/1a Aros variedad (AGO 3-5-6-7-13).PNG", "Products/Portada/2. Sets no publicados/1b.JPG", "Products/Portada/2. Sets no publicados/1c.JPG", "Products/Portada/2. Sets no publicados/1d.JPG", "Products/Portada/2. Sets no publicados/1e.PNG"],
+                stock: 1
+            },
+            "10":{
+                label: "Modelo 10",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/1a Aros variedad (AGO 3-5-6-7-13).PNG", "Products/Portada/2. Sets no publicados/1b.JPG", "Products/Portada/2. Sets no publicados/1c.JPG", "Products/Portada/2. Sets no publicados/1d.JPG", "Products/Portada/2. Sets no publicados/1e.PNG"],
+                stock: 1
+            },
+            "11":{
+                label: "Modelo 11",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/1a Aros variedad (AGO 3-5-6-7-13).PNG", "Products/Portada/2. Sets no publicados/1b.JPG", "Products/Portada/2. Sets no publicados/1c.JPG", "Products/Portada/2. Sets no publicados/1d.JPG", "Products/Portada/2. Sets no publicados/1e.PNG"],
+                stock: 1
+            },
+            "12":{
+                label: "Modelo 12",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/1a Aros variedad (AGO 3-5-6-7-13).PNG", "Products/Portada/2. Sets no publicados/1b.JPG", "Products/Portada/2. Sets no publicados/1c.JPG", "Products/Portada/2. Sets no publicados/1d.JPG", "Products/Portada/2. Sets no publicados/1e.PNG"],
+                stock: 1
+            },
+            "13":{
+                label: "Modelo 13",
+                price: 1590,
+                images: ["Products/Portada/2. Sets no publicados/1a Aros variedad (AGO 3-5-6-7-13).PNG", "Products/Portada/2. Sets no publicados/1b.JPG", "Products/Portada/2. Sets no publicados/1c.JPG", "Products/Portada/2. Sets no publicados/1d.JPG", "Products/Portada/2. Sets no publicados/1e.PNG"],
+                stock: 1
+            },
+            "14":{
+                label: "Modelo 14",
+                price: 1590,
+                images: ["Products/Portada/2. Sets no publicados/1a Aros variedad (AGO 3-5-6-7-13).PNG", "Products/Portada/2. Sets no publicados/1b.JPG", "Products/Portada/2. Sets no publicados/1c.JPG", "Products/Portada/2. Sets no publicados/1d.JPG", "Products/Portada/2. Sets no publicados/1e.PNG"],
+                stock: 1
+            },
+            "15":{
+                label: "Modelo 15",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/1a Aros variedad (AGO 3-5-6-7-13).PNG", "Products/Portada/2. Sets no publicados/1b.JPG", "Products/Portada/2. Sets no publicados/1c.JPG", "Products/Portada/2. Sets no publicados/1d.JPG", "Products/Portada/2. Sets no publicados/1e.PNG"],
+                stock: 1
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-p-2.2":{
+        title: "Argollas variedad",
+        variants:{
+            "1":{
+                label: "Modelo 01",
+                price: 1500,
+                images: ["Products/Portada/2. Sets no publicados/2a Argollas variedad (AGO 2y5) $1.500.PNG", "Products/Portada/2. Sets no publicados/2b.JPG", "Products/Portada/2. Sets no publicados/2c.PNG", "Products/Portada/2. Sets no publicados/2d.PNG"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 1500,
+                images: ["Products/Portada/2. Sets no publicados/2a Argollas variedad (AGO 2y5) $1.500.PNG", "Products/Portada/2. Sets no publicados/2b.JPG", "Products/Portada/2. Sets no publicados/2c.PNG", "Products/Portada/2. Sets no publicados/2d.PNG"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 1500,
+                images: ["Products/Portada/2. Sets no publicados/2a Argollas variedad (AGO 2y5) $1.500.PNG", "Products/Portada/2. Sets no publicados/2b.JPG", "Products/Portada/2. Sets no publicados/2c.PNG", "Products/Portada/2. Sets no publicados/2d.PNG"],
+                stock: 1
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 1500,
+                images: ["Products/Portada/2. Sets no publicados/2a Argollas variedad (AGO 2y5) $1.500.PNG", "Products/Portada/2. Sets no publicados/2b.JPG", "Products/Portada/2. Sets no publicados/2c.PNG", "Products/Portada/2. Sets no publicados/2d.PNG"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05",
+                price: 1500,
+                images: ["Products/Portada/2. Sets no publicados/2a Argollas variedad (AGO 2y5) $1.500.PNG", "Products/Portada/2. Sets no publicados/2b.JPG", "Products/Portada/2. Sets no publicados/2c.PNG", "Products/Portada/2. Sets no publicados/2d.PNG"],
+                stock: 1
+            },
+            "6":{
+                label: "Modelo 06",
+                price: 1500,
+                images: ["Products/Portada/2. Sets no publicados/2a Argollas variedad (AGO 2y5) $1.500.PNG", "Products/Portada/2. Sets no publicados/2b.JPG", "Products/Portada/2. Sets no publicados/2c.PNG", "Products/Portada/2. Sets no publicados/2d.PNG"],
+                stock: 1
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p-2.3":{
+        title: "Aros variedad",
+        variants:{
+            "1":{
+                label: "Modelo 01",
+                price: 990,
+                images: ["Products/Portada/2. Sets no publicados/3a Aros variedad (AGO 9-10-11-12-13-14-15).PNG", "Products/Portada/2. Sets no publicados/3b.JPG", "Products/Portada/2. Sets no publicados/3c.PNG"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 1090,
+                images: ["Products/Portada/2. Sets no publicados/3a Aros variedad (AGO 9-10-11-12-13-14-15).PNG", "Products/Portada/2. Sets no publicados/3b.JPG", "Products/Portada/2. Sets no publicados/3c.PNG"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 1390,
+                images: ["Products/Portada/2. Sets no publicados/3a Aros variedad (AGO 9-10-11-12-13-14-15).PNG", "Products/Portada/2. Sets no publicados/3b.JPG", "Products/Portada/2. Sets no publicados/3c.PNG"],
+                stock: 1
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/3a Aros variedad (AGO 9-10-11-12-13-14-15).PNG", "Products/Portada/2. Sets no publicados/3b.JPG", "Products/Portada/2. Sets no publicados/3c.PNG"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/3a Aros variedad (AGO 9-10-11-12-13-14-15).PNG", "Products/Portada/2. Sets no publicados/3b.JPG", "Products/Portada/2. Sets no publicados/3c.PNG"],
+                stock: 1
+            },
+            "6":{
+                label: "Modelo 06",
+                price: 990,
+                images: ["Products/Portada/2. Sets no publicados/3a Aros variedad (AGO 9-10-11-12-13-14-15).PNG", "Products/Portada/2. Sets no publicados/3b.JPG", "Products/Portada/2. Sets no publicados/3c.PNG"],
+                stock: 1
+            },
+            "7":{
+                label: "Modelo 07",
+                price: 990,
+                images: ["Products/Portada/2. Sets no publicados/3a Aros variedad (AGO 9-10-11-12-13-14-15).PNG", "Products/Portada/2. Sets no publicados/3b.JPG", "Products/Portada/2. Sets no publicados/3c.PNG"],
+                stock: 1
+            },
+            "8":{
+                label: "Modelo 08",
+                price: 1190,
+                images: ["Products/Portada/2. Sets no publicados/3a Aros variedad (AGO 9-10-11-12-13-14-15).PNG", "Products/Portada/2. Sets no publicados/3b.JPG", "Products/Portada/2. Sets no publicados/3c.PNG"],
+                stock: 1
+            },
+            "9":{
+                label: "Modelo 09 - AGOTADO",
+                price: 1390,
+                images: ["Products/Portada/2. Sets no publicados/3a Aros variedad (AGO 9-10-11-12-13-14-15).PNG", "Products/Portada/2. Sets no publicados/3b.JPG", "Products/Portada/2. Sets no publicados/3c.PNG"],
+                stock: 0
+            },
+            "10":{
+                label: "Modelo 10 - AGOTADO",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/3a Aros variedad (AGO 9-10-11-12-13-14-15).PNG", "Products/Portada/2. Sets no publicados/3b.JPG", "Products/Portada/2. Sets no publicados/3c.PNG"],
+                stock: 0
+            },
+            "11":{
+                label: "Modelo 11 - AGOTADO",
+                price: 990,
+                images: ["Products/Portada/2. Sets no publicados/3a Aros variedad (AGO 9-10-11-12-13-14-15).PNG", "Products/Portada/2. Sets no publicados/3b.JPG", "Products/Portada/2. Sets no publicados/3c.PNG"],
+                stock: 0
+            },
+            "12":{
+                label: "Modelo 12 - AGOTADO",
+                price: 1290,
+                images: ["Products/Portada/2. Sets no publicados/3a Aros variedad (AGO 9-10-11-12-13-14-15).PNG", "Products/Portada/2. Sets no publicados/3b.JPG", "Products/Portada/2. Sets no publicados/3c.PNG"],
+                stock: 0
+            },
+            "13":{
+                label: "Modelo 13 - AGOTADO",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/3a Aros variedad (AGO 9-10-11-12-13-14-15).PNG", "Products/Portada/2. Sets no publicados/3b.JPG", "Products/Portada/2. Sets no publicados/3c.PNG"],
+                stock: 0
+            },
+            "14":{
+                label: "Modelo 14 - AGOTADO",
+                price: 1390,
+                images: ["Products/Portada/2. Sets no publicados/3a Aros variedad (AGO 9-10-11-12-13-14-15).PNG", "Products/Portada/2. Sets no publicados/3b.JPG", "Products/Portada/2. Sets no publicados/3c.PNG"],
+                stock: 0
+            },
+            "15":{
+                label: "Modelo 15 - AGOTADO",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/3a Aros variedad (AGO 9-10-11-12-13-14-15).PNG", "Products/Portada/2. Sets no publicados/3b.JPG", "Products/Portada/2. Sets no publicados/3c.PNG"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p-2.4":{
+        title: "Aros variedad",
+        variants:{
+            "1":{
+                label: "Modelo 01 - AGOTADO",
+                price: 490,
+                images: ["Products/Portada/2. Sets no publicados/4a Aros variedad (AGO 1-6-8-10).PNG", "Products/Portada/2. Sets no publicados/4b.JPG", "Products/Portada/2. Sets no publicados/4c.PNG"],
+                stock: 0
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 1290,
+                images: ["Products/Portada/2. Sets no publicados/4a Aros variedad (AGO 1-6-8-10).PNG", "Products/Portada/2. Sets no publicados/4b.JPG", "Products/Portada/2. Sets no publicados/4c.PNG"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 1190,
+                images: ["Products/Portada/2. Sets no publicados/4a Aros variedad (AGO 1-6-8-10).PNG", "Products/Portada/2. Sets no publicados/4b.JPG", "Products/Portada/2. Sets no publicados/4c.PNG"],
+                stock: 1
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 1290,
+                images: ["Products/Portada/2. Sets no publicados/4a Aros variedad (AGO 1-6-8-10).PNG", "Products/Portada/2. Sets no publicados/4b.JPG", "Products/Portada/2. Sets no publicados/4c.PNG"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/4a Aros variedad (AGO 1-6-8-10).PNG", "Products/Portada/2. Sets no publicados/4b.JPG", "Products/Portada/2. Sets no publicados/4c.PNG"],
+                stock: 1
+            },
+            "6":{
+                label: "Modelo 06 - AGOTADO",
+                price: 990,
+                images: ["Products/Portada/2. Sets no publicados/4a Aros variedad (AGO 1-6-8-10).PNG", "Products/Portada/2. Sets no publicados/4b.JPG", "Products/Portada/2. Sets no publicados/4c.PNG"],
+                stock: 0
+            },
+            "7":{
+                label: "Modelo 07",
+                price: 1190,
+                images: ["Products/Portada/2. Sets no publicados/4a Aros variedad (AGO 1-6-8-10).PNG", "Products/Portada/2. Sets no publicados/4b.JPG", "Products/Portada/2. Sets no publicados/4c.PNG"],
+                stock: 1
+            },
+            "8":{
+                label: "Modelo 08 - AGOTADO",
+                price: 1290,
+                images: ["Products/Portada/2. Sets no publicados/4a Aros variedad (AGO 1-6-8-10).PNG", "Products/Portada/2. Sets no publicados/4b.JPG", "Products/Portada/2. Sets no publicados/4c.PNG"],
+                stock: 0
+            },
+            "9":{
+                label: "Modelo 09",
+                price: 1290,
+                images: ["Products/Portada/2. Sets no publicados/4a Aros variedad (AGO 1-6-8-10).PNG", "Products/Portada/2. Sets no publicados/4b.JPG", "Products/Portada/2. Sets no publicados/4c.PNG"],
+                stock: 1
+            },
+            "10":{
+                label: "Modelo 10 - AGOTADO",
+                price: 1390,
+                images: ["Products/Portada/2. Sets no publicados/4a Aros variedad (AGO 1-6-8-10).PNG", "Products/Portada/2. Sets no publicados/4b.JPG", "Products/Portada/2. Sets no publicados/4c.PNG"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p-2.5":{
+        title: "Aros variedad",
+        variants:{
+            "1":{
+                label: "Modelo 01",
+                price: 490,
+                images: ["Products/Portada/2. Sets no publicados/5a Aros variedad (AGO 2-3-8).PNG", "Products/Portada/2. Sets no publicados/5b.JPG", "Products/Portada/2. Sets no publicados/5c.PNG", "Products/Portada/2. Sets no publicados/5d.PNG", "Products/Portada/2. Sets no publicados/5e.PNG", "Products/Portada/2. Sets no publicados/5f.PNG"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02 - AGOTADO",
+                price: 1290,
+                images: ["Products/Portada/2. Sets no publicados/5a Aros variedad (AGO 2-3-8).PNG", "Products/Portada/2. Sets no publicados/5b.JPG", "Products/Portada/2. Sets no publicados/5c.PNG", "Products/Portada/2. Sets no publicados/5d.PNG", "Products/Portada/2. Sets no publicados/5e.PNG", "Products/Portada/2. Sets no publicados/5f.PNG"],
+                stock: 0
+            },
+            "3":{
+                label: "Modelo 03 - AGOTADO",
+                price: 1190,
+                images: ["Products/Portada/2. Sets no publicados/5a Aros variedad (AGO 2-3-8).PNG", "Products/Portada/2. Sets no publicados/5b.JPG", "Products/Portada/2. Sets no publicados/5c.PNG", "Products/Portada/2. Sets no publicados/5d.PNG", "Products/Portada/2. Sets no publicados/5e.PNG", "Products/Portada/2. Sets no publicados/5f.PNG"],
+                stock: 0
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 1290,
+                images: ["Products/Portada/2. Sets no publicados/5a Aros variedad (AGO 2-3-8).PNG", "Products/Portada/2. Sets no publicados/5b.JPG", "Products/Portada/2. Sets no publicados/5c.PNG", "Products/Portada/2. Sets no publicados/5d.PNG", "Products/Portada/2. Sets no publicados/5e.PNG", "Products/Portada/2. Sets no publicados/5f.PNG"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/5a Aros variedad (AGO 2-3-8).PNG", "Products/Portada/2. Sets no publicados/5b.JPG", "Products/Portada/2. Sets no publicados/5c.PNG", "Products/Portada/2. Sets no publicados/5d.PNG", "Products/Portada/2. Sets no publicados/5e.PNG", "Products/Portada/2. Sets no publicados/5f.PNG"],
+                stock: 1
+            },
+            "6":{
+                label: "Modelo 06",
+                price: 990,
+                images: ["Products/Portada/2. Sets no publicados/5a Aros variedad (AGO 2-3-8).PNG", "Products/Portada/2. Sets no publicados/5b.JPG", "Products/Portada/2. Sets no publicados/5c.PNG", "Products/Portada/2. Sets no publicados/5d.PNG", "Products/Portada/2. Sets no publicados/5e.PNG", "Products/Portada/2. Sets no publicados/5f.PNG"],
+                stock: 1
+            },
+            "7":{
+                label: "Modelo 07",
+                price: 1190,
+                images: ["Products/Portada/2. Sets no publicados/5a Aros variedad (AGO 2-3-8).PNG", "Products/Portada/2. Sets no publicados/5b.JPG", "Products/Portada/2. Sets no publicados/5c.PNG", "Products/Portada/2. Sets no publicados/5d.PNG", "Products/Portada/2. Sets no publicados/5e.PNG", "Products/Portada/2. Sets no publicados/5f.PNG"],
+                stock: 1
+            },
+            "8":{
+                label: "Modelo 08 - AGOTADO",
+                price: 1290,
+                images: ["Products/Portada/2. Sets no publicados/5a Aros variedad (AGO 2-3-8).PNG", "Products/Portada/2. Sets no publicados/5b.JPG", "Products/Portada/2. Sets no publicados/5c.PNG", "Products/Portada/2. Sets no publicados/5d.PNG", "Products/Portada/2. Sets no publicados/5e.PNG", "Products/Portada/2. Sets no publicados/5f.PNG"],
+                stock: 0
+            },
+            "9":{
+                label: "Modelo 09",
+                price: 1290,
+                images: ["Products/Portada/2. Sets no publicados/5a Aros variedad (AGO 2-3-8).PNG", "Products/Portada/2. Sets no publicados/5b.JPG", "Products/Portada/2. Sets no publicados/5c.PNG", "Products/Portada/2. Sets no publicados/5d.PNG", "Products/Portada/2. Sets no publicados/5e.PNG", "Products/Portada/2. Sets no publicados/5f.PNG"],
+                stock: 1
+            },
+            "10":{
+                label: "Modelo 10",
+                price: 1390,
+                images: ["Products/Portada/2. Sets no publicados/5a Aros variedad (AGO 2-3-8).PNG", "Products/Portada/2. Sets no publicados/5b.JPG", "Products/Portada/2. Sets no publicados/5c.PNG", "Products/Portada/2. Sets no publicados/5d.PNG", "Products/Portada/2. Sets no publicados/5e.PNG", "Products/Portada/2. Sets no publicados/5f.PNG"],
+                stock: 1
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p-2.6":{
+        title: "Aros variedad",
+        variants:{
+            "A":{
+                label: "Modelo A",
+                price: 390,
+                images: ["Products/Portada/2. Sets no publicados/6a Aros variedad (AGO B-C-1).PNG", "Products/Portada/2. Sets no publicados/6b.JPG", "Products/Portada/2. Sets no publicados/6c.PNG", "Products/Portada/2. Sets no publicados/6d.PNG"],
+                stock: 1
+            },
+            "B":{
+                label: "Modelo B - AGOTADO",
+                price: 590,
+                images: ["Products/Portada/2. Sets no publicados/6a Aros variedad (AGO B-C-1).PNG", "Products/Portada/2. Sets no publicados/6b.JPG", "Products/Portada/2. Sets no publicados/6c.PNG", "Products/Portada/2. Sets no publicados/6d.PNG"],
+                stock: 0
+            },
+            "C":{
+                label: "Modelo C - AGOTADO",
+                price: 590,
+                images: ["Products/Portada/2. Sets no publicados/6a Aros variedad (AGO B-C-1).PNG", "Products/Portada/2. Sets no publicados/6b.JPG", "Products/Portada/2. Sets no publicados/6c.PNG", "Products/Portada/2. Sets no publicados/6d.PNG"],
+                stock: 0
+            },
+            "D":{
+                label: "Modelo D",
+                price: 390,
+                images: ["Products/Portada/2. Sets no publicados/6a Aros variedad (AGO B-C-1).PNG", "Products/Portada/2. Sets no publicados/6b.JPG", "Products/Portada/2. Sets no publicados/6c.PNG", "Products/Portada/2. Sets no publicados/6d.PNG"],
+                stock: 1
+            },
+            "E":{
+                label: "Modelo E",
+                price: 690,
+                images: ["Products/Portada/2. Sets no publicados/6a Aros variedad (AGO B-C-1).PNG", "Products/Portada/2. Sets no publicados/6b.JPG", "Products/Portada/2. Sets no publicados/6c.PNG", "Products/Portada/2. Sets no publicados/6d.PNG"],
+                stock: 1
+            },
+            "F":{
+                label: "Modelo F",
+                price: 390,
+                images: ["Products/Portada/2. Sets no publicados/6a Aros variedad (AGO B-C-1).PNG", "Products/Portada/2. Sets no publicados/6b.JPG", "Products/Portada/2. Sets no publicados/6c.PNG", "Products/Portada/2. Sets no publicados/6d.PNG"],
+                stock: 1
+            },
+            "1":{
+                label: "Modelo 01 - AGOTADO",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/6a Aros variedad (AGO B-C-1).PNG", "Products/Portada/2. Sets no publicados/6b.JPG", "Products/Portada/2. Sets no publicados/6c.PNG", "Products/Portada/2. Sets no publicados/6d.PNG"],
+                stock: 0
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/6a Aros variedad (AGO B-C-1).PNG", "Products/Portada/2. Sets no publicados/6b.JPG", "Products/Portada/2. Sets no publicados/6c.PNG", "Products/Portada/2. Sets no publicados/6d.PNG"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 1190,
+                images: ["Products/Portada/2. Sets no publicados/6a Aros variedad (AGO B-C-1).PNG", "Products/Portada/2. Sets no publicados/6b.JPG", "Products/Portada/2. Sets no publicados/6c.PNG", "Products/Portada/2. Sets no publicados/6d.PNG"],
+                stock: 1
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 1190,
+                images: ["Products/Portada/2. Sets no publicados/6a Aros variedad (AGO B-C-1).PNG", "Products/Portada/2. Sets no publicados/6b.JPG", "Products/Portada/2. Sets no publicados/6c.PNG", "Products/Portada/2. Sets no publicados/6d.PNG"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/6a Aros variedad (AGO B-C-1).PNG", "Products/Portada/2. Sets no publicados/6b.JPG", "Products/Portada/2. Sets no publicados/6c.PNG", "Products/Portada/2. Sets no publicados/6d.PNG"],
+                stock: 1
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p-2.7":{
+        title: "Aros variedad",
+        variants:{
+            "A":{
+                label: "Modelo A",
+                price: 690,
+                images: ["Products/Portada/2. Sets no publicados/7a Aros variedad (AGO B-2-3).PNG", "Products/Portada/2. Sets no publicados/7b.JPG", "Products/Portada/2. Sets no publicados/7c.PNG", "Products/Portada/2. Sets no publicados/7d.PNG"],
+                stock: 1
+            },
+            "B":{
+                label: "Modelo B - AGOTADO",
+                price: 490,
+                images: ["Products/Portada/2. Sets no publicados/7a Aros variedad (AGO B-2-3).PNG", "Products/Portada/2. Sets no publicados/7b.JPG", "Products/Portada/2. Sets no publicados/7c.PNG", "Products/Portada/2. Sets no publicados/7d.PNG"],
+                stock: 0
+            },
+            "C":{
+                label: "Modelo C",
+                price: 390,
+                images: ["Products/Portada/2. Sets no publicados/7a Aros variedad (AGO B-2-3).PNG", "Products/Portada/2. Sets no publicados/7b.JPG", "Products/Portada/2. Sets no publicados/7c.PNG", "Products/Portada/2. Sets no publicados/7d.PNG"],
+                stock: 1
+            },
+            "D":{
+                label: "Modelo D",
+                price: 390,
+                images: ["Products/Portada/2. Sets no publicados/7a Aros variedad (AGO B-2-3).PNG", "Products/Portada/2. Sets no publicados/7b.JPG", "Products/Portada/2. Sets no publicados/7c.PNG", "Products/Portada/2. Sets no publicados/7d.PNG"],
+                stock: 1
+            },
+            "E":{
+                label: "Modelo E",
+                price: 490,
+                images: ["Products/Portada/2. Sets no publicados/7a Aros variedad (AGO B-2-3).PNG", "Products/Portada/2. Sets no publicados/7b.JPG", "Products/Portada/2. Sets no publicados/7c.PNG", "Products/Portada/2. Sets no publicados/7d.PNG"],
+                stock: 1
+            },
+            "F":{
+                label: "Modelo F",
+                price: 390,
+                images: ["Products/Portada/2. Sets no publicados/7a Aros variedad (AGO B-2-3).PNG", "Products/Portada/2. Sets no publicados/7b.JPG", "Products/Portada/2. Sets no publicados/7c.PNG", "Products/Portada/2. Sets no publicados/7d.PNG"],
+                stock: 1
+            },
+            "1":{
+                label: "Modelo 01",
+                price: 1390,
+                images: ["Products/Portada/2. Sets no publicados/7a Aros variedad (AGO B-2-3).PNG", "Products/Portada/2. Sets no publicados/7b.JPG", "Products/Portada/2. Sets no publicados/7c.PNG", "Products/Portada/2. Sets no publicados/7d.PNG"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02 - AGOTADO",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/7a Aros variedad (AGO B-2-3).PNG", "Products/Portada/2. Sets no publicados/7b.JPG", "Products/Portada/2. Sets no publicados/7c.PNG", "Products/Portada/2. Sets no publicados/7d.PNG"],
+                stock: 0
+            },
+            "3":{
+                label: "Modelo 03 - AGOTADO",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/7a Aros variedad (AGO B-2-3).PNG", "Products/Portada/2. Sets no publicados/7b.JPG", "Products/Portada/2. Sets no publicados/7c.PNG", "Products/Portada/2. Sets no publicados/7d.PNG"],
+                stock: 0
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 990,
+                images: ["Products/Portada/2. Sets no publicados/7a Aros variedad (AGO B-2-3).PNG", "Products/Portada/2. Sets no publicados/7b.JPG", "Products/Portada/2. Sets no publicados/7c.PNG", "Products/Portada/2. Sets no publicados/7d.PNG"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05",
+                price: 1190,
+                images: ["Products/Portada/2. Sets no publicados/7a Aros variedad (AGO B-2-3).PNG", "Products/Portada/2. Sets no publicados/7b.JPG", "Products/Portada/2. Sets no publicados/7c.PNG", "Products/Portada/2. Sets no publicados/7d.PNG"],
+                stock: 1
+            },
+            "6":{
+                label: "Modelo 06",
+                price: 1190,
+                images: ["Products/Portada/2. Sets no publicados/7a Aros variedad (AGO B-2-3).PNG", "Products/Portada/2. Sets no publicados/7b.JPG", "Products/Portada/2. Sets no publicados/7c.PNG", "Products/Portada/2. Sets no publicados/7d.PNG"],
+                stock: 1
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p-2.8":{
+        title: "Aros variedad",
+        variants:{
+            "1":{
+                label: "Modelo 01",
+                price: 990,
+                images: ["Products/Portada/2. Sets no publicados/8a Aros variedad (AGO 6-7).PNG", "Products/Portada/2. Sets no publicados/8b.JPG", "Products/Portada/2. Sets no publicados/8c.PNG"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 990,
+                images: ["Products/Portada/2. Sets no publicados/8a Aros variedad (AGO 6-7).PNG", "Products/Portada/2. Sets no publicados/8b.JPG", "Products/Portada/2. Sets no publicados/8c.PNG"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/8a Aros variedad (AGO 6-7).PNG", "Products/Portada/2. Sets no publicados/8b.JPG", "Products/Portada/2. Sets no publicados/8c.PNG"],
+                stock: 1
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 1290,
+                images: ["Products/Portada/2. Sets no publicados/8a Aros variedad (AGO 6-7).PNG", "Products/Portada/2. Sets no publicados/8b.JPG", "Products/Portada/2. Sets no publicados/8c.PNG"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/8a Aros variedad (AGO 6-7).PNG", "Products/Portada/2. Sets no publicados/8b.JPG", "Products/Portada/2. Sets no publicados/8c.PNG"],
+                stock: 1
+            },
+            "6":{
+                label: "Modelo 06 - AGOTADO",
+                price: 490,
+                images: ["Products/Portada/2. Sets no publicados/8a Aros variedad (AGO 6-7).PNG", "Products/Portada/2. Sets no publicados/8b.JPG", "Products/Portada/2. Sets no publicados/8c.PNG"],
+                stock: 0
+            },
+            "7":{
+                label: "Modelo 07 - AGOTADO",
+                price: 1390,
+                images: ["Products/Portada/2. Sets no publicados/8a Aros variedad (AGO 6-7).PNG", "Products/Portada/2. Sets no publicados/8b.JPG", "Products/Portada/2. Sets no publicados/8c.PNG"],
+                stock: 0
+            },
+            "8":{
+                label: "Modelo 08",
+                price: 1090,
+                images: ["Products/Portada/2. Sets no publicados/8a Aros variedad (AGO 6-7).PNG", "Products/Portada/2. Sets no publicados/8b.JPG", "Products/Portada/2. Sets no publicados/8c.PNG"],
+                stock: 1
+            },
+            "9":{
+                label: "Modelo 09",
+                price: 1190,
+                images: ["Products/Portada/2. Sets no publicados/8a Aros variedad (AGO 6-7).PNG", "Products/Portada/2. Sets no publicados/8b.JPG", "Products/Portada/2. Sets no publicados/8c.PNG"],
+                stock: 1
+            },
+            "10":{
+                label: "Modelo 10",
+                price: 1390,
+                images: ["Products/Portada/2. Sets no publicados/8a Aros variedad (AGO 6-7).PNG", "Products/Portada/2. Sets no publicados/8b.JPG", "Products/Portada/2. Sets no publicados/8c.PNG"],
+                stock: 1
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p-2.9":{
+        title: "Aros variedad",
+        variants:{
+            "1":{
+                label: "Modelo 01 - AGOTADO",
+                price: 990,
+                images: ["Products/Portada/2. Sets no publicados/9a Aros variedad (1-5-6-7).PNG", "Products/Portada/2. Sets no publicados/9b.JPG", "Products/Portada/2. Sets no publicados/9c.PNG", "Products/Portada/2. Sets no publicados/9d.PNG"],
+                stock: 0
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 990,
+                images: ["Products/Portada/2. Sets no publicados/9a Aros variedad (1-5-6-7).PNG", "Products/Portada/2. Sets no publicados/9b.JPG", "Products/Portada/2. Sets no publicados/9c.PNG", "Products/Portada/2. Sets no publicados/9d.PNG"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/9a Aros variedad (1-5-6-7).PNG", "Products/Portada/2. Sets no publicados/9b.JPG", "Products/Portada/2. Sets no publicados/9c.PNG", "Products/Portada/2. Sets no publicados/9d.PNG"],
+                stock: 1
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 1290,
+                images: ["Products/Portada/2. Sets no publicados/9a Aros variedad (1-5-6-7).PNG", "Products/Portada/2. Sets no publicados/9b.JPG", "Products/Portada/2. Sets no publicados/9c.PNG", "Products/Portada/2. Sets no publicados/9d.PNG"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05 - AGOTADO",
+                price: 1490,
+                images: ["Products/Portada/2. Sets no publicados/9a Aros variedad (1-5-6-7).PNG", "Products/Portada/2. Sets no publicados/9b.JPG", "Products/Portada/2. Sets no publicados/9c.PNG", "Products/Portada/2. Sets no publicados/9d.PNG"],
+                stock: 0
+            },
+            "6":{
+                label: "Modelo 06 - AGOTADO",
+                price: 490,
+                images: ["Products/Portada/2. Sets no publicados/9a Aros variedad (1-5-6-7).PNG", "Products/Portada/2. Sets no publicados/9b.JPG", "Products/Portada/2. Sets no publicados/9c.PNG", "Products/Portada/2. Sets no publicados/9d.PNG"],
+                stock: 0
+            },
+            "7":{
+                label: "Modelo 07 - AGOTADO",
+                price: 1390,
+                images: ["Products/Portada/2. Sets no publicados/9a Aros variedad (1-5-6-7).PNG", "Products/Portada/2. Sets no publicados/9b.JPG", "Products/Portada/2. Sets no publicados/9c.PNG", "Products/Portada/2. Sets no publicados/9d.PNG"],
+                stock: 0
+            },
+            "8":{
+                label: "Modelo 08",
+                price: 1090,
+                images: ["Products/Portada/2. Sets no publicados/9a Aros variedad (1-5-6-7).PNG", "Products/Portada/2. Sets no publicados/9b.JPG", "Products/Portada/2. Sets no publicados/9c.PNG", "Products/Portada/2. Sets no publicados/9d.PNG"],
+                stock: 1
+            },
+            "9":{
+                label: "Modelo 09",
+                price: 1190,
+                images: ["Products/Portada/2. Sets no publicados/9a Aros variedad (1-5-6-7).PNG", "Products/Portada/2. Sets no publicados/9b.JPG", "Products/Portada/2. Sets no publicados/9c.PNG", "Products/Portada/2. Sets no publicados/9d.PNG"],
+                stock: 1
+            },
+            "10":{
+                label: "Modelo 10",
+                price: 1390,
+                images: ["Products/Portada/2. Sets no publicados/9a Aros variedad (1-5-6-7).PNG", "Products/Portada/2. Sets no publicados/9b.JPG", "Products/Portada/2. Sets no publicados/9c.PNG", "Products/Portada/2. Sets no publicados/9d.PNG"],
+                stock: 1
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-p-3.1":{
+        title: "Argollas variedad",
+        variants:{
+            "1":{
+                label: "Modelo 01 - AGOTADO",
+                price: 1790,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1a Argollas variedad (02-04) $1.800.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1g.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1h.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1i.PNG"],
+                stock: 0
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 1790,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1a Argollas variedad (02-04) $1.800.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1g.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1h.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1i.PNG"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03 - AGOTADO",
+                price: 1790,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1a Argollas variedad (02-04) $1.800.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1g.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1h.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1i.PNG"],
+                stock: 0
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 1790,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1a Argollas variedad (02-04) $1.800.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1g.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1h.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1i.PNG"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05 - AGOTADO",
+                price: 1790,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1a Argollas variedad (02-04) $1.800.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1g.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1h.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/1i.PNG"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "argollas-p-3.2":{
+        title: "Argollas variedad",
+        variants:{
+            "1":{
+                label: "Modelo 01 - AGOTADO",
+                price: 1800,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2a Argollas variedad (02) $1.800.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2g.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2h.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2i.PNG"],
+                stock: 0
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 1800,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2a Argollas variedad (02) $1.800.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2g.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2h.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2i.PNG"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03 - AGOTADO",
+                price: 1800,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2a Argollas variedad (02) $1.800.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2g.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2h.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2i.PNG"],
+                stock: 0
+            },
+            "4":{
+                label: "Modelo 04 - AGOTADO",
+                price: 1800,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2a Argollas variedad (02) $1.800.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2g.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2h.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2i.PNG"],
+                stock: 0
+            },
+            "5":{
+                label: "Modelo 05 - AGOTADO",
+                price: 1800,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2a Argollas variedad (02) $1.800.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2g.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2h.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/2i.PNG"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p-3.3":{
+        title: "Aros variedad",
+        variants:{
+            "1":{
+                label: "Modelo 01",
+                price: 1290,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3a Aros variedad.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3g.PNG"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 1290,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3a Aros variedad.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3g.PNG"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 1290,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3a Aros variedad.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3g.PNG"],
+                stock: 1
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 890,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3a Aros variedad.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3g.PNG"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05",
+                price: 1290,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3a Aros variedad.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3g.PNG"],
+                stock: 1
+            },
+            "6":{
+                label: "Modelo 06",
+                price: 1290,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3a Aros variedad.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/3g.PNG"],
+                stock: 1
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p-3.4":{
+        title: "Aros variedad",
+        variants:{
+            "1":{
+                label: "Modelo 01",
+                price: 1490,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4a Aros variedad (AGO 04).PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4c.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4d.JPG"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 1090,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4a Aros variedad (AGO 04).PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4c.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4d.JPG"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 1290,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4a Aros variedad (AGO 04).PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4c.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4d.JPG"],
+                stock: 1
+            },
+            "4":{
+                label: "Modelo 04 - AGOTADO",
+                price: 1490,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4a Aros variedad (AGO 04).PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4c.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4d.JPG"],
+                stock: 0
+            },
+            "5":{
+                label: "Modelo 05",
+                price: 1490,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4a Aros variedad (AGO 04).PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4c.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4d.JPG"],
+                stock: 1
+            },
+            "6":{
+                label: "Modelo 06",
+                price: 1290,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4a Aros variedad (AGO 04).PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4c.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4d.JPG"],
+                stock: 1
+            },
+            "7":{
+                label: "Modelo 07",
+                price: 1490,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4a Aros variedad (AGO 04).PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4c.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4d.JPG"],
+                stock: 1
+            },
+            "8":{
+                label: "Modelo 08",
+                price: 1590,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4a Aros variedad (AGO 04).PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4c.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4d.JPG"],
+                stock: 1
+            },
+            "9":{
+                label: "Modelo 09",
+                price: 1490,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4a Aros variedad (AGO 04).PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4c.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/4d.JPG"],
+                stock: 1
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p-3.5":{
+        title: "Aros variedad",
+        variants:{
+            "1":{
+                label: "Modelo 01",
+                price: 1490,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5a Aros variedad (AGO 09).PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5g.PNG"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 1090,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5a Aros variedad (AGO 09).PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5g.PNG"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 990,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5a Aros variedad (AGO 09).PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5g.PNG"],
+                stock: 1
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 1190,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5a Aros variedad (AGO 09).PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5g.PNG"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05",
+                price: 990,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5a Aros variedad (AGO 09).PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5g.PNG"],
+                stock: 1
+            },
+            "6":{
+                label: "Modelo 06",
+                price: 1290,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5a Aros variedad (AGO 09).PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5g.PNG"],
+                stock: 1
+            },
+            "7":{
+                label: "Modelo 07",
+                price: 1490,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5a Aros variedad (AGO 09).PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5g.PNG"],
+                stock: 1
+            },
+            "8":{
+                label: "Modelo 08",
+                price: 1490,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5a Aros variedad (AGO 09).PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5g.PNG"],
+                stock: 1
+            },
+            "9":{
+                label: "Modelo 09 - AGOTADO",
+                price: 1590,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5a Aros variedad (AGO 09).PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5f.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/5g.PNG"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p-3.6":{
+        title: "Aros variedad perlas",
+        variants:{
+            "1":{
+                label: "Modelo 01",
+                price: 1490,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/6a Aros variedad perlas.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/6b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/6c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/6d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/6e.PNG"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 1890,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/6a Aros variedad perlas.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/6b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/6c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/6d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/6e.PNG"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 1990,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/6a Aros variedad perlas.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/6b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/6c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/6d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/6e.PNG"],
+                stock: 1
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p-3.7":{
+        title: "Perlas",
+        variants:{
+            "8mm":{
+                label: "8mm",
+                price: 1000,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7a Perlas (AGO 12mm) $1.000 a $1.800.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7f.PNG"],
+                stock: 1
+            },
+            "10mm":{
+                label: "10mm",
+                price: 1200,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7a Perlas (AGO 12mm) $1.000 a $1.800.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7f.PNG"],
+                stock: 1
+            },
+            "12mm":{
+                label: "12mm",
+                price: 1400,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7a Perlas (AGO 12mm) $1.000 a $1.800.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7f.PNG"],
+                stock: 1
+            },
+            "14mm":{
+                label: "14mm",
+                price: 1600,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7a Perlas (AGO 12mm) $1.000 a $1.800.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7f.PNG"],
+                stock: 1
+            },
+            "16mm":{
+                label: "16mm",
+                price: 1800,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7a Perlas (AGO 12mm) $1.000 a $1.800.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/7f.PNG"],
+                stock: 1
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p-3.8":{
+        title: "Perlas rosadas",
+        variants:{
+            "10mm":{
+                label: "10mm",
+                price: 1200,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/8a Perlas rosadas (10mm-2mm) $1.200 a $1.600.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/8b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/8c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/8d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/8e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/8f.PNG"],
+                stock: 1
+            },
+            "12mm":{
+                label: "12mm - AGOTADO",
+                price: 1400,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/8a Perlas rosadas (10mm-2mm) $1.200 a $1.600.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/8b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/8c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/8d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/8e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/8f.PNG"],
+                stock: 0
+            },
+            "14mm":{
+                label: "14mm",
+                price: 1600,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/8a Perlas rosadas (10mm-2mm) $1.200 a $1.600.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/8b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/8c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/8d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/8e.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/8f.PNG"],
+                stock: 1
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-p-3.9":{
+        title: "Perlas 12mm variedad colores",
+        variants:{
+            "rojo":{
+                label: "Rojo",
+                price: 1500,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9a Perlas 12mm variedad colores (todos dispo) $1.500.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9e.PNG"],
+                stock: 1
+            },
+            "cafe":{
+                label: "Café",
+                price: 1500,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9a Perlas 12mm variedad colores (todos dispo) $1.500.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9e.PNG"],
+                stock: 1
+            },
+            "plateado":{
+                label: "Plateado",
+                price: 1500,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9a Perlas 12mm variedad colores (todos dispo) $1.500.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9e.PNG"],
+                stock: 1
+            },
+            "blanco":{
+                label: "Blanco",
+                price: 1500,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9a Perlas 12mm variedad colores (todos dispo) $1.500.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9e.PNG"],
+                stock: 1
+            },
+            "bronce":{
+                label: "Bronce",
+                price: 1500,
+                images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9a Perlas 12mm variedad colores (todos dispo) $1.500.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/9e.PNG"],
+                stock: 1
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
 
     ///PLATA ESTERLINA
     "pulseras-5-3.1":{
@@ -2231,7 +3251,6 @@ const PRODUCTS = {
         category: "PlataEsterlina",
         subcategory: "Collares"
     },
-
 
     ///MAQUILLAJE
     "ojos-make-1.1":{
