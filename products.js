@@ -3753,7 +3753,8 @@ const PRODUCTS = {
                 stock:  1
             },
         },
-        category: "Accesorios"
+        category: "Accesorios",
+        subcategory: "Otros"
     },
     "herramientas-6.1":{
         title: "Set x7 brochas de maquillaje",
