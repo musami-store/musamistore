@@ -4094,5 +4094,792 @@ const PRODUCTS = {
         stock: 1,
         category: "Maquillaje",
         subcategory: "Ojos"
+    },
+
+    //ACCESORIOS
+    "accesorios-7.1":{
+        title: "Lentes accesorio (sin aumento)",
+        price: 3490,
+        images: ["Products/7. Accesorios/1a Lentes accesorio (sin aumento) $3.500.jpg", "Products/7. Accesorios/1b.jpg", "Products/7. Accesorios/1c.jpg"],
+        stock: 1,
+        category: "Accesorios",
+        subcategory: "Otros"
+    },
+    "accesorios-7.2":{
+        title: "Lentes accesorio (sin aumento)",
+        variants:{
+            "dorado":{
+                label: "Dorado",
+                price: 3790,
+                images: ["Products/7. Accesorios/2a Lentes accesorio (sin aumento) (DOR) $3.800.jpg", "Products/7. Accesorios/2b.jpg", "Products/7. Accesorios/2c.jpg", "Products/7. Accesorios/2d.jpg", "Products/7. Accesorios/2e.jpg"],
+                stock: 1
+            },
+            "plateado":{
+                label: "Plateado - AGOTADO",
+                price: 3790,
+                images: ["Products/7. Accesorios/2a Lentes accesorio (sin aumento) (DOR) $3.800.jpg", "Products/7. Accesorios/2b.jpg", "Products/7. Accesorios/2c.jpg", "Products/7. Accesorios/2d.jpg", "Products/7. Accesorios/2e.jpg"],
+                stock: 0
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Otros"
+    },
+    "accesorios-7.3":{
+        title: "Accesorio cabello",
+        variants:{
+            "plateado":{
+                label: "Plateado",
+                price: 990,
+                images: ["Products/7. Accesorios/3a Accesorio cabello (PLA) $1.000.jpg", "Products/7. Accesorios/3b.jpg"],
+                stock: 1
+            },
+            "dorado":{
+                label: "Dorado - AGOTADO",
+                price: 990,
+                images: ["Products/7. Accesorios/3a Accesorio cabello (PLA) $1.000.jpg", "Products/7. Accesorios/3b.jpg"],
+                stock: 0
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Pinches"
+    },
+    "accesorios-7.4":{
+        title: "Accesorio cabello",
+        variants:{
+            "dorado":{
+                label: "Dorado",
+                price: 990,
+                images: ["Products/7. Accesorios/4a Accesorio cabello (DOR) $1.000.jpg", "Products/7. Accesorios/4b.jpg"],
+                stock: 1
+            },
+            "plateado":{
+                label: "Plateado - AGOTADO",
+                price: 990,
+                images: ["Products/7. Accesorios/4a Accesorio cabello (DOR) $1.000.jpg", "Products/7. Accesorios/4b.jpg"],
+                stock: 0
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Pinches"
+    },
+    "accesorios-7.5":{
+        title: "Scrunchie",
+        variants: {
+            "beige":{
+                label: "Beige",
+                price: 1290,
+                images: ["Products/7. Accesorios/5a Scrunchie (beige y negro)$1.300.jpg", "Products/7. Accesorios/5b.jpg", "Products/7. Accesorios 5c.jpg"],
+                stock: 1
+            },
+            "negro":{
+                label: "Negro",
+                price: 1290,
+                images: ["Products/7. Accesorios/5a Scrunchie (beige y negro)$1.300.jpg", "Products/7. Accesorios/5b.jpg", "Products/7. Accesorios 5c.jpg"],
+                stock: 1
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Scrunchies"
+    },
+    "accesorios-7.6":{
+        title: "Scrunchie",
+        variants: {
+            "beige":{
+                label: "Beige",
+                price: 1490,
+                images: ["Products/7. Accesorios/6a Scrunchie (beige y café) $1.500.jpg", "Products/7. Accesorios/6b.jpg", "Products/7. Accesorios/6c.jpg", "Products/7. Accesorios/6d.jpg", "Products/7. Accesorios/6e.jpg"],
+                stock: 1
+            },
+            "cafe":{
+                label: "Café",
+                price: 1490,
+                images: ["Products/7. Accesorios/6a Scrunchie (beige y café) $1.500.jpg", "Products/7. Accesorios/6b.jpg", "Products/7. Accesorios/6c.jpg", "Products/7. Accesorios/6d.jpg", "Products/7. Accesorios/6e.jpg"],
+                stock: 1
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Scrunchies"
+    },
+    "accesorios-7.7":{
+        title: "Mini scrunchies",
+        variants: {
+            "negro":{
+                label: "Negro",
+                price: 390,
+                images: ["Products/7. Accesorios/7a Mini scrunchies (AGO Coral y azul) $400 (1).webp", "Products/7. Accesorios/7b.JPG", "Products/7. Accesorios/7c.webp", "Products/7. Accesorios/7d.webp", "Products/7. Accesorios/7e.webp", "Products/7. Accesorios/7f.webp", "Products/7. Accesorios/7g.webp", "Products/7. Accesorios/7h.webp", "Products/7. Accesorios/7i.webp"],
+                stock: 1
+            },
+            "cafe":{
+                label: "Café",
+                price: 390,
+                images: ["Products/7. Accesorios/7a Mini scrunchies (AGO Coral y azul) $400 (1).webp", "Products/7. Accesorios/7b.JPG", "Products/7. Accesorios/7c.webp", "Products/7. Accesorios/7d.webp", "Products/7. Accesorios/7e.webp", "Products/7. Accesorios/7f.webp", "Products/7. Accesorios/7g.webp", "Products/7. Accesorios/7h.webp", "Products/7. Accesorios/7i.webp"],
+                stock: 1
+            },
+            "dorado":{
+                label: "Dorado",
+                price: 390,
+                images: ["Products/7. Accesorios/7a Mini scrunchies (AGO Coral y azul) $400 (1).webp", "Products/7. Accesorios/7b.JPG", "Products/7. Accesorios/7c.webp", "Products/7. Accesorios/7d.webp", "Products/7. Accesorios/7e.webp", "Products/7. Accesorios/7f.webp", "Products/7. Accesorios/7g.webp", "Products/7. Accesorios/7h.webp", "Products/7. Accesorios/7i.webp"],
+                stock: 1
+            },
+            "blanco":{
+                label: "Blanco",
+                price: 390,
+                images: ["Products/7. Accesorios/7a Mini scrunchies (AGO Coral y azul) $400 (1).webp", "Products/7. Accesorios/7b.JPG", "Products/7. Accesorios/7c.webp", "Products/7. Accesorios/7d.webp", "Products/7. Accesorios/7e.webp", "Products/7. Accesorios/7f.webp", "Products/7. Accesorios/7g.webp", "Products/7. Accesorios/7h.webp", "Products/7. Accesorios/7i.webp"],
+                stock: 1
+            },
+            "rosa claro":{
+                label: "Rosa claro",
+                price: 390,
+                images: ["Products/7. Accesorios/7a Mini scrunchies (AGO Coral y azul) $400 (1).webp", "Products/7. Accesorios/7b.JPG", "Products/7. Accesorios/7c.webp", "Products/7. Accesorios/7d.webp", "Products/7. Accesorios/7e.webp", "Products/7. Accesorios/7f.webp", "Products/7. Accesorios/7g.webp", "Products/7. Accesorios/7h.webp", "Products/7. Accesorios/7i.webp"],
+                stock: 1
+            },
+            "beige":{
+                label: "Beige",
+                price: 390,
+                images: ["Products/7. Accesorios/7a Mini scrunchies (AGO Coral y azul) $400 (1).webp", "Products/7. Accesorios/7b.JPG", "Products/7. Accesorios/7c.webp", "Products/7. Accesorios/7d.webp", "Products/7. Accesorios/7e.webp", "Products/7. Accesorios/7f.webp", "Products/7. Accesorios/7g.webp", "Products/7. Accesorios/7h.webp", "Products/7. Accesorios/7i.webp"],
+                stock: 1
+            },
+            "rosado":{
+                label: "Rosado",
+                price: 390,
+                images: ["Products/7. Accesorios/7a Mini scrunchies (AGO Coral y azul) $400 (1).webp", "Products/7. Accesorios/7b.JPG", "Products/7. Accesorios/7c.webp", "Products/7. Accesorios/7d.webp", "Products/7. Accesorios/7e.webp", "Products/7. Accesorios/7f.webp", "Products/7. Accesorios/7g.webp", "Products/7. Accesorios/7h.webp", "Products/7. Accesorios/7i.webp"],
+                stock: 1
+            },
+            "coral":{
+                label: "Coral - AGOTADO",
+                price: 390,
+                images: ["Products/7. Accesorios/7a Mini scrunchies (AGO Coral y azul) $400 (1).webp", "Products/7. Accesorios/7b.JPG", "Products/7. Accesorios/7c.webp", "Products/7. Accesorios/7d.webp", "Products/7. Accesorios/7e.webp", "Products/7. Accesorios/7f.webp", "Products/7. Accesorios/7g.webp", "Products/7. Accesorios/7h.webp", "Products/7. Accesorios/7i.webp"],
+                stock: 0
+            },
+            "rojo":{
+                label: "Rojo",
+                price: 390,
+                images: ["Products/7. Accesorios/7a Mini scrunchies (AGO Coral y azul) $400 (1).webp", "Products/7. Accesorios/7b.JPG", "Products/7. Accesorios/7c.webp", "Products/7. Accesorios/7d.webp", "Products/7. Accesorios/7e.webp", "Products/7. Accesorios/7f.webp", "Products/7. Accesorios/7g.webp", "Products/7. Accesorios/7h.webp", "Products/7. Accesorios/7i.webp"],
+                stock: 1
+            },
+            "naranjo":{
+                label: "Naranjo",
+                price: 390,
+                images: ["Products/7. Accesorios/7a Mini scrunchies (AGO Coral y azul) $400 (1).webp", "Products/7. Accesorios/7b.JPG", "Products/7. Accesorios/7c.webp", "Products/7. Accesorios/7d.webp", "Products/7. Accesorios/7e.webp", "Products/7. Accesorios/7f.webp", "Products/7. Accesorios/7g.webp", "Products/7. Accesorios/7h.webp", "Products/7. Accesorios/7i.webp"],
+                stock: 1
+            },
+            "amarillo":{
+                label: "Amarillo",
+                price: 390,
+                images: ["Products/7. Accesorios/7a Mini scrunchies (AGO Coral y azul) $400 (1).webp", "Products/7. Accesorios/7b.JPG", "Products/7. Accesorios/7c.webp", "Products/7. Accesorios/7d.webp", "Products/7. Accesorios/7e.webp", "Products/7. Accesorios/7f.webp", "Products/7. Accesorios/7g.webp", "Products/7. Accesorios/7h.webp", "Products/7. Accesorios/7i.webp"],
+                stock: 1
+            },
+            "verde":{
+                label: "Verde",
+                price: 390,
+                images: ["Products/7. Accesorios/7a Mini scrunchies (AGO Coral y azul) $400 (1).webp", "Products/7. Accesorios/7b.JPG", "Products/7. Accesorios/7c.webp", "Products/7. Accesorios/7d.webp", "Products/7. Accesorios/7e.webp", "Products/7. Accesorios/7f.webp", "Products/7. Accesorios/7g.webp", "Products/7. Accesorios/7h.webp", "Products/7. Accesorios/7i.webp"],
+                stock: 1
+            },
+            "morado":{
+                label: "Morado",
+                price: 390,
+                images: ["Products/7. Accesorios/7a Mini scrunchies (AGO Coral y azul) $400 (1).webp", "Products/7. Accesorios/7b.JPG", "Products/7. Accesorios/7c.webp", "Products/7. Accesorios/7d.webp", "Products/7. Accesorios/7e.webp", "Products/7. Accesorios/7f.webp", "Products/7. Accesorios/7g.webp", "Products/7. Accesorios/7h.webp", "Products/7. Accesorios/7i.webp"],
+                stock: 1
+            },
+            "azul":{
+                label: "Azul - AGOTADO",
+                price: 390,
+                images: ["Products/7. Accesorios/7a Mini scrunchies (AGO Coral y azul) $400 (1).webp", "Products/7. Accesorios/7b.JPG", "Products/7. Accesorios/7c.webp", "Products/7. Accesorios/7d.webp", "Products/7. Accesorios/7e.webp", "Products/7. Accesorios/7f.webp", "Products/7. Accesorios/7g.webp", "Products/7. Accesorios/7h.webp", "Products/7. Accesorios/7i.webp"],
+                stock: 0
+            },
+            "celeste":{
+                label: "Celeste",
+                price: 390,
+                images: ["Products/7. Accesorios/7a Mini scrunchies (AGO Coral y azul) $400 (1).webp", "Products/7. Accesorios/7b.JPG", "Products/7. Accesorios/7c.webp", "Products/7. Accesorios/7d.webp", "Products/7. Accesorios/7e.webp", "Products/7. Accesorios/7f.webp", "Products/7. Accesorios/7g.webp", "Products/7. Accesorios/7h.webp", "Products/7. Accesorios/7i.webp"],
+                stock: 1
+            },
+            "gris":{
+                label: "Gris",
+                price: 390,
+                images: ["Products/7. Accesorios/7a Mini scrunchies (AGO Coral y azul) $400 (1).webp", "Products/7. Accesorios/7b.JPG", "Products/7. Accesorios/7c.webp", "Products/7. Accesorios/7d.webp", "Products/7. Accesorios/7e.webp", "Products/7. Accesorios/7f.webp", "Products/7. Accesorios/7g.webp", "Products/7. Accesorios/7h.webp", "Products/7. Accesorios/7i.webp"],
+                stock: 1
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Scrunchies"
+    },
+    "accesorios-7.8":{
+        title: "Scrunchies felpa",
+        variants:{
+            "1":{
+                label: "Modelo 01",
+                price: 890,
+                images: ["Products/7. Accesorios/8a Scruchies felpa (1-3-4-7) $1.200.webp", "Products/7. Accesorios/8b.JPG", "Products/7. Accesorios/8c.webp", "Products/7. Accesorios/8d.webp", "Products/7. Accesorios/8e.webp"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02 - AGOTADO",
+                price: 890,
+                images: ["Products/7. Accesorios/8a Scruchies felpa (1-3-4-7) $1.200.webp", "Products/7. Accesorios/8b.JPG", "Products/7. Accesorios/8c.webp", "Products/7. Accesorios/8d.webp", "Products/7. Accesorios/8e.webp"],
+                stock: 0
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 890,
+                images: ["Products/7. Accesorios/8a Scruchies felpa (1-3-4-7) $1.200.webp", "Products/7. Accesorios/8b.JPG", "Products/7. Accesorios/8c.webp", "Products/7. Accesorios/8d.webp", "Products/7. Accesorios/8e.webp"],
+                stock: 1
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 890,
+                images: ["Products/7. Accesorios/8a Scruchies felpa (1-3-4-7) $1.200.webp", "Products/7. Accesorios/8b.JPG", "Products/7. Accesorios/8c.webp", "Products/7. Accesorios/8d.webp", "Products/7. Accesorios/8e.webp"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05 - AGOTADO",
+                price: 890,
+                images: ["Products/7. Accesorios/8a Scruchies felpa (1-3-4-7) $1.200.webp", "Products/7. Accesorios/8b.JPG", "Products/7. Accesorios/8c.webp", "Products/7. Accesorios/8d.webp", "Products/7. Accesorios/8e.webp"],
+                stock: 0
+            },
+            "6":{
+                label: "Modelo 06 - AGOTADO",
+                price: 890,
+                images: ["Products/7. Accesorios/8a Scruchies felpa (1-3-4-7) $1.200.webp", "Products/7. Accesorios/8b.JPG", "Products/7. Accesorios/8c.webp", "Products/7. Accesorios/8d.webp", "Products/7. Accesorios/8e.webp"],
+                stock: 0
+            },
+            "7":{
+                label: "Modelo 07",
+                price: 890,
+                images: ["Products/7. Accesorios/8a Scruchies felpa (1-3-4-7) $1.200.webp", "Products/7. Accesorios/8b.JPG", "Products/7. Accesorios/8c.webp", "Products/7. Accesorios/8d.webp", "Products/7. Accesorios/8e.webp"],
+                stock: 1
+            },
+            "8":{
+                label: "Modelo 08 - AGOTADO",
+                price: 890,
+                images: ["Products/7. Accesorios/8a Scruchies felpa (1-3-4-7) $1.200.webp", "Products/7. Accesorios/8b.JPG", "Products/7. Accesorios/8c.webp", "Products/7. Accesorios/8d.webp", "Products/7. Accesorios/8e.webp"],
+                stock: 0
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Scrunchies"
+    },
+    "accesorios-7.9":{
+        title: "Scrunchie variedades",
+        variants:{
+            "1":{
+                label: "Modelo 01 - AGOTADO",
+                price: 890,
+                images: ["Products/7. Accesorios/9a Scrunchie variedades (AGO 1-4) $900.webp", "Products/7. Accesorios/9b.JPG", "Products/7. Accesorios/9c.webp", "Products/7. Accesorios/9d.webp", "Products/7. Accesorios/9e.webp"],
+                stock: 0
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 890,
+                images: ["Products/7. Accesorios/9a Scrunchie variedades (AGO 1-4) $900.webp", "Products/7. Accesorios/9b.JPG", "Products/7. Accesorios/9c.webp", "Products/7. Accesorios/9d.webp", "Products/7. Accesorios/9e.webp"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 890,
+                images: ["Products/7. Accesorios/9a Scrunchie variedades (AGO 1-4) $900.webp", "Products/7. Accesorios/9b.JPG", "Products/7. Accesorios/9c.webp", "Products/7. Accesorios/9d.webp", "Products/7. Accesorios/9e.webp"],
+                stock: 1
+            },
+            "4":{
+                label: "Modelo 04 - AGOTADO",
+                price: 890,
+                images: ["Products/7. Accesorios/9a Scrunchie variedades (AGO 1-4) $900.webp", "Products/7. Accesorios/9b.JPG", "Products/7. Accesorios/9c.webp", "Products/7. Accesorios/9d.webp", "Products/7. Accesorios/9e.webp"],
+                stock: 0
+            },
+            "5":{
+                label: "Modelo 05",
+                price: 890,
+                images: ["Products/7. Accesorios/9a Scrunchie variedades (AGO 1-4) $900.webp", "Products/7. Accesorios/9b.JPG", "Products/7. Accesorios/9c.webp", "Products/7. Accesorios/9d.webp", "Products/7. Accesorios/9e.webp"],
+                stock: 1
+            },
+            "6":{
+                label: "Modelo 06",
+                price: 890,
+                images: ["Products/7. Accesorios/9a Scrunchie variedades (AGO 1-4) $900.webp", "Products/7. Accesorios/9b.JPG", "Products/7. Accesorios/9c.webp", "Products/7. Accesorios/9d.webp", "Products/7. Accesorios/9e.webp"],
+                stock: 1
+            },
+            "7":{
+                label: "Modelo 07",
+                price: 890,
+                images: ["Products/7. Accesorios/9a Scrunchie variedades (AGO 1-4) $900.webp", "Products/7. Accesorios/9b.JPG", "Products/7. Accesorios/9c.webp", "Products/7. Accesorios/9d.webp", "Products/7. Accesorios/9e.webp"],
+                stock: 1
+            },
+            "8":{
+                label: "Modelo 08",
+                price: 890,
+                images: ["Products/7. Accesorios/9a Scrunchie variedades (AGO 1-4) $900.webp", "Products/7. Accesorios/9b.JPG", "Products/7. Accesorios/9c.webp", "Products/7. Accesorios/9d.webp", "Products/7. Accesorios/9e.webp"],
+                stock: 1
+            },
+            "9":{
+                label: "Modelo 09",
+                price: 890,
+                images: ["Products/7. Accesorios/9a Scrunchie variedades (AGO 1-4) $900.webp", "Products/7. Accesorios/9b.JPG", "Products/7. Accesorios/9c.webp", "Products/7. Accesorios/9d.webp", "Products/7. Accesorios/9e.webp"],
+                stock: 1
+            },
+            "10":{
+                label: "Modelo 10",
+                price: 890,
+                images: ["Products/7. Accesorios/9a Scrunchie variedades (AGO 1-4) $900.webp", "Products/7. Accesorios/9b.JPG", "Products/7. Accesorios/9c.webp", "Products/7. Accesorios/9d.webp", "Products/7. Accesorios/9e.webp"],
+                stock: 1
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Scrunchies"
+    },
+    "accesorios-7.10":{
+        title: "Scrunchies azul variedad",
+        variants: {
+            "1":{
+                label: "Modelo 01",
+                price: 790,
+                images: ["Products/7. Accesorios/10a Scrunchies azul variedad $800.webp", "Products/7. Accesorios/10b.JPG", "Products/7. Accesorios/10c.webp", "Products/7. Accesorios/10d.webp"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 790,
+                images: ["Products/7. Accesorios/10a Scrunchies azul variedad $800.webp", "Products/7. Accesorios/10b.JPG", "Products/7. Accesorios/10c.webp", "Products/7. Accesorios/10d.webp"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 790,
+                images: ["Products/7. Accesorios/10a Scrunchies azul variedad $800.webp", "Products/7. Accesorios/10b.JPG", "Products/7. Accesorios/10c.webp", "Products/7. Accesorios/10d.webp"],
+                stock: 1
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 790,
+                images: ["Products/7. Accesorios/10a Scrunchies azul variedad $800.webp", "Products/7. Accesorios/10b.JPG", "Products/7. Accesorios/10c.webp", "Products/7. Accesorios/10d.webp"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05",
+                price: 790,
+                images: ["Products/7. Accesorios/10a Scrunchies azul variedad $800.webp", "Products/7. Accesorios/10b.JPG", "Products/7. Accesorios/10c.webp", "Products/7. Accesorios/10d.webp"],
+                stock: 1
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Scrunchies"
+    },
+    "accesorios-7.11":{
+        title: "Scrunchies variedad rosado",
+        variants:{
+            "1":{
+                label: "Modelo 01 - AGOTADO",
+                price: 990,
+                images: ["Products/7. Accesorios/11a Scrunchie variedad rosado (2-3) $1.000.webp", "Products/7. Accesorios/11b.JPG", "Products/7. Accesorios/11c.webp", "Products/7. Accesorios/11d.webp"],
+                stock: 0
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 990,
+                images: ["Products/7. Accesorios/11a Scrunchie variedad rosado (2-3) $1.000.webp", "Products/7. Accesorios/11b.JPG", "Products/7. Accesorios/11c.webp", "Products/7. Accesorios/11d.webp"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 990,
+                images: ["Products/7. Accesorios/11a Scrunchie variedad rosado (2-3) $1.000.webp", "Products/7. Accesorios/11b.JPG", "Products/7. Accesorios/11c.webp", "Products/7. Accesorios/11d.webp"],
+                stock: 1
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Scrunchies"
+    },
+    "accesorios-7.12":{
+        title: "Moño cinta",
+        variants:{
+            "beige":{
+                label: "Beige",
+                price: 1490,
+                images: ["Products/7. Accesorios/12a Moño cinta (Beige-negro) $1.500.webp", "Products/7. Accesorios/12b.webp", "Products/7. Accesorios/12c.webp", "Products/7. Accesorios/12d.webp", "Products/7. Accesorios/12e.webp", "Products/7. Accesorios/12f.webp", "Products/7. Accesorios/12g.webp", "Products/7. Accesorios/12h.webp", "Products/7. Accesorios/12i.webp"],
+                stock: 1
+            },
+            "negro":{
+                label: "Negro",
+                price: 1490,
+                images: ["Products/7. Accesorios/12a Moño cinta (Beige-negro) $1.500.webp", "Products/7. Accesorios/12b.webp", "Products/7. Accesorios/12c.webp", "Products/7. Accesorios/12d.webp", "Products/7. Accesorios/12e.webp", "Products/7. Accesorios/12f.webp", "Products/7. Accesorios/12g.webp", "Products/7. Accesorios/12h.webp", "Products/7. Accesorios/12i.webp"],
+                stock: 1
+            },
+            "amarillo":{
+                label: "Amarillo - AGOTADO",
+                price: 1490,
+                images: ["Products/7. Accesorios/12a Moño cinta (Beige-negro) $1.500.webp", "Products/7. Accesorios/12b.webp", "Products/7. Accesorios/12c.webp", "Products/7. Accesorios/12d.webp", "Products/7. Accesorios/12e.webp", "Products/7. Accesorios/12f.webp", "Products/7. Accesorios/12g.webp", "Products/7. Accesorios/12h.webp", "Products/7. Accesorios/12i.webp"],
+                stock: 0
+            },
+            "rosa":{
+                label: "Rosa - AGOTADO",
+                price: 1490,
+                images: ["Products/7. Accesorios/12a Moño cinta (Beige-negro) $1.500.webp", "Products/7. Accesorios/12b.webp", "Products/7. Accesorios/12c.webp", "Products/7. Accesorios/12d.webp", "Products/7. Accesorios/12e.webp", "Products/7. Accesorios/12f.webp", "Products/7. Accesorios/12g.webp", "Products/7. Accesorios/12h.webp", "Products/7. Accesorios/12i.webp"],
+                stock: 0
+            },
+            "gris":{
+                label: "Gris - AGOTADO",
+                price: 1490,
+                images: ["Products/7. Accesorios/12a Moño cinta (Beige-negro) $1.500.webp", "Products/7. Accesorios/12b.webp", "Products/7. Accesorios/12c.webp", "Products/7. Accesorios/12d.webp", "Products/7. Accesorios/12e.webp", "Products/7. Accesorios/12f.webp", "Products/7. Accesorios/12g.webp", "Products/7. Accesorios/12h.webp", "Products/7. Accesorios/12i.webp"],
+                stock: 0
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Scrunchies"
+    },
+    "accesorios-7.13":{
+        title: "Accesorio para el cabello",
+        variants: {
+            "1":{
+                label: "Modelo 01",
+                price: 1490,
+                images: ["Products/7. Accesorios/13a Accesorio para el cabello $1.500 (todos dispo).JPG", "Products/7. Accesorios/13b.JPG", "Products/7. Accesorios/13c.JPG", "Products/7. Accesorios/13d.JPG", "Products/7. Accesorios/13e.JPG", "Products/7. Accesorios/13f.JPG"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 1490,
+                images: ["Products/7. Accesorios/13a Accesorio para el cabello $1.500 (todos dispo).JPG", "Products/7. Accesorios/13b.JPG", "Products/7. Accesorios/13c.JPG", "Products/7. Accesorios/13d.JPG", "Products/7. Accesorios/13e.JPG", "Products/7. Accesorios/13f.JPG"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 1490,
+                images: ["Products/7. Accesorios/13a Accesorio para el cabello $1.500 (todos dispo).JPG", "Products/7. Accesorios/13b.JPG", "Products/7. Accesorios/13c.JPG", "Products/7. Accesorios/13d.JPG", "Products/7. Accesorios/13e.JPG", "Products/7. Accesorios/13f.JPG"],
+                stock: 1
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 1490,
+                images: ["Products/7. Accesorios/13a Accesorio para el cabello $1.500 (todos dispo).JPG", "Products/7. Accesorios/13b.JPG", "Products/7. Accesorios/13c.JPG", "Products/7. Accesorios/13d.JPG", "Products/7. Accesorios/13e.JPG", "Products/7. Accesorios/13f.JPG"],
+                stock: 1
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Scrunchies"
+    },
+    "accesorios-7.14":{
+        title: "Accesorio multiuso",
+        variants: {
+            "1":{
+                label: "Modelo 01 - AGOTADO",
+                price: 1990,
+                images: ["Products/7. Accesorios/14a Accesorio multiuso (4-5-6) $2.000.JPG", "Products/7. Accesorios/14b.JPG", "Products/7. Accesorios/14c.JPG", "Products/7. Accesorios/14d.JPG", "Products/7. Accesorios/14e.JPG", "Products/7. Accesorios/14f.JPG", "Products/7. Accesorios/14g.JPG", "Products/7. Accesorios/14h.JPG", "Products/7. Accesorios/14i.JPG"],
+                stock: 0
+            },
+            "2":{
+                label: "Modelo 02 - AGOTADO",
+                price: 1990,
+                images: ["Products/7. Accesorios/14a Accesorio multiuso (4-5-6) $2.000.JPG", "Products/7. Accesorios/14b.JPG", "Products/7. Accesorios/14c.JPG", "Products/7. Accesorios/14d.JPG", "Products/7. Accesorios/14e.JPG", "Products/7. Accesorios/14f.JPG", "Products/7. Accesorios/14g.JPG", "Products/7. Accesorios/14h.JPG", "Products/7. Accesorios/14i.JPG"],
+                stock: 0
+            },
+            "3":{
+                label: "Modelo 03 - AGOTADO",
+                price: 1990,
+                images: ["Products/7. Accesorios/14a Accesorio multiuso (4-5-6) $2.000.JPG", "Products/7. Accesorios/14b.JPG", "Products/7. Accesorios/14c.JPG", "Products/7. Accesorios/14d.JPG", "Products/7. Accesorios/14e.JPG", "Products/7. Accesorios/14f.JPG", "Products/7. Accesorios/14g.JPG", "Products/7. Accesorios/14h.JPG", "Products/7. Accesorios/14i.JPG"],
+                stock: 0
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 1990,
+                images: ["Products/7. Accesorios/14a Accesorio multiuso (4-5-6) $2.000.JPG", "Products/7. Accesorios/14b.JPG", "Products/7. Accesorios/14c.JPG", "Products/7. Accesorios/14d.JPG", "Products/7. Accesorios/14e.JPG", "Products/7. Accesorios/14f.JPG", "Products/7. Accesorios/14g.JPG", "Products/7. Accesorios/14h.JPG", "Products/7. Accesorios/14i.JPG"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05",
+                price: 1990,
+                images: ["Products/7. Accesorios/14a Accesorio multiuso (4-5-6) $2.000.JPG", "Products/7. Accesorios/14b.JPG", "Products/7. Accesorios/14c.JPG", "Products/7. Accesorios/14d.JPG", "Products/7. Accesorios/14e.JPG", "Products/7. Accesorios/14f.JPG", "Products/7. Accesorios/14g.JPG", "Products/7. Accesorios/14h.JPG", "Products/7. Accesorios/14i.JPG"],
+                stock: 1
+            },
+            "6":{
+                label: "Modelo 06",
+                price: 1990,
+                images: ["Products/7. Accesorios/14a Accesorio multiuso (4-5-6) $2.000.JPG", "Products/7. Accesorios/14b.JPG", "Products/7. Accesorios/14c.JPG", "Products/7. Accesorios/14d.JPG", "Products/7. Accesorios/14e.JPG", "Products/7. Accesorios/14f.JPG", "Products/7. Accesorios/14g.JPG", "Products/7. Accesorios/14h.JPG", "Products/7. Accesorios/14i.JPG"],
+                stock: 1
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Scrunchies"
+    },
+    "accesorios-7.15":{
+        title: "Mini trabas",
+        variants:{
+            "1":{
+                label: "Modelo 01 - AGOTADO",
+                price: 390,
+                images: ["Products/7. Accesorios/15a Mini trabas (3-4-E-I-J) $400.webp", "Products/7. Accesorios/15b.JPG", "Products/7. Accesorios/15c.webp", "Products/7. Accesorios/15d.webp"],
+                stock: 0
+            },
+            "2":{
+                label: "Modelo 02 - AGOTADO",
+                price: 390,
+                images: ["Products/7. Accesorios/15a Mini trabas (3-4-E-I-J) $400.webp", "Products/7. Accesorios/15b.JPG", "Products/7. Accesorios/15c.webp", "Products/7. Accesorios/15d.webp"],
+                stock: 0
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 390,
+                images: ["Products/7. Accesorios/15a Mini trabas (3-4-E-I-J) $400.webp", "Products/7. Accesorios/15b.JPG", "Products/7. Accesorios/15c.webp", "Products/7. Accesorios/15d.webp"],
+                stock: 1
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 390,
+                images: ["Products/7. Accesorios/15a Mini trabas (3-4-E-I-J) $400.webp", "Products/7. Accesorios/15b.JPG", "Products/7. Accesorios/15c.webp", "Products/7. Accesorios/15d.webp"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05 - AGOTADO",
+                price: 390,
+                images: ["Products/7. Accesorios/15a Mini trabas (3-4-E-I-J) $400.webp", "Products/7. Accesorios/15b.JPG", "Products/7. Accesorios/15c.webp", "Products/7. Accesorios/15d.webp"],
+                stock: 0
+            },
+            "6":{
+                label: "Modelo 06 - AGOTADO",
+                price: 390,
+                images: ["Products/7. Accesorios/15a Mini trabas (3-4-E-I-J) $400.webp", "Products/7. Accesorios/15b.JPG", "Products/7. Accesorios/15c.webp", "Products/7. Accesorios/15d.webp"],
+                stock: 0
+            },
+            "7":{
+                label: "Modelo 07 - AGOTADO",
+                price: 390,
+                images: ["Products/7. Accesorios/15a Mini trabas (3-4-E-I-J) $400.webp", "Products/7. Accesorios/15b.JPG", "Products/7. Accesorios/15c.webp", "Products/7. Accesorios/15d.webp"],
+                stock: 0
+            },
+            "8":{
+                label: "Modelo 08 - AGOTADO",
+                price: 390,
+                images: ["Products/7. Accesorios/15a Mini trabas (3-4-E-I-J) $400.webp", "Products/7. Accesorios/15b.JPG", "Products/7. Accesorios/15c.webp", "Products/7. Accesorios/15d.webp"],
+                stock: 0
+            },
+
+            "9":{
+                label: "Modelo 09 - AGOTADO",
+                price: 390,
+                images: ["Products/7. Accesorios/15a Mini trabas (3-4-E-I-J) $400.webp", "Products/7. Accesorios/15b.JPG", "Products/7. Accesorios/15c.webp", "Products/7. Accesorios/15d.webp"],
+                stock: 0
+            },
+            "10":{
+                label: "Modelo 10 - AGOTADO",
+                price: 390,
+                images: ["Products/7. Accesorios/15a Mini trabas (3-4-E-I-J) $400.webp", "Products/7. Accesorios/15b.JPG", "Products/7. Accesorios/15c.webp", "Products/7. Accesorios/15d.webp"],
+                stock: 0
+            },
+            "A":{
+                label: "Modelo A - AGOTADO",
+                price: 390,
+                images: ["Products/7. Accesorios/15a Mini trabas (3-4-E-I-J) $400.webp", "Products/7. Accesorios/15b.JPG", "Products/7. Accesorios/15c.webp", "Products/7. Accesorios/15d.webp"],
+                stock: 0
+            },
+            "B":{
+                label: "Modelo B - AGOTADO",
+                price: 390,
+                images: ["Products/7. Accesorios/15a Mini trabas (3-4-E-I-J) $400.webp", "Products/7. Accesorios/15b.JPG", "Products/7. Accesorios/15c.webp", "Products/7. Accesorios/15d.webp"],
+                stock: 0
+            },
+            "C":{
+                label: "Modelo C - AGOTADO",
+                price: 390,
+                images: ["Products/7. Accesorios/15a Mini trabas (3-4-E-I-J) $400.webp", "Products/7. Accesorios/15b.JPG", "Products/7. Accesorios/15c.webp", "Products/7. Accesorios/15d.webp"],
+                stock: 0
+            },
+            "D":{
+                label: "Modelo D - AGOTADO",
+                price: 390,
+                images: ["Products/7. Accesorios/15a Mini trabas (3-4-E-I-J) $400.webp", "Products/7. Accesorios/15b.JPG", "Products/7. Accesorios/15c.webp", "Products/7. Accesorios/15d.webp"],
+                stock: 0
+            },
+            "E":{
+                label: "Modelo E",
+                price: 390,
+                images: ["Products/7. Accesorios/15a Mini trabas (3-4-E-I-J) $400.webp", "Products/7. Accesorios/15b.JPG", "Products/7. Accesorios/15c.webp", "Products/7. Accesorios/15d.webp"],
+                stock: 1
+            },
+            "F":{
+                label: "Modelo F - AGOTADO",
+                price: 390,
+                images: ["Products/7. Accesorios/15a Mini trabas (3-4-E-I-J) $400.webp", "Products/7. Accesorios/15b.JPG", "Products/7. Accesorios/15c.webp", "Products/7. Accesorios/15d.webp"],
+                stock: 0
+            },
+            "G":{
+                label: "Modelo G - AGOTADO",
+                price: 390,
+                images: ["Products/7. Accesorios/15a Mini trabas (3-4-E-I-J) $400.webp", "Products/7. Accesorios/15b.JPG", "Products/7. Accesorios/15c.webp", "Products/7. Accesorios/15d.webp"],
+                stock: 0
+            },
+            "H":{
+                label: "Modelo H - AGOTADO",
+                price: 390,
+                images: ["Products/7. Accesorios/15a Mini trabas (3-4-E-I-J) $400.webp", "Products/7. Accesorios/15b.JPG", "Products/7. Accesorios/15c.webp", "Products/7. Accesorios/15d.webp"],
+                stock: 0
+            },
+            "I":{
+                label: "Modelo I",
+                price: 390,
+                images: ["Products/7. Accesorios/15a Mini trabas (3-4-E-I-J) $400.webp", "Products/7. Accesorios/15b.JPG", "Products/7. Accesorios/15c.webp", "Products/7. Accesorios/15d.webp"],
+                stock: 1
+            },
+            "J":{
+                label: "Modelo J",
+                price: 390,
+                images: ["Products/7. Accesorios/15a Mini trabas (3-4-E-I-J) $400.webp", "Products/7. Accesorios/15b.JPG", "Products/7. Accesorios/15c.webp", "Products/7. Accesorios/15d.webp"],
+                stock: 1
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Pinches"
+    },
+    "accesorios-7.16":{
+        title: "Straps",
+        variants:{
+            "rosado":{
+                label: "Rosado",
+                price: 2490,
+                images: ["Products/7. Accesorios/16a Straps (ros) $2.500.webp", "Products/7. Accesorios/16b.JPG", "Products/7. Accesorios/16c.webp", "Products/7. Accesorios/16d.webp", "Products/7. Accesorios/16e.webp"],
+                stock: 1
+            },
+            "morado":{
+                label: "Morado - AGOTADO",
+                price: 2490,
+                images: ["Products/7. Accesorios/16a Straps (ros) $2.500.webp", "Products/7. Accesorios/16b.JPG", "Products/7. Accesorios/16c.webp", "Products/7. Accesorios/16d.webp", "Products/7. Accesorios/16e.webp"],
+                stock: 0
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Otros"
+    },
+    "accesorios-7.17":{
+        title: "Straps",
+        variants:{
+            "rosado":{
+                label: "Rosado",
+                price: 1990,
+                images: ["Products/7. Accesorios/17a Straps (ros) $2.000.webp", "Products/7. Accesorios/17b.JPG", "Products/7. Accesorios/17c.webp", "Products/7. Accesorios/17d.webp"],
+                stock: 1
+            },
+            "celeste":{
+                label: "Celeste - AGOTADO",
+                price: 1990,
+                images: ["Products/7. Accesorios/17a Straps (ros) $2.000.webp", "Products/7. Accesorios/17b.JPG", "Products/7. Accesorios/17c.webp", "Products/7. Accesorios/17d.webp"],
+                stock: 0
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Otros"
+    },
+    "accesorios-7.18":{
+        title: "Straps",
+        variants:{
+            "1":{
+                label: "Modelo 01",
+                price: 1590,
+                images: ["Products/7. Accesorios/18a Straps (01) $1.600.webp", "Products/7. Accesorios/18b.webp", "Products/7. Accesorios/18c.JPG", "Products/7. Accesorios/18d.webp", "Products/7. Accesorios/18e.JPG", "Products/7. Accesorios/18f.JPG", "Products/7. Accesorios/18g.JPG", "Products/7. Accesorios/18h.jpg", "Products/7. Accesorios/18i.JPG", "Products/7. Accesorios/18j.webp"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02 - AGOTADO",
+                price: 1590,
+                images: ["Products/7. Accesorios/18a Straps (01) $1.600.webp", "Products/7. Accesorios/18b.webp", "Products/7. Accesorios/18c.JPG", "Products/7. Accesorios/18d.webp", "Products/7. Accesorios/18e.JPG", "Products/7. Accesorios/18f.JPG", "Products/7. Accesorios/18g.JPG", "Products/7. Accesorios/18h.jpg", "Products/7. Accesorios/18i.JPG", "Products/7. Accesorios/18j.webp"],
+                stock: 0
+            },
+            "3":{
+                label: "Modelo 03 - AGOTADO",
+                price: 1590,
+                images: ["Products/7. Accesorios/18a Straps (01) $1.600.webp", "Products/7. Accesorios/18b.webp", "Products/7. Accesorios/18c.JPG", "Products/7. Accesorios/18d.webp", "Products/7. Accesorios/18e.JPG", "Products/7. Accesorios/18f.JPG", "Products/7. Accesorios/18g.JPG", "Products/7. Accesorios/18h.jpg", "Products/7. Accesorios/18i.JPG", "Products/7. Accesorios/18j.webp"],
+                stock: 0
+            },
+            "4":{
+                label: "Modelo 04 - AGOTADO",
+                price: 1590,
+                images: ["Products/7. Accesorios/18a Straps (01) $1.600.webp", "Products/7. Accesorios/18b.webp", "Products/7. Accesorios/18c.JPG", "Products/7. Accesorios/18d.webp", "Products/7. Accesorios/18e.JPG", "Products/7. Accesorios/18f.JPG", "Products/7. Accesorios/18g.JPG", "Products/7. Accesorios/18h.jpg", "Products/7. Accesorios/18i.JPG", "Products/7. Accesorios/18j.webp"],
+                stock: 0
+            },
+            "5":{
+                label: "Modelo 05 - AGOTADO",
+                price: 1590,
+                images: ["Products/7. Accesorios/18a Straps (01) $1.600.webp", "Products/7. Accesorios/18b.webp", "Products/7. Accesorios/18c.JPG", "Products/7. Accesorios/18d.webp", "Products/7. Accesorios/18e.JPG", "Products/7. Accesorios/18f.JPG", "Products/7. Accesorios/18g.JPG", "Products/7. Accesorios/18h.jpg", "Products/7. Accesorios/18i.JPG", "Products/7. Accesorios/18j.webp"],
+                stock: 0
+            },
+            "6":{
+                label: "Modelo 06 - AGOTADO",
+                price: 1590,
+                images: ["Products/7. Accesorios/18a Straps (01) $1.600.webp", "Products/7. Accesorios/18b.webp", "Products/7. Accesorios/18c.JPG", "Products/7. Accesorios/18d.webp", "Products/7. Accesorios/18e.JPG", "Products/7. Accesorios/18f.JPG", "Products/7. Accesorios/18g.JPG", "Products/7. Accesorios/18h.jpg", "Products/7. Accesorios/18i.JPG", "Products/7. Accesorios/18j.webp"],
+                stock: 0
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Otros"
+    },
+    "accesorios-7.19":{
+        title: "Straps",
+        variants:{
+            "negro":{
+                label: "Negro",
+                price: 2490,
+                images: ["Products/7. Accesorios/19a Straps (neg) $2.500.webp", "Products/7. Accesorios/19b.webp", "Products/7. Accesorios/19c.webp"],
+                stock: 1
+            },
+            "beige":{
+                label: "Beige - AGOTADO",
+                price: 2490,
+                images: ["Products/7. Accesorios/19a Straps (neg) $2.500.webp", "Products/7. Accesorios/19b.webp", "Products/7. Accesorios/19c.webp"],
+                stock: 0
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Otros"
+    },
+    "accesorios-7.20":{
+        title: "Mochila",
+        variants:{
+            "morado":{
+                label: "Morado",
+                price: 6490,
+                images: ["Products/7. Accesorios/20a Mochila (mor y neg) $6.500.JPG", "Products/7. Accesorios/20b.PNG", "Products/7. Accesorios/20c.webp", "Products/7. Accesorios/20d.webp", "Products/7. Accesorios/20e.PNG", "Products/7. Accesorios/20f.webp", "Products/7. Accesorios/20g.PNG", "Products/7. Accesorios/20h.webp", "Products/7. Accesorios/20i.webp", "Products/7. Accesorios/20j.PNG", "Products/7. Accesorios/20k.webp", "Products/7. Accesorios/20l.webp"],
+                stock: 1
+            },
+            "negro":{
+                label: "Morado",
+                price: 6490,
+                images: ["Products/7. Accesorios/20a Mochila (mor y neg) $6.500.JPG", "Products/7. Accesorios/20b.PNG", "Products/7. Accesorios/20c.webp", "Products/7. Accesorios/20d.webp", "Products/7. Accesorios/20e.PNG", "Products/7. Accesorios/20f.webp", "Products/7. Accesorios/20g.PNG", "Products/7. Accesorios/20h.webp", "Products/7. Accesorios/20i.webp", "Products/7. Accesorios/20j.PNG", "Products/7. Accesorios/20k.webp", "Products/7. Accesorios/20l.webp"],
+                stock: 1
+            },
+            "beige":{
+                label: "Beige - AGOTADO",
+                price: 6490,
+                images: ["Products/7. Accesorios/20a Mochila (mor y neg) $6.500.JPG", "Products/7. Accesorios/20b.PNG", "Products/7. Accesorios/20c.webp", "Products/7. Accesorios/20d.webp", "Products/7. Accesorios/20e.PNG", "Products/7. Accesorios/20f.webp", "Products/7. Accesorios/20g.PNG", "Products/7. Accesorios/20h.webp", "Products/7. Accesorios/20i.webp", "Products/7. Accesorios/20j.PNG", "Products/7. Accesorios/20k.webp", "Products/7. Accesorios/20l.webp"],
+                stock: 0
+            },
+            "cafe":{
+                label: "Café - AGOTADO",
+                price: 6490,
+                images: ["Products/7. Accesorios/20a Mochila (mor y neg) $6.500.JPG", "Products/7. Accesorios/20b.PNG", "Products/7. Accesorios/20c.webp", "Products/7. Accesorios/20d.webp", "Products/7. Accesorios/20e.PNG", "Products/7. Accesorios/20f.webp", "Products/7. Accesorios/20g.PNG", "Products/7. Accesorios/20h.webp", "Products/7. Accesorios/20i.webp", "Products/7. Accesorios/20j.PNG", "Products/7. Accesorios/20k.webp", "Products/7. Accesorios/20l.webp"],
+                stock: 0
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Otros"
+    },
+    "accesorios-7.21":{
+        title: "Scrunchies",
+        variants:{
+            "celeste":{
+                label: "Celeste",
+                price: 3490,
+                images: ["Products/7. Accesorios/21a Scrunchies tejidos a crochet $3.500.jpg", "Products/7. Accesorios/21b.jpg", "Products/7. Accesorios/21c.jpg", "Products/7. Accesorios/21d.jpg", "Products/7. Accesorios/21e.jpg", "Products/7. Accesorios/21f.jpg", "Products/7. Accesorios/21g.jpg", "Products/7. Accesorios/21h.jpg"],
+                stock: 1
+            },
+            "rosa":{
+                label: "Rosa",
+                price: 3490,
+                images: ["Products/7. Accesorios/21a Scrunchies tejidos a crochet $3.500.jpg", "Products/7. Accesorios/21b.jpg", "Products/7. Accesorios/21c.jpg", "Products/7. Accesorios/21d.jpg", "Products/7. Accesorios/21e.jpg", "Products/7. Accesorios/21f.jpg", "Products/7. Accesorios/21g.jpg", "Products/7. Accesorios/21h.jpg"],
+                stock: 1
+            },
+            "morado":{
+                label: "Morado",
+                price: 3490,
+                images: ["Products/7. Accesorios/21a Scrunchies tejidos a crochet $3.500.jpg", "Products/7. Accesorios/21b.jpg", "Products/7. Accesorios/21c.jpg", "Products/7. Accesorios/21d.jpg", "Products/7. Accesorios/21e.jpg", "Products/7. Accesorios/21f.jpg", "Products/7. Accesorios/21g.jpg", "Products/7. Accesorios/21h.jpg"],
+                stock: 1
+            },
+        },
+        category: "Accesorios",
+        subcategory: "Scrunchies"
     }
 }
