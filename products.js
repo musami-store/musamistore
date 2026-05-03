@@ -4442,10 +4442,10 @@ const PRODUCTS = {
                 stock: 1
             },
             "3":{
-                label: "Modelo 03",
+                label: "Modelo 03 - AGOTADO",
                 price: 790,
                 images: ["Products/7. Accesorios/10a Scrunchies azul variedad $800.webp", "Products/7. Accesorios/10b.JPG", "Products/7. Accesorios/10c.webp", "Products/7. Accesorios/10d.webp"],
-                stock: 1
+                stock: 0
             },
             "4":{
                 label: "Modelo 04",
@@ -4837,7 +4837,7 @@ const PRODUCTS = {
                 stock: 1
             },
             "negro":{
-                label: "Morado",
+                label: "Negro",
                 price: 6490,
                 images: ["Products/7. Accesorios/20a Mochila (mor y neg) $6.500.JPG", "Products/7. Accesorios/20b.PNG", "Products/7. Accesorios/20c.webp", "Products/7. Accesorios/20d.webp", "Products/7. Accesorios/20e.PNG", "Products/7. Accesorios/20f.webp", "Products/7. Accesorios/20g.PNG", "Products/7. Accesorios/20h.webp", "Products/7. Accesorios/20i.webp", "Products/7. Accesorios/20j.PNG", "Products/7. Accesorios/20k.webp", "Products/7. Accesorios/20l.webp"],
                 stock: 1
@@ -4859,10 +4859,10 @@ const PRODUCTS = {
         subcategory: "Otros"
     },
     "accesorios-7.21":{
-        title: "Scrunchies",
+        title: "Scrunchies tejidos a crochet",
         variants:{
-            "celeste":{
-                label: "Celeste",
+            "turquesa":{
+                label: "Turquesa",
                 price: 3490,
                 images: ["Products/7. Accesorios/21a Scrunchies tejidos a crochet $3.500.jpg", "Products/7. Accesorios/21b.jpg", "Products/7. Accesorios/21c.jpg", "Products/7. Accesorios/21d.jpg", "Products/7. Accesorios/21e.jpg", "Products/7. Accesorios/21f.jpg", "Products/7. Accesorios/21g.jpg", "Products/7. Accesorios/21h.jpg"],
                 stock: 1
