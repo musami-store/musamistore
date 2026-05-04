@@ -1424,6 +1424,7 @@ background:rgba(86, 125, 170, .45)
 }
 
 #cartnote{
+    margin-bottom: 50px;
+    margin-top:20px;
     width: 290px;
-    transform: translate(-32vw, -38vh);
 }
