@@ -1688,7 +1688,7 @@ const PRODUCTS = {
         title: "Aros perlas",
         price: 1600,
         images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/3a Aros perlas $1.600.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/3b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/3c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/3d.PNG"],
-        stock: 1,
+        stock: 2,
         category: "Bisuteria",
         subcategory: "Aros"
     },
@@ -1757,10 +1757,10 @@ const PRODUCTS = {
         subcategory: "Aros"
     },
     "argollas-p.12":{
-        title: "Argollas perlas - AGOTADO",
+        title: "Argollas perlas",
         price: 1700,
         images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/12a Argollas perlas (agotado) $1.700.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/12b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/12c.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/12d.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/12e.JPG"],
-        stock: 0,
+        stock: 1,
         category: "Bisuteria",
         subcategory: "Aros"
     },
@@ -3064,10 +3064,10 @@ const PRODUCTS = {
                 stock: 1
             },
             "2":{
-                label: "Modelo 02 - AGOTADO",
+                label: "Modelo 02",
                 price: 790,
                 images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/0a Aros variedad (01) $690.jpg", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/0b.jpg", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/0c.jpg", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/0d.jpg"],
-                stock: 0
+                stock: 1
             },
             "3":{
                 label: "Modelo 03 - AGOTADO",
@@ -3479,7 +3479,7 @@ const PRODUCTS = {
 
     ///MAQUILLAJE
     "ojos-make-1.1":{
-        title: "Delineador punta pincel",
+        title: "Delineador punta pincel waterproof",
         price: 4500,
         brand: "O.TWO.O",
         images: ["Products/Portada/1. Make up y accesorios nuevos/1a Delineador punta pincel $4.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/1b.PNG", "Products/Portada/1. Make up y accesorios nuevos/1c.PNG", "Products/Portada/1. Make up y accesorios nuevos/1d.PNG", "Products/Portada/1. Make up y accesorios nuevos/1e.JPG", "Products/Portada/1. Make up y accesorios nuevos/1f.PNG"],
@@ -3488,7 +3488,7 @@ const PRODUCTS = {
         subcategory: "Ojos"
     },
     "ojos-make-1.2":{
-        title: "Máscara de pestañas",
+        title: "Máscara de pestañas waterproof",
         price: 4490,
         brand: "O.TWO.O",
         images: ["Products/Portada/1. Make up y accesorios nuevos/2a Máscara de pestañas O.TWO.O $4.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/2b.JPG", "Products/Portada/1. Make up y accesorios nuevos/2c.png", "Products/Portada/1. Make up y accesorios nuevos/2d.png", "Products/Portada/1. Make up y accesorios nuevos/2e.PNG", "Products/Portada/1. Make up y accesorios nuevos/2f.PNG", "Products/Portada/1. Make up y accesorios nuevos/2g.PNG"],
