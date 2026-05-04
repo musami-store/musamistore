@@ -3091,8 +3091,198 @@ const PRODUCTS = {
         category: "Bisuteria",
         subcategory: "Aros"
     },
+    "collares-4-4.1":{
+        title: "Collar corazón rosado",
+        price: 1790,
+        images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/1a Collar corazón rosado $1.790.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/1b.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/1c.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/1d.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/1e.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-4.2":{
+        title: "Collar cadena grande",
+        variants:{
+            "dorado":{
+                label: "Dorado",
+                price: 2290,
+                images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/2a Collar cadena grande (DOR) $2.290.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/2b.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/2c.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/2d.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/2e.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/2f.jpg"],
+                stock: 1
+            },
+            "plateado":{
+                label: "Plateado - AGOTADO",
+                price: 2290,
+                images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/2a Collar cadena grande (DOR) $2.290.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/2b.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/2c.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/2d.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/2e.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/2f.jpg"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-4.3":{
+        title: "Collar",
+        price: 1990,
+        images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/3a Collar $1.990.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/3b.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/3c.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/3d.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/3e.webp"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-4.4":{
+        title: "Collar",
+        variants:{
+            "plateado":{
+                label: "Plateado",
+                price: 2290,
+                images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/4a Collar mariposa (PLA) $1.490.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4b.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4c.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4d.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4e.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4f.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4g.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4h.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4i.jpg"],
+                stock: 1
+            },
+            "dorado":{
+                label: "Dorado",
+                price: 2290,
+                images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/4a Collar mariposa (PLA) $1.490.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4b.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4c.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4d.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4e.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4f.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4g.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4h.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4i.jpg"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "collares-4-4.5":{
+        title: "Collar",
+        variants:{
+            "plateado":{
+                label: "Plateado",
+                price: 2290,
+                images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/5a Collar (PLA) $2.290.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5b.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5c.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5d.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5e.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5f.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5g.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5h.webp"],
+                stock: 1
+            },
+            "dorado":{
+                label: "Dorado - AGOTADO",
+                price: 2290,
+                images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/5a Collar (PLA) $2.290.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5b.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5c.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5d.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5e.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5f.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5g.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5h.webp"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Collares"
+    },
+    "aros-4-4.6":{
+        title: "Set de aros 3 pares",
+        price: 2490,
+        images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/6a Set de aros 3 pares $2.490.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/6b.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/6c.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/6d.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/6e.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-4-4.7":{
+        title: "Set de aros 4 piezas",
+        price: 1590,
+        images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/7a Set de aros 4 piezas $1.590.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/7b.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/7c.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/7d.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/7e.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/7f.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/7g.webp"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-4-4.8":{
+        title: "Set de aros 8 piezas",
+        price: 1490,
+        images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/8a Set de aros 8 piezas $1.490.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-4-4.9":{
+        title: "Aros rosas",
+        price: 490,
+        images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/9a Aros rosas $490.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-4-4.10":{
+        title: "Aros flores",
+        variants:{
+            "rosa":{
+                label: "Rosa",
+                price: 1490,
+                images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/10a Aros flores (ROS) $1.490.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/10b.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/10c.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/10d.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/10e.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/10f.jpg"],
+                stock: 1
+            },
+            "morado":{
+                label: "Morado - AGOTADO",
+                price: 1490,
+                images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/10a Aros flores (ROS) $1.490.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/10b.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/10c.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/10d.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/10e.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/10f.jpg"],
+                stock: 0
+            },
+            "amarillo":{
+                label: "Amarillo - AGOTADO",
+                price: 1490,
+                images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/10a Aros flores (ROS) $1.490.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/10b.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/10c.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/10d.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/10e.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/10f.jpg"],
+                stock: 0
+            },
+            "azul":{
+                label: "Azul - AGOTADO",
+                price: 1490,
+                images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/10a Aros flores (ROS) $1.490.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/10b.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/10c.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/10d.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/10e.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/10f.jpg"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-4-4.11":{
+        title: "Aros nube",
+        price: 1490,
+        images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/11a Aros nube $1.490.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/11b.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/11c.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/11d.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/11e.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-4-4.12":{
+        title: "Aros",
+        variants:{
+            "1":{
+                label: "Modelo 01",
+                price: 1490,
+                images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/12a Aros (01) $1.490.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/12b.JPG", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/12c.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/12d.jpg"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02 - AGOTADO",
+                price: 1490,
+                images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/12a Aros (01) $1.490.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/12b.JPG", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/12c.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/12d.jpg"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-4-4.13":{
+        title: "Aros corazones",
+        variants:{
+            "dorado":{
+                label: "Dorado",
+                price: 2990,
+                images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/13a Aros Corazones (DOR) $2.990.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/13b.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/13c.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/13d.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/13e.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/13f.jpg"],
+                stock: 1
+            },
+            "plateado":{
+                label: "Plateado - AGOTADO",
+                price: 2990,
+                images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/13a Aros Corazones (DOR) $2.990.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/13b.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/13c.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/13d.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/13e.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/13f.jpg"],
+                stock: 0
+            },
+        },
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
+    "aros-4-4.14":{
+        title: "Aros corazón",
+        price: 1790,
+        images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/14a Aros corazón $1.790.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/14b.jpg"],
+        stock: 1,
+        category: "Bisuteria",
+        subcategory: "Aros"
+    },
 
-
+    
     ///PLATA ESTERLINA
     "pulseras-5-3.1":{
         title: "Pulsera plata",
@@ -5225,7 +5415,18 @@ const PRODUCTS = {
         subcategory: "Rostro"
     },
     "rostro-6-2.28":{
-
+        title: "Rubor en polvos sueltos Airy minerals",
+        brand: "Kleancolor",
+        variants: {
+            "petal":{
+                label: "Petal",
+                price: 3990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/28a Rubor en polvos sueltos 'Airy minerals' M;Kleancolor (Petal) $3.990.jpg", "Products/6. Maquillaje/2. Maquillaje/28b.jpg", "Products/6. Maquillaje/2. Maquillaje/28c.jpg", "Products/6. Maquillaje/2. Maquillaje/28d.jpg"],
+                stock: 1
+            }
+        },
+        category: "Maquillaje",
+        subcategory: "Rostro"
     },
     "rostro-6-2.29":{
         title: "Convertidor de sombras Shadow seal",
