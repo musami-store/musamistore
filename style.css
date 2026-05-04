@@ -1422,3 +1422,8 @@ background:rgba(86, 125, 170, .45)
     background: var(--sb-thumb-color);
     border-radius: 1px;
 }
+
+#cartnote{
+    width: 290px;
+    transform: translate(-32vw, -38vh);
+}

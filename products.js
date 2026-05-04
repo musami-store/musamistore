@@ -3498,6 +3498,7 @@ const PRODUCTS = {
     },
     "ojos-make-1.3":{
         title: "Paleta de sombras glitter",
+        brand: "Dikalu",
         price: 3490,
         images: ["Products/Portada/1. Make up y accesorios nuevos/3a Paleta de sombras glitter $3.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/3b.PNG", "Products/Portada/1. Make up y accesorios nuevos/3c.PNG"],
         stock: 1,
@@ -4020,15 +4021,45 @@ const PRODUCTS = {
         brand: "IMAGIC",
         price: 13490,
         images: ["Products/6. Maquillaje/1. Paletas de sombras/5a Paleta de sombras Chalice IMAGIC $13.490.jpg", "Products/6. Maquillaje/1. Paletas de sombras/5b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/5c.jpg", "Products/6. Maquillaje/1. Paletas de sombras/5d.jpg", "Products/6. Maquillaje/1. Paletas de sombras/5e.jpg", "Products/6. Maquillaje/1. Paletas de sombras/5f.jpg", "Products/6. Maquillaje/1. Paletas de sombras/5g.jpg", "Products/6. Maquillaje/1. Paletas de sombras/5h.jpg"],
-        stock: 1,
+        stock: 2,
         category: "Maquillaje",
         subcategory: "Ojos"
     },
     "ojos-6-1.6":{
         title: "Paleta de sombras",
         brand: "Beauty Glazed",
-        price: 5490,
-        images: ["Products/6. Maquillaje/1. Paletas de sombras/6a Paleta de sombras Beauty Glazed $5.490.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6c.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6d.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6e.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6f.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6g.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6h.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6i.jpg"],
+        variants:{
+            "raisin":{
+                label: "Raisin",
+                price: 5490,
+                images: ["Products/6. Maquillaje/1. Paletas de sombras/6a Paleta de sombras Beauty Glazed $5.490.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6c.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6d.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6e.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6f.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6g.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6h.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6i.jpg"],
+                stock: 2
+            },
+            "brownie":{
+                label: "Brownie",
+                price: 5490,
+                images: ["Products/6. Maquillaje/1. Paletas de sombras/6a Paleta de sombras Beauty Glazed $5.490.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6c.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6d.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6e.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6f.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6g.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6h.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6i.jpg"],
+                stock: 1
+            },
+            "mocha":{
+                label: "Mocha",
+                price: 5490,
+                images: ["Products/6. Maquillaje/1. Paletas de sombras/6a Paleta de sombras Beauty Glazed $5.490.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6c.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6d.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6e.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6f.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6g.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6h.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6i.jpg"],
+                stock: 2
+            },
+            "truffle":{
+                label: "Truffle",
+                price: 5490,
+                images: ["Products/6. Maquillaje/1. Paletas de sombras/6a Paleta de sombras Beauty Glazed $5.490.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6c.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6d.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6e.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6f.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6g.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6h.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6i.jpg"],
+                stock: 3
+            },
+            "almond":{
+                label: "Almond",
+                price: 5490,
+                images: ["Products/6. Maquillaje/1. Paletas de sombras/6a Paleta de sombras Beauty Glazed $5.490.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6c.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6d.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6e.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6f.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6g.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6h.jpg", "Products/6. Maquillaje/1. Paletas de sombras/6i.jpg"],
+                stock: 1
+            },
+        },
         stock: 1,
         category: "Maquillaje",
         subcategory: "Ojos" 
@@ -4092,9 +4123,1117 @@ const PRODUCTS = {
         brand: "Beauty Glazed",
         price: 16490,
         images: ["Products/6. Maquillaje/1. Paletas de sombras/13a Libro paleta de sombras Color shades Beauty Glazed $16.490.jpg", "Products/6. Maquillaje/1. Paletas de sombras/13b.jpg", "Products/6. Maquillaje/1. Paletas de sombras/13c.jpg", "Products/6. Maquillaje/1. Paletas de sombras/13d.jpg", "Products/6. Maquillaje/1. Paletas de sombras/13e.jpg", "Products/6. Maquillaje/1. Paletas de sombras/13f.jpg", "Products/6. Maquillaje/1. Paletas de sombras/13g.jpg", "Products/6. Maquillaje/1. Paletas de sombras/13h.jpg", "Products/6. Maquillaje/1. Paletas de sombras/13i.jpg", "Products/6. Maquillaje/1. Paletas de sombras/13j.jpg"],
+        stock: 2,
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "rostro-6-2.1":{
+        title: "Iluminador líquido Perfect",
+        brand: "Kiss Beauty",
+        variants: {
+            "1":{
+                label: "Modelo 01 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/1a Iluminador líquido 'Perfect' M; Kiss Beauty (03) $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/1b.jpg", "Products/6. Maquillaje/2. Maquillaje/1c.jpg", "Products/6. Maquillaje/2. Maquillaje/1d.jpg", "Products/6. Maquillaje/2. Maquillaje/1e.jpg"],
+                stock: 0
+            },
+            "2":{
+                label: "Modelo 02 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/1a Iluminador líquido 'Perfect' M; Kiss Beauty (03) $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/1b.jpg", "Products/6. Maquillaje/2. Maquillaje/1c.jpg", "Products/6. Maquillaje/2. Maquillaje/1d.jpg", "Products/6. Maquillaje/2. Maquillaje/1e.jpg"],
+                stock: 0
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/1a Iluminador líquido 'Perfect' M; Kiss Beauty (03) $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/1b.jpg", "Products/6. Maquillaje/2. Maquillaje/1c.jpg", "Products/6. Maquillaje/2. Maquillaje/1d.jpg", "Products/6. Maquillaje/2. Maquillaje/1e.jpg"],
+                stock: 1
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Rostro"
+    },
+    "ojos-6-2.2":{
+        title: "Delineador glitter",
+        brand: "DNM",
+        variants: {
+            "1":{
+                label: "Modelo 01",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/2a Delineador glitter M; DNM $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/2b.jpg", "Products/6. Maquillaje/2. Maquillaje/2c.jpg", "Products/6. Maquillaje/2. Maquillaje/2d.jpg", "Products/6. Maquillaje/2. Maquillaje/2e.jpg", "Products/6. Maquillaje/2. Maquillaje/2f.jpg", "Products/6. Maquillaje/2. Maquillaje/2g.jpg", "Products/6. Maquillaje/2. Maquillaje/2h.jpg"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/2a Delineador glitter M; DNM $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/2b.jpg", "Products/6. Maquillaje/2. Maquillaje/2c.jpg", "Products/6. Maquillaje/2. Maquillaje/2d.jpg", "Products/6. Maquillaje/2. Maquillaje/2e.jpg", "Products/6. Maquillaje/2. Maquillaje/2f.jpg", "Products/6. Maquillaje/2. Maquillaje/2g.jpg", "Products/6. Maquillaje/2. Maquillaje/2h.jpg"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/2a Delineador glitter M; DNM $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/2b.jpg", "Products/6. Maquillaje/2. Maquillaje/2c.jpg", "Products/6. Maquillaje/2. Maquillaje/2d.jpg", "Products/6. Maquillaje/2. Maquillaje/2e.jpg", "Products/6. Maquillaje/2. Maquillaje/2f.jpg", "Products/6. Maquillaje/2. Maquillaje/2g.jpg", "Products/6. Maquillaje/2. Maquillaje/2h.jpg"],
+                stock: 1
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/2a Delineador glitter M; DNM $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/2b.jpg", "Products/6. Maquillaje/2. Maquillaje/2c.jpg", "Products/6. Maquillaje/2. Maquillaje/2d.jpg", "Products/6. Maquillaje/2. Maquillaje/2e.jpg", "Products/6. Maquillaje/2. Maquillaje/2f.jpg", "Products/6. Maquillaje/2. Maquillaje/2g.jpg", "Products/6. Maquillaje/2. Maquillaje/2h.jpg"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/2a Delineador glitter M; DNM $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/2b.jpg", "Products/6. Maquillaje/2. Maquillaje/2c.jpg", "Products/6. Maquillaje/2. Maquillaje/2d.jpg", "Products/6. Maquillaje/2. Maquillaje/2e.jpg", "Products/6. Maquillaje/2. Maquillaje/2f.jpg", "Products/6. Maquillaje/2. Maquillaje/2g.jpg", "Products/6. Maquillaje/2. Maquillaje/2h.jpg"],
+                stock: 1
+            },
+            "6":{
+                label: "Modelo 06",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/2a Delineador glitter M; DNM $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/2b.jpg", "Products/6. Maquillaje/2. Maquillaje/2c.jpg", "Products/6. Maquillaje/2. Maquillaje/2d.jpg", "Products/6. Maquillaje/2. Maquillaje/2e.jpg", "Products/6. Maquillaje/2. Maquillaje/2f.jpg", "Products/6. Maquillaje/2. Maquillaje/2g.jpg", "Products/6. Maquillaje/2. Maquillaje/2h.jpg"],
+                stock: 1
+            },
+            "7":{
+                label: "Modelo 07",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/2a Delineador glitter M; DNM $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/2b.jpg", "Products/6. Maquillaje/2. Maquillaje/2c.jpg", "Products/6. Maquillaje/2. Maquillaje/2d.jpg", "Products/6. Maquillaje/2. Maquillaje/2e.jpg", "Products/6. Maquillaje/2. Maquillaje/2f.jpg", "Products/6. Maquillaje/2. Maquillaje/2g.jpg", "Products/6. Maquillaje/2. Maquillaje/2h.jpg"],
+                stock: 1
+            },
+            "8":{
+                label: "Modelo 08",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/2a Delineador glitter M; DNM $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/2b.jpg", "Products/6. Maquillaje/2. Maquillaje/2c.jpg", "Products/6. Maquillaje/2. Maquillaje/2d.jpg", "Products/6. Maquillaje/2. Maquillaje/2e.jpg", "Products/6. Maquillaje/2. Maquillaje/2f.jpg", "Products/6. Maquillaje/2. Maquillaje/2g.jpg", "Products/6. Maquillaje/2. Maquillaje/2h.jpg"],
+                stock: 1
+            },
+            "9":{
+                label: "Modelo 09",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/2a Delineador glitter M; DNM $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/2b.jpg", "Products/6. Maquillaje/2. Maquillaje/2c.jpg", "Products/6. Maquillaje/2. Maquillaje/2d.jpg", "Products/6. Maquillaje/2. Maquillaje/2e.jpg", "Products/6. Maquillaje/2. Maquillaje/2f.jpg", "Products/6. Maquillaje/2. Maquillaje/2g.jpg", "Products/6. Maquillaje/2. Maquillaje/2h.jpg"],
+                stock: 1
+            },
+            "10":{
+                label: "Modelo 10",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/2a Delineador glitter M; DNM $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/2b.jpg", "Products/6. Maquillaje/2. Maquillaje/2c.jpg", "Products/6. Maquillaje/2. Maquillaje/2d.jpg", "Products/6. Maquillaje/2. Maquillaje/2e.jpg", "Products/6. Maquillaje/2. Maquillaje/2f.jpg", "Products/6. Maquillaje/2. Maquillaje/2g.jpg", "Products/6. Maquillaje/2. Maquillaje/2h.jpg"],
+                stock: 1
+            },
+            "11":{
+                label: "Modelo 11",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/2a Delineador glitter M; DNM $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/2b.jpg", "Products/6. Maquillaje/2. Maquillaje/2c.jpg", "Products/6. Maquillaje/2. Maquillaje/2d.jpg", "Products/6. Maquillaje/2. Maquillaje/2e.jpg", "Products/6. Maquillaje/2. Maquillaje/2f.jpg", "Products/6. Maquillaje/2. Maquillaje/2g.jpg", "Products/6. Maquillaje/2. Maquillaje/2h.jpg"],
+                stock: 1
+            },
+            "12":{
+                label: "Modelo 12",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/2a Delineador glitter M; DNM $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/2b.jpg", "Products/6. Maquillaje/2. Maquillaje/2c.jpg", "Products/6. Maquillaje/2. Maquillaje/2d.jpg", "Products/6. Maquillaje/2. Maquillaje/2e.jpg", "Products/6. Maquillaje/2. Maquillaje/2f.jpg", "Products/6. Maquillaje/2. Maquillaje/2g.jpg", "Products/6. Maquillaje/2. Maquillaje/2h.jpg"],
+                stock: 1
+            },
+            "13":{
+                label: "Modelo 13",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/2a Delineador glitter M; DNM $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/2b.jpg", "Products/6. Maquillaje/2. Maquillaje/2c.jpg", "Products/6. Maquillaje/2. Maquillaje/2d.jpg", "Products/6. Maquillaje/2. Maquillaje/2e.jpg", "Products/6. Maquillaje/2. Maquillaje/2f.jpg", "Products/6. Maquillaje/2. Maquillaje/2g.jpg", "Products/6. Maquillaje/2. Maquillaje/2h.jpg"],
+                stock: 1
+            },
+            "14":{
+                label: "Modelo 14",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/2a Delineador glitter M; DNM $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/2b.jpg", "Products/6. Maquillaje/2. Maquillaje/2c.jpg", "Products/6. Maquillaje/2. Maquillaje/2d.jpg", "Products/6. Maquillaje/2. Maquillaje/2e.jpg", "Products/6. Maquillaje/2. Maquillaje/2f.jpg", "Products/6. Maquillaje/2. Maquillaje/2g.jpg", "Products/6. Maquillaje/2. Maquillaje/2h.jpg"],
+                stock: 1
+            },
+            "15":{
+                label: "Modelo 15",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/2a Delineador glitter M; DNM $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/2b.jpg", "Products/6. Maquillaje/2. Maquillaje/2c.jpg", "Products/6. Maquillaje/2. Maquillaje/2d.jpg", "Products/6. Maquillaje/2. Maquillaje/2e.jpg", "Products/6. Maquillaje/2. Maquillaje/2f.jpg", "Products/6. Maquillaje/2. Maquillaje/2g.jpg", "Products/6. Maquillaje/2. Maquillaje/2h.jpg"],
+                stock: 1
+            },
+            "16":{
+                label: "Modelo 16",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/2a Delineador glitter M; DNM $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/2b.jpg", "Products/6. Maquillaje/2. Maquillaje/2c.jpg", "Products/6. Maquillaje/2. Maquillaje/2d.jpg", "Products/6. Maquillaje/2. Maquillaje/2e.jpg", "Products/6. Maquillaje/2. Maquillaje/2f.jpg", "Products/6. Maquillaje/2. Maquillaje/2g.jpg", "Products/6. Maquillaje/2. Maquillaje/2h.jpg"],
+                stock: 1
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-6-2.3":{
+        title: "Delineador lápiz de ojos",
+        brand: "Handaiyan",
+        variants:{
+            "1":{
+                label: "Modelo 01",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/3a Delineador lápiz de ojos M; Handaiyan $1.490.jpg", "Products/6. Maquillaje/2. Maquillaje/3b.jpg", "Products/6. Maquillaje/2. Maquillaje/3c.jpg", "Products/6. Maquillaje/2. Maquillaje/3d.jpg", "Products/6. Maquillaje/2. Maquillaje/3e.jpg", "Products/6. Maquillaje/2. Maquillaje/3f.jpg", "Products/6. Maquillaje/2. Maquillaje/3g.png", "Products/6. Maquillaje/2. Maquillaje/3h.jpg", "Products/6. Maquillaje/2. Maquillaje/3i.jpg", "Products/6. Maquillaje/2. Maquillaje/3j.jpg"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/3a Delineador lápiz de ojos M; Handaiyan $1.490.jpg", "Products/6. Maquillaje/2. Maquillaje/3b.jpg", "Products/6. Maquillaje/2. Maquillaje/3c.jpg", "Products/6. Maquillaje/2. Maquillaje/3d.jpg", "Products/6. Maquillaje/2. Maquillaje/3e.jpg", "Products/6. Maquillaje/2. Maquillaje/3f.jpg", "Products/6. Maquillaje/2. Maquillaje/3g.png", "Products/6. Maquillaje/2. Maquillaje/3h.jpg", "Products/6. Maquillaje/2. Maquillaje/3i.jpg", "Products/6. Maquillaje/2. Maquillaje/3j.jpg"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/3a Delineador lápiz de ojos M; Handaiyan $1.490.jpg", "Products/6. Maquillaje/2. Maquillaje/3b.jpg", "Products/6. Maquillaje/2. Maquillaje/3c.jpg", "Products/6. Maquillaje/2. Maquillaje/3d.jpg", "Products/6. Maquillaje/2. Maquillaje/3e.jpg", "Products/6. Maquillaje/2. Maquillaje/3f.jpg", "Products/6. Maquillaje/2. Maquillaje/3g.png", "Products/6. Maquillaje/2. Maquillaje/3h.jpg", "Products/6. Maquillaje/2. Maquillaje/3i.jpg", "Products/6. Maquillaje/2. Maquillaje/3j.jpg"],
+                stock: 1
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/3a Delineador lápiz de ojos M; Handaiyan $1.490.jpg", "Products/6. Maquillaje/2. Maquillaje/3b.jpg", "Products/6. Maquillaje/2. Maquillaje/3c.jpg", "Products/6. Maquillaje/2. Maquillaje/3d.jpg", "Products/6. Maquillaje/2. Maquillaje/3e.jpg", "Products/6. Maquillaje/2. Maquillaje/3f.jpg", "Products/6. Maquillaje/2. Maquillaje/3g.png", "Products/6. Maquillaje/2. Maquillaje/3h.jpg", "Products/6. Maquillaje/2. Maquillaje/3i.jpg", "Products/6. Maquillaje/2. Maquillaje/3j.jpg"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/3a Delineador lápiz de ojos M; Handaiyan $1.490.jpg", "Products/6. Maquillaje/2. Maquillaje/3b.jpg", "Products/6. Maquillaje/2. Maquillaje/3c.jpg", "Products/6. Maquillaje/2. Maquillaje/3d.jpg", "Products/6. Maquillaje/2. Maquillaje/3e.jpg", "Products/6. Maquillaje/2. Maquillaje/3f.jpg", "Products/6. Maquillaje/2. Maquillaje/3g.png", "Products/6. Maquillaje/2. Maquillaje/3h.jpg", "Products/6. Maquillaje/2. Maquillaje/3i.jpg", "Products/6. Maquillaje/2. Maquillaje/3j.jpg"],
+                stock: 1
+            },
+            "6":{
+                label: "Modelo 06",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/3a Delineador lápiz de ojos M; Handaiyan $1.490.jpg", "Products/6. Maquillaje/2. Maquillaje/3b.jpg", "Products/6. Maquillaje/2. Maquillaje/3c.jpg", "Products/6. Maquillaje/2. Maquillaje/3d.jpg", "Products/6. Maquillaje/2. Maquillaje/3e.jpg", "Products/6. Maquillaje/2. Maquillaje/3f.jpg", "Products/6. Maquillaje/2. Maquillaje/3g.png", "Products/6. Maquillaje/2. Maquillaje/3h.jpg", "Products/6. Maquillaje/2. Maquillaje/3i.jpg", "Products/6. Maquillaje/2. Maquillaje/3j.jpg"],
+                stock: 1
+            },
+            "7":{
+                label: "Modelo 07",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/3a Delineador lápiz de ojos M; Handaiyan $1.490.jpg", "Products/6. Maquillaje/2. Maquillaje/3b.jpg", "Products/6. Maquillaje/2. Maquillaje/3c.jpg", "Products/6. Maquillaje/2. Maquillaje/3d.jpg", "Products/6. Maquillaje/2. Maquillaje/3e.jpg", "Products/6. Maquillaje/2. Maquillaje/3f.jpg", "Products/6. Maquillaje/2. Maquillaje/3g.png", "Products/6. Maquillaje/2. Maquillaje/3h.jpg", "Products/6. Maquillaje/2. Maquillaje/3i.jpg", "Products/6. Maquillaje/2. Maquillaje/3j.jpg"],
+                stock: 1
+            },
+            "8":{
+                label: "Modelo 08",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/3a Delineador lápiz de ojos M; Handaiyan $1.490.jpg", "Products/6. Maquillaje/2. Maquillaje/3b.jpg", "Products/6. Maquillaje/2. Maquillaje/3c.jpg", "Products/6. Maquillaje/2. Maquillaje/3d.jpg", "Products/6. Maquillaje/2. Maquillaje/3e.jpg", "Products/6. Maquillaje/2. Maquillaje/3f.jpg", "Products/6. Maquillaje/2. Maquillaje/3g.png", "Products/6. Maquillaje/2. Maquillaje/3h.jpg", "Products/6. Maquillaje/2. Maquillaje/3i.jpg", "Products/6. Maquillaje/2. Maquillaje/3j.jpg"],
+                stock: 1
+            },
+            "9":{
+                label: "Modelo 09",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/3a Delineador lápiz de ojos M; Handaiyan $1.490.jpg", "Products/6. Maquillaje/2. Maquillaje/3b.jpg", "Products/6. Maquillaje/2. Maquillaje/3c.jpg", "Products/6. Maquillaje/2. Maquillaje/3d.jpg", "Products/6. Maquillaje/2. Maquillaje/3e.jpg", "Products/6. Maquillaje/2. Maquillaje/3f.jpg", "Products/6. Maquillaje/2. Maquillaje/3g.png", "Products/6. Maquillaje/2. Maquillaje/3h.jpg", "Products/6. Maquillaje/2. Maquillaje/3i.jpg", "Products/6. Maquillaje/2. Maquillaje/3j.jpg"],
+                stock: 1
+            },
+            "10":{
+                label: "Modelo 10",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/3a Delineador lápiz de ojos M; Handaiyan $1.490.jpg", "Products/6. Maquillaje/2. Maquillaje/3b.jpg", "Products/6. Maquillaje/2. Maquillaje/3c.jpg", "Products/6. Maquillaje/2. Maquillaje/3d.jpg", "Products/6. Maquillaje/2. Maquillaje/3e.jpg", "Products/6. Maquillaje/2. Maquillaje/3f.jpg", "Products/6. Maquillaje/2. Maquillaje/3g.png", "Products/6. Maquillaje/2. Maquillaje/3h.jpg", "Products/6. Maquillaje/2. Maquillaje/3i.jpg", "Products/6. Maquillaje/2. Maquillaje/3j.jpg"],
+                stock: 1
+            },
+            "11":{
+                label: "Modelo 11",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/3a Delineador lápiz de ojos M; Handaiyan $1.490.jpg", "Products/6. Maquillaje/2. Maquillaje/3b.jpg", "Products/6. Maquillaje/2. Maquillaje/3c.jpg", "Products/6. Maquillaje/2. Maquillaje/3d.jpg", "Products/6. Maquillaje/2. Maquillaje/3e.jpg", "Products/6. Maquillaje/2. Maquillaje/3f.jpg", "Products/6. Maquillaje/2. Maquillaje/3g.png", "Products/6. Maquillaje/2. Maquillaje/3h.jpg", "Products/6. Maquillaje/2. Maquillaje/3i.jpg", "Products/6. Maquillaje/2. Maquillaje/3j.jpg"],
+                stock: 1
+            },
+            "12":{
+                label: "Modelo 12",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/3a Delineador lápiz de ojos M; Handaiyan $1.490.jpg", "Products/6. Maquillaje/2. Maquillaje/3b.jpg", "Products/6. Maquillaje/2. Maquillaje/3c.jpg", "Products/6. Maquillaje/2. Maquillaje/3d.jpg", "Products/6. Maquillaje/2. Maquillaje/3e.jpg", "Products/6. Maquillaje/2. Maquillaje/3f.jpg", "Products/6. Maquillaje/2. Maquillaje/3g.png", "Products/6. Maquillaje/2. Maquillaje/3h.jpg", "Products/6. Maquillaje/2. Maquillaje/3i.jpg", "Products/6. Maquillaje/2. Maquillaje/3j.jpg"],
+                stock: 1
+            },
+            "13":{
+                label: "Modelo 13",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/3a Delineador lápiz de ojos M; Handaiyan $1.490.jpg", "Products/6. Maquillaje/2. Maquillaje/3b.jpg", "Products/6. Maquillaje/2. Maquillaje/3c.jpg", "Products/6. Maquillaje/2. Maquillaje/3d.jpg", "Products/6. Maquillaje/2. Maquillaje/3e.jpg", "Products/6. Maquillaje/2. Maquillaje/3f.jpg", "Products/6. Maquillaje/2. Maquillaje/3g.png", "Products/6. Maquillaje/2. Maquillaje/3h.jpg", "Products/6. Maquillaje/2. Maquillaje/3i.jpg", "Products/6. Maquillaje/2. Maquillaje/3j.jpg"],
+                stock: 1
+            },
+            "14":{
+                label: "Modelo 14",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/3a Delineador lápiz de ojos M; Handaiyan $1.490.jpg", "Products/6. Maquillaje/2. Maquillaje/3b.jpg", "Products/6. Maquillaje/2. Maquillaje/3c.jpg", "Products/6. Maquillaje/2. Maquillaje/3d.jpg", "Products/6. Maquillaje/2. Maquillaje/3e.jpg", "Products/6. Maquillaje/2. Maquillaje/3f.jpg", "Products/6. Maquillaje/2. Maquillaje/3g.png", "Products/6. Maquillaje/2. Maquillaje/3h.jpg", "Products/6. Maquillaje/2. Maquillaje/3i.jpg", "Products/6. Maquillaje/2. Maquillaje/3j.jpg"],
+                stock: 1
+            },
+            "15":{
+                label: "Modelo 15",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/3a Delineador lápiz de ojos M; Handaiyan $1.490.jpg", "Products/6. Maquillaje/2. Maquillaje/3b.jpg", "Products/6. Maquillaje/2. Maquillaje/3c.jpg", "Products/6. Maquillaje/2. Maquillaje/3d.jpg", "Products/6. Maquillaje/2. Maquillaje/3e.jpg", "Products/6. Maquillaje/2. Maquillaje/3f.jpg", "Products/6. Maquillaje/2. Maquillaje/3g.png", "Products/6. Maquillaje/2. Maquillaje/3h.jpg", "Products/6. Maquillaje/2. Maquillaje/3i.jpg", "Products/6. Maquillaje/2. Maquillaje/3j.jpg"],
+                stock: 1
+            },
+            "16":{
+                label: "Modelo 16",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/3a Delineador lápiz de ojos M; Handaiyan $1.490.jpg", "Products/6. Maquillaje/2. Maquillaje/3b.jpg", "Products/6. Maquillaje/2. Maquillaje/3c.jpg", "Products/6. Maquillaje/2. Maquillaje/3d.jpg", "Products/6. Maquillaje/2. Maquillaje/3e.jpg", "Products/6. Maquillaje/2. Maquillaje/3f.jpg", "Products/6. Maquillaje/2. Maquillaje/3g.png", "Products/6. Maquillaje/2. Maquillaje/3h.jpg", "Products/6. Maquillaje/2. Maquillaje/3i.jpg", "Products/6. Maquillaje/2. Maquillaje/3j.jpg"],
+                stock: 1
+            },
+            "17":{
+                label: "Modelo 17",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/3a Delineador lápiz de ojos M; Handaiyan $1.490.jpg", "Products/6. Maquillaje/2. Maquillaje/3b.jpg", "Products/6. Maquillaje/2. Maquillaje/3c.jpg", "Products/6. Maquillaje/2. Maquillaje/3d.jpg", "Products/6. Maquillaje/2. Maquillaje/3e.jpg", "Products/6. Maquillaje/2. Maquillaje/3f.jpg", "Products/6. Maquillaje/2. Maquillaje/3g.png", "Products/6. Maquillaje/2. Maquillaje/3h.jpg", "Products/6. Maquillaje/2. Maquillaje/3i.jpg", "Products/6. Maquillaje/2. Maquillaje/3j.jpg"],
+                stock: 1
+            },
+            "18":{
+                label: "Modelo 18",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/3a Delineador lápiz de ojos M; Handaiyan $1.490.jpg", "Products/6. Maquillaje/2. Maquillaje/3b.jpg", "Products/6. Maquillaje/2. Maquillaje/3c.jpg", "Products/6. Maquillaje/2. Maquillaje/3d.jpg", "Products/6. Maquillaje/2. Maquillaje/3e.jpg", "Products/6. Maquillaje/2. Maquillaje/3f.jpg", "Products/6. Maquillaje/2. Maquillaje/3g.png", "Products/6. Maquillaje/2. Maquillaje/3h.jpg", "Products/6. Maquillaje/2. Maquillaje/3i.jpg", "Products/6. Maquillaje/2. Maquillaje/3j.jpg"],
+                stock: 1
+            },
+            "19":{
+                label: "Modelo 19",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/3a Delineador lápiz de ojos M; Handaiyan $1.490.jpg", "Products/6. Maquillaje/2. Maquillaje/3b.jpg", "Products/6. Maquillaje/2. Maquillaje/3c.jpg", "Products/6. Maquillaje/2. Maquillaje/3d.jpg", "Products/6. Maquillaje/2. Maquillaje/3e.jpg", "Products/6. Maquillaje/2. Maquillaje/3f.jpg", "Products/6. Maquillaje/2. Maquillaje/3g.png", "Products/6. Maquillaje/2. Maquillaje/3h.jpg", "Products/6. Maquillaje/2. Maquillaje/3i.jpg", "Products/6. Maquillaje/2. Maquillaje/3j.jpg"],
+                stock: 1
+            },
+            "20":{
+                label: "Modelo 20",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/3a Delineador lápiz de ojos M; Handaiyan $1.490.jpg", "Products/6. Maquillaje/2. Maquillaje/3b.jpg", "Products/6. Maquillaje/2. Maquillaje/3c.jpg", "Products/6. Maquillaje/2. Maquillaje/3d.jpg", "Products/6. Maquillaje/2. Maquillaje/3e.jpg", "Products/6. Maquillaje/2. Maquillaje/3f.jpg", "Products/6. Maquillaje/2. Maquillaje/3g.png", "Products/6. Maquillaje/2. Maquillaje/3h.jpg", "Products/6. Maquillaje/2. Maquillaje/3i.jpg", "Products/6. Maquillaje/2. Maquillaje/3j.jpg"],
+                stock: 1
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-6-2.4":{
+        title: "Glitters",
+        brand: "Beauty Creations",
+        variants:{
+            "1":{
+                label: "Modelo 01 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/4a Glitters M; Beauty Creations (4-8-10-11-13-16-17 $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/4b.jpg", "Products/6. Maquillaje/2. Maquillaje/4c.jpg", "Products/6. Maquillaje/2. Maquillaje/4d.jpg", "Products/6. Maquillaje/2. Maquillaje/4e.jpg", "Products/6. Maquillaje/2. Maquillaje/4f.jpg", "Products/6. Maquillaje/2. Maquillaje/4g.jpg", "Products/6. Maquillaje/2. Maquillaje/4h.jpg", "Products/6. Maquillaje/2. Maquillaje/4i.jpg", "Products/6. Maquillaje/2. Maquillaje/4j.jpg"],
+                stock: 0
+            },
+            "2":{
+                label: "Modelo 02 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/4a Glitters M; Beauty Creations (4-8-10-11-13-16-17 $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/4b.jpg", "Products/6. Maquillaje/2. Maquillaje/4c.jpg", "Products/6. Maquillaje/2. Maquillaje/4d.jpg", "Products/6. Maquillaje/2. Maquillaje/4e.jpg", "Products/6. Maquillaje/2. Maquillaje/4f.jpg", "Products/6. Maquillaje/2. Maquillaje/4g.jpg", "Products/6. Maquillaje/2. Maquillaje/4h.jpg", "Products/6. Maquillaje/2. Maquillaje/4i.jpg", "Products/6. Maquillaje/2. Maquillaje/4j.jpg"],
+                stock: 0
+            },
+            "3":{
+                label: "Modelo 03 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/4a Glitters M; Beauty Creations (4-8-10-11-13-16-17 $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/4b.jpg", "Products/6. Maquillaje/2. Maquillaje/4c.jpg", "Products/6. Maquillaje/2. Maquillaje/4d.jpg", "Products/6. Maquillaje/2. Maquillaje/4e.jpg", "Products/6. Maquillaje/2. Maquillaje/4f.jpg", "Products/6. Maquillaje/2. Maquillaje/4g.jpg", "Products/6. Maquillaje/2. Maquillaje/4h.jpg", "Products/6. Maquillaje/2. Maquillaje/4i.jpg", "Products/6. Maquillaje/2. Maquillaje/4j.jpg"],
+                stock: 0
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/4a Glitters M; Beauty Creations (4-8-10-11-13-16-17 $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/4b.jpg", "Products/6. Maquillaje/2. Maquillaje/4c.jpg", "Products/6. Maquillaje/2. Maquillaje/4d.jpg", "Products/6. Maquillaje/2. Maquillaje/4e.jpg", "Products/6. Maquillaje/2. Maquillaje/4f.jpg", "Products/6. Maquillaje/2. Maquillaje/4g.jpg", "Products/6. Maquillaje/2. Maquillaje/4h.jpg", "Products/6. Maquillaje/2. Maquillaje/4i.jpg", "Products/6. Maquillaje/2. Maquillaje/4j.jpg"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/4a Glitters M; Beauty Creations (4-8-10-11-13-16-17 $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/4b.jpg", "Products/6. Maquillaje/2. Maquillaje/4c.jpg", "Products/6. Maquillaje/2. Maquillaje/4d.jpg", "Products/6. Maquillaje/2. Maquillaje/4e.jpg", "Products/6. Maquillaje/2. Maquillaje/4f.jpg", "Products/6. Maquillaje/2. Maquillaje/4g.jpg", "Products/6. Maquillaje/2. Maquillaje/4h.jpg", "Products/6. Maquillaje/2. Maquillaje/4i.jpg", "Products/6. Maquillaje/2. Maquillaje/4j.jpg"],
+                stock: 0
+            },
+            "6":{
+                label: "Modelo 06 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/4a Glitters M; Beauty Creations (4-8-10-11-13-16-17 $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/4b.jpg", "Products/6. Maquillaje/2. Maquillaje/4c.jpg", "Products/6. Maquillaje/2. Maquillaje/4d.jpg", "Products/6. Maquillaje/2. Maquillaje/4e.jpg", "Products/6. Maquillaje/2. Maquillaje/4f.jpg", "Products/6. Maquillaje/2. Maquillaje/4g.jpg", "Products/6. Maquillaje/2. Maquillaje/4h.jpg", "Products/6. Maquillaje/2. Maquillaje/4i.jpg", "Products/6. Maquillaje/2. Maquillaje/4j.jpg"],
+                stock: 0
+            },
+            "7":{
+                label: "Modelo 07 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/4a Glitters M; Beauty Creations (4-8-10-11-13-16-17 $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/4b.jpg", "Products/6. Maquillaje/2. Maquillaje/4c.jpg", "Products/6. Maquillaje/2. Maquillaje/4d.jpg", "Products/6. Maquillaje/2. Maquillaje/4e.jpg", "Products/6. Maquillaje/2. Maquillaje/4f.jpg", "Products/6. Maquillaje/2. Maquillaje/4g.jpg", "Products/6. Maquillaje/2. Maquillaje/4h.jpg", "Products/6. Maquillaje/2. Maquillaje/4i.jpg", "Products/6. Maquillaje/2. Maquillaje/4j.jpg"],
+                stock: 0
+            },
+            "8":{
+                label: "Modelo 08",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/4a Glitters M; Beauty Creations (4-8-10-11-13-16-17 $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/4b.jpg", "Products/6. Maquillaje/2. Maquillaje/4c.jpg", "Products/6. Maquillaje/2. Maquillaje/4d.jpg", "Products/6. Maquillaje/2. Maquillaje/4e.jpg", "Products/6. Maquillaje/2. Maquillaje/4f.jpg", "Products/6. Maquillaje/2. Maquillaje/4g.jpg", "Products/6. Maquillaje/2. Maquillaje/4h.jpg", "Products/6. Maquillaje/2. Maquillaje/4i.jpg", "Products/6. Maquillaje/2. Maquillaje/4j.jpg"],
+                stock: 1
+            },
+            "9":{
+                label: "Modelo 09 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/4a Glitters M; Beauty Creations (4-8-10-11-13-16-17 $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/4b.jpg", "Products/6. Maquillaje/2. Maquillaje/4c.jpg", "Products/6. Maquillaje/2. Maquillaje/4d.jpg", "Products/6. Maquillaje/2. Maquillaje/4e.jpg", "Products/6. Maquillaje/2. Maquillaje/4f.jpg", "Products/6. Maquillaje/2. Maquillaje/4g.jpg", "Products/6. Maquillaje/2. Maquillaje/4h.jpg", "Products/6. Maquillaje/2. Maquillaje/4i.jpg", "Products/6. Maquillaje/2. Maquillaje/4j.jpg"],
+                stock: 0
+            },
+            "10":{
+                label: "Modelo 10",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/4a Glitters M; Beauty Creations (4-8-10-11-13-16-17 $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/4b.jpg", "Products/6. Maquillaje/2. Maquillaje/4c.jpg", "Products/6. Maquillaje/2. Maquillaje/4d.jpg", "Products/6. Maquillaje/2. Maquillaje/4e.jpg", "Products/6. Maquillaje/2. Maquillaje/4f.jpg", "Products/6. Maquillaje/2. Maquillaje/4g.jpg", "Products/6. Maquillaje/2. Maquillaje/4h.jpg", "Products/6. Maquillaje/2. Maquillaje/4i.jpg", "Products/6. Maquillaje/2. Maquillaje/4j.jpg"],
+                stock: 1
+            },
+            "11":{
+                label: "Modelo 11",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/4a Glitters M; Beauty Creations (4-8-10-11-13-16-17 $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/4b.jpg", "Products/6. Maquillaje/2. Maquillaje/4c.jpg", "Products/6. Maquillaje/2. Maquillaje/4d.jpg", "Products/6. Maquillaje/2. Maquillaje/4e.jpg", "Products/6. Maquillaje/2. Maquillaje/4f.jpg", "Products/6. Maquillaje/2. Maquillaje/4g.jpg", "Products/6. Maquillaje/2. Maquillaje/4h.jpg", "Products/6. Maquillaje/2. Maquillaje/4i.jpg", "Products/6. Maquillaje/2. Maquillaje/4j.jpg"],
+                stock: 1
+            },
+            "12":{
+                label: "Modelo 12 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/4a Glitters M; Beauty Creations (4-8-10-11-13-16-17 $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/4b.jpg", "Products/6. Maquillaje/2. Maquillaje/4c.jpg", "Products/6. Maquillaje/2. Maquillaje/4d.jpg", "Products/6. Maquillaje/2. Maquillaje/4e.jpg", "Products/6. Maquillaje/2. Maquillaje/4f.jpg", "Products/6. Maquillaje/2. Maquillaje/4g.jpg", "Products/6. Maquillaje/2. Maquillaje/4h.jpg", "Products/6. Maquillaje/2. Maquillaje/4i.jpg", "Products/6. Maquillaje/2. Maquillaje/4j.jpg"],
+                stock: 0
+            },
+            "13":{
+                label: "Modelo 13",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/4a Glitters M; Beauty Creations (4-8-10-11-13-16-17 $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/4b.jpg", "Products/6. Maquillaje/2. Maquillaje/4c.jpg", "Products/6. Maquillaje/2. Maquillaje/4d.jpg", "Products/6. Maquillaje/2. Maquillaje/4e.jpg", "Products/6. Maquillaje/2. Maquillaje/4f.jpg", "Products/6. Maquillaje/2. Maquillaje/4g.jpg", "Products/6. Maquillaje/2. Maquillaje/4h.jpg", "Products/6. Maquillaje/2. Maquillaje/4i.jpg", "Products/6. Maquillaje/2. Maquillaje/4j.jpg"],
+                stock: 1
+            },
+            "14":{
+                label: "Modelo 14 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/4a Glitters M; Beauty Creations (4-8-10-11-13-16-17 $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/4b.jpg", "Products/6. Maquillaje/2. Maquillaje/4c.jpg", "Products/6. Maquillaje/2. Maquillaje/4d.jpg", "Products/6. Maquillaje/2. Maquillaje/4e.jpg", "Products/6. Maquillaje/2. Maquillaje/4f.jpg", "Products/6. Maquillaje/2. Maquillaje/4g.jpg", "Products/6. Maquillaje/2. Maquillaje/4h.jpg", "Products/6. Maquillaje/2. Maquillaje/4i.jpg", "Products/6. Maquillaje/2. Maquillaje/4j.jpg"],
+                stock: 0
+            },
+            "15":{
+                label: "Modelo 15 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/4a Glitters M; Beauty Creations (4-8-10-11-13-16-17 $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/4b.jpg", "Products/6. Maquillaje/2. Maquillaje/4c.jpg", "Products/6. Maquillaje/2. Maquillaje/4d.jpg", "Products/6. Maquillaje/2. Maquillaje/4e.jpg", "Products/6. Maquillaje/2. Maquillaje/4f.jpg", "Products/6. Maquillaje/2. Maquillaje/4g.jpg", "Products/6. Maquillaje/2. Maquillaje/4h.jpg", "Products/6. Maquillaje/2. Maquillaje/4i.jpg", "Products/6. Maquillaje/2. Maquillaje/4j.jpg"],
+                stock: 0
+            },
+            "16":{
+                label: "Modelo 16",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/4a Glitters M; Beauty Creations (4-8-10-11-13-16-17 $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/4b.jpg", "Products/6. Maquillaje/2. Maquillaje/4c.jpg", "Products/6. Maquillaje/2. Maquillaje/4d.jpg", "Products/6. Maquillaje/2. Maquillaje/4e.jpg", "Products/6. Maquillaje/2. Maquillaje/4f.jpg", "Products/6. Maquillaje/2. Maquillaje/4g.jpg", "Products/6. Maquillaje/2. Maquillaje/4h.jpg", "Products/6. Maquillaje/2. Maquillaje/4i.jpg", "Products/6. Maquillaje/2. Maquillaje/4j.jpg"],
+                stock: 1
+            },
+            "17":{
+                label: "Modelo 17",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/4a Glitters M; Beauty Creations (4-8-10-11-13-16-17 $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/4b.jpg", "Products/6. Maquillaje/2. Maquillaje/4c.jpg", "Products/6. Maquillaje/2. Maquillaje/4d.jpg", "Products/6. Maquillaje/2. Maquillaje/4e.jpg", "Products/6. Maquillaje/2. Maquillaje/4f.jpg", "Products/6. Maquillaje/2. Maquillaje/4g.jpg", "Products/6. Maquillaje/2. Maquillaje/4h.jpg", "Products/6. Maquillaje/2. Maquillaje/4i.jpg", "Products/6. Maquillaje/2. Maquillaje/4j.jpg"],
+                stock: 1
+            },
+            "18":{
+                label: "Modelo 18 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/4a Glitters M; Beauty Creations (4-8-10-11-13-16-17 $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/4b.jpg", "Products/6. Maquillaje/2. Maquillaje/4c.jpg", "Products/6. Maquillaje/2. Maquillaje/4d.jpg", "Products/6. Maquillaje/2. Maquillaje/4e.jpg", "Products/6. Maquillaje/2. Maquillaje/4f.jpg", "Products/6. Maquillaje/2. Maquillaje/4g.jbg", "Products/6. Maquillaje/2. Maquillaje/4h.jpg", "Products/6. Maquillaje/2. Maquillaje/4i.jpg", "Products/6. Maquillaje/2. Maquillaje/4j.jpg"],
+                stock: 0
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-6-2.5":{
+        title: "Delineador glitter Iridiscence",
+        brand: "Handaiyan",
+        variants:{
+            "1":{
+                label: "Modelo 01 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/5a Delineador glitter 'Iridescence' M; Handaiyan (8y9) $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/5b.jpg", "Products/6. Maquillaje/2. Maquillaje/5c.jpg", "Products/6. Maquillaje/2. Maquillaje/5d.jpg", "Products/6. Maquillaje/2. Maquillaje/5e.jpg", "Products/6. Maquillaje/2. Maquillaje/5f.jpg", "Products/6. Maquillaje/2. Maquillaje/5g.jpg", "Products/6. Maquillaje/2. Maquillaje/5h.jpg", "Products/6. Maquillaje/2. Maquillaje/5i.jpg", "Products/6. Maquillaje/2. Maquillaje/5j.jpg"],
+                stock: 0
+            },
+            "2":{
+                label: "Modelo 02 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/5a Delineador glitter 'Iridescence' M; Handaiyan (8y9) $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/5b.jpg", "Products/6. Maquillaje/2. Maquillaje/5c.jpg", "Products/6. Maquillaje/2. Maquillaje/5d.jpg", "Products/6. Maquillaje/2. Maquillaje/5e.jpg", "Products/6. Maquillaje/2. Maquillaje/5f.jpg", "Products/6. Maquillaje/2. Maquillaje/5g.jpg", "Products/6. Maquillaje/2. Maquillaje/5h.jpg", "Products/6. Maquillaje/2. Maquillaje/5i.jpg", "Products/6. Maquillaje/2. Maquillaje/5j.jpg"],
+                stock: 0
+            },
+            "3":{
+                label: "Modelo 03 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/5a Delineador glitter 'Iridescence' M; Handaiyan (8y9) $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/5b.jpg", "Products/6. Maquillaje/2. Maquillaje/5c.jpg", "Products/6. Maquillaje/2. Maquillaje/5d.jpg", "Products/6. Maquillaje/2. Maquillaje/5e.jpg", "Products/6. Maquillaje/2. Maquillaje/5f.jpg", "Products/6. Maquillaje/2. Maquillaje/5g.jpg", "Products/6. Maquillaje/2. Maquillaje/5h.jpg", "Products/6. Maquillaje/2. Maquillaje/5i.jpg", "Products/6. Maquillaje/2. Maquillaje/5j.jpg"],
+                stock: 0
+            },
+            "4":{
+                label: "Modelo 04 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/5a Delineador glitter 'Iridescence' M; Handaiyan (8y9) $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/5b.jpg", "Products/6. Maquillaje/2. Maquillaje/5c.jpg", "Products/6. Maquillaje/2. Maquillaje/5d.jpg", "Products/6. Maquillaje/2. Maquillaje/5e.jpg", "Products/6. Maquillaje/2. Maquillaje/5f.jpg", "Products/6. Maquillaje/2. Maquillaje/5g.jpg", "Products/6. Maquillaje/2. Maquillaje/5h.jpg", "Products/6. Maquillaje/2. Maquillaje/5i.jpg", "Products/6. Maquillaje/2. Maquillaje/5j.jpg"],
+                stock: 0
+            },
+            "5":{
+                label: "Modelo 05 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/5a Delineador glitter 'Iridescence' M; Handaiyan (8y9) $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/5b.jpg", "Products/6. Maquillaje/2. Maquillaje/5c.jpg", "Products/6. Maquillaje/2. Maquillaje/5d.jpg", "Products/6. Maquillaje/2. Maquillaje/5e.jpg", "Products/6. Maquillaje/2. Maquillaje/5f.jpg", "Products/6. Maquillaje/2. Maquillaje/5g.jpg", "Products/6. Maquillaje/2. Maquillaje/5h.jpg", "Products/6. Maquillaje/2. Maquillaje/5i.jpg", "Products/6. Maquillaje/2. Maquillaje/5j.jpg"],
+                stock: 0
+            },
+            "6":{
+                label: "Modelo 06 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/5a Delineador glitter 'Iridescence' M; Handaiyan (8y9) $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/5b.jpg", "Products/6. Maquillaje/2. Maquillaje/5c.jpg", "Products/6. Maquillaje/2. Maquillaje/5d.jpg", "Products/6. Maquillaje/2. Maquillaje/5e.jpg", "Products/6. Maquillaje/2. Maquillaje/5f.jpg", "Products/6. Maquillaje/2. Maquillaje/5g.jpg", "Products/6. Maquillaje/2. Maquillaje/5h.jpg", "Products/6. Maquillaje/2. Maquillaje/5i.jpg", "Products/6. Maquillaje/2. Maquillaje/5j.jpg"],
+                stock: 0
+            },
+            "7":{
+                label: "Modelo 07 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/5a Delineador glitter 'Iridescence' M; Handaiyan (8y9) $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/5b.jpg", "Products/6. Maquillaje/2. Maquillaje/5c.jpg", "Products/6. Maquillaje/2. Maquillaje/5d.jpg", "Products/6. Maquillaje/2. Maquillaje/5e.jpg", "Products/6. Maquillaje/2. Maquillaje/5f.jpg", "Products/6. Maquillaje/2. Maquillaje/5g.jpg", "Products/6. Maquillaje/2. Maquillaje/5h.jpg", "Products/6. Maquillaje/2. Maquillaje/5i.jpg", "Products/6. Maquillaje/2. Maquillaje/5j.jpg"],
+                stock: 0
+            },
+            "8":{
+                label: "Modelo 08",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/5a Delineador glitter 'Iridescence' M; Handaiyan (8y9) $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/5b.jpg", "Products/6. Maquillaje/2. Maquillaje/5c.jpg", "Products/6. Maquillaje/2. Maquillaje/5d.jpg", "Products/6. Maquillaje/2. Maquillaje/5e.jpg", "Products/6. Maquillaje/2. Maquillaje/5f.jpg", "Products/6. Maquillaje/2. Maquillaje/5g.jpg", "Products/6. Maquillaje/2. Maquillaje/5h.jpg", "Products/6. Maquillaje/2. Maquillaje/5i.jpg", "Products/6. Maquillaje/2. Maquillaje/5j.jpg"],
+                stock: 1
+            },
+            "9":{
+                label: "Modelo 09",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/5a Delineador glitter 'Iridescence' M; Handaiyan (8y9) $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/5b.jpg", "Products/6. Maquillaje/2. Maquillaje/5c.jpg", "Products/6. Maquillaje/2. Maquillaje/5d.jpg", "Products/6. Maquillaje/2. Maquillaje/5e.jpg", "Products/6. Maquillaje/2. Maquillaje/5f.jpg", "Products/6. Maquillaje/2. Maquillaje/5g.jpg", "Products/6. Maquillaje/2. Maquillaje/5h.jpg", "Products/6. Maquillaje/2. Maquillaje/5i.jpg", "Products/6. Maquillaje/2. Maquillaje/5j.jpg"],
+                stock: 1
+            },
+            "10":{
+                label: "Modelo 10 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/5a Delineador glitter 'Iridescence' M; Handaiyan (8y9) $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/5b.jpg", "Products/6. Maquillaje/2. Maquillaje/5c.jpg", "Products/6. Maquillaje/2. Maquillaje/5d.jpg", "Products/6. Maquillaje/2. Maquillaje/5e.jpg", "Products/6. Maquillaje/2. Maquillaje/5f.jpg", "Products/6. Maquillaje/2. Maquillaje/5g.jpg", "Products/6. Maquillaje/2. Maquillaje/5h.jpg", "Products/6. Maquillaje/2. Maquillaje/5i.jpg", "Products/6. Maquillaje/2. Maquillaje/5j.jpg"],
+                stock: 0
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-6-2.6":{
+        title: "Delineador formato plumón punta fieltro Rose Gold",
+        brand: "O.TWO.O",
+        price: 3990,
+        images: ["Products/6. Maquillaje/2. Maquillaje/6a Delineador formato plumón punta fieltro 'Rose Gold' M; O.TWO.O $3.990.jpg", "Products/6. Maquillaje/2. Maquillaje/6b.jpg", "Products/6. Maquillaje/2. Maquillaje/6c.png", "Products/6. Maquillaje/2. Maquillaje/6d.png", "Products/6. Maquillaje/2. Maquillaje/6e.png", "Products/6. Maquillaje/2. Maquillaje/6f.png", "Products/6. Maquillaje/2. Maquillaje/6g.png", "Products/6. Maquillaje/2. Maquillaje/6h.jpg"],
         stock: 1,
         category: "Maquillaje",
         subcategory: "Ojos"
+    },
+    "ojos-6-2.7":{
+        title: "Tinta gel fijador para cejas Shine",
+        brand: "O.TWO.O",
+        variants:{
+            "1":{
+                label: "Modelo 01 - AGOTADO",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/7a Tinte gel fijador para cejas 'Shine' (03) M; O.TWO.O $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/7b.jpg", "Products/6. Maquillaje/2. Maquillaje/7c.png", "Products/6. Maquillaje/2. Maquillaje/7d.png", "Products/6. Maquillaje/2. Maquillaje/7e.png", "Products/6. Maquillaje/2. Maquillaje/7f.jpg", "Products/6. Maquillaje/2. Maquillaje/7g.jpg","Products/6. Maquillaje/2. Maquillaje/7h.jpg", "Products/6. Maquillaje/2. Maquillaje/7i.jpg"],
+                stock: 0
+            },
+            "2":{
+                label: "Modelo 02 - AGOTADO",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/7a Tinte gel fijador para cejas 'Shine' (03) M; O.TWO.O $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/7b.jpg", "Products/6. Maquillaje/2. Maquillaje/7c.png", "Products/6. Maquillaje/2. Maquillaje/7d.png", "Products/6. Maquillaje/2. Maquillaje/7e.png", "Products/6. Maquillaje/2. Maquillaje/7f.jpg", "Products/6. Maquillaje/2. Maquillaje/7g.jpg","Products/6. Maquillaje/2. Maquillaje/7h.jpg", "Products/6. Maquillaje/2. Maquillaje/7i.jpg"],
+                stock: 0
+            },
+            "3":{
+                label: "Modelo 03",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/7a Tinte gel fijador para cejas 'Shine' (03) M; O.TWO.O $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/7b.jpg", "Products/6. Maquillaje/2. Maquillaje/7c.png", "Products/6. Maquillaje/2. Maquillaje/7d.png", "Products/6. Maquillaje/2. Maquillaje/7e.png", "Products/6. Maquillaje/2. Maquillaje/7f.jpg", "Products/6. Maquillaje/2. Maquillaje/7g.jpg","Products/6. Maquillaje/2. Maquillaje/7h.jpg", "Products/6. Maquillaje/2. Maquillaje/7i.jpg"],
+                stock: 1
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "rostro-6-2.8":{
+        title: "Corrector Black Gold",
+        brand: "O.TWO.O",
+        variants:{
+            "1":{
+                label: "Modelo 01 - AGOTADO",
+                price: 3990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/8a Corrector 'Black Gold' M; O.TWO.O (02) $3.990.jpg", "Products/6. Maquillaje/2. Maquillaje/8b.jpg", "Products/6. Maquillaje/2. Maquillaje/8c.JPG", "Products/6. Maquillaje/2. Maquillaje/8d.JPG", "Products/6. Maquillaje/2. Maquillaje/8e.jpg", "Products/6. Maquillaje/2. Maquillaje/8f.jpg", "Products/6. Maquillaje/2. Maquillaje/8g.jpg", "Products/6. Maquillaje/2. Maquillaje/8h.jpg", "Products/6. Maquillaje/2. Maquillaje/8i.jpg", "Products/6. Maquillaje/2. Maquillaje/8j.jpg"],
+                stock: 0
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 3990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/8a Corrector 'Black Gold' M; O.TWO.O (02) $3.990.jpg", "Products/6. Maquillaje/2. Maquillaje/8b.jpg", "Products/6. Maquillaje/2. Maquillaje/8c.JPG", "Products/6. Maquillaje/2. Maquillaje/8d.JPG", "Products/6. Maquillaje/2. Maquillaje/8e.jpg", "Products/6. Maquillaje/2. Maquillaje/8f.jpg", "Products/6. Maquillaje/2. Maquillaje/8g.jpg", "Products/6. Maquillaje/2. Maquillaje/8h.jpg", "Products/6. Maquillaje/2. Maquillaje/8i.jpg", "Products/6. Maquillaje/2. Maquillaje/8j.jpg"],
+                stock: 0
+            },
+            "3":{
+                label: "Modelo 03 - AGOTADO",
+                price: 3990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/8a Corrector 'Black Gold' M; O.TWO.O (02) $3.990.jpg", "Products/6. Maquillaje/2. Maquillaje/8b.jpg", "Products/6. Maquillaje/2. Maquillaje/8c.JPG", "Products/6. Maquillaje/2. Maquillaje/8d.JPG", "Products/6. Maquillaje/2. Maquillaje/8e.jpg", "Products/6. Maquillaje/2. Maquillaje/8f.jpg", "Products/6. Maquillaje/2. Maquillaje/8g.jpg", "Products/6. Maquillaje/2. Maquillaje/8h.jpg", "Products/6. Maquillaje/2. Maquillaje/8i.jpg", "Products/6. Maquillaje/2. Maquillaje/8j.jpg"],
+                stock: 0
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Rostro"
+    },
+    "ojos-6-2.9":{
+        title: "Sombra líquida shimmer",
+        brand: "Handaiyan",
+        variants:{
+            "7":{
+                label: "Modelo 07",
+                price: 2490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/9a Sombra líquida shimmer M; Handaiyan $2.490.webp", "Products/6. Maquillaje/2. Maquillaje/9b.webp", "Products/6. Maquillaje/2. Maquillaje/9c.webp", "Products/6. Maquillaje/2. Maquillaje/9d.webp", "Products/6. Maquillaje/2. Maquillaje/9e.webp", "Products/6. Maquillaje/2. Maquillaje/9f.webp"],
+                stock: 1
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "labios-6-2.10":{
+        title: "Mini brillo labial Lip glow",
+        brand: "Teayason",
+        variants:{
+            "2":{
+                label: "Modelo 02 - AGOTADO",
+                price: 1790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/10a Mini brillo labial 'Lip glow' (04) M; Teayason $1.790.jpg", "Products/6. Maquillaje/2. Maquillaje/10b.jpg", "Products/6. Maquillaje/2. Maquillaje/10c.jpg", "Products/6. Maquillaje/2. Maquillaje/10d.jpg", "Products/6. Maquillaje/2. Maquillaje/10e.jpg", "Products/6. Maquillaje/2. Maquillaje/10f.jpg", "Products/6. Maquillaje/2. Maquillaje/10g.jpg"],
+                stock: 0
+            },
+            "3":{
+                label: "Modelo 03 - AGOTADO",
+                price: 1790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/10a Mini brillo labial 'Lip glow' (04) M; Teayason $1.790.jpg", "Products/6. Maquillaje/2. Maquillaje/10b.jpg", "Products/6. Maquillaje/2. Maquillaje/10c.jpg", "Products/6. Maquillaje/2. Maquillaje/10d.jpg", "Products/6. Maquillaje/2. Maquillaje/10e.jpg", "Products/6. Maquillaje/2. Maquillaje/10f.jpg", "Products/6. Maquillaje/2. Maquillaje/10g.jpg"],
+                stock: 0
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 1790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/10a Mini brillo labial 'Lip glow' (04) M; Teayason $1.790.jpg", "Products/6. Maquillaje/2. Maquillaje/10b.jpg", "Products/6. Maquillaje/2. Maquillaje/10c.jpg", "Products/6. Maquillaje/2. Maquillaje/10d.jpg", "Products/6. Maquillaje/2. Maquillaje/10e.jpg", "Products/6. Maquillaje/2. Maquillaje/10f.jpg", "Products/6. Maquillaje/2. Maquillaje/10g.jpg"],
+                stock: 1
+            },
+            "6":{
+                label: "Modelo 06 - AGOTADO",
+                price: 1790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/10a Mini brillo labial 'Lip glow' (04) M; Teayason $1.790.jpg", "Products/6. Maquillaje/2. Maquillaje/10b.jpg", "Products/6. Maquillaje/2. Maquillaje/10c.jpg", "Products/6. Maquillaje/2. Maquillaje/10d.jpg", "Products/6. Maquillaje/2. Maquillaje/10e.jpg", "Products/6. Maquillaje/2. Maquillaje/10f.jpg", "Products/6. Maquillaje/2. Maquillaje/10g.jpg"],
+                stock: 0
+            },
+            "7":{
+                label: "Modelo 07 - AGOTADO",
+                price: 1790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/10a Mini brillo labial 'Lip glow' (04) M; Teayason $1.790.jpg", "Products/6. Maquillaje/2. Maquillaje/10b.jpg", "Products/6. Maquillaje/2. Maquillaje/10c.jpg", "Products/6. Maquillaje/2. Maquillaje/10d.jpg", "Products/6. Maquillaje/2. Maquillaje/10e.jpg", "Products/6. Maquillaje/2. Maquillaje/10f.jpg", "Products/6. Maquillaje/2. Maquillaje/10g.jpg"],
+                stock: 0
+            },
+            "9":{
+                label: "Modelo 09 - AGOTADO",
+                price: 1790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/10a Mini brillo labial 'Lip glow' (04) M; Teayason $1.790.jpg", "Products/6. Maquillaje/2. Maquillaje/10b.jpg", "Products/6. Maquillaje/2. Maquillaje/10c.jpg", "Products/6. Maquillaje/2. Maquillaje/10d.jpg", "Products/6. Maquillaje/2. Maquillaje/10e.jpg", "Products/6. Maquillaje/2. Maquillaje/10f.jpg", "Products/6. Maquillaje/2. Maquillaje/10g.jpg"],
+                stock: 0
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Labios"
+    },
+    "labios-6-2.11":{
+        title: "Tinta labial",
+        variants:{
+            "601":{
+                label: "Modelo 601",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/11a Tinta labial (601) $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/11b.jpg", "Products/6. Maquillaje/2. Maquillaje/11c.jpg", "Products/6. Maquillaje/2. Maquillaje/11d.jpg", "Products/6. Maquillaje/2. Maquillaje/11e.jpg", "Products/6. Maquillaje/2. Maquillaje/11f.jpg"],
+                stock: 1
+            },
+            "602":{
+                label: "Modelo 602 - AGOTADO",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/11a Tinta labial (601) $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/11b.jpg", "Products/6. Maquillaje/2. Maquillaje/11c.jpg", "Products/6. Maquillaje/2. Maquillaje/11d.jpg", "Products/6. Maquillaje/2. Maquillaje/11e.jpg", "Products/6. Maquillaje/2. Maquillaje/11f.jpg"],
+                stock: 0
+            },
+            "603":{
+                label: "Modelo 603 - AGOTADO",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/11a Tinta labial (601) $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/11b.jpg", "Products/6. Maquillaje/2. Maquillaje/11c.jpg", "Products/6. Maquillaje/2. Maquillaje/11d.jpg", "Products/6. Maquillaje/2. Maquillaje/11e.jpg", "Products/6. Maquillaje/2. Maquillaje/11f.jpg"],
+                stock: 0
+            },
+            "605":{
+                label: "Modelo 605 - AGOTADO",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/11a Tinta labial (601) $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/11b.jpg", "Products/6. Maquillaje/2. Maquillaje/11c.jpg", "Products/6. Maquillaje/2. Maquillaje/11d.jpg", "Products/6. Maquillaje/2. Maquillaje/11e.jpg", "Products/6. Maquillaje/2. Maquillaje/11f.jpg"],
+                stock: 0
+            },
+            "606":{
+                label: "Modelo 606 - AGOTADO",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/11a Tinta labial (601) $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/11b.jpg", "Products/6. Maquillaje/2. Maquillaje/11c.jpg", "Products/6. Maquillaje/2. Maquillaje/11d.jpg", "Products/6. Maquillaje/2. Maquillaje/11e.jpg", "Products/6. Maquillaje/2. Maquillaje/11f.jpg"],
+                stock: 0
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Labios"
+    },
+    "ojos-6-2.12":{
+        title: "Delineadores",
+        brand: "Xixi",
+        variants: {
+            "1":{
+                label: "Modelo 01",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/12a Delineadores M; Xixi (1-4-5-7) $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/12b.jpg", "Products/6. Maquillaje/2. Maquillaje/12c.jpg", "Products/6. Maquillaje/2. Maquillaje/12d.JPG", "Products/6. Maquillaje/2. Maquillaje/12e.JPG", "Products/6. Maquillaje/2. Maquillaje/12f.JPG", "Products/6. Maquillaje/2. Maquillaje/12g.JPG", "Products/6. Maquillaje/2. Maquillaje/12h.JPG", "Products/6. Maquillaje/2. Maquillaje/12i.JPG", "Products/6. Maquillaje/2. Maquillaje/12j.jpg"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02 - AGOTADO",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/12a Delineadores M; Xixi (1-4-5-7) $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/12b.jpg", "Products/6. Maquillaje/2. Maquillaje/12c.jpg", "Products/6. Maquillaje/2. Maquillaje/12d.JPG", "Products/6. Maquillaje/2. Maquillaje/12e.JPG", "Products/6. Maquillaje/2. Maquillaje/12f.JPG", "Products/6. Maquillaje/2. Maquillaje/12g.JPG", "Products/6. Maquillaje/2. Maquillaje/12h.JPG", "Products/6. Maquillaje/2. Maquillaje/12i.JPG", "Products/6. Maquillaje/2. Maquillaje/12j.jpg"],
+                stock: 0
+            },
+            "3":{
+                label: "Modelo 03 - AGOTADO",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/12a Delineadores M; Xixi (1-4-5-7) $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/12b.jpg", "Products/6. Maquillaje/2. Maquillaje/12c.jpg", "Products/6. Maquillaje/2. Maquillaje/12d.JPG", "Products/6. Maquillaje/2. Maquillaje/12e.JPG", "Products/6. Maquillaje/2. Maquillaje/12f.JPG", "Products/6. Maquillaje/2. Maquillaje/12g.JPG", "Products/6. Maquillaje/2. Maquillaje/12h.JPG", "Products/6. Maquillaje/2. Maquillaje/12i.JPG", "Products/6. Maquillaje/2. Maquillaje/12j.jpg"],
+                stock: 0
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/12a Delineadores M; Xixi (1-4-5-7) $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/12b.jpg", "Products/6. Maquillaje/2. Maquillaje/12c.jpg", "Products/6. Maquillaje/2. Maquillaje/12d.JPG", "Products/6. Maquillaje/2. Maquillaje/12e.JPG", "Products/6. Maquillaje/2. Maquillaje/12f.JPG", "Products/6. Maquillaje/2. Maquillaje/12g.JPG", "Products/6. Maquillaje/2. Maquillaje/12h.JPG", "Products/6. Maquillaje/2. Maquillaje/12i.JPG", "Products/6. Maquillaje/2. Maquillaje/12j.jpg"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/12a Delineadores M; Xixi (1-4-5-7) $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/12b.jpg", "Products/6. Maquillaje/2. Maquillaje/12c.jpg", "Products/6. Maquillaje/2. Maquillaje/12d.JPG", "Products/6. Maquillaje/2. Maquillaje/12e.JPG", "Products/6. Maquillaje/2. Maquillaje/12f.JPG", "Products/6. Maquillaje/2. Maquillaje/12g.JPG", "Products/6. Maquillaje/2. Maquillaje/12h.JPG", "Products/6. Maquillaje/2. Maquillaje/12i.JPG", "Products/6. Maquillaje/2. Maquillaje/12j.jpg"],
+                stock: 1
+            },
+            "6":{
+                label: "Modelo 06 - AGOTADO",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/12a Delineadores M; Xixi (1-4-5-7) $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/12b.jpg", "Products/6. Maquillaje/2. Maquillaje/12c.jpg", "Products/6. Maquillaje/2. Maquillaje/12d.JPG", "Products/6. Maquillaje/2. Maquillaje/12e.JPG", "Products/6. Maquillaje/2. Maquillaje/12f.JPG", "Products/6. Maquillaje/2. Maquillaje/12g.JPG", "Products/6. Maquillaje/2. Maquillaje/12h.JPG", "Products/6. Maquillaje/2. Maquillaje/12i.JPG", "Products/6. Maquillaje/2. Maquillaje/12j.jpg"],
+                stock: 0
+            },
+            "7":{
+                label: "Modelo 07",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/12a Delineadores M; Xixi (1-4-5-7) $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/12b.jpg", "Products/6. Maquillaje/2. Maquillaje/12c.jpg", "Products/6. Maquillaje/2. Maquillaje/12d.JPG", "Products/6. Maquillaje/2. Maquillaje/12e.JPG", "Products/6. Maquillaje/2. Maquillaje/12f.JPG", "Products/6. Maquillaje/2. Maquillaje/12g.JPG", "Products/6. Maquillaje/2. Maquillaje/12h.JPG", "Products/6. Maquillaje/2. Maquillaje/12i.JPG", "Products/6. Maquillaje/2. Maquillaje/12j.jpg"],
+                stock: 1
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-6-2.13":{
+        title: "Delineador glitter",
+        brand: "Xixi",
+        variants:{
+            "2":{
+                label: "Modelo 02 - AGOTADO",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/13a Delineador glitter M; Xixi (4-6-7) $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/13b.jpg", "Products/6. Maquillaje/2. Maquillaje/13c.jpg", "Products/6. Maquillaje/2. Maquillaje/13d.jpg", "Products/6. Maquillaje/2. Maquillaje/13e.jpg", "Products/6. Maquillaje/2. Maquillaje/13f.jpg", "Products/6. Maquillaje/2. Maquillaje/13g.jpg", "Products/6. Maquillaje/2. Maquillaje/13h.jpg", "Products/6. Maquillaje/2. Maquillaje/13i.jpg"],
+                stock: 0
+            },
+            "3":{
+                label: "Modelo 03 - AGOTADO",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/13a Delineador glitter M; Xixi (4-6-7) $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/13b.jpg", "Products/6. Maquillaje/2. Maquillaje/13c.jpg", "Products/6. Maquillaje/2. Maquillaje/13d.jpg", "Products/6. Maquillaje/2. Maquillaje/13e.jpg", "Products/6. Maquillaje/2. Maquillaje/13f.jpg", "Products/6. Maquillaje/2. Maquillaje/13g.jpg", "Products/6. Maquillaje/2. Maquillaje/13h.jpg", "Products/6. Maquillaje/2. Maquillaje/13i.jpg"],
+                stock: 0
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/13a Delineador glitter M; Xixi (4-6-7) $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/13b.jpg", "Products/6. Maquillaje/2. Maquillaje/13c.jpg", "Products/6. Maquillaje/2. Maquillaje/13d.jpg", "Products/6. Maquillaje/2. Maquillaje/13e.jpg", "Products/6. Maquillaje/2. Maquillaje/13f.jpg", "Products/6. Maquillaje/2. Maquillaje/13g.jpg", "Products/6. Maquillaje/2. Maquillaje/13h.jpg", "Products/6. Maquillaje/2. Maquillaje/13i.jpg"],
+                stock: 1
+            },
+            "6":{
+                label: "Modelo 06",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/13a Delineador glitter M; Xixi (4-6-7) $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/13b.jpg", "Products/6. Maquillaje/2. Maquillaje/13c.jpg", "Products/6. Maquillaje/2. Maquillaje/13d.jpg", "Products/6. Maquillaje/2. Maquillaje/13e.jpg", "Products/6. Maquillaje/2. Maquillaje/13f.jpg", "Products/6. Maquillaje/2. Maquillaje/13g.jpg", "Products/6. Maquillaje/2. Maquillaje/13h.jpg", "Products/6. Maquillaje/2. Maquillaje/13i.jpg"],
+                stock: 1
+            },
+            "7":{
+                label: "Modelo 07",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/13a Delineador glitter M; Xixi (4-6-7) $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/13b.jpg", "Products/6. Maquillaje/2. Maquillaje/13c.jpg", "Products/6. Maquillaje/2. Maquillaje/13d.jpg", "Products/6. Maquillaje/2. Maquillaje/13e.jpg", "Products/6. Maquillaje/2. Maquillaje/13f.jpg", "Products/6. Maquillaje/2. Maquillaje/13g.jpg", "Products/6. Maquillaje/2. Maquillaje/13h.jpg", "Products/6. Maquillaje/2. Maquillaje/13i.jpg"],
+                stock: 1
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "rostro-6-2.14":{
+        title: "Tinta multiuso Pick me",
+        brand: "O.TWO.O",
+        variants:{
+            "1":{
+                label: "Modelo 01",
+                price: 2990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/14a Tinta multiuso 'Pick me' M; O.TWO.O (01-02) $2.990.jpg", "Products/6. Maquillaje/2. Maquillaje/14b.png", "Products/6. Maquillaje/2. Maquillaje/14c.jpg", "Products/6. Maquillaje/2. Maquillaje/14d.jpg", "Products/6. Maquillaje/2. Maquillaje/14e.jpg", "Products/6. Maquillaje/2. Maquillaje/14f.jpg", "Products/6. Maquillaje/2. Maquillaje/14g.jpg", "Products/6. Maquillaje/2. Maquillaje/14h.jpg", "Products/6. Maquillaje/2. Maquillaje/14i.jpg"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 2990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/14a Tinta multiuso 'Pick me' M; O.TWO.O (01-02) $2.990.jpg", "Products/6. Maquillaje/2. Maquillaje/14b.png", "Products/6. Maquillaje/2. Maquillaje/14c.jpg", "Products/6. Maquillaje/2. Maquillaje/14d.jpg", "Products/6. Maquillaje/2. Maquillaje/14e.jpg", "Products/6. Maquillaje/2. Maquillaje/14f.jpg", "Products/6. Maquillaje/2. Maquillaje/14g.jpg", "Products/6. Maquillaje/2. Maquillaje/14h.jpg", "Products/6. Maquillaje/2. Maquillaje/14i.jpg"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03 - AGOTADO",
+                price: 2990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/14a Tinta multiuso 'Pick me' M; O.TWO.O (01-02) $2.990.jpg", "Products/6. Maquillaje/2. Maquillaje/14b.png", "Products/6. Maquillaje/2. Maquillaje/14c.jpg", "Products/6. Maquillaje/2. Maquillaje/14d.jpg", "Products/6. Maquillaje/2. Maquillaje/14e.jpg", "Products/6. Maquillaje/2. Maquillaje/14f.jpg", "Products/6. Maquillaje/2. Maquillaje/14g.jpg", "Products/6. Maquillaje/2. Maquillaje/14h.jpg", "Products/6. Maquillaje/2. Maquillaje/14i.jpg"],
+                stock: 0
+            },
+            "4":{
+                label: "Modelo 04 - AGOTADO",
+                price: 2990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/14a Tinta multiuso 'Pick me' M; O.TWO.O (01-02) $2.990.jpg", "Products/6. Maquillaje/2. Maquillaje/14b.png", "Products/6. Maquillaje/2. Maquillaje/14c.jpg", "Products/6. Maquillaje/2. Maquillaje/14d.jpg", "Products/6. Maquillaje/2. Maquillaje/14e.jpg", "Products/6. Maquillaje/2. Maquillaje/14f.jpg", "Products/6. Maquillaje/2. Maquillaje/14g.jpg", "Products/6. Maquillaje/2. Maquillaje/14h.jpg", "Products/6. Maquillaje/2. Maquillaje/14i.jpg"],
+                stock: 0
+            },
+            "5":{
+                label: "Modelo 05 - AGOTADO",
+                price: 2990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/14a Tinta multiuso 'Pick me' M; O.TWO.O (01-02) $2.990.jpg", "Products/6. Maquillaje/2. Maquillaje/14b.png", "Products/6. Maquillaje/2. Maquillaje/14c.jpg", "Products/6. Maquillaje/2. Maquillaje/14d.jpg", "Products/6. Maquillaje/2. Maquillaje/14e.jpg", "Products/6. Maquillaje/2. Maquillaje/14f.jpg", "Products/6. Maquillaje/2. Maquillaje/14g.jpg", "Products/6. Maquillaje/2. Maquillaje/14h.jpg", "Products/6. Maquillaje/2. Maquillaje/14i.jpg"],
+                stock: 0
+            },
+            "6":{
+                label: "Modelo 06 - AGOTADO",
+                price: 2990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/14a Tinta multiuso 'Pick me' M; O.TWO.O (01-02) $2.990.jpg", "Products/6. Maquillaje/2. Maquillaje/14b.png", "Products/6. Maquillaje/2. Maquillaje/14c.jpg", "Products/6. Maquillaje/2. Maquillaje/14d.jpg", "Products/6. Maquillaje/2. Maquillaje/14e.jpg", "Products/6. Maquillaje/2. Maquillaje/14f.jpg", "Products/6. Maquillaje/2. Maquillaje/14g.jpg", "Products/6. Maquillaje/2. Maquillaje/14h.jpg", "Products/6. Maquillaje/2. Maquillaje/14i.jpg"],
+                stock: 0
+            },
+            "7":{
+                label: "Modelo 07 - AGOTADO",
+                price: 2990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/14a Tinta multiuso 'Pick me' M; O.TWO.O (01-02) $2.990.jpg", "Products/6. Maquillaje/2. Maquillaje/14b.png", "Products/6. Maquillaje/2. Maquillaje/14c.jpg", "Products/6. Maquillaje/2. Maquillaje/14d.jpg", "Products/6. Maquillaje/2. Maquillaje/14e.jpg", "Products/6. Maquillaje/2. Maquillaje/14f.jpg", "Products/6. Maquillaje/2. Maquillaje/14g.jpg", "Products/6. Maquillaje/2. Maquillaje/14h.jpg", "Products/6. Maquillaje/2. Maquillaje/14i.jpg"],
+                stock: 0
+            },
+            "8":{
+                label: "Modelo 08 - AGOTADO",
+                price: 2990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/14a Tinta multiuso 'Pick me' M; O.TWO.O (01-02) $2.990.jpg", "Products/6. Maquillaje/2. Maquillaje/14b.png", "Products/6. Maquillaje/2. Maquillaje/14c.jpg", "Products/6. Maquillaje/2. Maquillaje/14d.jpg", "Products/6. Maquillaje/2. Maquillaje/14e.jpg", "Products/6. Maquillaje/2. Maquillaje/14f.jpg", "Products/6. Maquillaje/2. Maquillaje/14g.jpg", "Products/6. Maquillaje/2. Maquillaje/14h.jpg", "Products/6. Maquillaje/2. Maquillaje/14i.jpg"],
+                stock: 0
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Rostro"
+    },
+    "labios-6-2.15":{
+        title: "Labial líquido mate larga duración",
+        variants:{
+            "1":{
+                label: "Modelo 01",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/15a Labial líquido mate larga duración (1-2-4-6) $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/15b.jpg", "Products/6. Maquillaje/2. Maquillaje/15c.jpg", "Products/6. Maquillaje/2. Maquillaje/15d.jpg", "Products/6. Maquillaje/2. Maquillaje/15e.jpg", "Products/6. Maquillaje/2. Maquillaje/15f.jpg"],
+                stock: 1
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/15a Labial líquido mate larga duración (1-2-4-6) $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/15b.jpg", "Products/6. Maquillaje/2. Maquillaje/15c.jpg", "Products/6. Maquillaje/2. Maquillaje/15d.jpg", "Products/6. Maquillaje/2. Maquillaje/15e.jpg", "Products/6. Maquillaje/2. Maquillaje/15f.jpg"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/15a Labial líquido mate larga duración (1-2-4-6) $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/15b.jpg", "Products/6. Maquillaje/2. Maquillaje/15c.jpg", "Products/6. Maquillaje/2. Maquillaje/15d.jpg", "Products/6. Maquillaje/2. Maquillaje/15e.jpg", "Products/6. Maquillaje/2. Maquillaje/15f.jpg"],
+                stock: 0
+            },
+            "4":{
+                label: "Modelo 04",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/15a Labial líquido mate larga duración (1-2-4-6) $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/15b.jpg", "Products/6. Maquillaje/2. Maquillaje/15c.jpg", "Products/6. Maquillaje/2. Maquillaje/15d.jpg", "Products/6. Maquillaje/2. Maquillaje/15e.jpg", "Products/6. Maquillaje/2. Maquillaje/15f.jpg"],
+                stock: 1
+            },
+            "5":{
+                label: "Modelo 05 - AGOTADO",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/15a Labial líquido mate larga duración (1-2-4-6) $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/15b.jpg", "Products/6. Maquillaje/2. Maquillaje/15c.jpg", "Products/6. Maquillaje/2. Maquillaje/15d.jpg", "Products/6. Maquillaje/2. Maquillaje/15e.jpg", "Products/6. Maquillaje/2. Maquillaje/15f.jpg"],
+                stock: 0
+            },
+            "6":{
+                label: "Modelo 06",
+                price: 1990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/15a Labial líquido mate larga duración (1-2-4-6) $1.990.jpg", "Products/6. Maquillaje/2. Maquillaje/15b.jpg", "Products/6. Maquillaje/2. Maquillaje/15c.jpg", "Products/6. Maquillaje/2. Maquillaje/15d.jpg", "Products/6. Maquillaje/2. Maquillaje/15e.jpg", "Products/6. Maquillaje/2. Maquillaje/15f.jpg"],
+                stock: 1
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Labios"
+    },
+    "ojos-6-2.16":{
+        title: "Cuarteto de somrbas",
+        brand: "Xixi",
+        variants:{
+            "1":{
+                label: "Modelo 01 - AGOTADO",
+                price: 3990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/16a Cuarteto de sombras M; Xixi (M02) $3.990.jpg", "Products/6. Maquillaje/2. Maquillaje/16b.jpg", "Products/6. Maquillaje/2. Maquillaje/16c.jpg", "Products/6. Maquillaje/2. Maquillaje/16d.jpg", "Products/6. Maquillaje/2. Maquillaje/16e.jpg", "Products/6. Maquillaje/2. Maquillaje/16f.jpg"],
+                stock: 0
+            },
+            "2":{
+                label: "Modelo 02",
+                price: 3990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/16a Cuarteto de sombras M; Xixi (M02) $3.990.jpg", "Products/6. Maquillaje/2. Maquillaje/16b.jpg", "Products/6. Maquillaje/2. Maquillaje/16c.jpg", "Products/6. Maquillaje/2. Maquillaje/16d.jpg", "Products/6. Maquillaje/2. Maquillaje/16e.jpg", "Products/6. Maquillaje/2. Maquillaje/16f.jpg"],
+                stock: 1
+            },
+            "3":{
+                label: "Modelo 03 - AGOTADO",
+                price: 3990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/16a Cuarteto de sombras M; Xixi (M02) $3.990.jpg", "Products/6. Maquillaje/2. Maquillaje/16b.jpg", "Products/6. Maquillaje/2. Maquillaje/16c.jpg", "Products/6. Maquillaje/2. Maquillaje/16d.jpg", "Products/6. Maquillaje/2. Maquillaje/16e.jpg", "Products/6. Maquillaje/2. Maquillaje/16f.jpg"],
+                stock: 0
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "labios-6-2.17":{
+        title: "Tinta labial",
+        brand: "Beauty Glazed",
+        variants: {
+            "107":{
+                label: "Modelo 107",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/17a Tinta labial M;Beauty Glazed (107 Tomato) $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/17b.jpg", "Products/6. Maquillaje/2. Maquillaje/17c.jpg", "Products/6. Maquillaje/2. Maquillaje/17d.jpg", "Products/6. Maquillaje/2. Maquillaje/17e.jpg", "Products/6. Maquillaje/2. Maquillaje/17f.jpg", "Products/6. Maquillaje/2. Maquillaje/17g.jpg", "Products/6. Maquillaje/2. Maquillaje/17h.jpg"],
+                stock: 1
+            },
+            "101":{
+                label: "Modelo 101 - AGOTADO",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/17a Tinta labial M;Beauty Glazed (107 Tomato) $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/17b.jpg", "Products/6. Maquillaje/2. Maquillaje/17c.jpg", "Products/6. Maquillaje/2. Maquillaje/17d.jpg", "Products/6. Maquillaje/2. Maquillaje/17e.jpg", "Products/6. Maquillaje/2. Maquillaje/17f.jpg", "Products/6. Maquillaje/2. Maquillaje/17g.jpg", "Products/6. Maquillaje/2. Maquillaje/17h.jpg"],
+                stock: 0
+            },
+            "106":{
+                label: "Modelo 106 - AGOTADO",
+                price: 3490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/17a Tinta labial M;Beauty Glazed (107 Tomato) $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/17b.jpg", "Products/6. Maquillaje/2. Maquillaje/17c.jpg", "Products/6. Maquillaje/2. Maquillaje/17d.jpg", "Products/6. Maquillaje/2. Maquillaje/17e.jpg", "Products/6. Maquillaje/2. Maquillaje/17f.jpg", "Products/6. Maquillaje/2. Maquillaje/17g.jpg", "Products/6. Maquillaje/2. Maquillaje/17h.jpg"],
+                stock: 0
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Labios"
+    },
+    "labios-6-2.18":{
+        title: "Labial mate velvet Clay",
+        brand: "Focallure",
+        variants:{
+            "205":{
+                label: "Modelo 205",
+                price: 3790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/18a Labial mate velvet 'Clay' M; Focallure (205) $3.790.jpg", "Products/6. Maquillaje/2. Maquillaje/18b.jpg", "Products/6. Maquillaje/2. Maquillaje/18c.png", "Products/6. Maquillaje/2. Maquillaje/18d.png", "Products/6. Maquillaje/2. Maquillaje/18e.jpg"],
+                stock: 1
+            },
+            "206":{
+                label: "Modelo 206 - AGOTADO",
+                price: 3790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/18a Labial mate velvet 'Clay' M; Focallure (205) $3.790.jpg", "Products/6. Maquillaje/2. Maquillaje/18b.jpg", "Products/6. Maquillaje/2. Maquillaje/18c.png", "Products/6. Maquillaje/2. Maquillaje/18d.png", "Products/6. Maquillaje/2. Maquillaje/18e.jpg"],
+                stock: 0
+            },
+            "207":{
+                label: "Modelo 207 - AGOTADO",
+                price: 3790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/18a Labial mate velvet 'Clay' M; Focallure (205) $3.790.jpg", "Products/6. Maquillaje/2. Maquillaje/18b.jpg", "Products/6. Maquillaje/2. Maquillaje/18c.png", "Products/6. Maquillaje/2. Maquillaje/18d.png", "Products/6. Maquillaje/2. Maquillaje/18e.jpg"],
+                stock: 0
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Labios"
+    },
+    "labios-6-2.19":{
+        title: "Labial mate Chocolate",
+        brand: "Beauty Glazed",
+        variants: {
+            "101":{
+                label: "Modelo 101 - AGOTADO",
+                price: 2790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/19 a Labial mate 'Chocolate' M; Beauty Glazed (102) $2.790.jpg", "Products/6. Maquillaje/2. Maquillaje/19b.jpg", "Products/6. Maquillaje/2. Maquillaje/19c.jpg", "Products/6. Maquillaje/2. Maquillaje/19d.jpg", "Products/6. Maquillaje/2. Maquillaje/19e.jpg", "Products/6. Maquillaje/2. Maquillaje/19f.jpg", "Products/6. Maquillaje/2. Maquillaje/19g.jpg", "Products/6. Maquillaje/2. Maquillaje/19h.jpg", "Products/6. Maquillaje/2. Maquillaje/19i.jpg"],
+                stock: 0
+            },
+            "102":{
+                label: "Modelo 102",
+                price: 2790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/19 a Labial mate 'Chocolate' M; Beauty Glazed (102) $2.790.jpg", "Products/6. Maquillaje/2. Maquillaje/19b.jpg", "Products/6. Maquillaje/2. Maquillaje/19c.jpg", "Products/6. Maquillaje/2. Maquillaje/19d.jpg", "Products/6. Maquillaje/2. Maquillaje/19e.jpg", "Products/6. Maquillaje/2. Maquillaje/19f.jpg", "Products/6. Maquillaje/2. Maquillaje/19g.jpg", "Products/6. Maquillaje/2. Maquillaje/19h.jpg", "Products/6. Maquillaje/2. Maquillaje/19i.jpg"],
+                stock: 1
+            },
+            "103":{
+                label: "Modelo 103 - AGOTADO",
+                price: 2790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/19 a Labial mate 'Chocolate' M; Beauty Glazed (102) $2.790.jpg", "Products/6. Maquillaje/2. Maquillaje/19b.jpg", "Products/6. Maquillaje/2. Maquillaje/19c.jpg", "Products/6. Maquillaje/2. Maquillaje/19d.jpg", "Products/6. Maquillaje/2. Maquillaje/19e.jpg", "Products/6. Maquillaje/2. Maquillaje/19f.jpg", "Products/6. Maquillaje/2. Maquillaje/19g.jpg", "Products/6. Maquillaje/2. Maquillaje/19h.jpg", "Products/6. Maquillaje/2. Maquillaje/19i.jpg"],
+                stock: 0
+            },
+            "104":{
+                label: "Modelo 104 - AGOTADO",
+                price: 2790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/19 a Labial mate 'Chocolate' M; Beauty Glazed (102) $2.790.jpg", "Products/6. Maquillaje/2. Maquillaje/19b.jpg", "Products/6. Maquillaje/2. Maquillaje/19c.jpg", "Products/6. Maquillaje/2. Maquillaje/19d.jpg", "Products/6. Maquillaje/2. Maquillaje/19e.jpg", "Products/6. Maquillaje/2. Maquillaje/19f.jpg", "Products/6. Maquillaje/2. Maquillaje/19g.jpg", "Products/6. Maquillaje/2. Maquillaje/19h.jpg", "Products/6. Maquillaje/2. Maquillaje/19i.jpg"],
+                stock: 0
+            },
+            "105":{
+                label: "Modelo 105 - AGOTADO",
+                price: 2790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/19 a Labial mate 'Chocolate' M; Beauty Glazed (102) $2.790.jpg", "Products/6. Maquillaje/2. Maquillaje/19b.jpg", "Products/6. Maquillaje/2. Maquillaje/19c.jpg", "Products/6. Maquillaje/2. Maquillaje/19d.jpg", "Products/6. Maquillaje/2. Maquillaje/19e.jpg", "Products/6. Maquillaje/2. Maquillaje/19f.jpg", "Products/6. Maquillaje/2. Maquillaje/19g.jpg", "Products/6. Maquillaje/2. Maquillaje/19h.jpg", "Products/6. Maquillaje/2. Maquillaje/19i.jpg"],
+                stock: 0
+            },
+            "106":{
+                label: "Modelo 106 - AGOTADO",
+                price: 2790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/19 a Labial mate 'Chocolate' M; Beauty Glazed (102) $2.790.jpg", "Products/6. Maquillaje/2. Maquillaje/19b.jpg", "Products/6. Maquillaje/2. Maquillaje/19c.jpg", "Products/6. Maquillaje/2. Maquillaje/19d.jpg", "Products/6. Maquillaje/2. Maquillaje/19e.jpg", "Products/6. Maquillaje/2. Maquillaje/19f.jpg", "Products/6. Maquillaje/2. Maquillaje/19g.jpg", "Products/6. Maquillaje/2. Maquillaje/19h.jpg", "Products/6. Maquillaje/2. Maquillaje/19i.jpg"],
+                stock: 0
+            },
+            "107":{
+                label: "Modelo 107 - AGOTADO",
+                price: 2790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/19 a Labial mate 'Chocolate' M; Beauty Glazed (102) $2.790.jpg", "Products/6. Maquillaje/2. Maquillaje/19b.jpg", "Products/6. Maquillaje/2. Maquillaje/19c.jpg", "Products/6. Maquillaje/2. Maquillaje/19d.jpg", "Products/6. Maquillaje/2. Maquillaje/19e.jpg", "Products/6. Maquillaje/2. Maquillaje/19f.jpg", "Products/6. Maquillaje/2. Maquillaje/19g.jpg", "Products/6. Maquillaje/2. Maquillaje/19h.jpg", "Products/6. Maquillaje/2. Maquillaje/19i.jpg"],
+                stock: 0
+            },
+            "108":{
+                label: "Modelo 108 - AGOTADO",
+                price: 2790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/19 a Labial mate 'Chocolate' M; Beauty Glazed (102) $2.790.jpg", "Products/6. Maquillaje/2. Maquillaje/19b.jpg", "Products/6. Maquillaje/2. Maquillaje/19c.jpg", "Products/6. Maquillaje/2. Maquillaje/19d.jpg", "Products/6. Maquillaje/2. Maquillaje/19e.jpg", "Products/6. Maquillaje/2. Maquillaje/19f.jpg", "Products/6. Maquillaje/2. Maquillaje/19g.jpg", "Products/6. Maquillaje/2. Maquillaje/19h.jpg", "Products/6. Maquillaje/2. Maquillaje/19i.jpg"],
+                stock: 0
+            },
+            "109":{
+                label: "Modelo 109 - AGOTADO",
+                price: 2790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/19 a Labial mate 'Chocolate' M; Beauty Glazed (102) $2.790.jpg", "Products/6. Maquillaje/2. Maquillaje/19b.jpg", "Products/6. Maquillaje/2. Maquillaje/19c.jpg", "Products/6. Maquillaje/2. Maquillaje/19d.jpg", "Products/6. Maquillaje/2. Maquillaje/19e.jpg", "Products/6. Maquillaje/2. Maquillaje/19f.jpg", "Products/6. Maquillaje/2. Maquillaje/19g.jpg", "Products/6. Maquillaje/2. Maquillaje/19h.jpg", "Products/6. Maquillaje/2. Maquillaje/19i.jpg"],
+                stock: 0
+            },
+            "110":{
+                label: "Modelo 110 - AGOTADO",
+                price: 2790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/19 a Labial mate 'Chocolate' M; Beauty Glazed (102) $2.790.jpg", "Products/6. Maquillaje/2. Maquillaje/19b.jpg", "Products/6. Maquillaje/2. Maquillaje/19c.jpg", "Products/6. Maquillaje/2. Maquillaje/19d.jpg", "Products/6. Maquillaje/2. Maquillaje/19e.jpg", "Products/6. Maquillaje/2. Maquillaje/19f.jpg", "Products/6. Maquillaje/2. Maquillaje/19g.jpg", "Products/6. Maquillaje/2. Maquillaje/19h.jpg", "Products/6. Maquillaje/2. Maquillaje/19i.jpg"],
+                stock: 0
+            },
+            "111":{
+                label: "Modelo 111 - AGOTADO",
+                price: 2790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/19 a Labial mate 'Chocolate' M; Beauty Glazed (102) $2.790.jpg", "Products/6. Maquillaje/2. Maquillaje/19b.jpg", "Products/6. Maquillaje/2. Maquillaje/19c.jpg", "Products/6. Maquillaje/2. Maquillaje/19d.jpg", "Products/6. Maquillaje/2. Maquillaje/19e.jpg", "Products/6. Maquillaje/2. Maquillaje/19f.jpg", "Products/6. Maquillaje/2. Maquillaje/19g.jpg", "Products/6. Maquillaje/2. Maquillaje/19h.jpg", "Products/6. Maquillaje/2. Maquillaje/19i.jpg"],
+                stock: 0
+            },
+            "112":{
+                label: "Modelo 112 - AGOTADO",
+                price: 2790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/19 a Labial mate 'Chocolate' M; Beauty Glazed (102) $2.790.jpg", "Products/6. Maquillaje/2. Maquillaje/19b.jpg", "Products/6. Maquillaje/2. Maquillaje/19c.jpg", "Products/6. Maquillaje/2. Maquillaje/19d.jpg", "Products/6. Maquillaje/2. Maquillaje/19e.jpg", "Products/6. Maquillaje/2. Maquillaje/19f.jpg", "Products/6. Maquillaje/2. Maquillaje/19g.jpg", "Products/6. Maquillaje/2. Maquillaje/19h.jpg", "Products/6. Maquillaje/2. Maquillaje/19i.jpg"],
+                stock: 0
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Labios"
+    },
+    "labios-6-2.20":{
+        title: "Labia Ultra glossy lip",
+        brand: "Colourpop",
+        variants: {
+            "polished":{
+                label: "Polished",
+                price: 5490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/20a Labial 'Ultra glossy lip' M; Colourpop (polished) $5.490.jpg", "Products/6. Maquillaje/2. Maquillaje/20b.jpg", "Products/6. Maquillaje/2. Maquillaje/20c.jpg", "Products/6. Maquillaje/2. Maquillaje/20d.jpg"],
+                stock: 1
+            }
+        },
+        category: "Maquillaje",
+        subcategory: "Labios"
+    },
+    "labios-6-2.21":{
+        title: "Labial Ultra satin lip",
+        brand: "Colourpop",
+        variants: {
+            "virginia":{
+                label: "Virginia",
+                price: 5490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/21a Labial 'Ultra satin lip' M; Colourpop (Virginia-Petit four) $5.490.jpg", "Products/6. Maquillaje/2. Maquillaje/21b.jpg", "Products/6. Maquillaje/2. Maquillaje/21c.jpg", "Products/6. Maquillaje/2. Maquillaje/21d.jpg", "Products/6. Maquillaje/2. Maquillaje/21e.jpg", "Products/6. Maquillaje/2. Maquillaje/21f.jpg"],
+                stock: 1
+            },
+            "petit four":{
+                label: "Petit four",
+                price: 5490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/21a Labial 'Ultra satin lip' M; Colourpop (Virginia-Petit four) $5.490.jpg", "Products/6. Maquillaje/2. Maquillaje/21b.jpg", "Products/6. Maquillaje/2. Maquillaje/21c.jpg", "Products/6. Maquillaje/2. Maquillaje/21d.jpg", "Products/6. Maquillaje/2. Maquillaje/21e.jpg", "Products/6. Maquillaje/2. Maquillaje/21f.jpg"],
+                stock: 1
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Labios"
+    },
+    "ojos-6-2.22":{
+        title: "Sombra individual Super shock shadows",
+        brand: "Colourpop",
+        variants: {
+            "dgaf":{
+                label: "DGAF",
+                price: 5490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/22a Sombra individual 'Super shock shadows' M; Colour pop (DGAF-TACO) $5.490.jpg", "Products/6. Maquillaje/2. Maquillaje/22b.jpg", "Products/6. Maquillaje/2. Maquillaje/22c.jpg", "Products/6. Maquillaje/2. Maquillaje/22d.jpg", "Products/6. Maquillaje/2. Maquillaje/22e.jpg", "Products/6. Maquillaje/2. Maquillaje/22f.jpg", "Products/6. Maquillaje/2. Maquillaje/22g.jpg", "Products/6. Maquillaje/2. Maquillaje/22h.jpg", "Products/6. Maquillaje/2. Maquillaje/22i.jpg"],
+                stock: 1
+            },
+            "taco":{
+                label: "TACO",
+                price: 5490,
+                images: ["Products/6. Maquillaje/2. Maquillaje/22a Sombra individual 'Super shock shadows' M; Colour pop (DGAF-TACO) $5.490.jpg", "Products/6. Maquillaje/2. Maquillaje/22b.jpg", "Products/6. Maquillaje/2. Maquillaje/22c.jpg", "Products/6. Maquillaje/2. Maquillaje/22d.jpg", "Products/6. Maquillaje/2. Maquillaje/22e.jpg", "Products/6. Maquillaje/2. Maquillaje/22f.jpg", "Products/6. Maquillaje/2. Maquillaje/22g.jpg", "Products/6. Maquillaje/2. Maquillaje/22h.jpg", "Products/6. Maquillaje/2. Maquillaje/22i.jpg"],
+                stock: 1
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-6-2.23":{
+        title: "Delineadores en gel Gel pots",
+        brand: "Beauty Creations",
+        variants:{
+            "celestial":{
+                label: "Celestial",
+                price: 3990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/23a Delineadores en gel 'Gel pots' M;Beauty Creations (AGO Magical storm-confetti) $3.990.jpg", "Products/6. Maquillaje/2. Maquillaje/23b.jpg", "Products/6. Maquillaje/2. Maquillaje/23c.jpg", "Products/6. Maquillaje/2. Maquillaje/23d.jpg", "Products/6. Maquillaje/2. Maquillaje/23e.jpg", "Products/6. Maquillaje/2. Maquillaje/23f.jpg", "Products/6. Maquillaje/2. Maquillaje/23g.jpg", "Products/6. Maquillaje/2. Maquillaje/23h.jpg", "Products/6. Maquillaje/2. Maquillaje/23i.jpg"],
+                stock: 1
+            },
+            "confetti":{
+                label: "Confetti - AGOTADO",
+                price: 3990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/23a Delineadores en gel 'Gel pots' M;Beauty Creations (AGO Magical storm-confetti) $3.990.jpg", "Products/6. Maquillaje/2. Maquillaje/23b.jpg", "Products/6. Maquillaje/2. Maquillaje/23c.jpg", "Products/6. Maquillaje/2. Maquillaje/23d.jpg", "Products/6. Maquillaje/2. Maquillaje/23e.jpg", "Products/6. Maquillaje/2. Maquillaje/23f.jpg", "Products/6. Maquillaje/2. Maquillaje/23g.jpg", "Products/6. Maquillaje/2. Maquillaje/23h.jpg", "Products/6. Maquillaje/2. Maquillaje/23i.jpg"],
+                stock: 0
+            },
+            "magical storm":{
+                label: "Magical storm - AGOTADO",
+                price: 3990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/23a Delineadores en gel 'Gel pots' M;Beauty Creations (AGO Magical storm-confetti) $3.990.jpg", "Products/6. Maquillaje/2. Maquillaje/23b.jpg", "Products/6. Maquillaje/2. Maquillaje/23c.jpg", "Products/6. Maquillaje/2. Maquillaje/23d.jpg", "Products/6. Maquillaje/2. Maquillaje/23e.jpg", "Products/6. Maquillaje/2. Maquillaje/23f.jpg", "Products/6. Maquillaje/2. Maquillaje/23g.jpg", "Products/6. Maquillaje/2. Maquillaje/23h.jpg", "Products/6. Maquillaje/2. Maquillaje/23i.jpg"],
+                stock: 0
+            },
+            "macaroon":{
+                label: "Macaroon",
+                price: 3990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/23a Delineadores en gel 'Gel pots' M;Beauty Creations (AGO Magical storm-confetti) $3.990.jpg", "Products/6. Maquillaje/2. Maquillaje/23b.jpg", "Products/6. Maquillaje/2. Maquillaje/23c.jpg", "Products/6. Maquillaje/2. Maquillaje/23d.jpg", "Products/6. Maquillaje/2. Maquillaje/23e.jpg", "Products/6. Maquillaje/2. Maquillaje/23f.jpg", "Products/6. Maquillaje/2. Maquillaje/23g.jpg", "Products/6. Maquillaje/2. Maquillaje/23h.jpg", "Products/6. Maquillaje/2. Maquillaje/23i.jpg"],
+                stock: 1
+            },
+            "icing":{
+                label: "Icing",
+                price: 3990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/23a Delineadores en gel 'Gel pots' M;Beauty Creations (AGO Magical storm-confetti) $3.990.jpg", "Products/6. Maquillaje/2. Maquillaje/23b.jpg", "Products/6. Maquillaje/2. Maquillaje/23c.jpg", "Products/6. Maquillaje/2. Maquillaje/23d.jpg", "Products/6. Maquillaje/2. Maquillaje/23e.jpg", "Products/6. Maquillaje/2. Maquillaje/23f.jpg", "Products/6. Maquillaje/2. Maquillaje/23g.jpg", "Products/6. Maquillaje/2. Maquillaje/23h.jpg", "Products/6. Maquillaje/2. Maquillaje/23i.jpg"],
+                stock: 1
+            },
+            "lavender field":{
+                label: "Lavender field",
+                price: 3990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/23a Delineadores en gel 'Gel pots' M;Beauty Creations (AGO Magical storm-confetti) $3.990.jpg", "Products/6. Maquillaje/2. Maquillaje/23b.jpg", "Products/6. Maquillaje/2. Maquillaje/23c.jpg", "Products/6. Maquillaje/2. Maquillaje/23d.jpg", "Products/6. Maquillaje/2. Maquillaje/23e.jpg", "Products/6. Maquillaje/2. Maquillaje/23f.jpg", "Products/6. Maquillaje/2. Maquillaje/23g.jpg", "Products/6. Maquillaje/2. Maquillaje/23h.jpg", "Products/6. Maquillaje/2. Maquillaje/23i.jpg"],
+                stock: 1
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-6-2.24":{
+        title: "Delineadores en gel Gel pots",
+        brand: "Beauty Creations",
+        variants: {
+            "vivid violet":{
+                label: "Vivid violet",
+                price: 3990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/24a Delineadores en gel 'Gel pots' M;Beauty Creations (Vivid Violet y Let’s go party) $3.990.jpg", "Products/6. Maquillaje/2. Maquillaje/24b.jpg", "Products/6. Maquillaje/2. Maquillaje/24c.jpg", "Products/6. Maquillaje/2. Maquillaje/24d.jpg", "Products/6. Maquillaje/2. Maquillaje/24e.jpg", "Products/6. Maquillaje/2. Maquillaje/24f.jpg"],
+                stock: 1
+            },
+            "lets go party":{
+                label: "Let's go party",
+                price: 3990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/24a Delineadores en gel 'Gel pots' M;Beauty Creations (Vivid Violet y Let’s go party) $3.990.jpg", "Products/6. Maquillaje/2. Maquillaje/24b.jpg", "Products/6. Maquillaje/2. Maquillaje/24c.jpg", "Products/6. Maquillaje/2. Maquillaje/24d.jpg", "Products/6. Maquillaje/2. Maquillaje/24e.jpg", "Products/6. Maquillaje/2. Maquillaje/24f.jpg"],
+                stock: 1
+            },
+        },
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-6-2.25":{
+        title: "Pegamento para glitter Glitter primer",
+        price: 3990,
+        images: ["Products/6. Maquillaje/2. Maquillaje/25a Pegamento para glitter 'Glitter primer' M; Beauty Creations $3.990.jpg", "Products/6. Maquillaje/2. Maquillaje/25b.jpg", "Products/6. Maquillaje/2. Maquillaje/25c.jpg", "Products/6. Maquillaje/2. Maquillaje/25d.jpg", "Products/6. Maquillaje/2. Maquillaje/25e.jpg", "Products/6. Maquillaje/2. Maquillaje/25f.jpg", "Products/6. Maquillaje/2. Maquillaje/25g.jpg", "Products/6. Maquillaje/2. Maquillaje/25h.jpg"],
+        stock: 1,
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "ojos-6-2.26":{
+        title: "Prebase de sombras Neutral eye base primer",
+        brand: "Beauty Creations",
+        variants:{
+            "nude beige":{
+                label: "Nude beige",
+                price: 3790,
+                images: ["Products/6. Maquillaje/2. Maquillaje/26a Prebase de sombras 'Neutral eye base primer' M;Beauty Creations (Nude beige) $3.790.jpg", "Products/6. Maquillaje/2. Maquillaje/26b.jpg", "Products/6. Maquillaje/2. Maquillaje/26c.jpg", "Products/6. Maquillaje/2. Maquillaje/26d.jpg", "Products/6. Maquillaje/2. Maquillaje/26e.jpg"],
+                stock: 1
+            }
+        },
+        category: "Maquillaje",
+        subcategory: "Ojos"
+    },
+    "rostro-6-2.27":{
+        title: "Polvo bronceador Tan out of tan",
+        brand: "Kleancolor",
+        variants:{
+            "tanning bed":{
+                label: "Tanning bed",
+                price: 3990,
+                images: ["Products/6. Maquillaje/2. Maquillaje/27a Polvo bronceador 'Tan out of tan' M; Kleancolor (tanning bed) $3.990.jpg", "Products/6. Maquillaje/2. Maquillaje/27b.jpg", "Products/6. Maquillaje/2. Maquillaje/27c.jpg", "Products/6. Maquillaje/2. Maquillaje/27d.jpg", "Products/6. Maquillaje/2. Maquillaje/27e.jpg", "Products/6. Maquillaje/2. Maquillaje/27f.jpg", "Products/6. Maquillaje/2. Maquillaje/27g.jpg"],
+                stock: 1
+            }
+        },
+        category: "Maquillaje",
+        subcategory: "Rostro"
+    },
+    "rostro-6-2.28":{
+
+    },
+    "rostro-6-2.29":{
+        title: "Convertidor de sombras Shadow seal",
+        brand: "Kleancolor",
+        price: 3490,
+        images: ["Products/6. Maquillaje/2. Maquillaje/29a Convertidor de sombras 'Shadow seal' M; Kleancolor $3.490.jpg", "Products/6. Maquillaje/2. Maquillaje/29b.jpg", "Products/6. Maquillaje/2. Maquillaje/29c.jpg", "Products/6. Maquillaje/2. Maquillaje/29d.jpg", "Products/6. Maquillaje/2. Maquillaje/29e.jpg", "Products/6. Maquillaje/2. Maquillaje/29f.jpg", "Products/6. Maquillaje/2. Maquillaje/29g.jpg", "Products/6. Maquillaje/2. Maquillaje/29h.jpg", "Products/6. Maquillaje/2. Maquillaje/29i.jpg", "Products/6. Maquillaje/2. Maquillaje/29j.jpg"],
+        stock: 1,
+        category: "Maquillaje"
     },
 
     //ACCESORIOS
@@ -4882,5 +6021,6 @@ const PRODUCTS = {
         },
         category: "Accesorios",
         subcategory: "Scrunchies"
-    }
+    },
+
 }
