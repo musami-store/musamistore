@@ -355,6 +355,8 @@ nav ul li a:active{
         }
     }
 
+    
+
     .site-header::before{
         height: 120px;
 
@@ -1432,7 +1434,16 @@ background:rgba(86, 125, 170, .45)
 }
 
 #cartnote{
-    margin-bottom: 50px;
-    margin-top:20px;
-    width: 290px;
+    width: 40vw;
+    margin: 40px 0;
+    color: var(--color-border);
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+@media(max-width:766px){
+    #cartnote{
+        width: 85vw;
+        font-size: 0.8rem;
+    }
 }
