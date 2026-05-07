@@ -3460,10 +3460,10 @@ const PRODUCTS = {
         subcategory: "Pulseras"
     },
     "collares-5-2.3":{
-        title: "Collar doble plata",
+        title: "Collar doble plata - AGOTADO",
         price: 4000,
         images: ["Products/5. Plata esterlina/5.2 Plata/3a Collar doble plata $4.000.jpg", "Products/5. Plata esterlina/5.2 Plata/3b.jpg"],
-        stock: 1,
+        stock: 0,
         category: "PlataEsterlina",
         subcategory: "Collares"
     },
@@ -3733,7 +3733,7 @@ const PRODUCTS = {
                 label: "Beige",
                 price: 390,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
-                stock: 3
+                stock: 2
             },
             "rosa claro":{
                 label: "Rosa claro",
@@ -3745,7 +3745,7 @@ const PRODUCTS = {
                 label: "Rosado",
                 price: 390,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
-                stock: 3
+                stock: 2
             },
             "morado":{
                 label: "Morado",
@@ -3763,7 +3763,7 @@ const PRODUCTS = {
                 label: "Melocotón",
                 price: 390,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/5a Mini esponja de maquillaje $400.PNG", "Products/Portada/1. Make up y accesorios nuevos/5b.PNG", "Products/Portada/1. Make up y accesorios nuevos/5c.PNG"],
-                stock: 6
+                stock: 5
             },
             "lila":{
                 label: "Lila",
@@ -3938,10 +3938,10 @@ const PRODUCTS = {
                 stock:  1
             },
             "cafe":{
-                label: "Café",
+                label: "Café - AGOTADO",
                 price: 5490,
                 images: ["Products/Portada/1. Make up y accesorios nuevos/13a Cinturón (negro y café talla 132cm) $5.500.PNG", "Products/Portada/1. Make up y accesorios nuevos/13b.png", "Products/Portada/1. Make up y accesorios nuevos/13c.PNG"],
-                stock:  1
+                stock:  0
             },
         },
         category: "Accesorios",
@@ -4155,10 +4155,10 @@ const PRODUCTS = {
                 stock: 0
             },
             "a02":{
-                label: "Modelo A02",
+                label: "Modelo A02 - AGOTADO",
                 price: 790,
                 images: ["Products/6. Maquillaje/3. Herramientas de belleza/12a Brocha biselada (AGO B01) $800.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12b.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/12e.jpg"],
-                stock: 1
+                stock: 0
             },
             "b02":{
                 label: "Modelo B02",
