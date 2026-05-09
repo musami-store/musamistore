@@ -3976,7 +3976,7 @@ const PRODUCTS = {
     "herramientas-6.4":{
         title: "Set x12 brochas de maquillaje",
         brand: "DUcare",
-        price: 1290,
+        price: 12990,
         images: ["Products/6. Maquillaje/3. Herramientas de belleza/4a Set x12 brochas de maquillaje DUcare $13.000.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/4b.png", "Products/6. Maquillaje/3. Herramientas de belleza/4c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/4d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/4e.jpg"],
         stock: 1,
         category: "Maquillaje",
