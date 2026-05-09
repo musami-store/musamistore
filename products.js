@@ -1725,10 +1725,10 @@ const PRODUCTS = {
         subcategory: "Aros"
     },
     "aros-p.8":{
-        title: "Aros corazón floreado",
-        price: 2500,
+        title: "Aros corazón floreado - AGOTADO",
+        price: 2490,
         images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/8a Aros corazón floreado $2.500.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/8b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/8c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/8d.PNG"],
-        stock: 1,
+        stock: 0,
         category: "Bisuteria",
         subcategory: "Aros"
     },
@@ -1741,10 +1741,10 @@ const PRODUCTS = {
         subcategory: "Aros"
     },
     "aros-p.10":{
-        title: "Aros flor",
-        price: 1700,
+        title: "Aros flor - AGOTADO",
+        price: 1690,
         images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/10a Aros flor $1.700.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/10b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Aros/10c.PNG"],
-        stock: 1,
+        stock: 0,
         category: "Bisuteria",
         subcategory: "Aros"
     },
@@ -3286,7 +3286,7 @@ const PRODUCTS = {
     ///PLATA ESTERLINA
     "pulseras-5-3.1":{
         title: "Pulsera plata",
-        price: 4000,
+        price: 3990,
         images: ["Products/5. Plata esterlina/5.3 Plata nueva/1a Pulsera plata $4.000.JPG", "Products/5. Plata esterlina/5.3 Plata nueva/1b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/1c.JPG", "Products/5. Plata esterlina/5.3 Plata nueva/1d.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/1e.PNG"],
         stock: 1,
         category: "PlataEsterlina",
@@ -3294,23 +3294,23 @@ const PRODUCTS = {
     },
     "pulseras-5-3.2":{
         title: "Pulsera corazones plata",
-        price: 4000,
+        price: 3990,
         images: ["Products/5. Plata esterlina/5.3 Plata nueva/2a Pulsera corazones plata.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/2b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/2c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/2d.PNG"],
         stock: 1,
         category: "PlataEsterlina",
         subcategory: "Pulseras"
     },
     "anillos-5-3.3":{
-        title: "Anillo antiestrés y ansiedad plata",
-        price: 4000,
+        title: "Anillo antiestrés y ansiedad plata - AGOTADO",
+        price: 3990,
         images: ["Products/5. Plata esterlina/5.3 Plata nueva/3a Anillo antiestrés y ansiedad plata $4.000.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/3b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/3c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/3d.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/3e.PNG"],
-        stock: 1,
+        stock: 0,
         category: "PlataEsterlina",
         subcategory: "Anillos"
     },
     "anillos-5-3.4":{
         title: "Anillo ajustable plata",
-        price: 3500,
+        price: 3490,
         images: ["Products/5. Plata esterlina/5.3 Plata nueva/4a Anillo ajustable plata $3.500.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/4b.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/4c.PNG", "Products/5. Plata esterlina/5.3 Plata nueva/4d.PNG"],
         stock: 1,
         category: "PlataEsterlina",
@@ -3921,10 +3921,10 @@ const PRODUCTS = {
         subcategory: "Pinches"
     },
     "scrunchies-make-1.12":{
-        title: "Scrunchie print",
+        title: "Scrunchie print - AGOTADO",
         price: 2290,
         images: ["Products/Portada/1. Make up y accesorios nuevos/12a Scrunchie print $2.300.webp", "Products/Portada/1. Make up y accesorios nuevos/12b.webp"],
-        stock: 1,
+        stock: 0,
         category: "Accesorios",
         subcategory: "Scrunchies"
     },
@@ -3977,7 +3977,7 @@ const PRODUCTS = {
         title: "Set x12 brochas de maquillaje",
         brand: "DUcare",
         price: 12990,
-        images: ["Products/6. Maquillaje/3. Herramientas de belleza/4a Set x12 brochas de maquillaje DUcare $13.000.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/4b.png", "Products/6. Maquillaje/3. Herramientas de belleza/4c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/4d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/4e.jpg"],
+        images: ["Products/6. Maquillaje/3. Herramientas de belleza/4a Set x1    2 brochas de maquillaje DUcare $13.000.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/4b.png", "Products/6. Maquillaje/3. Herramientas de belleza/4c.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/4d.jpg", "Products/6. Maquillaje/3. Herramientas de belleza/4e.jpg"],
         stock: 1,
         category: "Maquillaje",
         subcategory: "Herramientas"
@@ -5648,10 +5648,10 @@ const PRODUCTS = {
         title: "Scrunchies felpa",
         variants:{
             "1":{
-                label: "Modelo 01",
+                label: "Modelo 01 - AGOTADO",
                 price: 890,
                 images: ["Products/7. Accesorios/8a Scruchies felpa (1-3-4-7) $1.200.webp", "Products/7. Accesorios/8b.JPG", "Products/7. Accesorios/8c.webp", "Products/7. Accesorios/8d.webp", "Products/7. Accesorios/8e.webp"],
-                stock: 1
+                stock: 0
             },
             "2":{
                 label: "Modelo 02 - AGOTADO",
@@ -5660,16 +5660,16 @@ const PRODUCTS = {
                 stock: 0
             },
             "3":{
-                label: "Modelo 03",
+                label: "Modelo 03 - AGOTADO",
                 price: 890,
                 images: ["Products/7. Accesorios/8a Scruchies felpa (1-3-4-7) $1.200.webp", "Products/7. Accesorios/8b.JPG", "Products/7. Accesorios/8c.webp", "Products/7. Accesorios/8d.webp", "Products/7. Accesorios/8e.webp"],
-                stock: 1
+                stock: 0
             },
             "4":{
-                label: "Modelo 04",
+                label: "Modelo 04 - AGOTADO",
                 price: 890,
                 images: ["Products/7. Accesorios/8a Scruchies felpa (1-3-4-7) $1.200.webp", "Products/7. Accesorios/8b.JPG", "Products/7. Accesorios/8c.webp", "Products/7. Accesorios/8d.webp", "Products/7. Accesorios/8e.webp"],
-                stock: 1
+                stock: 0
             },
             "5":{
                 label: "Modelo 05 - AGOTADO",
@@ -5684,10 +5684,10 @@ const PRODUCTS = {
                 stock: 0
             },
             "7":{
-                label: "Modelo 07",
+                label: "Modelo 07 - AGOTADO",
                 price: 890,
                 images: ["Products/7. Accesorios/8a Scruchies felpa (1-3-4-7) $1.200.webp", "Products/7. Accesorios/8b.JPG", "Products/7. Accesorios/8c.webp", "Products/7. Accesorios/8d.webp", "Products/7. Accesorios/8e.webp"],
-                stock: 1
+                stock: 0
             },
             "8":{
                 label: "Modelo 08 - AGOTADO",
