@@ -1954,10 +1954,10 @@ const PRODUCTS = {
                 stock: 1
             },
             "2":{
-                label: "Modelo 02",
+                label: "Modelo 02 - AGOTADO",
                 price: 1500,
                 images: ["Products/Portada/2. Sets no publicados/2a Argollas variedad (AGO 2y5) $1.500.PNG", "Products/Portada/2. Sets no publicados/2b.JPG", "Products/Portada/2. Sets no publicados/2c.PNG", "Products/Portada/2. Sets no publicados/2d.PNG"],
-                stock: 1
+                stock: 0
             },
             "3":{
                 label: "Modelo 03",
@@ -1972,10 +1972,10 @@ const PRODUCTS = {
                 stock: 1
             },
             "5":{
-                label: "Modelo 05",
+                label: "Modelo 05 - AGOTADO",
                 price: 1500,
                 images: ["Products/Portada/2. Sets no publicados/2a Argollas variedad (AGO 2y5) $1.500.PNG", "Products/Portada/2. Sets no publicados/2b.JPG", "Products/Portada/2. Sets no publicados/2c.PNG", "Products/Portada/2. Sets no publicados/2d.PNG"],
-                stock: 1
+                stock: 0
             },
             "6":{
                 label: "Modelo 06",
