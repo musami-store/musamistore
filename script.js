@@ -506,6 +506,24 @@ function initLightboxTrigger(card){
             if(!lightboxTrack) return;
             lightboxTrack.innerHTML = lbImages.map(src=>`<img src="${src}">`).join("");
             lightboxTitle.textContent = product.title;
+
+            // Inyectar descripción dinámicamente si existe
+            let descEl = lightbox.querySelector(".lightbox-description");
+            if (!descEl) {
+                descEl = document.createElement("p");
+                descEl.className = "lightbox-description";
+                descEl.style.fontSize = "0.95rem";
+                descEl.style.color = "#555";
+                descEl.style.marginTop = "10px";
+                descEl.style.lineHeight = "1.4";
+                descEl.style.fontFamily = "inherit";
+                descEl.style.textAlign = "center";
+                descEl.style.padding = "0 10px";
+                lightboxTitle.parentNode.appendChild(descEl);
+            }
+            descEl.textContent = product.description || "";
+            descEl.style.display = product.description ? "block" : "none";
+
             const lbPrev = lightbox.querySelector(".prev");
             const lbNext = lightbox.querySelector(".next");
 
@@ -577,7 +595,8 @@ async function initSupabase() {
                         price: Number(row.price),
                         images: row.images,
                         stock: Number(row.stock),
-                        variants: row.variants
+                        variants: row.variants,
+                        description: row.description
                     };
                 });
                 console.log("Catálogo en vivo cargado desde Supabase:", data.length, "productos.");

@@ -13,7 +13,8 @@ CREATE TABLE IF NOT EXISTS public.products (
     stock INTEGER,
     category TEXT NOT NULL,
     subcategory TEXT,
-    variants JSONB
+    variants JSONB,
+    description TEXT
 );
 
 -- 2. Habilitar RLS (Seguridad a Nivel de Fila)

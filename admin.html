@@ -57,11 +57,16 @@
 
         header h1 {
             margin: 0;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--color-border);
             font-weight: 700;
             display: flex;
             align-items: center;
+            gap: 8px;
+        }
+
+        .header-buttons {
+            display: flex;
             gap: 10px;
         }
 
@@ -73,7 +78,7 @@
             border-radius: 8px;
             font-weight: 600;
             cursor: pointer;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             display: flex;
             align-items: center;
             gap: 5px;
@@ -82,6 +87,10 @@
 
         header button:active {
             opacity: 0.8;
+        }
+
+        header button.create-mode-btn {
+            background-color: var(--color-success);
         }
 
         main {
@@ -158,6 +167,67 @@
             background-color: #35379e;
         }
 
+        /* Formulario de Creación de Producto */
+        .creator-card {
+            background: var(--color-card-bg);
+            border: 2px solid var(--color-success);
+            border-radius: 15px;
+            padding: 20px 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.15);
+        }
+
+        .creator-card h2 {
+            margin: 0 0 15px 0;
+            font-size: 1.2rem;
+            color: var(--color-success);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .form-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .form-group label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #555;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--color-success);
+        }
+
+        .form-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
         /* Buscador y Controles del Panel */
         .controls-card {
             background: var(--color-card-bg);
@@ -198,10 +268,10 @@
             gap: 8px;
             overflow-x: auto;
             padding-bottom: 5px;
-            scrollbar-width: none; /* Firefox */
+            scrollbar-width: none;
         }
         .filters-row::-webkit-scrollbar {
-            display: none; /* Safari/Chrome */
+            display: none;
         }
 
         .filter-chip {
@@ -250,8 +320,8 @@
         }
 
         .product-meta img {
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             border-radius: 10px;
             object-fit: cover;
             border: 1px solid #ddd;
@@ -279,7 +349,7 @@
             color: var(--color-border);
         }
 
-        /* Controles de Precio y Stock */
+        /* Controles de Precio, Stock y Descripción */
         .product-editor {
             border-top: 1px solid #eee;
             padding-top: 12px;
@@ -379,16 +449,32 @@
             font-size: 0.95rem;
             font-weight: 700;
             outline: none;
-            -moz-appearance: textfield;
         }
 
-        .stock-control input::-webkit-outer-spin-button,
-        .stock-control input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
+        /* Textarea de descripcion */
+        .desc-input-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-top: 5px;
         }
 
-        /* Botón de Guardar en la tarjeta */
+        .desc-input-wrapper textarea {
+            width: 100%;
+            padding: 8px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-family: inherit;
+            outline: none;
+            resize: vertical;
+        }
+
+        .desc-input-wrapper textarea:focus {
+            border-color: var(--color-border);
+        }
+
+        /* Botón de Guardar */
         .save-btn {
             background: var(--color-border);
             color: white;
@@ -418,6 +504,32 @@
 
         .save-btn.success {
             background-color: var(--color-success);
+        }
+
+        /* Botón Guardar Creación */
+        .create-submit-btn {
+            background-color: var(--color-success);
+            color: white;
+            font-weight: 700;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .create-submit-btn:active {
+            opacity: 0.9;
+        }
+
+        .create-submit-btn:disabled {
+            background-color: #95a5a6;
+            cursor: not-allowed;
         }
 
         /* Toasts de Notificación */
@@ -464,10 +576,13 @@
 </head>
 <body>
 
-    <!-- Cabecera del Panel (Se muestra logueado) -->
+    <!-- Cabecera del Panel -->
     <header id="main-header" style="display: none;">
         <h1><i class="fa-solid fa-gem"></i> Musamí Admin</h1>
-        <button id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Salir</button>
+        <div class="header-buttons">
+            <button id="toggle-creator-btn" class="create-mode-btn"><i class="fa-solid fa-plus"></i> Nuevo</button>
+            <button id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Salir</button>
+        </div>
     </header>
 
     <main>
@@ -489,8 +604,75 @@
             <button id="login-btn" class="login-btn">Ingresar</button>
         </div>
 
-        <!-- Seccion del Catalogo (Se muestra logueado) -->
+        <!-- Seccion del Catalogo -->
         <div id="catalog-section" style="display: none;">
+            
+            <!-- FORMULARIO NUEVO PRODUCTO (Desplegable) -->
+            <div id="creator-panel" class="creator-card" style="display: none;">
+                <h2><i class="fa-solid fa-square-plus"></i> Crear Nuevo Producto</h2>
+                <form id="product-create-form" onsubmit="handleCreateProduct(event)">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="create-title">Nombre del Producto *</label>
+                            <input type="text" id="create-title" required placeholder="Ej. Pulsera de corazones">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="create-id">ID Único (Autogenerado) *</label>
+                                <input type="text" id="create-id" required placeholder="Ej. pulseras-7.7.13">
+                            </div>
+                            <div class="form-group">
+                                <label for="create-brand">Marca (Opcional)</label>
+                                <input type="text" id="create-brand" placeholder="Ej. Kleancolor">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="create-price">Precio ($) *</label>
+                                <input type="number" id="create-price" required min="0" placeholder="Ej. 1990">
+                            </div>
+                            <div class="form-group">
+                                <label for="create-stock">Stock Inicial *</label>
+                                <input type="number" id="create-stock" required min="0" value="1">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="create-category">Categoría *</label>
+                                <select id="create-category" required onchange="updateSubcategoriesDropdown()">
+                                    <option value="Bisuteria">Bisutería</option>
+                                    <option value="PlataEsterlina">Plata Esterlina</option>
+                                    <option value="Maquillaje">Maquillaje</option>
+                                    <option value="Accesorios">Accesorios</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="create-subcategory">Subcategoría *</label>
+                                <select id="create-subcategory" required>
+                                    <!-- Dinámico -->
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="create-description">Descripción (Opcional)</label>
+                            <textarea id="create-description" rows="3" placeholder="Detalles de materiales, medidas, uso, etc."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="create-images">Imágenes del Producto * (Puedes seleccionar varias)</label>
+                            <input type="file" id="create-images" required multiple accept="image/*">
+                        </div>
+
+                        <button type="submit" id="create-submit-btn" class="create-submit-btn">
+                            <i class="fa-solid fa-circle-check"></i> Guardar Producto
+                        </button>
+                    </div>
+                </form>
+            </div>
             
             <!-- Controles: Buscar y Filtrar -->
             <div class="controls-card">
@@ -517,17 +699,24 @@
         </div>
     </main>
 
-    <!-- Contenedor de Mensajes Flotantes -->
     <div id="toast-container"></div>
 
     <script>
-        // Declaraciones de Estado
+        // Mapeo Categorías -> Subcategorías para consistencia de base de datos
+        const SUBCATEGORIES_MAP = {
+            "Bisuteria": ["Aros", "Collares", "Anillos", "Pulseras"],
+            "PlataEsterlina": ["Aros", "Collares", "Anillos", "Pulseras"],
+            "Maquillaje": ["Ojos", "Rostro", "Labios", "Herramientas"],
+            "Accesorios": ["Scrunchies", "Pinches", "Otros"]
+        };
+
+        // Estado
         let allProducts = [];
         let filteredProducts = [];
         let activeCategory = "ALL";
         let searchQuery = "";
 
-        // Referencias del DOM
+        // DOM
         const loginSection = document.getElementById("login-section");
         const catalogSection = document.getElementById("catalog-section");
         const mainHeader = document.getElementById("main-header");
@@ -536,6 +725,9 @@
         const loginPassword = document.getElementById("login-password");
         const loginBtn = document.getElementById("login-btn");
         const logoutBtn = document.getElementById("logout-btn");
+        const toggleCreatorBtn = document.getElementById("toggle-creator-btn");
+        const creatorPanel = document.getElementById("creator-panel");
+        const createForm = document.getElementById("product-create-form");
         
         const searchInput = document.getElementById("search-input");
         const categoriesChips = document.getElementById("categories-chips");
@@ -549,20 +741,85 @@
             toast.textContent = message;
             container.appendChild(toast);
             
-            // Reflow
             toast.offsetHeight;
             toast.classList.add("show");
             
             setTimeout(() => {
                 toast.classList.remove("show");
                 setTimeout(() => toast.remove(), 300);
-            }, 2500);
+            }, 3000);
+        }
+
+        // Toggle panel de creación
+        toggleCreatorBtn.addEventListener("click", () => {
+            if (creatorPanel.style.display === "none") {
+                creatorPanel.style.display = "block";
+                toggleCreatorBtn.innerHTML = `<i class="fa-solid fa-xmark"></i> Cerrar`;
+                toggleCreatorBtn.style.backgroundColor = "var(--color-danger)";
+                updateSubcategoriesDropdown();
+                // Limpiar formulario y generar ID temporal
+                createForm.reset();
+                generateTempId();
+            } else {
+                creatorPanel.style.display = "none";
+                toggleCreatorBtn.innerHTML = `<i class="fa-solid fa-plus"></i> Nuevo`;
+                toggleCreatorBtn.style.backgroundColor = "var(--color-success)";
+            }
+        });
+
+        // Generar ID sugerido basándose en título y fecha
+        document.getElementById("create-title").addEventListener("input", (e) => {
+            generateTempId();
+        });
+
+        function generateTempId() {
+            const title = document.getElementById("create-title").value.trim();
+            const category = document.getElementById("create-category").value;
+            const sub = document.getElementById("create-subcategory").value;
+            const idInput = document.getElementById("create-id");
+
+            if (!title) {
+                idInput.value = "";
+                return;
+            }
+
+            // Normalizar texto
+            let slug = title.toLowerCase()
+                .replace(/[áäâà]/g, "a")
+                .replace(/[éëêè]/g, "e")
+                .replace(/[íïîì]/g, "i")
+                .replace(/[óöôò]/g, "o")
+                .replace(/[úüûù]/g, "u")
+                .replace(/ñ/g, "n")
+                .replace(/[^a-z0-9\s-]/g, "") // eliminar caracteres especiales
+                .trim()
+                .replace(/\s+/g, "-");       // espacios por guiones
+
+            let prefix = "";
+            if (category === "Bisuteria") prefix = "bisuteria";
+            else if (category === "PlataEsterlina") prefix = "plata";
+            else if (category === "Maquillaje") prefix = "maquillaje";
+            else prefix = "accesorios";
+
+            // Prefijo + slug + timestamp corto
+            const rand = Math.floor(100 + Math.random() * 900);
+            idInput.value = `${prefix}-${slug}-${rand}`;
+        }
+
+        // Cargar dropdown de subcategorías
+        function updateSubcategoriesDropdown() {
+            const category = document.getElementById("create-category").value;
+            const subSelect = document.getElementById("create-subcategory");
+            const subs = SUBCATEGORIES_MAP[category] || [];
+
+            subSelect.innerHTML = subs.map(s => `<option value="${s}">${s}</option>`).join("");
+            generateTempId();
         }
 
         // 1. Manejo de Sesión y Autenticación
         async function checkSession() {
             if (!window.supabaseClient) {
-                showToast("Error: Supabase no está configurado todavía. Copia primero las credenciales en supabase-config.js.", "error");
+                showToast("Error: Configura Supabase en supabase-config.js", "error");
                 return;
             }
 
@@ -587,7 +844,7 @@
             mainHeader.style.display = "none";
         }
 
-        // Login Handler
+        // Login
         loginBtn.addEventListener("click", async () => {
             const email = loginEmail.value.trim();
             const password = loginPassword.value.trim();
@@ -602,16 +859,14 @@
 
             try {
                 const { data, error } = await window.supabaseClient.auth.signInWithPassword({
-                    email: email,
-                    password: password
+                    email,
+                    password
                 });
 
                 if (error) throw error;
-
                 showToast("¡Ingreso exitoso!");
                 showAdminPanel();
             } catch (err) {
-                console.error("Login Error:", err);
                 showToast("Credenciales incorrectas: " + (err.message || err), "error");
             } finally {
                 loginBtn.disabled = false;
@@ -619,14 +874,14 @@
             }
         });
 
-        // Logout Handler
+        // Logout
         logoutBtn.addEventListener("click", async () => {
             await window.supabaseClient.auth.signOut();
             showToast("Sesión cerrada");
             showLoginScreen();
         });
 
-        // 2. Cargar y Procesar Productos
+        // 2. Cargar Productos
         async function loadProductsFromSupabase() {
             productsContainer.innerHTML = `
                 <div style="text-align: center; padding: 40px; font-weight: bold; color: var(--color-border); font-size: 1.1rem;">
@@ -641,11 +896,9 @@
 
                 if (error) throw error;
 
-                // Ordenar alfabéticamente por título
                 allProducts = data.sort((a, b) => a.title.localeCompare(b.title));
                 applyFilters();
             } catch (err) {
-                console.error("Fetch Products Error:", err);
                 productsContainer.innerHTML = `
                     <div style="text-align: center; padding: 40px; color: var(--color-danger); font-weight: bold;">
                         <i class="fa-solid fa-triangle-exclamation"></i> Error al cargar datos: <br> ${err.message || err}
@@ -654,13 +907,11 @@
             }
         }
 
-        // 3. Filtrar y Renderizar Catálogo
+        // 3. Filtrar y Renderizar
         function applyFilters() {
             filteredProducts = allProducts.filter(p => {
-                // Categoría
                 const matchesCategory = (activeCategory === "ALL" || p.category === activeCategory);
                 
-                // Búsqueda
                 const q = searchQuery.toLowerCase();
                 const matchesSearch = !q || 
                     p.title.toLowerCase().indexOf(q) !== -1 || 
@@ -690,12 +941,10 @@
                 itemDiv.className = "product-item";
                 itemDiv.dataset.id = product.id;
 
-                // Imagen de portada
                 let coverImg = "diamond.svg";
                 if (product.images && product.images.length > 0) {
                     coverImg = product.images[0];
                 } else if (product.variants) {
-                    // Si no tiene imagen principal, busca la de la primera variante
                     const firstVarKey = Object.keys(product.variants)[0];
                     const firstVar = product.variants[firstVarKey];
                     if (firstVar && firstVar.images && firstVar.images.length > 0) {
@@ -703,10 +952,9 @@
                     }
                 }
 
-                // Generar Controles del Editor
                 let editorHtml = "";
                 if (product.variants) {
-                    // Controles para Producto con Variantes
+                    // Producto con variantes
                     editorHtml = Object.entries(product.variants).map(([vKey, vData]) => {
                         return `
                             <div class="variant-group" data-variant-key="${vKey}">
@@ -730,7 +978,7 @@
                         `;
                     }).join("");
                 } else {
-                    // Controles para Producto Simple
+                    // Producto simple
                     editorHtml = `
                         <div class="editor-row">
                             <div class="editor-label">Precio ($)</div>
@@ -750,6 +998,14 @@
                     `;
                 }
 
+                // Agregar cuadro de descripción
+                editorHtml += `
+                    <div class="desc-input-wrapper">
+                        <div class="editor-label">Descripción (Opcional)</div>
+                        <textarea class="desc-input" rows="2" placeholder="Describe el producto...">${product.description || ""}</textarea>
+                    </div>
+                `;
+
                 itemDiv.innerHTML = `
                     <div class="product-meta">
                         <img src="${coverImg}" alt="${product.title}">
@@ -768,14 +1024,11 @@
                     </div>
                 `;
 
-                // Agregar Handlers táctiles para los botones de stock +/- dentro de este div
                 setupStockButtons(itemDiv);
-
                 productsContainer.appendChild(itemDiv);
             });
         }
 
-        // Configura los eventos click de los botones +/- en cada tarjeta
         function setupStockButtons(container) {
             container.querySelectorAll(".stock-control").forEach(control => {
                 const minusBtn = control.querySelector(".qty-btn-minus");
@@ -794,7 +1047,7 @@
             });
         }
 
-        // 4. Guardar Cambios de un Producto en Supabase
+        // 4. Guardar Cambios
         async function saveProduct(productId) {
             const productCard = document.querySelector(`.product-item[data-id="${productId}"]`);
             if (!productCard) return;
@@ -806,16 +1059,18 @@
             saveBtn.className = "save-btn saving";
             saveBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Guardando...`;
 
-            // Buscar datos en el objeto original
             const originalProduct = allProducts.find(p => p.id === productId);
             if (!originalProduct) return;
 
             let updatePayload = {};
 
             try {
+                // Leer descripción
+                const descInput = productCard.querySelector(".desc-input");
+                updatePayload.description = descInput.value.trim() || null;
+
                 if (originalProduct.variants) {
-                    // Es un producto con variantes: Reconstruir el objeto variants
-                    let updatedVariants = JSON.parse(JSON.stringify(originalProduct.variants)); // Clonar
+                    let updatedVariants = JSON.parse(JSON.stringify(originalProduct.variants));
                     
                     const variantGroups = productCard.querySelectorAll(".variant-group");
                     variantGroups.forEach(group => {
@@ -827,13 +1082,12 @@
                         const newStock = parseInt(stockInput.value);
 
                         if (isNaN(newPrice) || isNaN(newStock) || newPrice < 0 || newStock < 0) {
-                            throw new Error("Valores de precio o stock inválidos.");
+                            throw new Error("Precios o stock inválidos.");
                         }
 
                         updatedVariants[vKey].price = newPrice;
                         updatedVariants[vKey].stock = newStock;
                         
-                        // Si el stock es 0, agrega la advertencia " - AGOTADO" al label si no la tiene
                         let label = updatedVariants[vKey].label;
                         const agotadoStr = " - AGOTADO";
                         if (newStock === 0 && label.indexOf(agotadoStr) === -1) {
@@ -845,7 +1099,6 @@
 
                     updatePayload.variants = updatedVariants;
                 } else {
-                    // Es un producto simple
                     const priceInput = productCard.querySelector(".price-input");
                     const stockInput = productCard.querySelector(".stock-input");
 
@@ -853,7 +1106,7 @@
                     const newStock = parseInt(stockInput.value);
 
                     if (isNaN(newPrice) || isNaN(newStock) || newPrice < 0 || newStock < 0) {
-                        throw new Error("Valores de precio o stock inválidos.");
+                        throw new Error("Precio o stock inválidos.");
                     }
 
                     updatePayload.price = newPrice;
@@ -868,15 +1121,12 @@
 
                 if (error) throw error;
 
-                // Actualizar en el estado local para mantener la coherencia
                 Object.assign(originalProduct, updatePayload);
 
-                // Feedback visual de éxito
                 saveBtn.className = "save-btn success";
                 saveBtn.innerHTML = `<i class="fa-solid fa-circle-check"></i> ¡Guardado!`;
                 showToast("Producto actualizado con éxito", "success");
 
-                // Restaurar el botón original después de 1.5 segundos
                 setTimeout(() => {
                     saveBtn.disabled = false;
                     saveBtn.className = "save-btn";
@@ -886,15 +1136,112 @@
             } catch (err) {
                 console.error("Save Error:", err);
                 showToast("Fallo al guardar: " + (err.message || err), "error");
-                
-                // Restaurar botón con error
                 saveBtn.disabled = false;
                 saveBtn.className = "save-btn";
                 saveBtn.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i> Reintentar`;
             }
         }
 
-        // 5. Handlers de Búsqueda y Filtros
+        // 5. Creación de Nuevo Producto (Opción A)
+        async function handleCreateProduct(e) {
+            e.preventDefault();
+
+            const title = document.getElementById("create-title").value.trim();
+            const productId = document.getElementById("create-id").value.trim();
+            const brand = document.getElementById("create-brand").value.trim();
+            const price = parseFloat(document.getElementById("create-price").value);
+            const stock = parseInt(document.getElementById("create-stock").value);
+            const category = document.getElementById("create-category").value;
+            const subcategory = document.getElementById("create-subcategory").value;
+            const description = document.getElementById("create-description").value.trim();
+            const imageInput = document.getElementById("create-images");
+            const submitBtn = document.getElementById("create-submit-btn");
+
+            // Validaciones básicas
+            if (!title || !productId || isNaN(price) || isNaN(stock) || price < 0 || stock < 0 || imageInput.files.length === 0) {
+                showToast("Completa los datos obligatorios y selecciona al menos una imagen", "error");
+                return;
+            }
+
+            // Validar que el ID no esté duplicado localmente
+            if (allProducts.some(p => p.id === productId)) {
+                showToast("El ID ya existe para otro producto. Usa un ID diferente.", "error");
+                return;
+            }
+
+            submitBtn.disabled = true;
+            const originalSubmitHtml = submitBtn.innerHTML;
+            submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Guardando...`;
+
+            try {
+                // Subir fotos a Supabase Storage
+                const files = imageInput.files;
+                const imagesUrls = [];
+
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
+                    const fileExt = file.name.split('.').pop();
+                    // Generar un nombre único
+                    const fileName = `${productId}_${Date.now()}_${i}.${fileExt}`;
+                    const filePath = `${category}/${fileName}`;
+
+                    submitBtn.innerHTML = `<i class="fa-solid fa-cloud-arrow-up"></i> Subiendo imagen ${i+1} de ${files.length}...`;
+
+                    // Subir archivo
+                    const { error: uploadError } = await window.supabaseClient.storage
+                        .from("products")
+                        .upload(filePath, file);
+
+                    if (uploadError) throw uploadError;
+
+                    // Obtener URL pública
+                    const { data: { publicUrl } } = window.supabaseClient.storage
+                        .from("products")
+                        .getPublicUrl(filePath);
+
+                    imagesUrls.push(publicUrl);
+                }
+
+                submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Insertando producto...`;
+
+                // Registrar en la tabla products
+                const { error: insertError } = await window.supabaseClient
+                    .from("products")
+                    .insert({
+                        id: productId,
+                        title,
+                        brand: brand || null,
+                        price,
+                        stock,
+                        category,
+                        subcategory: subcategory || null,
+                        description: description || null,
+                        images: imagesUrls
+                    });
+
+                if (insertError) throw insertError;
+
+                showToast("¡Producto creado con éxito!");
+                
+                // Recargar catálogo y cerrar creador
+                creatorPanel.style.display = "none";
+                toggleCreatorBtn.innerHTML = `<i class="fa-solid fa-plus"></i> Nuevo`;
+                toggleCreatorBtn.style.backgroundColor = "var(--color-success)";
+                createForm.reset();
+                
+                // Recargar de Supabase
+                loadProductsFromSupabase();
+
+            } catch (err) {
+                console.error("Create Product Error:", err);
+                showToast("Fallo al crear producto: " + (err.message || err), "error");
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalSubmitHtml;
+            }
+        }
+
+        // Buscar y Filtrar
         searchInput.addEventListener("input", (e) => {
             searchQuery = e.target.value;
             applyFilters();
@@ -904,7 +1251,6 @@
             const chip = e.target.closest(".filter-chip");
             if (!chip) return;
 
-            // Cambiar clase activa
             categoriesChips.querySelectorAll(".filter-chip").forEach(c => c.classList.remove("active"));
             chip.classList.add("active");
 
@@ -912,9 +1258,7 @@
             applyFilters();
         });
 
-        // Inicialización
         window.addEventListener("DOMContentLoaded", () => {
-            // Un pequeño retardo para asegurar que supabase-config.js y el CDN estén completamente inicializados
             setTimeout(checkSession, 300);
         });
     </script>
