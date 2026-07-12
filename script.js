@@ -513,7 +513,8 @@ function initLightboxTrigger(card){
                 descEl = document.createElement("p");
                 descEl.className = "lightbox-description";
                 descEl.style.fontSize = "0.95rem";
-                descEl.style.color = "#555";
+                descEl.style.color = "#ffffff";
+                descEl.style.fontStyle = "italic";
                 descEl.style.marginTop = "10px";
                 descEl.style.lineHeight = "1.4";
                 descEl.style.fontFamily = "inherit";
