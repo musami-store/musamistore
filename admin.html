@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control - Musamí Store</title>
+    <link rel="shortcut icon" href="./diamond.svg">
+    
+    <!-- Fuentes y Estilos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Supabase JS Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Carga configuración local -->
+    <script src="supabase-config.js"></script>
+
+    <style>
+        :root {
+            --color-border: #4648bb;
+            --color-hover: #84BAF8;
+            --color-bg-grad: #6f74ff15;
+            --color-success: #2ecc71;
+            --color-danger: #e74c3c;
+            --color-card-bg: rgba(255, 255, 255, 0.95);
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #FFFFFF 30%, var(--color-hover) 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--color-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: var(--color-border);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header button {
+            background: var(--color-border);
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: opacity 0.2s;
+        }
+
+        header button:active {
+            opacity: 0.8;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px 15px;
+        }
+
+        /* Pantalla de Login */
+        .login-container {
+            max-width: 400px;
+            margin: 80px auto 0;
+            background: var(--color-card-bg);
+            border: 2px solid var(--color-border);
+            border-radius: 20px;
+            padding: 30px 20px;
+            box-shadow: 0 10px 25px rgba(70, 72, 187, 0.15);
+            text-align: center;
+        }
+
+        .login-container img {
+            height: 100px;
+            margin-bottom: 15px;
+        }
+
+        .login-container h2 {
+            margin-top: 0;
+            color: var(--color-border);
+            font-size: 1.4rem;
+        }
+
+        .login-form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .login-form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #666;
+        }
+
+        .login-form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .login-form-group input:focus {
+            border-color: var(--color-border);
+        }
+
+        .login-btn {
+            width: 100%;
+            background: var(--color-border);
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+
+        .login-btn:active {
+            background-color: #35379e;
+        }
+
+        /* Buscador y Controles del Panel */
+        .controls-card {
+            background: var(--color-card-bg);
+            border: 2px solid var(--color-border);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(70, 72, 187, 0.1);
+        }
+
+        .search-box {
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 12px 12px 40px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .search-box input:focus {
+            border-color: var(--color-border);
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            color: #999;
+        }
+
+        .filters-row {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+            scrollbar-width: none; /* Firefox */
+        }
+        .filters-row::-webkit-scrollbar {
+            display: none; /* Safari/Chrome */
+        }
+
+        .filter-chip {
+            background: #f1f2f6;
+            color: #555;
+            border: 1px solid #ddd;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .filter-chip.active {
+            background: var(--color-border);
+            color: white;
+            border-color: var(--color-border);
+        }
+
+        /* Contenedor de Productos */
+        .products-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Tarjeta de Producto en Panel */
+        .product-item {
+            background: var(--color-card-bg);
+            border: 2px solid var(--color-border);
+            border-radius: 15px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .product-meta {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .product-meta img {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+        }
+
+        .product-info-text {
+            flex: 1;
+        }
+
+        .product-info-text h3 {
+            margin: 0 0 4px 0;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #222;
+        }
+
+        .product-info-text .sub-label {
+            font-size: 0.75rem;
+            color: #777;
+            margin: 0;
+        }
+
+        .product-info-text .sub-label strong {
+            color: var(--color-border);
+        }
+
+        /* Controles de Precio y Stock */
+        .product-editor {
+            border-top: 1px solid #eee;
+            padding-top: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .variant-group {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 10px;
+            border: 1px solid #e9ecef;
+            margin-bottom: 5px;
+        }
+
+        .variant-title {
+            margin: 0 0 8px 0;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--color-border);
+        }
+
+        .editor-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 5px;
+        }
+
+        .editor-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #555;
+            flex: 1;
+        }
+
+        .price-input-wrapper {
+            position: relative;
+            width: 120px;
+        }
+
+        .price-input-wrapper span {
+            position: absolute;
+            left: 10px;
+            top: 9px;
+            font-weight: 600;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .price-input-wrapper input {
+            width: 100%;
+            padding: 8px 8px 8px 22px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            outline: none;
+        }
+
+        .price-input-wrapper input:focus {
+            border-color: var(--color-border);
+        }
+
+        .stock-control {
+            display: flex;
+            align-items: center;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 120px;
+            background: white;
+        }
+
+        .stock-control button {
+            background: #f1f2f6;
+            border: none;
+            width: 35px;
+            height: 35px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .stock-control button:active {
+            background: #e1e2e6;
+        }
+
+        .stock-control input {
+            width: 50px;
+            height: 35px;
+            border: none;
+            text-align: center;
+            font-size: 0.95rem;
+            font-weight: 700;
+            outline: none;
+            -moz-appearance: textfield;
+        }
+
+        .stock-control input::-webkit-outer-spin-button,
+        .stock-control input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Botón de Guardar en la tarjeta */
+        .save-btn {
+            background: var(--color-border);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: background-color 0.2s, transform 0.1s;
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        .save-btn:active {
+            transform: scale(0.98);
+        }
+
+        .save-btn.saving {
+            background-color: #666;
+            cursor: not-allowed;
+        }
+
+        .save-btn.success {
+            background-color: var(--color-success);
+        }
+
+        /* Toasts de Notificación */
+        #toast-container {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 90%;
+            max-width: 350px;
+        }
+
+        .toast {
+            background: rgba(0, 0, 0, 0.85);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .toast.error {
+            background: var(--color-danger);
+        }
+
+        .toast.success {
+            background: var(--color-success);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabecera del Panel (Se muestra logueado) -->
+    <header id="main-header" style="display: none;">
+        <h1><i class="fa-solid fa-gem"></i> Musamí Admin</h1>
+        <button id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Salir</button>
+    </header>
+
+    <main>
+        <!-- Formulario de Login -->
+        <div id="login-section" class="login-container">
+            <img src="diamond.svg" alt="Musamí Isotipo">
+            <h2>Acceso Administrador</h2>
+            
+            <div class="login-form-group">
+                <label for="login-email">Correo Electrónico</label>
+                <input type="email" id="login-email" placeholder="correo@ejemplo.com">
+            </div>
+            
+            <div class="login-form-group">
+                <label for="login-password">Contraseña</label>
+                <input type="password" id="login-password" placeholder="••••••••">
+            </div>
+            
+            <button id="login-btn" class="login-btn">Ingresar</button>
+        </div>
+
+        <!-- Seccion del Catalogo (Se muestra logueado) -->
+        <div id="catalog-section" style="display: none;">
+            
+            <!-- Controles: Buscar y Filtrar -->
+            <div class="controls-card">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Buscar por nombre o ID...">
+                </div>
+                
+                <div class="filters-row" id="categories-chips">
+                    <div class="filter-chip active" data-category="ALL">Todos</div>
+                    <div class="filter-chip" data-category="Bisuteria">Bisutería</div>
+                    <div class="filter-chip" data-category="PlataEsterlina">Plata Esterlina</div>
+                    <div class="filter-chip" data-category="Maquillaje">Maquillaje</div>
+                    <div class="filter-chip" data-category="Accesorios">Accesorios</div>
+                </div>
+            </div>
+
+            <!-- Lista de Productos -->
+            <div class="products-list" id="products-list-container">
+                <div style="text-align: center; padding: 20px; font-weight: bold; color: var(--color-border);">
+                    <i class="fa-solid fa-spinner fa-spin"></i> Cargando productos...
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Contenedor de Mensajes Flotantes -->
+    <div id="toast-container"></div>
+
+    <script>
+        // Declaraciones de Estado
+        let allProducts = [];
+        let filteredProducts = [];
+        let activeCategory = "ALL";
+        let searchQuery = "";
+
+        // Referencias del DOM
+        const loginSection = document.getElementById("login-section");
+        const catalogSection = document.getElementById("catalog-section");
+        const mainHeader = document.getElementById("main-header");
+        
+        const loginEmail = document.getElementById("login-email");
+        const loginPassword = document.getElementById("login-password");
+        const loginBtn = document.getElementById("login-btn");
+        const logoutBtn = document.getElementById("logout-btn");
+        
+        const searchInput = document.getElementById("search-input");
+        const categoriesChips = document.getElementById("categories-chips");
+        const productsContainer = document.getElementById("products-list-container");
+
+        // Toast feedback
+        function showToast(message, type = "success") {
+            const container = document.getElementById("toast-container");
+            const toast = document.createElement("div");
+            toast.className = `toast ${type}`;
+            toast.textContent = message;
+            container.appendChild(toast);
+            
+            // Reflow
+            toast.offsetHeight;
+            toast.classList.add("show");
+            
+            setTimeout(() => {
+                toast.classList.remove("show");
+                setTimeout(() => toast.remove(), 300);
+            }, 2500);
+        }
+
+        // 1. Manejo de Sesión y Autenticación
+        async function checkSession() {
+            if (!window.supabaseClient) {
+                showToast("Error: Supabase no está configurado todavía. Copia primero las credenciales en supabase-config.js.", "error");
+                return;
+            }
+
+            const { data: { session } } = await window.supabaseClient.auth.getSession();
+            if (session) {
+                showAdminPanel();
+            } else {
+                showLoginScreen();
+            }
+        }
+
+        function showAdminPanel() {
+            loginSection.style.display = "none";
+            catalogSection.style.display = "block";
+            mainHeader.style.display = "flex";
+            loadProductsFromSupabase();
+        }
+
+        function showLoginScreen() {
+            loginSection.style.display = "block";
+            catalogSection.style.display = "none";
+            mainHeader.style.display = "none";
+        }
+
+        // Login Handler
+        loginBtn.addEventListener("click", async () => {
+            const email = loginEmail.value.trim();
+            const password = loginPassword.value.trim();
+
+            if (!email || !password) {
+                showToast("Por favor completa todos los campos", "error");
+                return;
+            }
+
+            loginBtn.disabled = true;
+            loginBtn.textContent = "Ingresando...";
+
+            try {
+                const { data, error } = await window.supabaseClient.auth.signInWithPassword({
+                    email: email,
+                    password: password
+                });
+
+                if (error) throw error;
+
+                showToast("¡Ingreso exitoso!");
+                showAdminPanel();
+            } catch (err) {
+                console.error("Login Error:", err);
+                showToast("Credenciales incorrectas: " + (err.message || err), "error");
+            } finally {
+                loginBtn.disabled = false;
+                loginBtn.textContent = "Ingresar";
+            }
+        });
+
+        // Logout Handler
+        logoutBtn.addEventListener("click", async () => {
+            await window.supabaseClient.auth.signOut();
+            showToast("Sesión cerrada");
+            showLoginScreen();
+        });
+
+        // 2. Cargar y Procesar Productos
+        async function loadProductsFromSupabase() {
+            productsContainer.innerHTML = `
+                <div style="text-align: center; padding: 40px; font-weight: bold; color: var(--color-border); font-size: 1.1rem;">
+                    <i class="fa-solid fa-circle-notch fa-spin"></i> Cargando catálogo en vivo...
+                </div>
+            `;
+            
+            try {
+                const { data, error } = await window.supabaseClient
+                    .from("products")
+                    .select("*");
+
+                if (error) throw error;
+
+                // Ordenar alfabéticamente por título
+                allProducts = data.sort((a, b) => a.title.localeCompare(b.title));
+                applyFilters();
+            } catch (err) {
+                console.error("Fetch Products Error:", err);
+                productsContainer.innerHTML = `
+                    <div style="text-align: center; padding: 40px; color: var(--color-danger); font-weight: bold;">
+                        <i class="fa-solid fa-triangle-exclamation"></i> Error al cargar datos: <br> ${err.message || err}
+                    </div>
+                `;
+            }
+        }
+
+        // 3. Filtrar y Renderizar Catálogo
+        function applyFilters() {
+            filteredProducts = allProducts.filter(p => {
+                // Categoría
+                const matchesCategory = (activeCategory === "ALL" || p.category === activeCategory);
+                
+                // Búsqueda
+                const q = searchQuery.toLowerCase();
+                const matchesSearch = !q || 
+                    p.title.toLowerCase().indexOf(q) !== -1 || 
+                    p.id.toLowerCase().indexOf(q) !== -1 ||
+                    (p.brand && p.brand.toLowerCase().indexOf(q) !== -1);
+                
+                return matchesCategory && matchesSearch;
+            });
+
+            renderProducts();
+        }
+
+        function renderProducts() {
+            if (filteredProducts.length === 0) {
+                productsContainer.innerHTML = `
+                    <div style="text-align: center; padding: 40px; color: #888; font-weight: 600;">
+                        No se encontraron productos.
+                    </div>
+                `;
+                return;
+            }
+
+            productsContainer.innerHTML = "";
+
+            filteredProducts.forEach(product => {
+                const itemDiv = document.createElement("div");
+                itemDiv.className = "product-item";
+                itemDiv.dataset.id = product.id;
+
+                // Imagen de portada
+                let coverImg = "diamond.svg";
+                if (product.images && product.images.length > 0) {
+                    coverImg = product.images[0];
+                } else if (product.variants) {
+                    // Si no tiene imagen principal, busca la de la primera variante
+                    const firstVarKey = Object.keys(product.variants)[0];
+                    const firstVar = product.variants[firstVarKey];
+                    if (firstVar && firstVar.images && firstVar.images.length > 0) {
+                        coverImg = firstVar.images[0];
+                    }
+                }
+
+                // Generar Controles del Editor
+                let editorHtml = "";
+                if (product.variants) {
+                    // Controles para Producto con Variantes
+                    editorHtml = Object.entries(product.variants).map(([vKey, vData]) => {
+                        return `
+                            <div class="variant-group" data-variant-key="${vKey}">
+                                <h4 class="variant-title">${vData.label}</h4>
+                                <div class="editor-row">
+                                    <div class="editor-label">Precio ($)</div>
+                                    <div class="price-input-wrapper">
+                                        <span>$</span>
+                                        <input type="number" class="price-input" value="${vData.price}" min="0">
+                                    </div>
+                                </div>
+                                <div class="editor-row">
+                                    <div class="editor-label">Stock</div>
+                                    <div class="stock-control">
+                                        <button class="qty-btn-minus" type="button">−</button>
+                                        <input type="number" class="stock-input" value="${vData.stock}" min="0">
+                                        <button class="qty-btn-plus" type="button">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }).join("");
+                } else {
+                    // Controles para Producto Simple
+                    editorHtml = `
+                        <div class="editor-row">
+                            <div class="editor-label">Precio ($)</div>
+                            <div class="price-input-wrapper">
+                                <span>$</span>
+                                <input type="number" class="price-input" value="${product.price}" min="0">
+                            </div>
+                        </div>
+                        <div class="editor-row">
+                            <div class="editor-label">Stock</div>
+                            <div class="stock-control">
+                                <button class="qty-btn-minus" type="button">−</button>
+                                <input type="number" class="stock-input" value="${product.stock}" min="0">
+                                <button class="qty-btn-plus" type="button">+</button>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                itemDiv.innerHTML = `
+                    <div class="product-meta">
+                        <img src="${coverImg}" alt="${product.title}">
+                        <div class="product-info-text">
+                            <h3>${product.title}</h3>
+                            <p class="sub-label">ID: <strong>${product.id}</strong></p>
+                            <p class="sub-label">Categoría: <strong>${product.category}</strong>${product.subcategory ? ` > ${product.subcategory}` : ""}</p>
+                            ${product.brand ? `<p class="sub-label">Marca: <strong>${product.brand}</strong></p>` : ""}
+                        </div>
+                    </div>
+                    <div class="product-editor">
+                        ${editorHtml}
+                        <button class="save-btn" onclick="saveProduct('${product.id}')">
+                            <i class="fa-solid fa-floppy-disk"></i> Guardar Cambios
+                        </button>
+                    </div>
+                `;
+
+                // Agregar Handlers táctiles para los botones de stock +/- dentro de este div
+                setupStockButtons(itemDiv);
+
+                productsContainer.appendChild(itemDiv);
+            });
+        }
+
+        // Configura los eventos click de los botones +/- en cada tarjeta
+        function setupStockButtons(container) {
+            container.querySelectorAll(".stock-control").forEach(control => {
+                const minusBtn = control.querySelector(".qty-btn-minus");
+                const plusBtn = control.querySelector(".qty-btn-plus");
+                const input = control.querySelector(".stock-input");
+
+                minusBtn.addEventListener("click", () => {
+                    let val = parseInt(input.value) || 0;
+                    if (val > 0) input.value = val - 1;
+                });
+
+                plusBtn.addEventListener("click", () => {
+                    let val = parseInt(input.value) || 0;
+                    input.value = val + 1;
+                });
+            });
+        }
+
+        // 4. Guardar Cambios de un Producto en Supabase
+        async function saveProduct(productId) {
+            const productCard = document.querySelector(`.product-item[data-id="${productId}"]`);
+            if (!productCard) return;
+
+            const saveBtn = productCard.querySelector(".save-btn");
+            const originalHtml = saveBtn.innerHTML;
+            
+            saveBtn.disabled = true;
+            saveBtn.className = "save-btn saving";
+            saveBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Guardando...`;
+
+            // Buscar datos en el objeto original
+            const originalProduct = allProducts.find(p => p.id === productId);
+            if (!originalProduct) return;
+
+            let updatePayload = {};
+
+            try {
+                if (originalProduct.variants) {
+                    // Es un producto con variantes: Reconstruir el objeto variants
+                    let updatedVariants = JSON.parse(JSON.stringify(originalProduct.variants)); // Clonar
+                    
+                    const variantGroups = productCard.querySelectorAll(".variant-group");
+                    variantGroups.forEach(group => {
+                        const vKey = group.dataset.variantKey;
+                        const priceInput = group.querySelector(".price-input");
+                        const stockInput = group.querySelector(".stock-input");
+
+                        const newPrice = parseFloat(priceInput.value);
+                        const newStock = parseInt(stockInput.value);
+
+                        if (isNaN(newPrice) || isNaN(newStock) || newPrice < 0 || newStock < 0) {
+                            throw new Error("Valores de precio o stock inválidos.");
+                        }
+
+                        updatedVariants[vKey].price = newPrice;
+                        updatedVariants[vKey].stock = newStock;
+                        
+                        // Si el stock es 0, agrega la advertencia " - AGOTADO" al label si no la tiene
+                        let label = updatedVariants[vKey].label;
+                        const agotadoStr = " - AGOTADO";
+                        if (newStock === 0 && label.indexOf(agotadoStr) === -1) {
+                            updatedVariants[vKey].label = label + agotadoStr;
+                        } else if (newStock > 0 && label.indexOf(agotadoStr) !== -1) {
+                            updatedVariants[vKey].label = label.replace(agotadoStr, "");
+                        }
+                    });
+
+                    updatePayload.variants = updatedVariants;
+                } else {
+                    // Es un producto simple
+                    const priceInput = productCard.querySelector(".price-input");
+                    const stockInput = productCard.querySelector(".stock-input");
+
+                    const newPrice = parseFloat(priceInput.value);
+                    const newStock = parseInt(stockInput.value);
+
+                    if (isNaN(newPrice) || isNaN(newStock) || newPrice < 0 || newStock < 0) {
+                        throw new Error("Valores de precio o stock inválidos.");
+                    }
+
+                    updatePayload.price = newPrice;
+                    updatePayload.stock = newStock;
+                }
+
+                // Guardar en Supabase
+                const { error } = await window.supabaseClient
+                    .from("products")
+                    .update(updatePayload)
+                    .eq("id", productId);
+
+                if (error) throw error;
+
+                // Actualizar en el estado local para mantener la coherencia
+                Object.assign(originalProduct, updatePayload);
+
+                // Feedback visual de éxito
+                saveBtn.className = "save-btn success";
+                saveBtn.innerHTML = `<i class="fa-solid fa-circle-check"></i> ¡Guardado!`;
+                showToast("Producto actualizado con éxito", "success");
+
+                // Restaurar el botón original después de 1.5 segundos
+                setTimeout(() => {
+                    saveBtn.disabled = false;
+                    saveBtn.className = "save-btn";
+                    saveBtn.innerHTML = originalHtml;
+                }, 1500);
+
+            } catch (err) {
+                console.error("Save Error:", err);
+                showToast("Fallo al guardar: " + (err.message || err), "error");
+                
+                // Restaurar botón con error
+                saveBtn.disabled = false;
+                saveBtn.className = "save-btn";
+                saveBtn.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i> Reintentar`;
+            }
+        }
+
+        // 5. Handlers de Búsqueda y Filtros
+        searchInput.addEventListener("input", (e) => {
+            searchQuery = e.target.value;
+            applyFilters();
+        });
+
+        categoriesChips.addEventListener("click", (e) => {
+            const chip = e.target.closest(".filter-chip");
+            if (!chip) return;
+
+            // Cambiar clase activa
+            categoriesChips.querySelectorAll(".filter-chip").forEach(c => c.classList.remove("active"));
+            chip.classList.add("active");
+
+            activeCategory = chip.dataset.category;
+            applyFilters();
+        });
+
+        // Inicialización
+        window.addEventListener("DOMContentLoaded", () => {
+            // Un pequeño retardo para asegurar que supabase-config.js y el CDN estén completamente inicializados
+            setTimeout(checkSession, 300);
+        });
+    </script>
+</body>
+</html>

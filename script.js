@@ -540,7 +540,57 @@ lightboxTrack?.addEventListener("touchend",e=>{
 /* =========================
    INICIALIZACIÓN
    ========================= */
-document.addEventListener("DOMContentLoaded", () => {
+function loadScript(src) {
+    return new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = src;
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.appendChild(script);
+    });
+}
+
+async function initSupabase() {
+    try {
+        // Cargar dinámicamente Supabase SDK y archivo de configuración local
+        await loadScript("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2");
+        await loadScript("supabase-config.js");
+
+        if (window.supabaseClient) {
+            const { data, error } = await window.supabaseClient.from("products").select("*");
+            if (error) throw error;
+
+            if (data && data.length > 0) {
+                // Limpiar llaves estáticas anteriores de PRODUCTS
+                for (let key in PRODUCTS) {
+                    if (PRODUCTS.hasOwnProperty(key)) {
+                        delete PRODUCTS[key];
+                    }
+                }
+                // Repoblar con información en vivo desde Supabase
+                data.forEach(row => {
+                    PRODUCTS[row.id] = {
+                        title: row.title,
+                        category: row.category,
+                        subcategory: row.subcategory,
+                        brand: row.brand,
+                        price: Number(row.price),
+                        images: row.images,
+                        stock: Number(row.stock),
+                        variants: row.variants
+                    };
+                });
+                console.log("Catálogo en vivo cargado desde Supabase:", data.length, "productos.");
+            }
+        }
+    } catch (e) {
+        console.warn("No se pudo cargar Supabase (usando respaldo local estático products.js):", e);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+
+    await initSupabase();
 
     loadHeader();
     loadCart();
