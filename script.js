@@ -571,22 +571,22 @@ function loadScript(src) {
 
 async function initSupabase() {
     try {
-        // Cargar dinámicamente Supabase SDK y archivo de configuración local
         await loadScript("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2");
         await loadScript("supabase-config.js");
 
         if (window.supabaseClient) {
-            const { data, error } = await window.supabaseClient.from("products").select("*");
+            // Consulta con timeout estricto de 2.5 segundos para no congelar la web si Supabase está pausado
+            const queryPromise = window.supabaseClient.from("products").select("*");
+            const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error("Supabase timeout")), 2500));
+            const { data, error } = await Promise.race([queryPromise, timeoutPromise]);
             if (error) throw error;
 
             if (data && data.length > 0) {
-                // Limpiar llaves estáticas anteriores de PRODUCTS
                 for (let key in PRODUCTS) {
                     if (PRODUCTS.hasOwnProperty(key)) {
                         delete PRODUCTS[key];
                     }
                 }
-                // Repoblar con información en vivo desde Supabase
                 data.forEach(row => {
                     PRODUCTS[row.id] = {
                         title: row.title,
@@ -600,22 +600,27 @@ async function initSupabase() {
                         description: row.description
                     };
                 });
-                console.log("Catálogo en vivo cargado desde Supabase:", data.length, "productos.");
+                console.log("Catálogo en vivo sincronizado desde Supabase:", data.length, "productos.");
+                return true;
             }
         }
     } catch (e) {
-        console.warn("No se pudo cargar Supabase (usando respaldo local estático products.js):", e);
+        console.warn("Supabase pausado o sin conexión (usando catálogo local estático):", e.message || e);
+        return false;
     }
+    return false;
 }
 
 async function renderHomepageDynamic() {
     if (!window.supabaseClient) return;
 
     try {
-        const { data: sections, error } = await window.supabaseClient
+        const queryPromise = window.supabaseClient
             .from("homepage_sections")
             .select("*")
             .order("position", { ascending: true });
+        const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error("Sections timeout")), 2500));
+        const { data: sections, error } = await Promise.race([queryPromise, timeoutPromise]);
 
         if (error) throw error;
 
@@ -675,22 +680,11 @@ async function renderHomepageDynamic() {
             });
         }
     } catch (e) {
-        console.warn("Fallo al cargar diseño dinámico desde Supabase, usando respaldo estático:", e);
+        console.warn("Fallo al cargar diseño dinámico desde Supabase, usando respaldo estático:", e.message || e);
     }
 }
 
-document.addEventListener("DOMContentLoaded", async () => {
-
-    await initSupabase();
-
-    const isHomepage = !document.body.dataset.category && 
-                       !document.body.classList.contains("cart-page") && 
-                       !document.body.classList.contains("favorites-page");
-
-    if (isHomepage) {
-        await renderHomepageDynamic();
-    }
-
+function renderAllCardsAndLayout() {
     loadHeader();
     loadCart();
     loadFavorites();
@@ -698,13 +692,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     if(document.body.classList.contains("cart-page")) {
         renderCartPage();
     } else {
-        renderCart(); // para dropdown en header
+        renderCart();
     }
+
     const isFavoritesPage = document.body.classList.contains("favorites-page");
 
     if(isFavoritesPage){
         const container = document.getElementById("favorites-container");
         if(!container) return;
+        container.innerHTML = "";
 
         FAVORITES.forEach(id=>{
             const product = PRODUCTS[id];
@@ -729,6 +725,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
         initSliders();
         
+        const isHomepage = !document.body.dataset.category && 
+                           !document.body.classList.contains("cart-page") && 
+                           !document.body.classList.contains("favorites-page");
         if (isHomepage) {
             initHomepageSliders();
         }
@@ -739,6 +738,25 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     updateFavoritesCount();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Renderizado INSTANTÁNEO garantizado (0 milisegundos de espera)
+    renderAllCardsAndLayout();
+
+    // 2. En segundo plano: consultar Supabase de forma asíncrona sin bloquear la pantalla
+    (async () => {
+        const synced = await initSupabase();
+        if (synced) {
+            const isHomepage = !document.body.dataset.category && 
+                               !document.body.classList.contains("cart-page") && 
+                               !document.body.classList.contains("favorites-page");
+            if (isHomepage) {
+                await renderHomepageDynamic();
+            }
+            renderAllCardsAndLayout();
+        }
+    })();
 });
 
 function renderCategory(){
@@ -1018,21 +1036,4 @@ function initHomepageSliders() {
         // también cuando cambie tamaño (importante en responsive)
         window.onresize = updateFade;
     });
-}
-
-function renderSliderProducts(containerId, filterFn) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-
-    const products = PRODUCTS.filter(filterFn);
-
-    container.innerHTML = products.map(p => `
-        <div class="product-card">
-            <img src="${p.images[0]}" alt="${p.name}">
-            <h3>${p.name}</h3>
-            <p>$${p.price}</p>
-        </div>
-    `).join("");
-}
-
-renderSliderProducts("slider-destacados", p => p.featured);
+}
