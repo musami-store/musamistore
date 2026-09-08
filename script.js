@@ -27,22 +27,27 @@ async function loadHeader() {
         });
     }
 
-    // SCROLL HEADER
+    // SCROLL HEADER (optimizado con rAF y passive: true)
     let lastScroll = 0;
+    let ticking = false;
     const header = document.querySelector(".site-header");
 
     if (header) {
         window.addEventListener("scroll", () => {
             const currentScroll = window.pageYOffset;
-
-            if (currentScroll > lastScroll && currentScroll > 50) {
-                header.classList.add("hidden");
-            } else {
-                header.classList.remove("hidden");
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    if (currentScroll > lastScroll && currentScroll > 50) {
+                        header.classList.add("hidden");
+                    } else {
+                        header.classList.remove("hidden");
+                    }
+                    lastScroll = currentScroll;
+                    ticking = false;
+                });
+                ticking = true;
             }
-
-            lastScroll = currentScroll;
-        });
+        }, { passive: true });
     }
 
     document
@@ -383,7 +388,7 @@ function renderProductCard(card, product){
     card.innerHTML = `
         <div class="product-slider">
             <div class="slider-track">
-                ${data.images.map(img=>`<img src="${img}">`).join("")}
+                ${data.images.map(img=>`<img src="${img}" loading="lazy" decoding="async">`).join("")}
             </div>
             <button class="slider-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
             <button class="slider-btn next"><i class="fa-solid fa-chevron-right"></i></button>
@@ -440,7 +445,7 @@ function initVariantSelector(card, product){
     select.addEventListener("change", ()=>{
         const variant = product.variants[select.value];
         priceEl.textContent = `$${variant.price.toLocaleString("es-CL")}`;
-        track.innerHTML = variant.images.map(img=>`<img src="${img}">`).join("");
+        track.innerHTML = variant.images.map(img=>`<img src="${img}" loading="lazy" decoding="async">`).join("");
         track.style.transform="translateX(0)";
         initLightboxTrigger(card);
     });
