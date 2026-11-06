@@ -1,0 +1,24 @@
+name: Mantener Supabase Activo
+
+on:
+  schedule:
+    # Se ejecuta cada 2 días a las 12:00 UTC
+    - cron: '0 12 */2 * *'
+  workflow_dispatch:
+
+jobs:
+  ping_supabase:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Realizar consulta real a la base de datos de Supabase
+        run: |
+          RESPONSE=$(curl -s -w "\nHTTP_STATUS:%{http_code}" -X GET "https://tgfqgjnodjbmrmusgtwf.supabase.co/rest/v1/products?select=id&limit=1" \
+            -H "apikey: sb_publishable_crXFVrkudImZ73Qjvw2Z5A_GkfULcX_" \
+            -H "Authorization: Bearer sb_publishable_crXFVrkudImZ73Qjvw2Z5A_GkfULcX_")
+          echo "$RESPONSE"
+          STATUS=$(echo "$RESPONSE" | grep "HTTP_STATUS" | cut -d':' -f2)
+          if [ "$STATUS" -ge 200 ] && [ "$STATUS" -lt 300 ]; then
+            echo "Actividad registrada con éxito en Supabase (Status $STATUS)."
+          else
+            echo "Alerta: Supabase devolvió status $STATUS"
+          fi

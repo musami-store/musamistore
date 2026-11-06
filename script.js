@@ -27,22 +27,27 @@ async function loadHeader() {
         });
     }
 
-    // SCROLL HEADER
+    // SCROLL HEADER (optimizado con rAF y passive: true)
     let lastScroll = 0;
+    let ticking = false;
     const header = document.querySelector(".site-header");
 
     if (header) {
         window.addEventListener("scroll", () => {
             const currentScroll = window.pageYOffset;
-
-            if (currentScroll > lastScroll && currentScroll > 50) {
-                header.classList.add("hidden");
-            } else {
-                header.classList.remove("hidden");
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    if (currentScroll > lastScroll && currentScroll > 50) {
+                        header.classList.add("hidden");
+                    } else {
+                        header.classList.remove("hidden");
+                    }
+                    lastScroll = currentScroll;
+                    ticking = false;
+                });
+                ticking = true;
             }
-
-            lastScroll = currentScroll;
-        });
+        }, { passive: true });
     }
 
     document
@@ -383,7 +388,7 @@ function renderProductCard(card, product){
     card.innerHTML = `
         <div class="product-slider">
             <div class="slider-track">
-                ${data.images.map(img=>`<img src="${img}">`).join("")}
+                ${data.images.map(img=>`<img src="${img}" loading="lazy" decoding="async">`).join("")}
             </div>
             <button class="slider-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
             <button class="slider-btn next"><i class="fa-solid fa-chevron-right"></i></button>
@@ -440,7 +445,7 @@ function initVariantSelector(card, product){
     select.addEventListener("change", ()=>{
         const variant = product.variants[select.value];
         priceEl.textContent = `$${variant.price.toLocaleString("es-CL")}`;
-        track.innerHTML = variant.images.map(img=>`<img src="${img}">`).join("");
+        track.innerHTML = variant.images.map(img=>`<img src="${img}" loading="lazy" decoding="async">`).join("");
         track.style.transform="translateX(0)";
         initLightboxTrigger(card);
     });
@@ -571,22 +576,22 @@ function loadScript(src) {
 
 async function initSupabase() {
     try {
-        // Cargar dinámicamente Supabase SDK y archivo de configuración local
         await loadScript("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2");
         await loadScript("supabase-config.js");
 
         if (window.supabaseClient) {
-            const { data, error } = await window.supabaseClient.from("products").select("*");
+            // Consulta con timeout estricto de 2.5 segundos para no congelar la web si Supabase está pausado
+            const queryPromise = window.supabaseClient.from("products").select("*");
+            const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error("Supabase timeout")), 2500));
+            const { data, error } = await Promise.race([queryPromise, timeoutPromise]);
             if (error) throw error;
 
             if (data && data.length > 0) {
-                // Limpiar llaves estáticas anteriores de PRODUCTS
                 for (let key in PRODUCTS) {
                     if (PRODUCTS.hasOwnProperty(key)) {
                         delete PRODUCTS[key];
                     }
                 }
-                // Repoblar con información en vivo desde Supabase
                 data.forEach(row => {
                     PRODUCTS[row.id] = {
                         title: row.title,
@@ -600,18 +605,91 @@ async function initSupabase() {
                         description: row.description
                     };
                 });
-                console.log("Catálogo en vivo cargado desde Supabase:", data.length, "productos.");
+                console.log("Catálogo en vivo sincronizado desde Supabase:", data.length, "productos.");
+                return true;
             }
         }
     } catch (e) {
-        console.warn("No se pudo cargar Supabase (usando respaldo local estático products.js):", e);
+        console.warn("Supabase pausado o sin conexión (usando catálogo local estático):", e.message || e);
+        return false;
+    }
+    return false;
+}
+
+async function renderHomepageDynamic() {
+    if (!window.supabaseClient) return;
+
+    try {
+        const queryPromise = window.supabaseClient
+            .from("homepage_sections")
+            .select("*")
+            .order("position", { ascending: true });
+        const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error("Sections timeout")), 2500));
+        const { data: sections, error } = await Promise.race([queryPromise, timeoutPromise]);
+
+        if (error) throw error;
+
+        if (sections && sections.length > 0) {
+            const mainEl = document.querySelector("main");
+            if (!mainEl) return;
+
+            mainEl.innerHTML = "";
+
+            sections.forEach(section => {
+                if (section.type === "slider") {
+                    const sec = document.createElement("section");
+                    sec.className = "product-slider-section";
+                    sec.innerHTML = `
+                        <h2>${section.title || "Destacados"}</h2>
+                        <div class="product-slider-container">
+                            <button class="product-slider-btn prev">&#10094;</button>
+                            <div class="product-slider-track" id="${section.id}">
+                                ${section.product_ids ? section.product_ids.map(pid => `<div class="product-card" data-id="${pid}"></div>`).join("") : ""}
+                            </div>
+                            <button class="product-slider-btn next">&#10095;</button>
+                        </div>
+                    `;
+                    mainEl.appendChild(sec);
+                } else if (section.type === "grid") {
+                    if (section.title) {
+                        const h2 = document.createElement("h2");
+                        h2.style.marginTop = "40px";
+                        h2.style.marginBottom = "20px";
+                        h2.style.color = "var(--color-border)";
+                        h2.style.textAlign = "center";
+                        h2.textContent = section.title;
+                        mainEl.appendChild(h2);
+                    }
+                    const grid = document.createElement("div");
+                    grid.className = "product-grid";
+                    grid.innerHTML = section.product_ids ? section.product_ids.map(pid => `<div class="product-card" data-id="${pid}"></div>`).join("") : "";
+                    mainEl.appendChild(grid);
+                } else if (section.type === "banner" && section.content) {
+                    const banner = document.createElement("div");
+                    banner.className = "homepage-banner-section";
+                    banner.style.width = "100%";
+                    banner.style.maxWidth = "1200px";
+                    banner.style.margin = "30px auto";
+                    banner.style.borderRadius = "15px";
+                    banner.style.overflow = "hidden";
+                    banner.style.border = "2px solid #6f74ff30";
+                    banner.style.boxShadow = "0 8px 20px rgba(70,72,187,0.08)";
+                    
+                    let bannerHtml = `<img src="${section.content.image_url}" style="width: 100%; height: auto; max-height: 280px; object-fit: cover; display: block;">`;
+                    if (section.content.link_url) {
+                        bannerHtml = `<a href="${section.content.link_url}">${bannerHtml}</a>`;
+                    }
+                    banner.innerHTML = bannerHtml;
+                    mainEl.appendChild(banner);
+                }
+            });
+        }
+    } catch (e) {
+        console.warn("Fallo al cargar diseño dinámico desde Supabase, usando respaldo estático:", e.message || e);
     }
 }
 
-document.addEventListener("DOMContentLoaded", async () => {
-
-    await initSupabase();
-
+function renderAllCardsAndLayout() {
     loadHeader();
     loadCart();
     loadFavorites();
@@ -619,13 +697,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     if(document.body.classList.contains("cart-page")) {
         renderCartPage();
     } else {
-        renderCart(); // para dropdown en header
+        renderCart();
     }
+
     const isFavoritesPage = document.body.classList.contains("favorites-page");
 
     if(isFavoritesPage){
         const container = document.getElementById("favorites-container");
         if(!container) return;
+        container.innerHTML = "";
 
         FAVORITES.forEach(id=>{
             const product = PRODUCTS[id];
@@ -649,6 +729,13 @@ document.addEventListener("DOMContentLoaded", async () => {
             renderProductCard(card, product);
         });
         initSliders();
+        
+        const isHomepage = !document.body.dataset.category && 
+                           !document.body.classList.contains("cart-page") && 
+                           !document.body.classList.contains("favorites-page");
+        if (isHomepage) {
+            initHomepageSliders();
+        }
     }
 
     if(document.body.dataset.category){
@@ -656,6 +743,25 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     updateFavoritesCount();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Renderizado INSTANTÁNEO garantizado (0 milisegundos de espera)
+    renderAllCardsAndLayout();
+
+    // 2. En segundo plano: consultar Supabase de forma asíncrona sin bloquear la pantalla
+    (async () => {
+        const synced = await initSupabase();
+        if (synced) {
+            const isHomepage = !document.body.dataset.category && 
+                               !document.body.classList.contains("cart-page") && 
+                               !document.body.classList.contains("favorites-page");
+            if (isHomepage) {
+                await renderHomepageDynamic();
+            }
+            renderAllCardsAndLayout();
+        }
+    })();
 });
 
 function renderCategory(){
@@ -889,66 +995,50 @@ toast.remove();
 
 
 
-document.querySelectorAll(".product-slider-container").forEach(container => {
-    const track = container.querySelector(".product-slider-track");
-    const next = container.querySelector(".next");
-    const prev = container.querySelector(".prev");
+function initHomepageSliders() {
+    document.querySelectorAll(".product-slider-container").forEach(container => {
+        const track = container.querySelector(".product-slider-track");
+        const next = container.querySelector(".next");
+        const prev = container.querySelector(".prev");
 
-    const scrollAmount = 300;
+        if (!track || !next || !prev) return;
 
-    next.addEventListener("click", () => {
-        track.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    });
+        const scrollAmount = 300;
 
-    prev.addEventListener("click", () => {
-        track.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-    });
-});
-document.querySelectorAll(".product-slider-container").forEach(container => {
-    const track = container.querySelector(".product-slider-track");
+        next.onclick = () => {
+            track.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        };
 
-    function updateFade() {
-        const scrollLeft = track.scrollLeft;
-        const maxScroll = track.scrollWidth - track.clientWidth;
+        prev.onclick = () => {
+            track.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        };
 
-        // izquierda
-        if (scrollLeft > 10) {
-            container.classList.add("show-left");
-        } else {
-            container.classList.remove("show-left");
+        function updateFade() {
+            const scrollLeft = track.scrollLeft;
+            const maxScroll = track.scrollWidth - track.clientWidth;
+
+            // izquierda
+            if (scrollLeft > 10) {
+                container.classList.add("show-left");
+            } else {
+                container.classList.remove("show-left");
+            }
+
+            // derecha
+            if (scrollLeft < maxScroll - 10) {
+                container.classList.add("show-right");
+            } else {
+                container.classList.remove("show-right");
+            }
         }
 
-        // derecha
-        if (scrollLeft < maxScroll - 10) {
-            container.classList.add("show-right");
-        } else {
-            container.classList.remove("show-right");
-        }
-    }
+        // ejecutar al inicio
+        updateFade();
 
-    // ejecutar al inicio
-    updateFade();
+        // escuchar scroll
+        track.onscroll = updateFade;
 
-    // escuchar scroll
-    track.addEventListener("scroll", updateFade);
-
-    // también cuando cambie tamaño (importante en responsive)
-    window.addEventListener("resize", updateFade);
-});
-
-function renderSliderProducts(containerId, filterFn) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-
-    const products = PRODUCTS.filter(filterFn);
-
-    container.innerHTML = products.map(p => `
-        <div class="product-card">
-            <img src="${p.images[0]}" alt="${p.name}">
-            <h3>${p.name}</h3>
-            <p>$${p.price}</p>
-        </div>
-    `).join("");
-}
-
-renderSliderProducts("slider-destacados", p => p.featured);
+        // también cuando cambie tamaño (importante en responsive)
+        window.onresize = updateFade;
+    });
+}

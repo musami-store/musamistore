@@ -89,8 +89,32 @@
             opacity: 0.8;
         }
 
-        header button.create-mode-btn {
-            background-color: var(--color-success);
+        /* Tabs de navegación */
+        .tabs-container {
+            display: flex;
+            background: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 60px;
+            z-index: 90;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 14px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #666;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .tab-btn.active {
+            color: var(--color-border);
+            border-bottom-color: var(--color-border);
+            background: #6f74ff0a;
         }
 
         main {
@@ -293,8 +317,8 @@
             border-color: var(--color-border);
         }
 
-        /* Contenedor de Productos */
-        .products-list {
+        /* Lista de Productos y Secciones */
+        .products-list, .sections-list {
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -474,7 +498,7 @@
             border-color: var(--color-border);
         }
 
-        /* Botón de Guardar */
+        /* Botones de acción */
         .save-btn {
             background: var(--color-border);
             color: white;
@@ -506,7 +530,156 @@
             background-color: var(--color-success);
         }
 
-        /* Botón Guardar Creación */
+        /* Elementos del Gestor de Diseño (Secciones) */
+        .section-card {
+            background: var(--color-card-bg);
+            border: 2px solid var(--color-border);
+            border-radius: 15px;
+            padding: 18px 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            position: relative;
+        }
+
+        .section-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        .section-card-header h3 {
+            margin: 0;
+            font-size: 1.05rem;
+            color: var(--color-border);
+            font-weight: 700;
+        }
+
+        .section-type-badge {
+            font-size: 0.7rem;
+            font-weight: 700;
+            background: #eee;
+            color: #666;
+            padding: 4px 8px;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        .section-type-badge.slider { background: #ffeaa7; color: #d63031; }
+        .section-type-badge.grid { background: #dff9fb; color: #0984e3; }
+        .section-type-badge.banner { background: #e8f5e9; color: #2e7d32; }
+
+        .section-order-btns {
+            display: flex;
+            gap: 5px;
+        }
+
+        .order-btn {
+            background: #f1f2f6;
+            border: 1px solid #ddd;
+            color: #333;
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+
+        .order-btn:active {
+            background: #e1e2e6;
+        }
+
+        .section-delete-btn {
+            background: transparent;
+            color: var(--color-danger);
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            padding: 5px;
+        }
+
+        /* Chips de productos ordenados dentro de una sección */
+        .section-products-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-height: 250px;
+            overflow-y: auto;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 8px;
+            background: #fafafa;
+        }
+
+        .section-product-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 6px 10px;
+            gap: 10px;
+        }
+
+        .section-product-row img {
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .section-product-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .row-ctrl-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #777;
+            padding: 4px;
+            font-size: 0.75rem;
+        }
+
+        .row-ctrl-btn:hover {
+            color: var(--color-border);
+        }
+
+        .row-ctrl-btn.remove {
+            color: var(--color-danger);
+        }
+
+        /* Banner preview */
+        .banner-preview-box {
+            width: 100%;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            background: #fafafa;
+            position: relative;
+        }
+
+        .banner-preview-box img {
+            max-width: 100%;
+            max-height: 120px;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+
+        /* Botón Crear Creación */
         .create-submit-btn {
             background-color: var(--color-success);
             color: white;
@@ -525,11 +698,6 @@
 
         .create-submit-btn:active {
             opacity: 0.9;
-        }
-
-        .create-submit-btn:disabled {
-            background-color: #95a5a6;
-            cursor: not-allowed;
         }
 
         /* Toasts de Notificación */
@@ -585,6 +753,12 @@
         </div>
     </header>
 
+    <!-- Barra de Pestañas (Tabs) -->
+    <div id="admin-tabs" class="tabs-container" style="display: none;">
+        <div class="tab-btn active" data-target="tab-catalog"><i class="fa-solid fa-store"></i> Catálogo</div>
+        <div class="tab-btn" data-target="tab-design"><i class="fa-solid fa-compass"></i> Diseño Portada</div>
+    </div>
+
     <main>
         <!-- Formulario de Login -->
         <div id="login-section" class="login-container">
@@ -604,8 +778,8 @@
             <button id="login-btn" class="login-btn">Ingresar</button>
         </div>
 
-        <!-- Seccion del Catalogo -->
-        <div id="catalog-section" style="display: none;">
+        <!-- SECCIÓN 1: CATÁLOGO DE PRODUCTOS -->
+        <div id="tab-catalog" class="tab-content" style="display: none;">
             
             <!-- FORMULARIO NUEVO PRODUCTO (Desplegable) -->
             <div id="creator-panel" class="creator-card" style="display: none;">
@@ -697,6 +871,40 @@
                 </div>
             </div>
         </div>
+
+        <!-- SECCIÓN 2: DISEÑO DE PORTADA -->
+        <div id="tab-design" class="tab-content" style="display: none;">
+            <!-- Creador de Sección -->
+            <div class="creator-card" style="border-color: var(--color-border);">
+                <h2><i class="fa-solid fa-folder-plus" style="color: var(--color-border);"></i> Agregar Sección a la Portada</h2>
+                <div class="form-grid">
+                    <div class="form-row">
+                        <div class="form-group" style="flex: 2;">
+                            <label for="new-section-title">Título de la Sección</label>
+                            <input type="text" id="new-section-title" placeholder="Ej. Ofertas del Mes o Destacados">
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label for="new-section-type">Tipo</label>
+                            <select id="new-section-type">
+                                <option value="slider">Slider (Horizontal)</option>
+                                <option value="grid">Catálogo (Cuadrícula)</option>
+                                <option value="banner">Banner (Publicidad)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="save-btn" onclick="addNewSection()" style="margin-top: 5px;">
+                        <i class="fa-solid fa-plus"></i> Agregar Nueva Sección
+                    </button>
+                </div>
+            </div>
+
+            <!-- Lista de Secciones -->
+            <div class="sections-list" id="sections-list-container">
+                <div style="text-align: center; padding: 20px; font-weight: bold; color: var(--color-border);">
+                    <i class="fa-solid fa-spinner fa-spin"></i> Cargando secciones de portada...
+                </div>
+            </div>
+        </div>
     </main>
 
     <div id="toast-container"></div>
@@ -713,12 +921,15 @@
         // Estado
         let allProducts = [];
         let filteredProducts = [];
+        let allSections = [];
         let activeCategory = "ALL";
         let searchQuery = "";
 
         // DOM
         const loginSection = document.getElementById("login-section");
-        const catalogSection = document.getElementById("catalog-section");
+        const catalogSection = document.getElementById("tab-catalog");
+        const designSection = document.getElementById("tab-design");
+        const adminTabs = document.getElementById("admin-tabs");
         const mainHeader = document.getElementById("main-header");
         
         const loginEmail = document.getElementById("login-email");
@@ -732,6 +943,7 @@
         const searchInput = document.getElementById("search-input");
         const categoriesChips = document.getElementById("categories-chips");
         const productsContainer = document.getElementById("products-list-container");
+        const sectionsContainer = document.getElementById("sections-list-container");
 
         // Toast feedback
         function showToast(message, type = "success") {
@@ -750,6 +962,29 @@
             }, 3000);
         }
 
+        // Navegación de pestañas (Tabs)
+        document.querySelectorAll(".tab-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                const target = btn.dataset.target;
+                if (target === "tab-catalog") {
+                    catalogSection.style.display = "block";
+                    designSection.style.display = "none";
+                    toggleCreatorBtn.style.display = "flex";
+                } else {
+                    catalogSection.style.display = "none";
+                    designSection.style.display = "block";
+                    toggleCreatorBtn.style.display = "none";
+                    creatorPanel.style.display = "none";
+                    toggleCreatorBtn.innerHTML = `<i class="fa-solid fa-plus"></i> Nuevo`;
+                    toggleCreatorBtn.style.backgroundColor = "var(--color-success)";
+                    loadHomepageSections();
+                }
+            });
+        });
+
         // Toggle panel de creación
         toggleCreatorBtn.addEventListener("click", () => {
             if (creatorPanel.style.display === "none") {
@@ -757,7 +992,6 @@
                 toggleCreatorBtn.innerHTML = `<i class="fa-solid fa-xmark"></i> Cerrar`;
                 toggleCreatorBtn.style.backgroundColor = "var(--color-danger)";
                 updateSubcategoriesDropdown();
-                // Limpiar formulario y generar ID temporal
                 createForm.reset();
                 generateTempId();
             } else {
@@ -775,7 +1009,6 @@
         function generateTempId() {
             const title = document.getElementById("create-title").value.trim();
             const category = document.getElementById("create-category").value;
-            const sub = document.getElementById("create-subcategory").value;
             const idInput = document.getElementById("create-id");
 
             if (!title) {
@@ -783,7 +1016,6 @@
                 return;
             }
 
-            // Normalizar texto
             let slug = title.toLowerCase()
                 .replace(/[áäâà]/g, "a")
                 .replace(/[éëêè]/g, "e")
@@ -791,9 +1023,9 @@
                 .replace(/[óöôò]/g, "o")
                 .replace(/[úüûù]/g, "u")
                 .replace(/ñ/g, "n")
-                .replace(/[^a-z0-9\s-]/g, "") // eliminar caracteres especiales
+                .replace(/[^a-z0-9\s-]/g, "")
                 .trim()
-                .replace(/\s+/g, "-");       // espacios por guiones
+                .replace(/\s+/g, "-");
 
             let prefix = "";
             if (category === "Bisuteria") prefix = "bisuteria";
@@ -801,7 +1033,6 @@
             else if (category === "Maquillaje") prefix = "maquillaje";
             else prefix = "accesorios";
 
-            // Prefijo + slug + timestamp corto
             const rand = Math.floor(100 + Math.random() * 900);
             idInput.value = `${prefix}-${slug}-${rand}`;
         }
@@ -834,14 +1065,18 @@
         function showAdminPanel() {
             loginSection.style.display = "none";
             catalogSection.style.display = "block";
+            designSection.style.display = "none";
             mainHeader.style.display = "flex";
+            adminTabs.style.display = "flex";
             loadProductsFromSupabase();
         }
 
         function showLoginScreen() {
             loginSection.style.display = "block";
             catalogSection.style.display = "none";
+            designSection.style.display = "none";
             mainHeader.style.display = "none";
+            adminTabs.style.display = "none";
         }
 
         // Login
@@ -881,7 +1116,7 @@
             showLoginScreen();
         });
 
-        // 2. Cargar Productos
+        // 2. Cargar Catálogo Completo
         async function loadProductsFromSupabase() {
             productsContainer.innerHTML = `
                 <div style="text-align: center; padding: 40px; font-weight: bold; color: var(--color-border); font-size: 1.1rem;">
@@ -907,11 +1142,10 @@
             }
         }
 
-        // 3. Filtrar y Renderizar
+        // Filtrar y Renderizar Catálogo
         function applyFilters() {
             filteredProducts = allProducts.filter(p => {
                 const matchesCategory = (activeCategory === "ALL" || p.category === activeCategory);
-                
                 const q = searchQuery.toLowerCase();
                 const matchesSearch = !q || 
                     p.title.toLowerCase().indexOf(q) !== -1 || 
@@ -920,17 +1154,12 @@
                 
                 return matchesCategory && matchesSearch;
             });
-
             renderProducts();
         }
 
         function renderProducts() {
             if (filteredProducts.length === 0) {
-                productsContainer.innerHTML = `
-                    <div style="text-align: center; padding: 40px; color: #888; font-weight: 600;">
-                        No se encontraron productos.
-                    </div>
-                `;
+                productsContainer.innerHTML = `<div style="text-align: center; padding: 40px; color: #888; font-weight: 600;">No se encontraron productos.</div>`;
                 return;
             }
 
@@ -942,43 +1171,31 @@
                 itemDiv.dataset.id = product.id;
 
                 let coverImg = "diamond.svg";
-                if (product.images && product.images.length > 0) {
-                    coverImg = product.images[0];
-                } else if (product.variants) {
-                    const firstVarKey = Object.keys(product.variants)[0];
-                    const firstVar = product.variants[firstVarKey];
-                    if (firstVar && firstVar.images && firstVar.images.length > 0) {
-                        coverImg = firstVar.images[0];
-                    }
-                }
+                if (product.images && product.images.length > 0) coverImg = product.images[0];
 
                 let editorHtml = "";
                 if (product.variants) {
-                    // Producto con variantes
-                    editorHtml = Object.entries(product.variants).map(([vKey, vData]) => {
-                        return `
-                            <div class="variant-group" data-variant-key="${vKey}">
-                                <h4 class="variant-title">${vData.label}</h4>
-                                <div class="editor-row">
-                                    <div class="editor-label">Precio ($)</div>
-                                    <div class="price-input-wrapper">
-                                        <span>$</span>
-                                        <input type="number" class="price-input" value="${vData.price}" min="0">
-                                    </div>
-                                </div>
-                                <div class="editor-row">
-                                    <div class="editor-label">Stock</div>
-                                    <div class="stock-control">
-                                        <button class="qty-btn-minus" type="button">−</button>
-                                        <input type="number" class="stock-input" value="${vData.stock}" min="0">
-                                        <button class="qty-btn-plus" type="button">+</button>
-                                    </div>
+                    editorHtml = Object.entries(product.variants).map(([vKey, vData]) => `
+                        <div class="variant-group" data-variant-key="${vKey}">
+                            <h4 class="variant-title">${vData.label}</h4>
+                            <div class="editor-row">
+                                <div class="editor-label">Precio ($)</div>
+                                <div class="price-input-wrapper">
+                                    <span>$</span>
+                                    <input type="number" class="price-input" value="${vData.price}" min="0">
                                 </div>
                             </div>
-                        `;
-                    }).join("");
+                            <div class="editor-row">
+                                <div class="editor-label">Stock</div>
+                                <div class="stock-control">
+                                    <button class="qty-btn-minus" type="button">−</button>
+                                    <input type="number" class="stock-input" value="${vData.stock}" min="0">
+                                    <button class="qty-btn-plus" type="button">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    `).join("");
                 } else {
-                    // Producto simple
                     editorHtml = `
                         <div class="editor-row">
                             <div class="editor-label">Precio ($)</div>
@@ -998,7 +1215,6 @@
                     `;
                 }
 
-                // Agregar cuadro de descripción
                 editorHtml += `
                     <div class="desc-input-wrapper">
                         <div class="editor-label">Descripción (Opcional)</div>
@@ -1013,7 +1229,6 @@
                             <h3>${product.title}</h3>
                             <p class="sub-label">ID: <strong>${product.id}</strong></p>
                             <p class="sub-label">Categoría: <strong>${product.category}</strong>${product.subcategory ? ` > ${product.subcategory}` : ""}</p>
-                            ${product.brand ? `<p class="sub-label">Marca: <strong>${product.brand}</strong></p>` : ""}
                         </div>
                     </div>
                     <div class="product-editor">
@@ -1047,7 +1262,7 @@
             });
         }
 
-        // 4. Guardar Cambios
+        // Guardar Producto
         async function saveProduct(productId) {
             const productCard = document.querySelector(`.product-item[data-id="${productId}"]`);
             if (!productCard) return;
@@ -1065,13 +1280,11 @@
             let updatePayload = {};
 
             try {
-                // Leer descripción
                 const descInput = productCard.querySelector(".desc-input");
                 updatePayload.description = descInput.value.trim() || null;
 
                 if (originalProduct.variants) {
                     let updatedVariants = JSON.parse(JSON.stringify(originalProduct.variants));
-                    
                     const variantGroups = productCard.querySelectorAll(".variant-group");
                     variantGroups.forEach(group => {
                         const vKey = group.dataset.variantKey;
@@ -1096,7 +1309,6 @@
                             updatedVariants[vKey].label = label.replace(agotadoStr, "");
                         }
                     });
-
                     updatePayload.variants = updatedVariants;
                 } else {
                     const priceInput = productCard.querySelector(".price-input");
@@ -1113,7 +1325,6 @@
                     updatePayload.stock = newStock;
                 }
 
-                // Guardar en Supabase
                 const { error } = await window.supabaseClient
                     .from("products")
                     .update(updatePayload)
@@ -1134,15 +1345,14 @@
                 }, 1500);
 
             } catch (err) {
-                console.error("Save Error:", err);
                 showToast("Fallo al guardar: " + (err.message || err), "error");
                 saveBtn.disabled = false;
                 saveBtn.className = "save-btn";
-                saveBtn.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i> Reintentar`;
+                saveBtn.innerHTML = originalHtml;
             }
         }
 
-        // 5. Creación de Nuevo Producto (Opción A)
+        // Crear Producto
         async function handleCreateProduct(e) {
             e.preventDefault();
 
@@ -1157,44 +1367,37 @@
             const imageInput = document.getElementById("create-images");
             const submitBtn = document.getElementById("create-submit-btn");
 
-            // Validaciones básicas
             if (!title || !productId || isNaN(price) || isNaN(stock) || price < 0 || stock < 0 || imageInput.files.length === 0) {
-                showToast("Completa los datos obligatorios y selecciona al menos una imagen", "error");
+                showToast("Completa todos los campos obligatorios", "error");
                 return;
             }
 
-            // Validar que el ID no esté duplicado localmente
             if (allProducts.some(p => p.id === productId)) {
-                showToast("El ID ya existe para otro producto. Usa un ID diferente.", "error");
+                showToast("El ID ya existe para otro producto.", "error");
                 return;
             }
 
             submitBtn.disabled = true;
-            const originalSubmitHtml = submitBtn.innerHTML;
-            submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Guardando...`;
+            submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Creando...`;
 
             try {
-                // Subir fotos a Supabase Storage
                 const files = imageInput.files;
                 const imagesUrls = [];
 
                 for (let i = 0; i < files.length; i++) {
                     const file = files[i];
                     const fileExt = file.name.split('.').pop();
-                    // Generar un nombre único
                     const fileName = `${productId}_${Date.now()}_${i}.${fileExt}`;
                     const filePath = `${category}/${fileName}`;
 
                     submitBtn.innerHTML = `<i class="fa-solid fa-cloud-arrow-up"></i> Subiendo imagen ${i+1} de ${files.length}...`;
 
-                    // Subir archivo
                     const { error: uploadError } = await window.supabaseClient.storage
                         .from("products")
                         .upload(filePath, file);
 
                     if (uploadError) throw uploadError;
 
-                    // Obtener URL pública
                     const { data: { publicUrl } } = window.supabaseClient.storage
                         .from("products")
                         .getPublicUrl(filePath);
@@ -1202,9 +1405,6 @@
                     imagesUrls.push(publicUrl);
                 }
 
-                submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Insertando producto...`;
-
-                // Registrar en la tabla products
                 const { error: insertError } = await window.supabaseClient
                     .from("products")
                     .insert({
@@ -1222,22 +1422,411 @@
                 if (insertError) throw insertError;
 
                 showToast("¡Producto creado con éxito!");
-                
-                // Recargar catálogo y cerrar creador
                 creatorPanel.style.display = "none";
                 toggleCreatorBtn.innerHTML = `<i class="fa-solid fa-plus"></i> Nuevo`;
                 toggleCreatorBtn.style.backgroundColor = "var(--color-success)";
                 createForm.reset();
                 
-                // Recargar de Supabase
                 loadProductsFromSupabase();
-
             } catch (err) {
-                console.error("Create Product Error:", err);
-                showToast("Fallo al crear producto: " + (err.message || err), "error");
+                showToast("Fallo al crear producto: " + err.message, "error");
             } finally {
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = originalSubmitHtml;
+                submitBtn.innerHTML = `<i class="fa-solid fa-circle-check"></i> Guardar Producto`;
+            }
+        }
+
+        // ==========================================
+        // GESTOR DE DISEÑO DE PORTADA (SECCIONES)
+        // ==========================================
+
+        async function loadHomepageSections() {
+            sectionsContainer.innerHTML = `
+                <div style="text-align: center; padding: 40px; font-weight: bold; color: var(--color-border); font-size: 1.1rem;">
+                    <i class="fa-solid fa-circle-notch fa-spin"></i> Cargando diseño de portada...
+                </div>
+            `;
+
+            try {
+                const { data, error } = await window.supabaseClient
+                    .from("homepage_sections")
+                    .select("*")
+                    .order("position", { ascending: true });
+
+                if (error) throw error;
+
+                allSections = data || [];
+                renderSections();
+            } catch (e) {
+                sectionsContainer.innerHTML = `
+                    <div style="text-align: center; padding: 40px; color: var(--color-danger); font-weight: bold;">
+                        <i class="fa-solid fa-triangle-exclamation"></i> Error al cargar diseño: <br> ${e.message}
+                    </div>
+                `;
+            }
+        }
+
+        function renderSections() {
+            if (allSections.length === 0) {
+                sectionsContainer.innerHTML = `<div style="text-align: center; padding: 40px; color: #888; font-weight: 600;">No hay secciones configuradas en la portada.</div>`;
+                return;
+            }
+
+            sectionsContainer.innerHTML = "";
+
+            allSections.forEach((section, index) => {
+                const cardDiv = document.createElement("div");
+                cardDiv.className = "section-card";
+                cardDiv.dataset.id = section.id;
+
+                // Cabecera de sección
+                let headerHtml = `
+                    <div class="section-card-header">
+                        <div>
+                            <span class="section-type-badge ${section.type}">${section.type}</span>
+                            <h3>${section.title || "Sin Título"}</h3>
+                        </div>
+                        <div style="display:flex; align-items:center; gap: 8px;">
+                            <div class="section-order-btns">
+                                <button class="order-btn" onclick="moveSection('${section.id}', -1)" ${index === 0 ? 'disabled' : ''}>▲</button>
+                                <button class="order-btn" onclick="moveSection('${section.id}', 1)" ${index === allSections.length - 1 ? 'disabled' : ''}>▼</button>
+                            </div>
+                            <button class="section-delete-btn" onclick="deleteSection('${section.id}')" title="Eliminar sección"><i class="fa-solid fa-trash-can"></i></button>
+                        </div>
+                    </div>
+                `;
+
+                let contentHtml = "";
+
+                // Configuración según tipo
+                if (section.type === "slider" || section.type === "grid") {
+                    const productsList = section.product_ids || [];
+                    
+                    let chipsHtml = "";
+                    if (productsList.length === 0) {
+                        chipsHtml = `<div style="text-align:center; padding:10px; color:#888; font-size:0.8rem;">No hay productos en esta sección.</div>`;
+                    } else {
+                        chipsHtml = productsList.map((pid, pIdx) => {
+                            const prod = allProducts.find(p => p.id === pid);
+                            const title = prod ? prod.title : pid;
+                            const img = (prod && prod.images && prod.images.length > 0) ? prod.images[0] : "diamond.svg";
+
+                            return `
+                                <div class="section-product-row">
+                                    <div style="display:flex; align-items:center; gap:8px; overflow:hidden;">
+                                        <img src="${img}">
+                                        <span class="section-product-title">${title}</span>
+                                    </div>
+                                    <div style="display:flex; gap:3px;">
+                                        <button class="row-ctrl-btn" onclick="moveProduct('${section.id}', ${pIdx}, -1)" ${pIdx === 0 ? 'disabled' : ''}>◀</button>
+                                        <button class="row-ctrl-btn" onclick="moveProduct('${section.id}', ${pIdx}, 1)" ${pIdx === productsList.length - 1 ? 'disabled' : ''}>▶</button>
+                                        <button class="row-ctrl-btn remove" onclick="removeProductFromSection('${section.id}', ${pIdx})"><i class="fa-solid fa-xmark"></i></button>
+                                    </div>
+                                </div>
+                            `;
+                        }).join("");
+                    }
+
+                    contentHtml = `
+                        <div class="form-group">
+                            <label>Editar Título de Sección</label>
+                            <input type="text" value="${section.title || ""}" oninput="updateSectionTitleLocal('${section.id}', this.value)" style="padding:6px; border-radius:6px; border:2px solid #ddd; outline:none; font-size:0.85rem; font-family:inherit;">
+                        </div>
+                        <div class="form-group">
+                            <label>Productos en la Sección (${productsList.length})</label>
+                            <div class="section-products-container">
+                                ${chipsHtml}
+                            </div>
+                        </div>
+                        ${renderProductSearch(section.id)}
+                    `;
+                } else if (section.type === "banner") {
+                    const content = section.content || { image_url: "diamond.svg", link_url: "" };
+                    
+                    contentHtml = `
+                        <div class="form-group">
+                            <label>Subir Imagen de Banner</label>
+                            <input type="file" accept="image/*" onchange="handleBannerUpload(this, '${section.id}')" style="font-size:0.8rem;">
+                        </div>
+                        <div class="banner-preview-box">
+                            <img src="${content.image_url}" id="banner-preview-${section.id}" alt="Vista previa de banner">
+                        </div>
+                        <div class="form-group">
+                            <label>Enlace del Banner (Ruta de Categoría, Ej: accesorios.html u ojos.html)</label>
+                            <input type="text" value="${content.link_url || ""}" oninput="updateBannerLinkLocal('${section.id}', this.value)" placeholder="Ej. plata.html o ojos.html" style="padding:8px; border-radius:6px; border:2px solid #ddd; outline:none; font-size:0.85rem; font-family:inherit;">
+                        </div>
+                    `;
+                }
+
+                cardDiv.innerHTML = `
+                    ${headerHtml}
+                    <div style="display:flex; flex-direction:column; gap:10px;">
+                        ${contentHtml}
+                    </div>
+                    <button class="save-btn" onclick="saveSectionChanges('${section.id}')" style="background-color: var(--color-border); margin-top:5px;">
+                        <i class="fa-solid fa-floppy-disk"></i> Guardar Cambios de Sección
+                    </button>
+                `;
+
+                sectionsContainer.appendChild(cardDiv);
+            });
+        }
+
+        // Helpers de Búsqueda de Productos en la sección
+        function renderProductSearch(sectionId) {
+            return `
+                <div class="search-product-wrapper" style="position:relative; margin-top: 10px;">
+                    <input type="text" placeholder="Buscar producto por nombre..." oninput="filterSearchProducts(this, '${sectionId}')" style="width:100%; padding:8px; border:2px solid #ddd; border-radius:8px; font-size:0.85rem; outline:none; font-family:inherit;">
+                    <div class="search-results-dropdown" id="search-results-${sectionId}" style="display:none; position:absolute; width:100%; max-height:150px; overflow-y:auto; background:white; border:2px solid var(--color-border); border-radius:8px; z-index:10; box-shadow:0 4px 10px rgba(0,0,0,0.15); margin-top:2px;"></div>
+                </div>
+            `;
+        }
+
+        window.filterSearchProducts = function(input, sectionId) {
+            const query = input.value.trim().toLowerCase();
+            const dropdown = document.getElementById(`search-results-${sectionId}`);
+            if (!query) {
+                dropdown.style.display = "none";
+                return;
+            }
+
+            const matches = allProducts.filter(p => 
+                p.title.toLowerCase().indexOf(query) !== -1 || 
+                p.id.toLowerCase().indexOf(query) !== -1
+            ).slice(0, 8);
+
+            if (matches.length === 0) {
+                dropdown.innerHTML = `<div style="padding:8px; font-size:0.8rem; color:#888; text-align:center;">No se encontraron productos</div>`;
+            } else {
+                dropdown.innerHTML = matches.map(p => `
+                    <div class="search-item-row" onclick="addProductToSection('${sectionId}', '${p.id}')" style="display:flex; align-items:center; gap:10px; padding:8px; cursor:pointer; border-bottom:1px solid #eee; transition:background-color 0.15s;">
+                        <img src="${p.images[0] || 'diamond.svg'}" style="width:30px; height:30px; border-radius:4px; object-fit:cover;">
+                        <div>
+                            <div style="font-size:0.85rem; font-weight:600; color:#333;">${p.title}</div>
+                            <div style="font-size:0.7rem; color:#777;">ID: ${p.id}</div>
+                        </div>
+                    </div>
+                `).join("");
+            }
+            dropdown.style.display = "block";
+        }
+
+        window.addProductToSection = function(sectionId, productId) {
+            const section = allSections.find(s => s.id === sectionId);
+            if (!section) return;
+
+            if (!section.product_ids) section.product_ids = [];
+            if (section.product_ids.indexOf(productId) !== -1) {
+                showToast("El producto ya está en esta sección", "error");
+                return;
+            }
+
+            section.product_ids.push(productId);
+            
+            const dropdown = document.getElementById(`search-results-${sectionId}`);
+            if (dropdown) dropdown.style.display = "none";
+            
+            const input = dropdown.previousElementSibling;
+            if (input) input.value = "";
+
+            renderSections();
+        }
+
+        window.moveProduct = function(sectionId, index, direction) {
+            const section = allSections.find(s => s.id === sectionId);
+            if (!section || !section.product_ids) return;
+
+            const newIndex = index + direction;
+            if (newIndex < 0 || newIndex >= section.product_ids.length) return;
+
+            const temp = section.product_ids[index];
+            section.product_ids[index] = section.product_ids[newIndex];
+            section.product_ids[newIndex] = temp;
+
+            renderSections();
+        }
+
+        window.removeProductFromSection = function(sectionId, index) {
+            const section = allSections.find(s => s.id === sectionId);
+            if (!section || !section.product_ids) return;
+
+            section.product_ids.splice(index, 1);
+            renderSections();
+        }
+
+        // Guardado Local Temporal
+        window.updateSectionTitleLocal = function(sectionId, value) {
+            const section = allSections.find(s => s.id === sectionId);
+            if (section) section.title = value.trim();
+        }
+
+        window.updateBannerLinkLocal = function(sectionId, value) {
+            const section = allSections.find(s => s.id === sectionId);
+            if (section) {
+                if (!section.content) section.content = {};
+                section.content.link_url = value.trim();
+            }
+        }
+
+        // Subida de Banners a Storage
+        window.handleBannerUpload = async function(fileInput, sectionId) {
+            if (!fileInput.files || fileInput.files.length === 0) return;
+            const file = fileInput.files[0];
+            
+            showToast("Subiendo imagen de banner...", "success");
+            
+            try {
+                const fileExt = file.name.split('.').pop();
+                const fileName = `banner_${sectionId}_${Date.now()}.${fileExt}`;
+                const filePath = `banners/${fileName}`;
+                
+                const { error: uploadError } = await window.supabaseClient.storage
+                    .from("products")
+                    .upload(filePath, file);
+
+                if (uploadError) throw uploadError;
+
+                const { data: { publicUrl } } = window.supabaseClient.storage
+                    .from("products")
+                    .getPublicUrl(filePath);
+
+                const section = allSections.find(s => s.id === sectionId);
+                if (section) {
+                    if (!section.content) section.content = {};
+                    section.content.image_url = publicUrl;
+                    
+                    renderSections();
+                    showToast("Banner cargado. Guarda la sección para publicar.");
+                }
+            } catch (e) {
+                showToast("Error al subir imagen: " + e.message, "error");
+            }
+        }
+
+        // Guardar Cambios de Sección en la Base de Datos
+        window.saveSectionChanges = async function(sectionId) {
+            const section = allSections.find(s => s.id === sectionId);
+            if (!section) return;
+
+            const card = document.querySelector(`.section-card[data-id="${sectionId}"]`);
+            const saveBtn = card.querySelector(".save-btn");
+            const originalHtml = saveBtn.innerHTML;
+
+            saveBtn.disabled = true;
+            saveBtn.className = "save-btn saving";
+            saveBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Guardando...`;
+
+            try {
+                const { error } = await window.supabaseClient
+                    .from("homepage_sections")
+                    .update({
+                        title: section.title,
+                        product_ids: section.product_ids,
+                        content: section.content
+                    })
+                    .eq("id", sectionId);
+
+                if (error) throw error;
+
+                saveBtn.className = "save-btn success";
+                saveBtn.innerHTML = `<i class="fa-solid fa-circle-check"></i> ¡Guardado!`;
+                showToast("Sección guardada correctamente");
+
+                setTimeout(() => {
+                    saveBtn.disabled = false;
+                    saveBtn.className = "save-btn";
+                    saveBtn.innerHTML = originalHtml;
+                }, 1500);
+            } catch (e) {
+                showToast("Error al guardar: " + e.message, "error");
+                saveBtn.disabled = false;
+                saveBtn.className = "save-btn";
+                saveBtn.innerHTML = originalHtml;
+            }
+        }
+
+        // Orden de Secciones (Subir y Bajar)
+        window.moveSection = async function(sectionId, direction) {
+            const index = allSections.findIndex(s => s.id === sectionId);
+            if (index === -1) return;
+
+            const newIndex = index + direction;
+            if (newIndex < 0 || newIndex >= allSections.length) return;
+
+            const current = allSections[index];
+            const target = allSections[newIndex];
+
+            // Intercambiar posición local
+            const tempPos = current.position;
+            current.position = target.position;
+            target.position = tempPos;
+
+            allSections[index] = target;
+            allSections[newIndex] = current;
+
+            renderSections();
+
+            try {
+                await Promise.all([
+                    window.supabaseClient.from("homepage_sections").update({ position: current.position }).eq("id", current.id),
+                    window.supabaseClient.from("homepage_sections").update({ position: target.position }).eq("id", target.id)
+                ]);
+                showToast("Orden de secciones guardado.");
+            } catch (e) {
+                showToast("Error al ordenar en servidor: " + e.message, "error");
+            }
+        }
+
+        // Eliminar Sección
+        window.deleteSection = async function(sectionId) {
+            if (!confirm("¿Seguro que deseas eliminar esta sección de la portada?")) return;
+
+            try {
+                const { error } = await window.supabaseClient
+                    .from("homepage_sections")
+                    .delete()
+                    .eq("id", sectionId);
+
+                if (error) throw error;
+
+                showToast("Sección eliminada");
+                loadHomepageSections();
+            } catch (e) {
+                showToast("Fallo al eliminar: " + e.message, "error");
+            }
+        }
+
+        // Agregar Nueva Sección
+        window.addNewSection = async function() {
+            const titleInput = document.getElementById("new-section-title");
+            const typeSelect = document.getElementById("new-section-type");
+
+            const title = titleInput.value.trim();
+            const type = typeSelect.value;
+
+            const newId = `${type}-${Date.now()}`;
+            const maxPos = allSections.length > 0 ? Math.max(...allSections.map(s => s.position)) : 0;
+            const newPos = maxPos + 1;
+
+            try {
+                const { error } = await window.supabaseClient
+                    .from("homepage_sections")
+                    .insert({
+                        id: newId,
+                        type,
+                        title: title || (type === "slider" ? "Destacados" : (type === "grid" ? "Colección" : "Promoción")),
+                        product_ids: type === "banner" ? null : [],
+                        content: type === "banner" ? { image_url: "diamond.svg", link_url: "" } : null,
+                        position: newPos
+                    });
+
+                if (error) throw error;
+
+                showToast("Sección agregada con éxito");
+                titleInput.value = "";
+                loadHomepageSections();
+            } catch (e) {
+                showToast("Fallo al agregar sección: " + e.message, "error");
             }
         }
 

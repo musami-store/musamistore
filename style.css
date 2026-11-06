@@ -5,11 +5,10 @@
 }
 body{
     font-family: "Montserrat";
-    background: linear-gradient(to bottom, #FFFFFF 50%, var(--color-hover) 100%);
-    background-attachment: fixed;
+    min-height: 100vh;
     overflow-x: hidden;
-}
-body{
+    position: relative;
+    background-color: #ffffff;
     margin:0;
     --sb-track-color: #ffffff;
     --sb-thumb-color: #4648bb;
@@ -26,17 +25,16 @@ body::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
   border-radius: 1px;
 }
-body::before,
-body::after {
+/* Capa de fondo acelerada por GPU: 100% idéntica visualmente pero elimina el lag al scrollear */
+body::before {
     content: "";
     position: fixed;
-    top: 0;
-    width: 180px;       /* ajusta al tamaño real */
-    height: 180px;
-    background-size: contain;
-    background-repeat: no-repeat;
+    inset: 0;
+    z-index: -999;
+    background: linear-gradient(to bottom, #FFFFFF 50%, var(--color-hover) 100%);
     pointer-events: none;
-    z-index: 11;
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 main{
@@ -71,6 +69,8 @@ button {
     transition: transform 0.3s ease;
     overflow: visible;
     background-color: transparent;
+    transform: translateZ(0);
+    will-change: transform;
 }
 .site-header::before{
     content:"";
@@ -99,7 +99,7 @@ button {
     pointer-events: none;
 }
 .site-header.hidden {
-    transform: translateY(-100%);
+    transform: translateY(-100%) translateZ(0);
 }
 
 .s-header{
@@ -628,11 +628,13 @@ h1{
     max-width: 280px;
     margin: 0 auto;
     border-radius: 8px;
-    transition: transform 0.4s, box-shadow 0.4s;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s;
+    content-visibility: auto;
+    contain-intrinsic-size: 280px 480px;
 }
 .product-card:hover{
     transform: translateY(-10px);
-    box-shadow: 0px 12px 17px 3px rgba(0, 0, 0, 0.171)
+    box-shadow: 0px 12px 17px 3px rgba(0, 0, 0, 0.171);
 }
 
 .product-slider {
@@ -642,12 +644,12 @@ h1{
     overflow: hidden;
     touch-action: pan-y;
     border-radius: 8px;
-    border: 1px var(--color-border) solid
+    border: 1px var(--color-border) solid;
 }
 
 .product-slider .slider-track {
     display: flex;
-    transition: transform 0.4s ease;
+    transition: transform 0.35s ease;
     height: 100%;
 }
 
@@ -664,14 +666,17 @@ h1{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
     cursor: pointer;
     padding: 6px 10px;
     font-size: 16px;
     border-radius: 20px;
-    border-color: var(--color-border);
+    border: 1px solid var(--color-border);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.slider-btn:hover {
+    background: rgba(255, 255, 255, 0.98);
 }
 
 .slider-btn.prev {
@@ -1400,16 +1405,18 @@ background:rgba(86, 125, 170, .45)
 .product-slider-btn{
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    transform: translateY(-50%) scale(1.2);
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
     cursor: pointer;
     padding: 6px 10px;
     font-size: 16px;
-    border-color: var(--color-border);
-    transform: scale(1.2);
+    border: 1px solid var(--color-border);
     align-self: center;
+    transition: background-color 0.2s ease;
+}
+.product-slider-btn:hover{
+    background: rgba(255, 255, 255, 0.98);
 }
 .product-slider-btn.prev{
     left: -15px;
