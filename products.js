@@ -1251,7 +1251,7 @@ const PRODUCTS = {
         subcategory: "Anillos"
     },
     "anillos-4-2.3":{
-        title: "Set de anillos x",
+        title: "Set de anillos x10",
         price: 1990,
         images: ["Products/4. Collares, anillos y pulseras/4.2 Anillos/3a Set x10 $2.000.jpg", "Products/4. Collares, anillos y pulseras/4.2 Anillos/3b.jpg", "Products/4. Collares, anillos y pulseras/4.2 Anillos/3c.jpg", "Products/4. Collares, anillos y pulseras/4.2 Anillos/3d.jpg", "Products/4. Collares, anillos y pulseras/4.2 Anillos/3e.jpg"],
         stock:1,
@@ -3159,10 +3159,10 @@ const PRODUCTS = {
         subcategory: "Anillos"
     },
     "anillos-3.16":{
-        title: "Set x20 anillos",
+        title: "Set x20 anillos - AGOTADO",
         price: 3490,
         images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/16a Set x 20 anillos $3.500.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/16b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/16c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/16d.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Sets nuevos/16e.PNG"],
-        stock: 1,
+        stock: 0,
         category: "Bisuteria",
         subcategory: "Anillos"
     },
