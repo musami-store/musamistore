@@ -1556,15 +1556,15 @@ const PRODUCTS = {
         variants:{
             "dorado":{
                 label: "Dorado",
-                price: 1790,
+                price: 1490,
                 images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/044.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/039.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/040.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/041.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/042.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/043.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/045.jpg"],
                 stock:1
             },
             "plateado":{
                 label: "Plateado",
-                price: 1790,
+                price: 1490,
                 images: ["Products/4. Collares, anillos y pulseras/4.1 Collares/044.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/039.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/040.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/041.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/042.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/043.jpg", "Products/4. Collares, anillos y pulseras/4.1 Collares/045.jpg"],
-                stock:1
+                stock:2
             },
         },
         category: "Bisuteria",
@@ -1802,10 +1802,10 @@ const PRODUCTS = {
         subcategory: "Collares"
     },
     "collares-p.5":{
-        title: "Collar piedras coloridas",
+        title: "Collar piedras coloridas - AGOTADO",
         price: 2490,
         images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/5a Collar piedras coloridas $2.500.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/5b.JPG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Collares y pulsera/5c.JPG"],
-        stock: 1,
+        stock: 0,
         category: "Bisuteria",
         subcategory: "Collares"
     },
@@ -1997,10 +1997,10 @@ const PRODUCTS = {
         subcategory: "Collares"
     },
     "collares-psummer.5":{
-        title: "Collar summer",
+        title: "Collar summer - AGOTADO",
         price: 2490,
         images: ["Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/5a Collar Summer $2.500.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/5b.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/5c.PNG", "Products/Portada/NEW; Aros, Sets, Collares y pulsera (en proceso mitad de carpetas)/Summer/5d.PNG"],
-        stock: 1,
+        stock: 0,
         category: "Bisuteria",
         subcategory: "Collares"
     },
@@ -3288,13 +3288,13 @@ const PRODUCTS = {
         variants:{
             "plateado":{
                 label: "Plateado",
-                price: 2290,
+                price: 1490,
                 images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/4a Collar mariposa (PLA) $1.490.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4b.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4c.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4d.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4e.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4f.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4g.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4h.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4i.jpg"],
                 stock: 1
             },
             "dorado":{
                 label: "Dorado",
-                price: 2290,
+                price: 1490,
                 images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/4a Collar mariposa (PLA) $1.490.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4b.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4c.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4d.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4e.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4f.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4g.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4h.jpg", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/4i.jpg"],
                 stock: 0
             },
@@ -3306,10 +3306,10 @@ const PRODUCTS = {
         title: "Collar",
         variants:{
             "plateado":{
-                label: "Plateado",
+                label: "Plateado - AGOTADO",
                 price: 2290,
                 images: ["Products/4. Collares, anillos y pulseras/4.4 Rezagados/5a Collar (PLA) $2.290.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5b.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5c.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5d.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5e.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5f.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5g.webp", "Products/4. Collares, anillos y pulseras/4.4 Rezagados/5h.webp"],
-                stock: 1
+                stock: 0
             },
             "dorado":{
                 label: "Dorado - AGOTADO",
