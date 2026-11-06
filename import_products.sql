@@ -32,6 +32,36 @@ CREATE POLICY "Allow authenticated insert" ON public.products FOR INSERT WITH CH
 CREATE POLICY "Allow authenticated update" ON public.products FOR UPDATE USING (auth.role() = 'authenticated') WITH CHECK (auth.role() = 'authenticated');
 CREATE POLICY "Allow authenticated delete" ON public.products FOR DELETE USING (auth.role() = 'authenticated');
 
+-- 4.1 Configurar Bucket de Storage 'products' y sus Políticas RLS (Subida de Imágenes)
+INSERT INTO storage.buckets (id, name, public)
+VALUES ('products', 'products', true)
+ON CONFLICT (id) DO UPDATE SET public = true;
+
+DROP POLICY IF EXISTS "Storage public read products" ON storage.objects;
+DROP POLICY IF EXISTS "Storage authenticated insert products" ON storage.objects;
+DROP POLICY IF EXISTS "Storage authenticated update products" ON storage.objects;
+DROP POLICY IF EXISTS "Storage authenticated delete products" ON storage.objects;
+
+CREATE POLICY "Storage public read products"
+ON storage.objects FOR SELECT
+USING (bucket_id = 'products');
+
+CREATE POLICY "Storage authenticated insert products"
+ON storage.objects FOR INSERT
+TO authenticated
+WITH CHECK (bucket_id = 'products');
+
+CREATE POLICY "Storage authenticated update products"
+ON storage.objects FOR UPDATE
+TO authenticated
+USING (bucket_id = 'products')
+WITH CHECK (bucket_id = 'products');
+
+CREATE POLICY "Storage authenticated delete products"
+ON storage.objects FOR DELETE
+TO authenticated
+USING (bucket_id = 'products');
+
 -- 5. Crear Función Segura para Rebajar Stock
 CREATE OR REPLACE FUNCTION public.decrement_stock(product_id TEXT, qty INT, variant_key TEXT DEFAULT NULL)
 RETURNS VOID AS $$
