@@ -381,8 +381,48 @@ updateFavoritesCount();
 /* =========================
    PRODUCT CARD
    ========================= */
+function formatAgotadoText(text, stock) {
+    if (!text) return "";
+    let clean = text.replace(/(\s*-\s*AGOTADO)+\s*$/i, "").trim();
+    if (Number(stock) <= 0) {
+        return `${clean} - AGOTADO`;
+    }
+    return clean;
+}
+
+function getSortedVariantEntries(product) {
+    if (!product.variants) return [];
+    return Object.entries(product.variants).sort(([k1, v1], [k2, v2]) => {
+        const stock1 = (v1.stock !== undefined && v1.stock !== null) ? Number(v1.stock) : 1;
+        const stock2 = (v2.stock !== undefined && v2.stock !== null) ? Number(v2.stock) : 1;
+        const avail1 = stock1 > 0 ? 1 : 0;
+        const avail2 = stock2 > 0 ? 1 : 0;
+        return avail2 - avail1; // Disponibles (1) primero, agotadas (0) al final
+    });
+}
+
+function sanitizeAllProductsAgotado() {
+    for (let id in PRODUCTS) {
+        const p = PRODUCTS[id];
+        if (!p) continue;
+        if (!p.variants) {
+            p.title = formatAgotadoText(p.title, Number(p.stock));
+        } else if (typeof p.variants === "object") {
+            for (let vKey in p.variants) {
+                if (p.variants[vKey]) {
+                    const vStock = (p.variants[vKey].stock !== undefined && p.variants[vKey].stock !== null)
+                        ? Number(p.variants[vKey].stock)
+                        : 1;
+                    p.variants[vKey].label = formatAgotadoText(p.variants[vKey].label, vStock);
+                }
+            }
+        }
+    }
+}
+
 function renderProductCard(card, product){
-    let activeVariant = product.variants ? Object.keys(product.variants)[0] : null;
+    const sortedVariants = product.variants ? getSortedVariantEntries(product) : [];
+    let activeVariant = sortedVariants.length > 0 ? sortedVariants[0][0] : null;
     const data = activeVariant ? product.variants[activeVariant] : product;
 
     card.innerHTML = `
@@ -402,7 +442,7 @@ function renderProductCard(card, product){
         ` : ""}
         ${product.variants ? `
             <select class="variant-selector">
-                ${Object.entries(product.variants).map(([k,v])=>`<option value="${k}">${v.label}</option>`).join("")}
+                ${sortedVariants.map(([k,v])=>`<option value="${k}">${v.label}</option>`).join("")}
             </select>` : ""}
         <p class="product-price">$${data.price.toLocaleString("es-CL")}</p>
         <div class="product-actions">
@@ -593,15 +633,32 @@ async function initSupabase() {
                     }
                 }
                 data.forEach(row => {
+                    let title = row.title;
+                    let variants = row.variants;
+                    const stock = Number(row.stock);
+
+                    if (!variants) {
+                        title = formatAgotadoText(title, stock);
+                    } else if (typeof variants === "object") {
+                        for (let vKey in variants) {
+                            if (variants[vKey]) {
+                                const vStock = (variants[vKey].stock !== undefined && variants[vKey].stock !== null) 
+                                    ? Number(variants[vKey].stock) 
+                                    : 1;
+                                variants[vKey].label = formatAgotadoText(variants[vKey].label, vStock);
+                            }
+                        }
+                    }
+
                     PRODUCTS[row.id] = {
-                        title: row.title,
+                        title: title,
                         category: row.category,
                         subcategory: row.subcategory,
                         brand: row.brand,
                         price: Number(row.price),
                         images: row.images,
-                        stock: Number(row.stock),
-                        variants: row.variants,
+                        stock: stock,
+                        variants: variants,
                         description: row.description
                     };
                 });
@@ -690,6 +747,7 @@ async function renderHomepageDynamic() {
 }
 
 function renderAllCardsAndLayout() {
+    sanitizeAllProductsAgotado();
     loadHeader();
     loadCart();
     loadFavorites();

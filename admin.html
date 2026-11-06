@@ -530,6 +530,221 @@
             background-color: var(--color-success);
         }
 
+        /* Estilos de Edición de Nombres, Variantes y Borradores */
+        .title-edit-wrapper, .variant-title-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 100%;
+        }
+
+        .product-title-input, .variant-label-input {
+            width: 100%;
+            padding: 8px 10px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            font-family: inherit;
+            color: #333;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .product-title-input:focus, .variant-label-input:focus {
+            border-color: var(--color-border);
+            box-shadow: 0 0 0 2px #6f74ff22;
+        }
+
+        .save-actions-row {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .save-btn.direct-save-btn {
+            flex: 1.2;
+            min-width: 140px;
+            margin-top: 0;
+            background: var(--color-border);
+        }
+
+        .draft-btn {
+            flex: 1;
+            min-width: 130px;
+            background: #f39c12;
+            color: white;
+            border: none;
+            padding: 10px 8px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .draft-btn:hover {
+            background: #d68910;
+        }
+
+        .draft-btn:active {
+            transform: scale(0.98);
+        }
+
+        .badge-counter {
+            background: #e74c3c;
+            color: white;
+            font-size: 0.72rem;
+            padding: 2px 7px;
+            border-radius: 12px;
+            margin-left: 5px;
+            font-weight: 700;
+            vertical-align: middle;
+        }
+
+        .in-draft-badge {
+            background: #fef5e7;
+            color: #d35400;
+            border: 1px solid #f8c471;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .stock-badge {
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .stock-badge.agotado {
+            background: #fadbd8;
+            color: #c0392b;
+            border: 1px solid #f1948a;
+        }
+
+        .stock-badge.disponible {
+            background: #d5f5e3;
+            color: #27ae60;
+            border: 1px solid #a9dfbf;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .modal-card {
+            background: white;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 460px;
+            padding: 22px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            animation: modalFadeIn 0.2s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from { transform: scale(0.95); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 12px;
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            font-size: 1.15rem;
+            color: var(--color-border);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .modal-close-btn {
+            background: none;
+            border: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: #888;
+            line-height: 1;
+            padding: 0;
+        }
+
+        .modal-close-btn:hover {
+            color: #333;
+        }
+
+        /* Barra flotante de advertencia de cambios sin guardar */
+        .unsaved-warning-bar {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #c0392b;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            max-width: 90%;
+            animation: warningSlideUp 0.3s ease;
+        }
+
+        @keyframes warningSlideUp {
+            from { transform: translate(-50%, 40px); opacity: 0; }
+            to { transform: translate(-50%, 0); opacity: 1; }
+        }
+
+        .draft-item-card {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            padding: 14px;
+            margin-bottom: 12px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .draft-item-card img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+
         /* Elementos del Gestor de Diseño (Secciones) */
         .section-card {
             background: var(--color-card-bg);
@@ -756,6 +971,7 @@
     <!-- Barra de Pestañas (Tabs) -->
     <div id="admin-tabs" class="tabs-container" style="display: none;">
         <div class="tab-btn active" data-target="tab-catalog"><i class="fa-solid fa-store"></i> Catálogo</div>
+        <div class="tab-btn" data-target="tab-drafts"><i class="fa-solid fa-file-pen"></i> Borradores <span id="drafts-badge" class="badge-counter" style="display:none;">0</span></div>
         <div class="tab-btn" data-target="tab-design"><i class="fa-solid fa-compass"></i> Diseño Portada</div>
     </div>
 
@@ -841,9 +1057,14 @@
                             <input type="file" id="create-images" required multiple accept="image/*">
                         </div>
 
-                        <button type="submit" id="create-submit-btn" class="create-submit-btn">
-                            <i class="fa-solid fa-circle-check"></i> Guardar Producto
-                        </button>
+                        <div class="form-actions-row" style="display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap;">
+                            <button type="submit" id="create-submit-btn" class="create-submit-btn" style="flex: 1.2; min-width: 160px;">
+                                <i class="fa-solid fa-bolt"></i> Publicar de Inmediato
+                            </button>
+                            <button type="button" id="create-draft-btn" class="create-submit-btn draft-style-btn" onclick="handleCreateProductDraft(event)" style="flex: 1; min-width: 160px; background-color: #f39c12;">
+                                <i class="fa-solid fa-bookmark"></i> Guardar en Borrador...
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -869,6 +1090,52 @@
                 <div style="text-align: center; padding: 20px; font-weight: bold; color: var(--color-border);">
                     <i class="fa-solid fa-spinner fa-spin"></i> Cargando productos...
                 </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN: GESTOR DE BORRADORES -->
+        <div id="tab-drafts" class="tab-content" style="display: none;">
+            <div class="creator-card" style="margin-bottom: 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                    <div>
+                        <h2 style="margin: 0; color: var(--color-border); font-size: 1.25rem;">
+                            <i class="fa-solid fa-file-pen"></i> Gestor de Borradores
+                        </h2>
+                        <p style="margin: 5px 0 0; font-size: 0.85rem; color: #666;">
+                            Guarda productos editados o nuevos y haz una actualización masiva cuando lo decidas.
+                        </p>
+                    </div>
+                    <button id="create-new-draft-btn" onclick="promptCreateNewDraft()" style="background: var(--color-border); color: white; border: none; padding: 8px 14px; border-radius: 8px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px;">
+                        <i class="fa-solid fa-plus"></i> Nuevo Borrador
+                    </button>
+                </div>
+
+                <div style="margin-top: 15px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                    <label style="font-weight: 700; font-size: 0.9rem; color: #444;">Borrador actual:</label>
+                    <select id="active-draft-select" onchange="changeActiveDraft(this.value)" style="padding: 8px 12px; border-radius: 8px; border: 2px solid var(--color-border); font-weight: 600; font-family: inherit; min-width: 200px;">
+                        <!-- Opciones dinámicas -->
+                    </select>
+                    <button onclick="promptRenameDraft()" title="Renombrar este borrador" style="background: #f0f0f0; border: 1px solid #ccc; padding: 8px 12px; border-radius: 8px; cursor: pointer;">
+                        <i class="fa-solid fa-pen"></i> Renombrar
+                    </button>
+                    <button onclick="promptDeleteDraft()" title="Eliminar este borrador" style="background: #fee; border: 1px solid #fcc; color: var(--color-danger); padding: 8px 12px; border-radius: 8px; cursor: pointer;">
+                        <i class="fa-solid fa-trash"></i> Eliminar
+                    </button>
+                </div>
+            </div>
+
+            <div id="draft-action-banner" style="background: #fdfaf3; border: 2px solid #f39c12; border-radius: 12px; padding: 15px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+                <div>
+                    <h4 style="margin: 0; color: #b7791f; font-size: 1.05rem;" id="draft-summary-title">Borrador: Principal</h4>
+                    <p style="margin: 4px 0 0; font-size: 0.85rem; color: #666;" id="draft-summary-desc">0 productos listos para publicación masiva.</p>
+                </div>
+                <button id="publish-entire-draft-btn" onclick="publishActiveDraft()" style="background: #27ae60; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-weight: 700; font-size: 0.95rem; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(39, 174, 96, 0.25);">
+                    <i class="fa-solid fa-rocket"></i> Publicar Borrador Masivamente
+                </button>
+            </div>
+
+            <div id="draft-items-container" class="products-list">
+                <!-- Se llena dinámicamente -->
             </div>
         </div>
 
@@ -925,12 +1192,25 @@
         let activeCategory = "ALL";
         let searchQuery = "";
 
+        // Estado de Borradores y Cambios sin guardar
+        const DRAFTS_STORAGE_KEY = "musami_admin_drafts";
+        let drafts = {};
+        let activeDraftId = "draft_default";
+        const dirtyProducts = new Set();
+        let createFormDirty = false;
+        let currentModalProductId = null;
+        window.__pendingNewProductPayload = null;
+
         // DOM
         const loginSection = document.getElementById("login-section");
         const catalogSection = document.getElementById("tab-catalog");
+        const draftsSection = document.getElementById("tab-drafts");
         const designSection = document.getElementById("tab-design");
         const adminTabs = document.getElementById("admin-tabs");
         const mainHeader = document.getElementById("main-header");
+        const draftsBadge = document.getElementById("drafts-badge");
+        const unsavedWarningBar = document.getElementById("unsaved-warning-bar");
+        const unsavedCountEl = document.getElementById("unsaved-count");
         
         const loginEmail = document.getElementById("login-email");
         const loginPassword = document.getElementById("login-password");
@@ -944,6 +1224,32 @@
         const categoriesChips = document.getElementById("categories-chips");
         const productsContainer = document.getElementById("products-list-container");
         const sectionsContainer = document.getElementById("sections-list-container");
+
+        // Funciones de formato y limpieza de AGOTADO
+        function formatAgotadoText(text, stock) {
+            if (!text) return "";
+            let clean = text.replace(/(\s*-\s*AGOTADO)+\s*$/i, "").trim();
+            if (Number(stock) <= 0) {
+                return `${clean} - AGOTADO`;
+            }
+            return clean;
+        }
+
+        function cleanAgotado(text) {
+            if (!text) return "";
+            return text.replace(/(\s*-\s*AGOTADO)+\s*$/i, "").trim();
+        }
+
+        // Advertencia de cambios sin guardar
+        function updateUnsavedWarning() {
+            const count = dirtyProducts.size + (createFormDirty ? 1 : 0);
+            if (count > 0) {
+                if (unsavedCountEl) unsavedCountEl.textContent = count;
+                if (unsavedWarningBar) unsavedWarningBar.style.display = "flex";
+            } else {
+                if (unsavedWarningBar) unsavedWarningBar.style.display = "none";
+            }
+        }
 
         // Toast feedback
         function showToast(message, type = "success") {
@@ -971,10 +1277,21 @@
                 const target = btn.dataset.target;
                 if (target === "tab-catalog") {
                     catalogSection.style.display = "block";
+                    if (draftsSection) draftsSection.style.display = "none";
                     designSection.style.display = "none";
                     toggleCreatorBtn.style.display = "flex";
+                } else if (target === "tab-drafts") {
+                    catalogSection.style.display = "none";
+                    if (draftsSection) draftsSection.style.display = "block";
+                    designSection.style.display = "none";
+                    toggleCreatorBtn.style.display = "none";
+                    creatorPanel.style.display = "none";
+                    toggleCreatorBtn.innerHTML = `<i class="fa-solid fa-plus"></i> Nuevo`;
+                    toggleCreatorBtn.style.backgroundColor = "var(--color-success)";
+                    renderDraftsView();
                 } else {
                     catalogSection.style.display = "none";
+                    if (draftsSection) draftsSection.style.display = "none";
                     designSection.style.display = "block";
                     toggleCreatorBtn.style.display = "none";
                     creatorPanel.style.display = "none";
@@ -993,12 +1310,28 @@
                 toggleCreatorBtn.style.backgroundColor = "var(--color-danger)";
                 updateSubcategoriesDropdown();
                 createForm.reset();
+                createFormDirty = false;
+                updateUnsavedWarning();
                 generateTempId();
             } else {
+                if (createFormDirty) {
+                    if (!confirm("Tienes datos ingresados en el formulario de nuevo producto. Si lo cierras se perderán. ¿Cerrar de todas formas?")) {
+                        return;
+                    }
+                }
                 creatorPanel.style.display = "none";
                 toggleCreatorBtn.innerHTML = `<i class="fa-solid fa-plus"></i> Nuevo`;
                 toggleCreatorBtn.style.backgroundColor = "var(--color-success)";
+                createFormDirty = false;
+                updateUnsavedWarning();
             }
+        });
+
+        // Rastrear si el formulario de nuevo producto tiene datos
+        createForm.addEventListener("input", () => {
+            const title = document.getElementById("create-title").value.trim();
+            createFormDirty = title.length > 0;
+            updateUnsavedWarning();
         });
 
         // Generar ID sugerido basándose en título y fecha
@@ -1049,6 +1382,7 @@
 
         // 1. Manejo de Sesión y Autenticación
         async function checkSession() {
+            loadDrafts();
             if (!window.supabaseClient) {
                 showToast("Error: Configura Supabase en supabase-config.js", "error");
                 return;
@@ -1065,6 +1399,7 @@
         function showAdminPanel() {
             loginSection.style.display = "none";
             catalogSection.style.display = "block";
+            if (draftsSection) draftsSection.style.display = "none";
             designSection.style.display = "none";
             mainHeader.style.display = "flex";
             adminTabs.style.display = "flex";
@@ -1074,9 +1409,11 @@
         function showLoginScreen() {
             loginSection.style.display = "block";
             catalogSection.style.display = "none";
+            if (draftsSection) draftsSection.style.display = "none";
             designSection.style.display = "none";
             mainHeader.style.display = "none";
             adminTabs.style.display = "none";
+            if (unsavedWarningBar) unsavedWarningBar.style.display = "none";
         }
 
         // Login
@@ -1109,8 +1446,12 @@
             }
         });
 
-        // Logout
+        // Logout protegido si hay cambios sin guardar ni en borrador
         logoutBtn.addEventListener("click", async () => {
+            if (dirtyProducts.size > 0 || createFormDirty) {
+                const confirmExit = confirm("Tienes productos editados o nuevos sin guardar ni dejar en borrador. Si sales, se perderán estos cambios. ¿Deseas salir de todas formas?");
+                if (!confirmExit) return;
+            }
             await window.supabaseClient.auth.signOut();
             showToast("Sesión cerrada");
             showLoginScreen();
@@ -1133,6 +1474,7 @@
 
                 allProducts = data.sort((a, b) => a.title.localeCompare(b.title));
                 applyFilters();
+                updateDraftsBadge();
             } catch (err) {
                 productsContainer.innerHTML = `
                     <div style="text-align: center; padding: 40px; color: var(--color-danger); font-weight: bold;">
@@ -1173,11 +1515,40 @@
                 let coverImg = "diamond.svg";
                 if (product.images && product.images.length > 0) coverImg = product.images[0];
 
+                let inDraftBadge = "";
+                for (let dId in drafts) {
+                    if (drafts[dId]?.items?.[product.id]) {
+                        inDraftBadge = `<span class="in-draft-badge" title="Tiene cambios guardados en este borrador"><i class="fa-solid fa-bookmark"></i> En borrador: <strong>${drafts[dId].name}</strong></span>`;
+                        break;
+                    }
+                }
+
+                let stockBadge = "";
+                if (!product.variants) {
+                    const isAgotado = Number(product.stock) <= 0;
+                    stockBadge = isAgotado 
+                        ? `<span class="stock-badge agotado"><i class="fa-solid fa-circle-xmark"></i> Agotado (Stock 0)</span>`
+                        : `<span class="stock-badge disponible"><i class="fa-solid fa-circle-check"></i> Stock: ${product.stock}</span>`;
+                }
+
                 let editorHtml = "";
                 if (product.variants) {
-                    editorHtml = Object.entries(product.variants).map(([vKey, vData]) => `
+                    editorHtml = Object.entries(product.variants).map(([vKey, vData]) => {
+                        const vStock = (vData.stock !== undefined && vData.stock !== null) ? Number(vData.stock) : 1;
+                        const vAgotada = vStock <= 0;
+                        const vBadge = vAgotada 
+                            ? `<span class="stock-badge agotado" style="font-size: 0.7rem; padding: 1px 6px;">Agotado</span>`
+                            : `<span class="stock-badge disponible" style="font-size: 0.7rem; padding: 1px 6px;">Stock: ${vStock}</span>`;
+
+                        return `
                         <div class="variant-group" data-variant-key="${vKey}">
-                            <h4 class="variant-title">${vData.label}</h4>
+                            <div class="variant-title-wrapper" style="margin-bottom: 8px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div class="editor-label"><i class="fa-solid fa-palette"></i> Nombre de la Variante</div>
+                                    ${vBadge}
+                                </div>
+                                <input type="text" class="variant-label-input" value="${cleanAgotado(vData.label)}" placeholder="Nombre de la variante">
+                            </div>
                             <div class="editor-row">
                                 <div class="editor-label">Precio ($)</div>
                                 <div class="price-input-wrapper">
@@ -1189,12 +1560,13 @@
                                 <div class="editor-label">Stock</div>
                                 <div class="stock-control">
                                     <button class="qty-btn-minus" type="button">−</button>
-                                    <input type="number" class="stock-input" value="${vData.stock}" min="0">
+                                    <input type="number" class="stock-input" value="${vStock}" min="0">
                                     <button class="qty-btn-plus" type="button">+</button>
                                 </div>
                             </div>
                         </div>
-                    `).join("");
+                    `;
+                    }).join("");
                 } else {
                     editorHtml = `
                         <div class="editor-row">
@@ -1225,21 +1597,40 @@
                 itemDiv.innerHTML = `
                     <div class="product-meta">
                         <img src="${coverImg}" alt="${product.title}">
-                        <div class="product-info-text">
-                            <h3>${product.title}</h3>
-                            <p class="sub-label">ID: <strong>${product.id}</strong></p>
-                            <p class="sub-label">Categoría: <strong>${product.category}</strong>${product.subcategory ? ` > ${product.subcategory}` : ""}</p>
+                        <div class="product-info-text" style="flex: 1;">
+                            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                                <p class="sub-label" style="margin: 0;">ID: <strong>${product.id}</strong></p>
+                                ${inDraftBadge}
+                                ${stockBadge}
+                            </div>
+                            <p class="sub-label" style="margin-top: 4px;">Categoría: <strong>${product.category}</strong>${product.subcategory ? ` > ${product.subcategory}` : ""}</p>
                         </div>
                     </div>
                     <div class="product-editor">
+                        <div class="title-edit-wrapper" style="margin-bottom: 10px;">
+                            <div class="editor-label"><i class="fa-solid fa-tag"></i> Nombre del Producto</div>
+                            <input type="text" class="product-title-input" value="${cleanAgotado(product.title)}" placeholder="Nombre del producto">
+                        </div>
                         ${editorHtml}
-                        <button class="save-btn" onclick="saveProduct('${product.id}')">
-                            <i class="fa-solid fa-floppy-disk"></i> Guardar Cambios
-                        </button>
+                        <div class="save-actions-row">
+                            <button class="save-btn direct-save-btn" onclick="saveProduct('${product.id}', 'direct')">
+                                <i class="fa-solid fa-bolt"></i> Publicar de Inmediato
+                            </button>
+                            <button class="draft-btn" onclick="openDraftModalForProduct('${product.id}')">
+                                <i class="fa-solid fa-bookmark"></i> Guardar en Borrador...
+                            </button>
+                        </div>
                     </div>
                 `;
 
                 setupStockButtons(itemDiv);
+
+                // Detectar edición para advertencia de cambios sin guardar
+                itemDiv.addEventListener("input", () => {
+                    dirtyProducts.add(product.id);
+                    updateUnsavedWarning();
+                });
+
                 productsContainer.appendChild(itemDiv);
             });
         }
@@ -1252,78 +1643,94 @@
 
                 minusBtn.addEventListener("click", () => {
                     let val = parseInt(input.value) || 0;
-                    if (val > 0) input.value = val - 1;
+                    if (val > 0) {
+                        input.value = val - 1;
+                        input.dispatchEvent(new Event("input", { bubbles: true }));
+                    }
                 });
 
                 plusBtn.addEventListener("click", () => {
                     let val = parseInt(input.value) || 0;
                     input.value = val + 1;
+                    input.dispatchEvent(new Event("input", { bubbles: true }));
                 });
             });
         }
 
-        // Guardar Producto
-        async function saveProduct(productId) {
-            const productCard = document.querySelector(`.product-item[data-id="${productId}"]`);
-            if (!productCard) return;
-
-            const saveBtn = productCard.querySelector(".save-btn");
-            const originalHtml = saveBtn.innerHTML;
+        // Extraer valores editados de un producto y aplicar reglas de "- AGOTADO"
+        function extractProductFormValues(productCard, originalProduct) {
+            const titleInput = productCard.querySelector(".product-title-input");
+            const descInput = productCard.querySelector(".desc-input");
+            const rawTitle = titleInput ? titleInput.value.trim() : originalProduct.title;
             
-            saveBtn.disabled = true;
-            saveBtn.className = "save-btn saving";
-            saveBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Guardando...`;
+            let updatePayload = {
+                description: descInput ? (descInput.value.trim() || null) : (originalProduct.description || null)
+            };
 
-            const originalProduct = allProducts.find(p => p.id === productId);
-            if (!originalProduct) return;
+            if (originalProduct.variants) {
+                let updatedVariants = JSON.parse(JSON.stringify(originalProduct.variants));
+                const variantGroups = productCard.querySelectorAll(".variant-group");
+                
+                variantGroups.forEach(group => {
+                    const vKey = group.dataset.variantKey;
+                    const labelInput = group.querySelector(".variant-label-input");
+                    const priceInput = group.querySelector(".price-input");
+                    const stockInput = group.querySelector(".stock-input");
 
-            let updatePayload = {};
-
-            try {
-                const descInput = productCard.querySelector(".desc-input");
-                updatePayload.description = descInput.value.trim() || null;
-
-                if (originalProduct.variants) {
-                    let updatedVariants = JSON.parse(JSON.stringify(originalProduct.variants));
-                    const variantGroups = productCard.querySelectorAll(".variant-group");
-                    variantGroups.forEach(group => {
-                        const vKey = group.dataset.variantKey;
-                        const priceInput = group.querySelector(".price-input");
-                        const stockInput = group.querySelector(".stock-input");
-
-                        const newPrice = parseFloat(priceInput.value);
-                        const newStock = parseInt(stockInput.value);
-
-                        if (isNaN(newPrice) || isNaN(newStock) || newPrice < 0 || newStock < 0) {
-                            throw new Error("Precios o stock inválidos.");
-                        }
-
-                        updatedVariants[vKey].price = newPrice;
-                        updatedVariants[vKey].stock = newStock;
-                        
-                        let label = updatedVariants[vKey].label;
-                        const agotadoStr = " - AGOTADO";
-                        if (newStock === 0 && label.indexOf(agotadoStr) === -1) {
-                            updatedVariants[vKey].label = label + agotadoStr;
-                        } else if (newStock > 0 && label.indexOf(agotadoStr) !== -1) {
-                            updatedVariants[vKey].label = label.replace(agotadoStr, "");
-                        }
-                    });
-                    updatePayload.variants = updatedVariants;
-                } else {
-                    const priceInput = productCard.querySelector(".price-input");
-                    const stockInput = productCard.querySelector(".stock-input");
-
+                    const rawLabel = labelInput ? labelInput.value.trim() : (updatedVariants[vKey]?.label || "");
                     const newPrice = parseFloat(priceInput.value);
                     const newStock = parseInt(stockInput.value);
 
                     if (isNaN(newPrice) || isNaN(newStock) || newPrice < 0 || newStock < 0) {
-                        throw new Error("Precio o stock inválidos.");
+                        throw new Error("Precios o stock de variante inválidos.");
                     }
 
-                    updatePayload.price = newPrice;
-                    updatePayload.stock = newStock;
+                    if (!updatedVariants[vKey]) updatedVariants[vKey] = {};
+                    updatedVariants[vKey].price = newPrice;
+                    updatedVariants[vKey].stock = newStock;
+                    // Agregar automáticamente "- AGOTADO" a la variante si stock === 0 (o remover si stock > 0)
+                    updatedVariants[vKey].label = formatAgotadoText(rawLabel, newStock);
+                });
+
+                updatePayload.variants = updatedVariants;
+                updatePayload.title = cleanAgotado(rawTitle);
+            } else {
+                const priceInput = productCard.querySelector(".price-input");
+                const stockInput = productCard.querySelector(".stock-input");
+
+                const newPrice = parseFloat(priceInput.value);
+                const newStock = parseInt(stockInput.value);
+
+                if (isNaN(newPrice) || isNaN(newStock) || newPrice < 0 || newStock < 0) {
+                    throw new Error("Precio o stock inválidos.");
                 }
+
+                updatePayload.price = newPrice;
+                updatePayload.stock = newStock;
+                // Agregar automáticamente "- AGOTADO" al nombre del producto si stock === 0 (o remover si stock > 0)
+                updatePayload.title = formatAgotadoText(rawTitle, newStock);
+            }
+
+            return updatePayload;
+        }
+
+        // Guardar Producto (Publicación Inmediata)
+        async function saveProduct(productId, mode = 'direct') {
+            const productCard = document.querySelector(`.product-item[data-id="${productId}"]`);
+            if (!productCard) return;
+
+            const directBtn = productCard.querySelector(".direct-save-btn");
+            const originalHtml = directBtn.innerHTML;
+
+            directBtn.disabled = true;
+            directBtn.className = "save-btn direct-save-btn saving";
+            directBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Guardando...`;
+
+            const originalProduct = allProducts.find(p => p.id === productId);
+            if (!originalProduct) return;
+
+            try {
+                const updatePayload = extractProductFormValues(productCard, originalProduct);
 
                 const { error } = await window.supabaseClient
                     .from("products")
@@ -1333,26 +1740,412 @@
                 if (error) throw error;
 
                 Object.assign(originalProduct, updatePayload);
+                dirtyProducts.delete(productId);
+                updateUnsavedWarning();
 
-                saveBtn.className = "save-btn success";
-                saveBtn.innerHTML = `<i class="fa-solid fa-circle-check"></i> ¡Guardado!`;
-                showToast("Producto actualizado con éxito", "success");
+                directBtn.className = "save-btn direct-save-btn success";
+                directBtn.innerHTML = `<i class="fa-solid fa-circle-check"></i> ¡Publicado!`;
+                showToast("Producto actualizado en la web con éxito", "success");
 
                 setTimeout(() => {
-                    saveBtn.disabled = false;
-                    saveBtn.className = "save-btn";
-                    saveBtn.innerHTML = originalHtml;
-                }, 1500);
+                    directBtn.disabled = false;
+                    directBtn.className = "save-btn direct-save-btn";
+                    directBtn.innerHTML = originalHtml;
+                    renderProducts();
+                }, 1200);
 
             } catch (err) {
                 showToast("Fallo al guardar: " + (err.message || err), "error");
-                saveBtn.disabled = false;
-                saveBtn.className = "save-btn";
-                saveBtn.innerHTML = originalHtml;
+                directBtn.disabled = false;
+                directBtn.className = "save-btn direct-save-btn";
+                directBtn.innerHTML = originalHtml;
             }
         }
 
-        // Crear Producto
+        // ==========================================
+        // GESTIÓN DE BORRADORES (DRAFTS)
+        // ==========================================
+        function loadDrafts() {
+            try {
+                const stored = localStorage.getItem(DRAFTS_STORAGE_KEY);
+                if (stored) {
+                    drafts = JSON.parse(stored);
+                }
+            } catch (e) {
+                console.error("Error loading drafts:", e);
+                drafts = {};
+            }
+
+            if (!drafts || Object.keys(drafts).length === 0) {
+                drafts = {
+                    "draft_default": {
+                        id: "draft_default",
+                        name: "Borrador Principal",
+                        createdAt: Date.now(),
+                        items: {}
+                    }
+                };
+            }
+
+            if (!drafts[activeDraftId]) {
+                activeDraftId = Object.keys(drafts)[0];
+            }
+
+            updateDraftsBadge();
+        }
+
+        function saveDrafts() {
+            try {
+                localStorage.setItem(DRAFTS_STORAGE_KEY, JSON.stringify(drafts));
+            } catch (e) {
+                console.error("Error saving drafts:", e);
+            }
+            updateDraftsBadge();
+            populateActiveDraftDropdown();
+        }
+
+        function updateDraftsBadge() {
+            let total = 0;
+            for (let id in drafts) {
+                total += Object.keys(drafts[id].items || {}).length;
+            }
+            if (draftsBadge) {
+                if (total > 0) {
+                    draftsBadge.textContent = total;
+                    draftsBadge.style.display = "inline-block";
+                } else {
+                    draftsBadge.style.display = "none";
+                }
+            }
+        }
+
+        function populateActiveDraftDropdown() {
+            const select = document.getElementById("active-draft-select");
+            if (!select) return;
+            select.innerHTML = Object.keys(drafts).map(k => `
+                <option value="${k}" ${k === activeDraftId ? "selected" : ""}>
+                    ${drafts[k].name} (${Object.keys(drafts[k].items || {}).length} productos)
+                </option>
+            `).join("");
+        }
+
+        function changeActiveDraft(draftId) {
+            if (drafts[draftId]) {
+                activeDraftId = draftId;
+                renderDraftsView();
+            }
+        }
+
+        function promptCreateNewDraft() {
+            const name = prompt("Ingresa el nombre del nuevo borrador (ej. Campaña Verano, Ajuste Precios):");
+            if (!name || !name.trim()) return;
+            const newId = "draft_" + Date.now();
+            drafts[newId] = {
+                id: newId,
+                name: name.trim(),
+                createdAt: Date.now(),
+                items: {}
+            };
+            activeDraftId = newId;
+            saveDrafts();
+            renderDraftsView();
+            showToast(`Borrador "${name.trim()}" creado`);
+        }
+
+        function promptRenameDraft() {
+            const cur = drafts[activeDraftId];
+            if (!cur) return;
+            const newName = prompt("Nuevo nombre para este borrador:", cur.name);
+            if (!newName || !newName.trim()) return;
+            cur.name = newName.trim();
+            saveDrafts();
+            renderDraftsView();
+            showToast("Borrador renombrado");
+        }
+
+        function promptDeleteDraft() {
+            const keys = Object.keys(drafts);
+            if (keys.length <= 1) {
+                showToast("No puedes eliminar el único borrador disponible.", "error");
+                return;
+            }
+            const cur = drafts[activeDraftId];
+            if (!cur) return;
+            const itemsCount = Object.keys(cur.items || {}).length;
+            if (itemsCount > 0) {
+                if (!confirm(`Este borrador contiene ${itemsCount} productos. Si lo eliminas se perderán estos cambios no publicados. ¿Continuar?`)) {
+                    return;
+                }
+            }
+            delete drafts[activeDraftId];
+            activeDraftId = Object.keys(drafts)[0];
+            saveDrafts();
+            renderDraftsView();
+            showToast("Borrador eliminado");
+        }
+
+        function removeDraftItem(draftId, productId) {
+            if (drafts[draftId]?.items?.[productId]) {
+                delete drafts[draftId].items[productId];
+                saveDrafts();
+                renderDraftsView();
+                renderProducts();
+                showToast("Producto quitado del borrador");
+            }
+        }
+
+        function renderDraftsView() {
+            populateActiveDraftDropdown();
+            const draft = drafts[activeDraftId];
+            if (!draft) return;
+
+            const items = Object.values(draft.items || {});
+            const bannerTitle = document.getElementById("draft-summary-title");
+            const bannerDesc = document.getElementById("draft-summary-desc");
+            const container = document.getElementById("draft-items-container");
+            const pubBtn = document.getElementById("publish-entire-draft-btn");
+
+            if (bannerTitle) bannerTitle.textContent = `Borrador: ${draft.name}`;
+            if (bannerDesc) bannerDesc.textContent = `${items.length} producto(s) listo(s) para publicación masiva.`;
+            if (pubBtn) pubBtn.style.display = items.length > 0 ? "flex" : "none";
+
+            if (items.length === 0) {
+                container.innerHTML = `
+                    <div style="text-align: center; padding: 40px; color: #888; font-weight: 600;">
+                        <i class="fa-solid fa-folder-open" style="font-size: 2.5rem; color: #ccc; margin-bottom: 12px; display: block;"></i>
+                        Este borrador está vacío.<br>
+                        Ve a la pestaña <strong>Catálogo</strong> y elige <em>"Guardar en Borrador"</em> al editar o crear productos.
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = "";
+            items.forEach(item => {
+                const itemDiv = document.createElement("div");
+                itemDiv.className = "draft-item-card";
+
+                let detailsHtml = "";
+                if (item.type === "create") {
+                    detailsHtml = `
+                        <div style="flex: 1;">
+                            <span class="stock-badge disponible" style="margin-bottom: 5px;"><i class="fa-solid fa-plus-circle"></i> Nuevo Producto</span>
+                            <h4 style="margin: 2px 0 4px; color: var(--color-border);">${item.title}</h4>
+                            <p style="margin: 0; font-size: 0.8rem; color: #666;">ID: <strong>${item.productId}</strong> | Precio: $${item.payload.price} | Stock: ${item.payload.stock}</p>
+                        </div>
+                    `;
+                } else {
+                    let changes = [];
+                    if (item.payload.title) changes.push(`Nombre: <strong>${item.payload.title}</strong>`);
+                    if (item.payload.price !== undefined) changes.push(`Precio: $${item.payload.price}`);
+                    if (item.payload.stock !== undefined) changes.push(`Stock: ${item.payload.stock}`);
+                    if (item.payload.variants) {
+                        const vLabels = Object.values(item.payload.variants).map(v => `${v.label} (Stock: ${v.stock})`).join(", ");
+                        changes.push(`Variantes: ${vLabels}`);
+                    }
+                    if (item.payload.description !== undefined) changes.push(`Descripción actualizada`);
+
+                    detailsHtml = `
+                        <div style="flex: 1;">
+                            <span class="in-draft-badge" style="margin-bottom: 5px;"><i class="fa-solid fa-pen"></i> Edición de Producto</span>
+                            <h4 style="margin: 2px 0 4px; color: var(--color-border);">${item.title}</h4>
+                            <p style="margin: 0; font-size: 0.8rem; color: #666;">ID: <strong>${item.productId}</strong></p>
+                            <p style="margin: 4px 0 0; font-size: 0.8rem; color: #444; line-height: 1.3;">${changes.join(" | ")}</p>
+                        </div>
+                    `;
+                }
+
+                itemDiv.innerHTML = `
+                    <img src="${item.coverImg || 'diamond.svg'}" alt="${item.title}">
+                    ${detailsHtml}
+                    <button onclick="removeDraftItem('${activeDraftId}', '${item.productId}')" title="Quitar de este borrador" style="background: #fee; border: 1px solid #fcc; color: var(--color-danger); padding: 8px 12px; border-radius: 8px; cursor: pointer; margin-left: auto;">
+                        <i class="fa-solid fa-xmark"></i> Quitar
+                    </button>
+                `;
+
+                container.appendChild(itemDiv);
+            });
+        }
+
+        // Publicar Todo el Borrador Masivamente
+        async function publishActiveDraft() {
+            const draft = drafts[activeDraftId];
+            if (!draft) return;
+            const items = Object.values(draft.items || {});
+            if (items.length === 0) {
+                showToast("No hay productos en este borrador.", "error");
+                return;
+            }
+
+            const confirmPub = confirm(`¿Estás seguro de publicar masivamente los ${items.length} productos del borrador "${draft.name}" a la tienda en vivo?`);
+            if (!confirmPub) return;
+
+            const pubBtn = document.getElementById("publish-entire-draft-btn");
+            const originalHtml = pubBtn.innerHTML;
+            pubBtn.disabled = true;
+            pubBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Publicando masivamente...`;
+
+            let successCount = 0;
+            let errors = [];
+
+            for (let i = 0; i < items.length; i++) {
+                const item = items[i];
+                pubBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Publicando ${i + 1} de ${items.length}...`;
+
+                try {
+                    if (item.type === "create") {
+                        const { error } = await window.supabaseClient
+                            .from("products")
+                            .insert(item.payload);
+                        if (error) throw error;
+                    } else {
+                        const { error } = await window.supabaseClient
+                            .from("products")
+                            .update(item.payload)
+                            .eq("id", item.productId);
+                        if (error) throw error;
+                    }
+                    successCount++;
+                } catch (e) {
+                    console.error("Error publicando item:", item.productId, e);
+                    errors.push(`${item.title}: ${e.message || e}`);
+                }
+            }
+
+            if (errors.length > 0) {
+                showToast(`Se publicaron ${successCount} productos, fallaron ${errors.length}.`, "error");
+            } else {
+                showToast(`¡Borrador "${draft.name}" publicado masivamente con éxito! (${successCount} productos actualizados)`, "success");
+            }
+
+            draft.items = {};
+            saveDrafts();
+            await loadProductsFromSupabase();
+            renderDraftsView();
+
+            pubBtn.disabled = false;
+            pubBtn.innerHTML = originalHtml;
+        }
+
+        // Modal para seleccionar o crear borrador
+        function openDraftModalForProduct(productId) {
+            const product = allProducts.find(p => p.id === productId);
+            if (!product) return;
+            
+            currentModalProductId = productId;
+            const nameEl = document.getElementById("draft-modal-product-name");
+            nameEl.textContent = `Producto: ${product.title} (${product.id})`;
+
+            populateDraftModalDropdown();
+            document.getElementById("draft-modal").style.display = "flex";
+        }
+
+        function closeDraftModal() {
+            document.getElementById("draft-modal").style.display = "none";
+            currentModalProductId = null;
+        }
+
+        function populateDraftModalDropdown() {
+            const select = document.getElementById("modal-draft-select");
+            const draftKeys = Object.keys(drafts);
+            
+            select.innerHTML = draftKeys.map(k => `
+                <option value="${k}" ${k === activeDraftId ? "selected" : ""}>${drafts[k].name} (${Object.keys(drafts[k].items || {}).length} productos)</option>
+            `).join("") + `<option value="__new__">+ Crear nuevo borrador...</option>`;
+
+            toggleNewDraftInput();
+        }
+
+        function toggleNewDraftInput() {
+            const select = document.getElementById("modal-draft-select");
+            const newGroup = document.getElementById("modal-new-draft-row");
+            if (select.value === "__new__") {
+                newGroup.style.display = "block";
+                document.getElementById("modal-new-draft-name").focus();
+            } else {
+                newGroup.style.display = "none";
+            }
+        }
+
+        document.getElementById("modal-draft-select")?.addEventListener("change", toggleNewDraftInput);
+
+        function confirmSaveToDraft() {
+            if (!currentModalProductId) return;
+
+            const select = document.getElementById("modal-draft-select");
+            let targetDraftId = select.value;
+
+            if (targetDraftId === "__new__") {
+                const newName = document.getElementById("modal-new-draft-name").value.trim();
+                if (!newName) {
+                    showToast("Ingresa un nombre para el nuevo borrador", "error");
+                    return;
+                }
+                targetDraftId = "draft_" + Date.now();
+                drafts[targetDraftId] = {
+                    id: targetDraftId,
+                    name: newName,
+                    createdAt: Date.now(),
+                    items: {}
+                };
+                activeDraftId = targetDraftId;
+            }
+
+            if (currentModalProductId === "__new_product__") {
+                const payload = window.__pendingNewProductPayload;
+                if (!payload) return;
+
+                drafts[targetDraftId].items[payload.id] = {
+                    type: "create",
+                    productId: payload.id,
+                    title: payload.title,
+                    coverImg: payload.images?.[0] || "diamond.svg",
+                    payload: payload,
+                    stagedAt: Date.now()
+                };
+
+                saveDrafts();
+                closeDraftModal();
+                createFormDirty = false;
+                createForm.reset();
+                document.getElementById("creator-panel").style.display = "none";
+                toggleCreatorBtn.innerHTML = `<i class="fa-solid fa-plus"></i> Nuevo`;
+                toggleCreatorBtn.style.backgroundColor = "var(--color-success)";
+                updateUnsavedWarning();
+                showToast(`Nuevo producto guardado en borrador "${drafts[targetDraftId].name}"`, "success");
+                return;
+            }
+
+            const productCard = document.querySelector(`.product-item[data-id="${currentModalProductId}"]`);
+            const originalProduct = allProducts.find(p => p.id === currentModalProductId);
+            if (!productCard || !originalProduct) return;
+
+            try {
+                const payload = extractProductFormValues(productCard, originalProduct);
+
+                drafts[targetDraftId].items[currentModalProductId] = {
+                    type: "update",
+                    productId: currentModalProductId,
+                    title: payload.title,
+                    coverImg: originalProduct.images?.[0] || "diamond.svg",
+                    payload: payload,
+                    stagedAt: Date.now()
+                };
+
+                saveDrafts();
+                dirtyProducts.delete(currentModalProductId);
+                updateUnsavedWarning();
+                closeDraftModal();
+
+                showToast(`Cambios guardados en borrador "${drafts[targetDraftId].name}"`, "success");
+                renderProducts();
+
+            } catch (err) {
+                showToast("Error al guardar en borrador: " + (err.message || err), "error");
+            }
+        }
+
+        // Crear Producto (Publicación Inmediata)
         async function handleCreateProduct(e) {
             e.preventDefault();
 
@@ -1378,7 +2171,7 @@
             }
 
             submitBtn.disabled = true;
-            submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Creando...`;
+            submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Publicando...`;
 
             try {
                 const files = imageInput.files;
@@ -1405,11 +2198,14 @@
                     imagesUrls.push(publicUrl);
                 }
 
+                // Formatear automáticamente "- AGOTADO" si stock === 0
+                const finalTitle = formatAgotadoText(title, stock);
+
                 const { error: insertError } = await window.supabaseClient
                     .from("products")
                     .insert({
                         id: productId,
-                        title,
+                        title: finalTitle,
                         brand: brand || null,
                         price,
                         stock,
@@ -1421,20 +2217,113 @@
 
                 if (insertError) throw insertError;
 
-                showToast("¡Producto creado con éxito!");
+                showToast("¡Producto creado y publicado con éxito!");
                 creatorPanel.style.display = "none";
                 toggleCreatorBtn.innerHTML = `<i class="fa-solid fa-plus"></i> Nuevo`;
                 toggleCreatorBtn.style.backgroundColor = "var(--color-success)";
                 createForm.reset();
+                createFormDirty = false;
+                updateUnsavedWarning();
                 
                 loadProductsFromSupabase();
             } catch (err) {
                 showToast("Fallo al crear producto: " + err.message, "error");
             } finally {
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = `<i class="fa-solid fa-circle-check"></i> Guardar Producto`;
+                submitBtn.innerHTML = `<i class="fa-solid fa-bolt"></i> Publicar de Inmediato`;
             }
         }
+
+        // Crear Producto (Guardar en Borrador)
+        async function handleCreateProductDraft(e) {
+            e.preventDefault();
+
+            const title = document.getElementById("create-title").value.trim();
+            const productId = document.getElementById("create-id").value.trim();
+            const brand = document.getElementById("create-brand").value.trim();
+            const price = parseFloat(document.getElementById("create-price").value);
+            const stock = parseInt(document.getElementById("create-stock").value);
+            const category = document.getElementById("create-category").value;
+            const subcategory = document.getElementById("create-subcategory").value;
+            const description = document.getElementById("create-description").value.trim();
+            const imageInput = document.getElementById("create-images");
+            const draftBtn = document.getElementById("create-draft-btn");
+
+            if (!title || !productId || isNaN(price) || isNaN(stock) || price < 0 || stock < 0 || imageInput.files.length === 0) {
+                showToast("Completa todos los campos obligatorios para guardar el borrador", "error");
+                return;
+            }
+
+            if (allProducts.some(p => p.id === productId)) {
+                showToast("El ID ya existe para otro producto.", "error");
+                return;
+            }
+
+            draftBtn.disabled = true;
+            draftBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Preparando imágenes...`;
+
+            try {
+                const files = imageInput.files;
+                const imagesUrls = [];
+
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
+                    const fileExt = file.name.split('.').pop();
+                    const fileName = `${productId}_${Date.now()}_${i}.${fileExt}`;
+                    const filePath = `${category}/${fileName}`;
+
+                    draftBtn.innerHTML = `<i class="fa-solid fa-cloud-arrow-up"></i> Subiendo imagen ${i+1} de ${files.length}...`;
+
+                    const { error: uploadError } = await window.supabaseClient.storage
+                        .from("products")
+                        .upload(filePath, file);
+
+                    if (uploadError) throw uploadError;
+
+                    const { data: { publicUrl } } = window.supabaseClient.storage
+                        .from("products")
+                        .getPublicUrl(filePath);
+
+                    imagesUrls.push(publicUrl);
+                }
+
+                // Formatear automáticamente "- AGOTADO" si stock === 0
+                const finalTitle = formatAgotadoText(title, stock);
+
+                window.__pendingNewProductPayload = {
+                    id: productId,
+                    title: finalTitle,
+                    brand: brand || null,
+                    price,
+                    stock,
+                    category,
+                    subcategory: subcategory || null,
+                    description: description || null,
+                    images: imagesUrls
+                };
+
+                currentModalProductId = "__new_product__";
+                const nameEl = document.getElementById("draft-modal-product-name");
+                nameEl.textContent = `Nuevo Producto: ${finalTitle} (${productId})`;
+                populateDraftModalDropdown();
+                document.getElementById("draft-modal").style.display = "flex";
+
+            } catch (err) {
+                showToast("Fallo al preparar imágenes del producto: " + err.message, "error");
+            } finally {
+                draftBtn.disabled = false;
+                draftBtn.innerHTML = `<i class="fa-solid fa-bookmark"></i> Guardar en Borrador...`;
+            }
+        }
+
+        // Advertencia beforeunload: previene cerrar si hay cambios sin guardar ni dejar en borrador
+        window.addEventListener("beforeunload", (e) => {
+            if (dirtyProducts.size > 0 || createFormDirty) {
+                e.preventDefault();
+                e.returnValue = "Tienes cambios o productos sin guardar ni dejar en borrador. ¿Seguro que deseas salir?";
+                return e.returnValue;
+            }
+        });
 
         // ==========================================
         // GESTOR DE DISEÑO DE PORTADA (SECCIONES)
@@ -1851,5 +2740,50 @@
             setTimeout(checkSession, 300);
         });
     </script>
+
+    <!-- Modal para Seleccionar / Crear Borrador -->
+    <div id="draft-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-bookmark" style="color: #f39c12;"></i> Guardar en Borrador</h3>
+                <button type="button" class="modal-close-btn" onclick="closeDraftModal()">&times;</button>
+            </div>
+            <div class="modal-body" style="margin-top: 15px;">
+                <p id="draft-modal-product-name" style="font-size: 0.95rem; font-weight: 700; color: var(--color-border); margin: 0 0 10px;"></p>
+                <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">
+                    Elige el borrador donde deseas guardar los cambios para su posterior publicación masiva:
+                </p>
+                
+                <div class="form-group" style="margin-bottom: 12px;">
+                    <label style="font-size: 0.85rem; font-weight: 700; color: #444; display: block; margin-bottom: 5px;">Borrador destino:</label>
+                    <select id="modal-draft-select" style="width: 100%; padding: 10px; border-radius: 8px; border: 2px solid #ddd; font-family: inherit;">
+                        <!-- Opciones dinámicas -->
+                    </select>
+                </div>
+                
+                <div id="modal-new-draft-row" style="display: none; margin-bottom: 12px;">
+                    <label style="font-size: 0.85rem; font-weight: 700; color: #444; display: block; margin-bottom: 5px;">Nombre del nuevo borrador:</label>
+                    <input type="text" id="modal-new-draft-name" placeholder="Ej. Campaña Primavera, Ajuste Precios..." style="width: 100%; padding: 10px; border-radius: 8px; border: 2px solid #ddd; font-family: inherit;">
+                </div>
+            </div>
+            <div class="modal-footer" style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px;">
+                <button type="button" class="btn-cancel" onclick="closeDraftModal()" style="padding: 10px 16px; border-radius: 8px; border: 1px solid #ccc; background: #eee; cursor: pointer; font-weight: 600;">Cancelar</button>
+                <button type="button" class="btn-confirm" onclick="confirmSaveToDraft()" style="padding: 10px 18px; border-radius: 8px; border: none; background: #f39c12; color: white; cursor: pointer; font-weight: 700;">Confirmar y Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra flotante de advertencia: cambios sin guardar -->
+    <div id="unsaved-warning-bar" class="unsaved-warning-bar" style="display: none;">
+        <i class="fa-solid fa-triangle-exclamation" style="font-size: 1.3rem; color: #ffeb3b;"></i>
+        <div>
+            <div style="font-weight: 700; font-size: 0.9rem;">
+                Tienes <span id="unsaved-count">0</span> producto(s) editado(s) o nuevo(s) sin guardar ni dejar en borrador.
+            </div>
+            <div style="font-size: 0.78rem; opacity: 0.9;">
+                Debes guardarlos directo o dejarlos en un borrador antes de salir de la página.
+            </div>
+        </div>
+    </div>
 </body>
 </html>
