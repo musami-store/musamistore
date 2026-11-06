@@ -745,6 +745,122 @@
             border: 1px solid #eee;
         }
 
+        /* Organizador de Orden de Imágenes */
+        .images-organizer-section {
+            margin: 10px 0;
+            background: #f8f9ff;
+            border: 1px dashed #b8baff;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .images-organizer-list {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 6px;
+            align-items: center;
+        }
+
+        .image-org-item {
+            flex: 0 0 auto;
+            width: 94px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 6px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            position: relative;
+            transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+            cursor: grab;
+        }
+
+        .image-org-item:first-child {
+            border-color: var(--color-border);
+            background: #f0f1ff;
+        }
+
+        .image-org-item.dragging {
+            opacity: 0.5;
+            transform: scale(0.95);
+        }
+
+        .image-org-badge {
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 6px;
+            background: #eee;
+            color: #555;
+            width: 100%;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .image-org-item:first-child .image-org-badge {
+            background: var(--color-border);
+            color: white;
+        }
+
+        .image-org-item img {
+            width: 78px;
+            height: 78px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #eee;
+            pointer-events: none;
+        }
+
+        .image-org-controls {
+            display: flex;
+            gap: 4px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .img-move-btn {
+            flex: 1;
+            background: #eef0ff;
+            border: 1px solid #c5c8ff;
+            color: var(--color-border);
+            border-radius: 5px;
+            padding: 4px 0;
+            font-size: 0.75rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.15s;
+        }
+
+        .img-move-btn:hover:not(:disabled) {
+            background: var(--color-border);
+            color: white;
+        }
+
+        .img-move-btn:disabled {
+            opacity: 0.35;
+            cursor: default;
+        }
+
+        .img-remove-btn {
+            background: #fee;
+            border: 1px solid #fcc;
+            color: var(--color-danger);
+            border-radius: 5px;
+            padding: 4px 6px;
+            font-size: 0.75rem;
+            cursor: pointer;
+        }
+
+        .img-remove-btn:hover {
+            background: var(--color-danger);
+            color: white;
+        }
+
         /* Elementos del Gestor de Diseño (Secciones) */
         .section-card {
             background: var(--color-card-bg);
@@ -1053,8 +1169,14 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="create-images">Imágenes del Producto * (Puedes seleccionar varias)</label>
-                            <input type="file" id="create-images" required multiple accept="image/*">
+                            <label for="create-images">Imágenes del Producto * (Puedes seleccionar varias y organizar su orden)</label>
+                            <input type="file" id="create-images" multiple accept="image/*">
+                            <div id="create-images-organizer-wrapper" class="images-organizer-section" style="display: none; margin-top: 8px;">
+                                <div class="editor-label" style="margin-bottom: 6px; font-size: 0.8rem; color: var(--color-border);">
+                                    <i class="fa-solid fa-arrows-left-right"></i> Organiza el orden de las fotos (La #1 será la portada):
+                                </div>
+                                <div id="create-images-organizer" class="images-organizer-list"></div>
+                            </div>
                         </div>
 
                         <div class="form-actions-row" style="display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap;">
@@ -1302,6 +1424,106 @@
             });
         });
 
+        // Gestión y orden de fotos para Nuevo Producto
+        let createSelectedFiles = [];
+
+        function resetCreateImages() {
+            createSelectedFiles.forEach(item => {
+                if (item.previewUrl) URL.revokeObjectURL(item.previewUrl);
+            });
+            createSelectedFiles = [];
+            renderCreateImagesOrganizer();
+        }
+
+        document.getElementById("create-images").addEventListener("change", (e) => {
+            const files = Array.from(e.target.files || []);
+            if (files.length === 0) return;
+
+            files.forEach(file => {
+                createSelectedFiles.push({
+                    file,
+                    previewUrl: URL.createObjectURL(file)
+                });
+            });
+
+            e.target.value = "";
+            createFormDirty = true;
+            updateUnsavedWarning();
+            renderCreateImagesOrganizer();
+        });
+
+        function renderCreateImagesOrganizer() {
+            const wrapper = document.getElementById("create-images-organizer-wrapper");
+            const container = document.getElementById("create-images-organizer");
+            if (!wrapper || !container) return;
+
+            if (createSelectedFiles.length === 0) {
+                wrapper.style.display = "none";
+                container.innerHTML = "";
+                return;
+            }
+
+            wrapper.style.display = "block";
+            container.innerHTML = createSelectedFiles.map((item, idx) => `
+                <div class="image-org-item" draggable="true" data-idx="${idx}">
+                    <span class="image-org-badge">${idx === 0 ? "★ #1 Portada" : `#${idx + 1}`}</span>
+                    <img src="${item.previewUrl}" alt="Foto ${idx + 1}">
+                    <div class="image-org-controls">
+                        <button type="button" class="img-move-btn" onclick="moveCreateImage(${idx}, -1)" ${idx === 0 ? "disabled" : ""} title="Mover antes">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button type="button" class="img-move-btn" onclick="moveCreateImage(${idx}, 1)" ${idx === createSelectedFiles.length - 1 ? "disabled" : ""} title="Mover después">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <button type="button" class="img-remove-btn" onclick="removeCreateImage(${idx})" title="Quitar foto">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join("");
+
+            let dragCreateIdx = null;
+            container.querySelectorAll(".image-org-item").forEach(el => {
+                el.addEventListener("dragstart", (ev) => {
+                    dragCreateIdx = parseInt(el.dataset.idx);
+                    el.classList.add("dragging");
+                    ev.dataTransfer.effectAllowed = "move";
+                });
+                el.addEventListener("dragend", () => {
+                    el.classList.remove("dragging");
+                    dragCreateIdx = null;
+                });
+                el.addEventListener("dragover", (ev) => {
+                    ev.preventDefault();
+                });
+                el.addEventListener("drop", (ev) => {
+                    ev.preventDefault();
+                    const targetIdx = parseInt(el.dataset.idx);
+                    if (dragCreateIdx === null || dragCreateIdx === targetIdx) return;
+                    const [moved] = createSelectedFiles.splice(dragCreateIdx, 1);
+                    createSelectedFiles.splice(targetIdx, 0, moved);
+                    renderCreateImagesOrganizer();
+                });
+            });
+        }
+
+        window.moveCreateImage = function(index, direction) {
+            const targetIdx = index + direction;
+            if (targetIdx < 0 || targetIdx >= createSelectedFiles.length) return;
+            const temp = createSelectedFiles[index];
+            createSelectedFiles[index] = createSelectedFiles[targetIdx];
+            createSelectedFiles[targetIdx] = temp;
+            renderCreateImagesOrganizer();
+        };
+
+        window.removeCreateImage = function(index) {
+            if (createSelectedFiles[index]?.previewUrl) {
+                URL.revokeObjectURL(createSelectedFiles[index].previewUrl);
+            }
+            createSelectedFiles.splice(index, 1);
+            renderCreateImagesOrganizer();
+        };
+
         // Toggle panel de creación
         toggleCreatorBtn.addEventListener("click", () => {
             if (creatorPanel.style.display === "none") {
@@ -1310,6 +1532,7 @@
                 toggleCreatorBtn.style.backgroundColor = "var(--color-danger)";
                 updateSubcategoriesDropdown();
                 createForm.reset();
+                resetCreateImages();
                 createFormDirty = false;
                 updateUnsavedWarning();
                 generateTempId();
@@ -1322,6 +1545,7 @@
                 creatorPanel.style.display = "none";
                 toggleCreatorBtn.innerHTML = `<i class="fa-solid fa-plus"></i> Nuevo`;
                 toggleCreatorBtn.style.backgroundColor = "var(--color-success)";
+                resetCreateImages();
                 createFormDirty = false;
                 updateUnsavedWarning();
             }
@@ -1330,7 +1554,7 @@
         // Rastrear si el formulario de nuevo producto tiene datos
         createForm.addEventListener("input", () => {
             const title = document.getElementById("create-title").value.trim();
-            createFormDirty = title.length > 0;
+            createFormDirty = title.length > 0 || createSelectedFiles.length > 0;
             updateUnsavedWarning();
         });
 
@@ -1499,6 +1723,121 @@
             renderProducts();
         }
 
+        function buildImagesOrganizerHtml(imagesArray, targetType = "product") {
+            const imgs = Array.isArray(imagesArray) ? imagesArray : [];
+            if (imgs.length === 0) return "";
+
+            return `
+                <div class="images-organizer-section">
+                    <div class="editor-label" style="margin-bottom: 6px; font-size: 0.8rem;">
+                        <i class="fa-solid fa-images"></i> Orden de Fotos (${imgs.length}) <span style="font-weight: 400; color: #666;">— Usa las flechas o arrastra para ordenar</span>
+                    </div>
+                    <div class="images-organizer-list" data-target="${targetType}">
+                        ${imgs.map((url, idx) => `
+                            <div class="image-org-item" draggable="true" data-url="${url}">
+                                <span class="image-org-badge">${idx === 0 ? "★ #1 Portada" : `#${idx + 1}`}</span>
+                                <img src="${url}" alt="Foto ${idx + 1}" loading="lazy">
+                                <div class="image-org-controls">
+                                    <button type="button" class="img-move-btn prev-img-btn" ${idx === 0 ? "disabled" : ""} title="Mover antes">
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </button>
+                                    <button type="button" class="img-move-btn next-img-btn" ${idx === imgs.length - 1 ? "disabled" : ""} title="Mover después">
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        `).join("")}
+                    </div>
+                </div>
+            `;
+        }
+
+        function refreshOrganizerBadgesAndButtons(listEl, productCard) {
+            const items = Array.from(listEl.querySelectorAll(".image-org-item"));
+            items.forEach((item, idx) => {
+                const badge = item.querySelector(".image-org-badge");
+                if (badge) badge.textContent = idx === 0 ? "★ #1 Portada" : `#${idx + 1}`;
+                const prevBtn = item.querySelector(".prev-img-btn");
+                const nextBtn = item.querySelector(".next-img-btn");
+                if (prevBtn) prevBtn.disabled = (idx === 0);
+                if (nextBtn) nextBtn.disabled = (idx === items.length - 1);
+            });
+
+            if (listEl.dataset.target === "product" && items.length > 0 && productCard) {
+                const firstUrl = items[0].dataset.url;
+                const metaImg = productCard.querySelector(".product-meta img");
+                if (metaImg && firstUrl) metaImg.src = firstUrl;
+            }
+        }
+
+        function getDragAfterHorizontalElement(container, x) {
+            const draggableElements = [...container.querySelectorAll(".image-org-item:not(.dragging)")];
+            return draggableElements.reduce((closest, child) => {
+                const box = child.getBoundingClientRect();
+                const offset = x - box.left - box.width / 2;
+                if (offset < 0 && offset > closest.offset) {
+                    return { offset: offset, element: child };
+                } else {
+                    return closest;
+                }
+            }, { offset: Number.NEGATIVE_INFINITY }).element;
+        }
+
+        function setupImageOrganizers(productCard, productId) {
+            productCard.querySelectorAll(".images-organizer-list").forEach(listEl => {
+                listEl.addEventListener("click", (e) => {
+                    const prevBtn = e.target.closest(".prev-img-btn");
+                    const nextBtn = e.target.closest(".next-img-btn");
+                    if (!prevBtn && !nextBtn) return;
+
+                    const item = e.target.closest(".image-org-item");
+                    if (!item) return;
+
+                    if (prevBtn && item.previousElementSibling) {
+                        listEl.insertBefore(item, item.previousElementSibling);
+                    } else if (nextBtn && item.nextElementSibling) {
+                        listEl.insertBefore(item.nextElementSibling, item);
+                    } else {
+                        return;
+                    }
+
+                    refreshOrganizerBadgesAndButtons(listEl, productCard);
+                    dirtyProducts.add(productId);
+                    updateUnsavedWarning();
+                });
+
+                let draggedItem = null;
+                listEl.addEventListener("dragstart", (e) => {
+                    const item = e.target.closest(".image-org-item");
+                    if (!item) return;
+                    draggedItem = item;
+                    item.classList.add("dragging");
+                    e.dataTransfer.effectAllowed = "move";
+                });
+
+                listEl.addEventListener("dragend", () => {
+                    if (draggedItem) {
+                        draggedItem.classList.remove("dragging");
+                        draggedItem = null;
+                        refreshOrganizerBadgesAndButtons(listEl, productCard);
+                        dirtyProducts.add(productId);
+                        updateUnsavedWarning();
+                    }
+                });
+
+                listEl.addEventListener("dragover", (e) => {
+                    e.preventDefault();
+                    if (!draggedItem) return;
+                    const afterElement = getDragAfterHorizontalElement(listEl, e.clientX);
+                    if (afterElement == null) {
+                        listEl.appendChild(draggedItem);
+                    } else {
+                        listEl.insertBefore(draggedItem, afterElement);
+                    }
+                });
+            });
+        }
+
         function renderProducts() {
             if (filteredProducts.length === 0) {
                 productsContainer.innerHTML = `<div style="text-align: center; padding: 40px; color: #888; font-weight: 600;">No se encontraron productos.</div>`;
@@ -1513,7 +1852,12 @@
                 itemDiv.dataset.id = product.id;
 
                 let coverImg = "diamond.svg";
-                if (product.images && product.images.length > 0) coverImg = product.images[0];
+                if (product.images && product.images.length > 0) {
+                    coverImg = product.images[0];
+                } else if (product.variants) {
+                    const firstVar = Object.values(product.variants)[0];
+                    if (firstVar?.images?.length > 0) coverImg = firstVar.images[0];
+                }
 
                 let inDraftBadge = "";
                 for (let dId in drafts) {
@@ -1564,6 +1908,7 @@
                                     <button class="qty-btn-plus" type="button">+</button>
                                 </div>
                             </div>
+                            ${buildImagesOrganizerHtml(vData.images, "variant")}
                         </div>
                     `;
                     }).join("");
@@ -1584,6 +1929,7 @@
                                 <button class="qty-btn-plus" type="button">+</button>
                             </div>
                         </div>
+                        ${buildImagesOrganizerHtml(product.images, "product")}
                     `;
                 }
 
@@ -1624,6 +1970,7 @@
                 `;
 
                 setupStockButtons(itemDiv);
+                setupImageOrganizers(itemDiv, product.id);
 
                 // Detectar edición para advertencia de cambios sin guardar
                 itemDiv.addEventListener("input", () => {
@@ -1657,7 +2004,7 @@
             });
         }
 
-        // Extraer valores editados de un producto y aplicar reglas de "- AGOTADO"
+        // Extraer valores editados de un producto y aplicar reglas de "- AGOTADO" y orden de fotos
         function extractProductFormValues(productCard, originalProduct) {
             const titleInput = productCard.querySelector(".product-title-input");
             const descInput = productCard.querySelector(".desc-input");
@@ -1690,6 +2037,12 @@
                     updatedVariants[vKey].stock = newStock;
                     // Agregar automáticamente "- AGOTADO" a la variante si stock === 0 (o remover si stock > 0)
                     updatedVariants[vKey].label = formatAgotadoText(rawLabel, newStock);
+
+                    // Guardar orden de fotos de esta variante
+                    const varImgItems = group.querySelectorAll('.images-organizer-list[data-target="variant"] .image-org-item');
+                    if (varImgItems.length > 0) {
+                        updatedVariants[vKey].images = Array.from(varImgItems).map(el => el.dataset.url);
+                    }
                 });
 
                 updatePayload.variants = updatedVariants;
@@ -1709,6 +2062,12 @@
                 updatePayload.stock = newStock;
                 // Agregar automáticamente "- AGOTADO" al nombre del producto si stock === 0 (o remover si stock > 0)
                 updatePayload.title = formatAgotadoText(rawTitle, newStock);
+
+                // Guardar orden de fotos del producto individual
+                const prodImgItems = productCard.querySelectorAll('.images-organizer-list[data-target="product"] .image-org-item');
+                if (prodImgItems.length > 0) {
+                    updatePayload.images = Array.from(prodImgItems).map(el => el.dataset.url);
+                }
             }
 
             return updatePayload;
@@ -1943,6 +2302,7 @@
                         const vLabels = Object.values(item.payload.variants).map(v => `${v.label} (Stock: ${v.stock})`).join(", ");
                         changes.push(`Variantes: ${vLabels}`);
                     }
+                    if (item.payload.images) changes.push(`Orden de fotos actualizado`);
                     if (item.payload.description !== undefined) changes.push(`Descripción actualizada`);
 
                     detailsHtml = `
@@ -2108,6 +2468,7 @@
                 closeDraftModal();
                 createFormDirty = false;
                 createForm.reset();
+                resetCreateImages();
                 document.getElementById("creator-panel").style.display = "none";
                 toggleCreatorBtn.innerHTML = `<i class="fa-solid fa-plus"></i> Nuevo`;
                 toggleCreatorBtn.style.backgroundColor = "var(--color-success)";
@@ -2127,7 +2488,7 @@
                     type: "update",
                     productId: currentModalProductId,
                     title: payload.title,
-                    coverImg: originalProduct.images?.[0] || "diamond.svg",
+                    coverImg: payload.images?.[0] || originalProduct.images?.[0] || "diamond.svg",
                     payload: payload,
                     stagedAt: Date.now()
                 };
@@ -2157,11 +2518,10 @@
             const category = document.getElementById("create-category").value;
             const subcategory = document.getElementById("create-subcategory").value;
             const description = document.getElementById("create-description").value.trim();
-            const imageInput = document.getElementById("create-images");
             const submitBtn = document.getElementById("create-submit-btn");
 
-            if (!title || !productId || isNaN(price) || isNaN(stock) || price < 0 || stock < 0 || imageInput.files.length === 0) {
-                showToast("Completa todos los campos obligatorios", "error");
+            if (!title || !productId || isNaN(price) || isNaN(stock) || price < 0 || stock < 0 || createSelectedFiles.length === 0) {
+                showToast("Completa todos los campos obligatorios (incluyendo al menos 1 imagen)", "error");
                 return;
             }
 
@@ -2174,7 +2534,7 @@
             submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Publicando...`;
 
             try {
-                const files = imageInput.files;
+                const files = createSelectedFiles.map(item => item.file);
                 const imagesUrls = [];
 
                 for (let i = 0; i < files.length; i++) {
@@ -2222,6 +2582,7 @@
                 toggleCreatorBtn.innerHTML = `<i class="fa-solid fa-plus"></i> Nuevo`;
                 toggleCreatorBtn.style.backgroundColor = "var(--color-success)";
                 createForm.reset();
+                resetCreateImages();
                 createFormDirty = false;
                 updateUnsavedWarning();
                 
@@ -2246,11 +2607,10 @@
             const category = document.getElementById("create-category").value;
             const subcategory = document.getElementById("create-subcategory").value;
             const description = document.getElementById("create-description").value.trim();
-            const imageInput = document.getElementById("create-images");
             const draftBtn = document.getElementById("create-draft-btn");
 
-            if (!title || !productId || isNaN(price) || isNaN(stock) || price < 0 || stock < 0 || imageInput.files.length === 0) {
-                showToast("Completa todos los campos obligatorios para guardar el borrador", "error");
+            if (!title || !productId || isNaN(price) || isNaN(stock) || price < 0 || stock < 0 || createSelectedFiles.length === 0) {
+                showToast("Completa todos los campos obligatorios (incluyendo al menos 1 imagen) para guardar el borrador", "error");
                 return;
             }
 
@@ -2263,7 +2623,7 @@
             draftBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Preparando imágenes...`;
 
             try {
-                const files = imageInput.files;
+                const files = createSelectedFiles.map(item => item.file);
                 const imagesUrls = [];
 
                 for (let i = 0; i < files.length; i++) {
