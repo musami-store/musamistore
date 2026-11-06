@@ -1366,20 +1366,20 @@ const PRODUCTS = {
             "Products/07.07/Pulseras/6e.PNG",
             "Products/07.07/Pulseras/6f.PNG"
         ],
-        stock: 1,
+        stock: 2,
         category: "Bisuteria",
         subcategory: "Pulseras"
     },
     "pulseras-7.7.7":{
-        title: "Set x5 pulseras",
+        title: "Set x5 pulseras - AGOTADO",
         price: 2790,
         images: [
-            "Products/07.07/Pulseras/7a Set x5 pulseras $2.790.PNG",
+            "Products/07.07/Pulseras/7a Set x5 pulseras $2.790 AGO.PNG",
             "Products/07.07/Pulseras/7b.PNG",
             "Products/07.07/Pulseras/7c.PNG",
             "Products/07.07/Pulseras/7d.PNG"
         ],
-        stock: 1,
+        stock: 0,
         category: "Bisuteria",
         subcategory: "Pulseras"
     },
