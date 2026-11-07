@@ -662,6 +662,7 @@ async function initSupabase() {
                         description: row.description
                     };
                 });
+                window.__supabaseSynced = true;
                 console.log("Catálogo en vivo sincronizado desde Supabase:", data.length, "productos.");
                 return true;
             }
@@ -701,7 +702,7 @@ async function renderHomepageDynamic() {
                         <div class="product-slider-container">
                             <button class="product-slider-btn prev">&#10094;</button>
                             <div class="product-slider-track" id="${section.id}">
-                                ${section.product_ids ? section.product_ids.map(pid => `<div class="product-card" data-id="${pid}"></div>`).join("") : ""}
+                                ${section.product_ids ? section.product_ids.filter(pid => !!PRODUCTS[pid]).map(pid => `<div class="product-card" data-id="${pid}"></div>`).join("") : ""}
                             </div>
                             <button class="product-slider-btn next">&#10095;</button>
                         </div>
@@ -719,7 +720,7 @@ async function renderHomepageDynamic() {
                     }
                     const grid = document.createElement("div");
                     grid.className = "product-grid";
-                    grid.innerHTML = section.product_ids ? section.product_ids.map(pid => `<div class="product-card" data-id="${pid}"></div>`).join("") : "";
+                    grid.innerHTML = section.product_ids ? section.product_ids.filter(pid => !!PRODUCTS[pid]).map(pid => `<div class="product-card" data-id="${pid}"></div>`).join("") : "";
                     mainEl.appendChild(grid);
                 } else if (section.type === "banner" && section.content) {
                     const banner = document.createElement("div");
@@ -783,7 +784,10 @@ function renderAllCardsAndLayout() {
         document.querySelectorAll('.product-card').forEach(card=>{
             const id = card.dataset.id;
             const product = PRODUCTS[id];
-            if(!product) return;
+            if(!product) {
+                if (window.__supabaseSynced) card.remove();
+                return;
+            }
             renderProductCard(card, product);
         });
         initSliders();
@@ -1099,4 +1103,4 @@ function initHomepageSliders() {
         // también cuando cambie tamaño (importante en responsive)
         window.onresize = updateFade;
     });
-}
+}

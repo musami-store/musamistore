@@ -6,10 +6,10 @@
     <title>Panel de Control - Musamí Store</title>
     <link rel="shortcut icon" href="./diamond.svg">
     
-    <!-- Fuentes y Estilos -->
+    <!-- Fuentes y Estilos (incluye 3 fuentes para el editor de imágenes) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Supabase JS Client -->
@@ -851,14 +851,376 @@
             border: 1px solid #fcc;
             color: var(--color-danger);
             border-radius: 5px;
-            padding: 4px 6px;
-            font-size: 0.75rem;
+            padding: 4px 5px;
+            font-size: 0.72rem;
             cursor: pointer;
         }
 
         .img-remove-btn:hover {
             background: var(--color-danger);
             color: white;
+        }
+
+        .img-edit-btn {
+            background: #eef0ff;
+            border: 1px solid #b8baff;
+            color: var(--color-border);
+            border-radius: 5px;
+            padding: 4px 5px;
+            font-size: 0.72rem;
+            cursor: pointer;
+        }
+
+        .img-edit-btn:hover {
+            background: var(--color-border);
+            color: white;
+        }
+
+        .image-org-item {
+            width: 108px;
+        }
+
+        .add-photo-inline-btn {
+            background: var(--color-border);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 5px 10px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            white-space: nowrap;
+        }
+
+        .add-photo-inline-btn:hover:not(:disabled) {
+            opacity: 0.9;
+        }
+
+        .add-photo-inline-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* Gestión de Variantes y Eliminación de Productos */
+        .variants-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 8px;
+            padding: 8px 10px;
+            background: #eef0ff;
+            border-radius: 8px;
+            border: 1px solid #d5d8ff;
+        }
+
+        .add-variant-btn, .convert-to-variants-btn {
+            background: #eef0ff;
+            color: var(--color-border);
+            border: 1px solid var(--color-border);
+            border-radius: 7px;
+            padding: 6px 10px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.15s;
+        }
+
+        .add-variant-btn:hover, .convert-to-variants-btn:hover {
+            background: var(--color-border);
+            color: white;
+        }
+
+        .remove-variant-btn {
+            background: #fee;
+            color: var(--color-danger);
+            border: 1px solid #fcc;
+            border-radius: 6px;
+            padding: 3px 8px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .remove-variant-btn:hover {
+            background: var(--color-danger);
+            color: white;
+        }
+
+        .delete-product-btn {
+            background: #fff5f5;
+            color: var(--color-danger);
+            border: 1px solid #f5b7b1;
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: all 0.15s;
+        }
+
+        .delete-product-btn:hover {
+            background: var(--color-danger);
+            color: white;
+            border-color: var(--color-danger);
+        }
+
+        /* Acciones en Tarjeta de Borrador y Estado Nube */
+        .draft-item-card {
+            flex-wrap: wrap;
+        }
+
+        .draft-item-actions {
+            display: flex;
+            gap: 6px;
+            margin-left: auto;
+            flex-wrap: wrap;
+        }
+
+        .draft-action-btn {
+            padding: 7px 10px;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            border: 1px solid transparent;
+        }
+
+        .draft-action-btn.edit {
+            background: #eef0ff;
+            border-color: #c5c8ff;
+            color: var(--color-border);
+        }
+
+        .draft-action-btn.edit:hover {
+            background: var(--color-border);
+            color: white;
+        }
+
+        .draft-action-btn.move {
+            background: #fef5e7;
+            border-color: #f8c471;
+            color: #d35400;
+        }
+
+        .draft-action-btn.move:hover {
+            background: #f39c12;
+            color: white;
+        }
+
+        .draft-action-btn.remove {
+            background: #fee;
+            border-color: #fcc;
+            color: var(--color-danger);
+        }
+
+        .draft-action-btn.remove:hover {
+            background: var(--color-danger);
+            color: white;
+        }
+
+        .cloud-sync-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: #eef9f2;
+            color: #27ae60;
+            border: 1px solid #a9dfbf;
+        }
+
+        .cloud-sync-pill.syncing {
+            background: #eef0ff;
+            color: var(--color-border);
+            border-color: #c5c8ff;
+        }
+
+        .cloud-sync-pill.error {
+            background: #fee;
+            color: var(--color-danger);
+            border-color: #fcc;
+        }
+
+        /* Modal Editor de Imágenes */
+        .img-editor-modal-card {
+            max-width: 680px;
+            max-height: 94vh;
+            overflow-y: auto;
+            padding: 18px;
+        }
+
+        .img-editor-toolbar {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 12px 0;
+        }
+
+        .img-tool-btn {
+            flex: 1;
+            min-width: 110px;
+            padding: 8px 10px;
+            border-radius: 8px;
+            border: 2px solid #d5d8ff;
+            background: #f5f6ff;
+            color: var(--color-border);
+            font-weight: 700;
+            font-size: 0.82rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: all 0.15s;
+        }
+
+        .img-tool-btn:hover, .img-tool-btn.active {
+            background: var(--color-border);
+            color: white;
+            border-color: var(--color-border);
+        }
+
+        .img-editor-canvas-wrap {
+            background: repeating-conic-gradient(#e8e8e8 0% 25%, #f8f8f8 0% 50%) 50% / 16px 16px;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 220px;
+            max-height: 52vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #img-editor-canvas {
+            max-width: 100%;
+            max-height: 48vh;
+            width: auto;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            touch-action: none;
+            cursor: crosshair;
+        }
+
+        .img-editor-layers {
+            display: flex;
+            gap: 6px;
+            overflow-x: auto;
+            padding: 8px 0 4px;
+            align-items: center;
+        }
+
+        .img-layer-chip {
+            flex: 0 0 auto;
+            padding: 4px 10px;
+            border-radius: 16px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border: 1px solid #ccc;
+            background: #f4f4f4;
+            color: #444;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .img-layer-chip.selected {
+            background: var(--color-border);
+            color: white;
+            border-color: var(--color-border);
+        }
+
+        .img-editor-props {
+            background: #f8f9fc;
+            border: 1px solid #e1e4f0;
+            border-radius: 10px;
+            padding: 12px;
+            margin-top: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .font-choice-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .font-choice-btn {
+            flex: 1;
+            min-width: 95px;
+            padding: 7px 8px;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+            background: white;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .font-choice-btn.active {
+            border-color: var(--color-border);
+            background: #eef0ff;
+            color: var(--color-border);
+        }
+
+        .prop-inline-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .prop-inline-row label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #444;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .prop-inline-row input[type="color"] {
+            width: 34px;
+            height: 30px;
+            padding: 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            cursor: pointer;
+            background: none;
+        }
+
+        .prop-inline-row input[type="range"] {
+            flex: 1;
+            min-width: 100px;
+            accent-color: var(--color-border);
         }
 
         /* Elementos del Gestor de Diseño (Secciones) */
@@ -1220,16 +1582,24 @@
             <div class="creator-card" style="margin-bottom: 20px;">
                 <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
                     <div>
-                        <h2 style="margin: 0; color: var(--color-border); font-size: 1.25rem;">
-                            <i class="fa-solid fa-file-pen"></i> Gestor de Borradores
-                        </h2>
+                        <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                            <h2 style="margin: 0; color: var(--color-border); font-size: 1.25rem;">
+                                <i class="fa-solid fa-file-pen"></i> Gestor de Borradores
+                            </h2>
+                            <span id="cloud-sync-status" class="cloud-sync-pill"><i class="fa-solid fa-cloud"></i> Sincronizado en la nube</span>
+                        </div>
                         <p style="margin: 5px 0 0; font-size: 0.85rem; color: #666;">
-                            Guarda productos editados o nuevos y haz una actualización masiva cuando lo decidas.
+                            Los borradores se guardan en la nube para que veas lo mismo desde cualquier computador o celular.
                         </p>
                     </div>
-                    <button id="create-new-draft-btn" onclick="promptCreateNewDraft()" style="background: var(--color-border); color: white; border: none; padding: 8px 14px; border-radius: 8px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px;">
-                        <i class="fa-solid fa-plus"></i> Nuevo Borrador
-                    </button>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <button type="button" onclick="syncDraftsFromCloudManual()" title="Recargar borradores desde la nube" style="background: #eef0ff; color: var(--color-border); border: 1px solid #b8baff; padding: 8px 12px; border-radius: 8px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px;">
+                            <i class="fa-solid fa-arrows-rotate"></i> Sincronizar
+                        </button>
+                        <button id="create-new-draft-btn" onclick="promptCreateNewDraft()" style="background: var(--color-border); color: white; border: none; padding: 8px 14px; border-radius: 8px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px;">
+                            <i class="fa-solid fa-plus"></i> Nuevo Borrador
+                        </button>
+                    </div>
                 </div>
 
                 <div style="margin-top: 15px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
@@ -1362,6 +1732,25 @@
             return text.replace(/(\s*-\s*AGOTADO)+\s*$/i, "").trim();
         }
 
+        function escapeAttr(str) {
+            return String(str ?? "")
+                .replace(/&/g, "&amp;")
+                .replace(/"/g, "&quot;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;");
+        }
+
+        function getProductCoverImage(p) {
+            if (!p) return "diamond.svg";
+            if (Array.isArray(p.images) && p.images.length > 0) return p.images[0];
+            if (p.variants && typeof p.variants === "object") {
+                for (const v of Object.values(p.variants)) {
+                    if (Array.isArray(v?.images) && v.images.length > 0) return v.images[0];
+                }
+            }
+            return "diamond.svg";
+        }
+
         // Advertencia de cambios sin guardar
         function updateUnsavedWarning() {
             const count = dirtyProducts.size + (createFormDirty ? 1 : 0);
@@ -1402,6 +1791,7 @@
                     if (draftsSection) draftsSection.style.display = "none";
                     designSection.style.display = "none";
                     toggleCreatorBtn.style.display = "flex";
+                    renderProducts();
                 } else if (target === "tab-drafts") {
                     catalogSection.style.display = "none";
                     if (draftsSection) draftsSection.style.display = "block";
@@ -1411,6 +1801,7 @@
                     toggleCreatorBtn.innerHTML = `<i class="fa-solid fa-plus"></i> Nuevo`;
                     toggleCreatorBtn.style.backgroundColor = "var(--color-success)";
                     renderDraftsView();
+                    loadDraftsFromCloud({ silent: true });
                 } else {
                     catalogSection.style.display = "none";
                     if (draftsSection) draftsSection.style.display = "none";
@@ -1424,12 +1815,13 @@
             });
         });
 
-        // Gestión y orden de fotos para Nuevo Producto
+        // Gestión, orden y edición de fotos para Nuevo Producto
         let createSelectedFiles = [];
 
         function resetCreateImages() {
             createSelectedFiles.forEach(item => {
                 if (item.previewUrl) URL.revokeObjectURL(item.previewUrl);
+                if (item.basePreviewUrl && item.basePreviewUrl !== item.previewUrl) URL.revokeObjectURL(item.basePreviewUrl);
             });
             createSelectedFiles = [];
             renderCreateImagesOrganizer();
@@ -1440,9 +1832,13 @@
             if (files.length === 0) return;
 
             files.forEach(file => {
+                const url = URL.createObjectURL(file);
                 createSelectedFiles.push({
                     file,
-                    previewUrl: URL.createObjectURL(file)
+                    baseFile: file,
+                    previewUrl: url,
+                    basePreviewUrl: url,
+                    editorState: null
                 });
             });
 
@@ -1474,6 +1870,9 @@
                         </button>
                         <button type="button" class="img-move-btn" onclick="moveCreateImage(${idx}, 1)" ${idx === createSelectedFiles.length - 1 ? "disabled" : ""} title="Mover después">
                             <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <button type="button" class="img-edit-btn" onclick="openCreateImageEditor(${idx})" title="Editar foto (textos, flechas, bordes)">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
                         </button>
                         <button type="button" class="img-remove-btn" onclick="removeCreateImage(${idx})" title="Quitar foto">
                             <i class="fa-solid fa-trash-can"></i>
@@ -1517,9 +1916,9 @@
         };
 
         window.removeCreateImage = function(index) {
-            if (createSelectedFiles[index]?.previewUrl) {
-                URL.revokeObjectURL(createSelectedFiles[index].previewUrl);
-            }
+            const item = createSelectedFiles[index];
+            if (item?.previewUrl) URL.revokeObjectURL(item.previewUrl);
+            if (item?.basePreviewUrl && item.basePreviewUrl !== item.previewUrl) URL.revokeObjectURL(item.basePreviewUrl);
             createSelectedFiles.splice(index, 1);
             renderCreateImagesOrganizer();
         };
@@ -1628,6 +2027,7 @@
             mainHeader.style.display = "flex";
             adminTabs.style.display = "flex";
             loadProductsFromSupabase();
+            loadDraftsFromCloud({ silent: true });
         }
 
         function showLoginScreen() {
@@ -1723,37 +2123,82 @@
             renderProducts();
         }
 
-        function buildImagesOrganizerHtml(imagesArray, targetType = "product") {
-            const imgs = Array.isArray(imagesArray) ? imagesArray : [];
-            if (imgs.length === 0) return "";
-
+        function buildSingleImageOrgItemHtml(url, idx, total) {
             return `
-                <div class="images-organizer-section">
-                    <div class="editor-label" style="margin-bottom: 6px; font-size: 0.8rem;">
-                        <i class="fa-solid fa-images"></i> Orden de Fotos (${imgs.length}) <span style="font-weight: 400; color: #666;">— Usa las flechas o arrastra para ordenar</span>
-                    </div>
-                    <div class="images-organizer-list" data-target="${targetType}">
-                        ${imgs.map((url, idx) => `
-                            <div class="image-org-item" draggable="true" data-url="${url}">
-                                <span class="image-org-badge">${idx === 0 ? "★ #1 Portada" : `#${idx + 1}`}</span>
-                                <img src="${url}" alt="Foto ${idx + 1}" loading="lazy">
-                                <div class="image-org-controls">
-                                    <button type="button" class="img-move-btn prev-img-btn" ${idx === 0 ? "disabled" : ""} title="Mover antes">
-                                        <i class="fa-solid fa-chevron-left"></i>
-                                    </button>
-                                    <button type="button" class="img-move-btn next-img-btn" ${idx === imgs.length - 1 ? "disabled" : ""} title="Mover después">
-                                        <i class="fa-solid fa-chevron-right"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        `).join("")}
+                <div class="image-org-item" draggable="true" data-url="${escapeAttr(url)}">
+                    <span class="image-org-badge">${idx === 0 ? "★ #1 Portada" : `#${idx + 1}`}</span>
+                    <img src="${escapeAttr(url)}" alt="Foto ${idx + 1}" loading="lazy">
+                    <div class="image-org-controls">
+                        <button type="button" class="img-move-btn prev-img-btn" ${idx === 0 ? "disabled" : ""} title="Mover antes">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button type="button" class="img-move-btn next-img-btn" ${idx === total - 1 ? "disabled" : ""} title="Mover después">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <button type="button" class="img-edit-btn edit-img-btn" title="Editar foto (textos, flechas, bordes)">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </button>
+                        <button type="button" class="img-remove-btn remove-img-btn" title="Quitar esta foto">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
                     </div>
                 </div>
             `;
         }
 
+        function buildImagesOrganizerHtml(imagesArray, targetType = "product") {
+            const imgs = Array.isArray(imagesArray) ? imagesArray : [];
+
+            return `
+                <div class="images-organizer-section">
+                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px;">
+                        <div class="editor-label" style="font-size: 0.8rem; margin: 0;">
+                            <i class="fa-solid fa-images"></i> Fotos (<span class="imgs-count-num">${imgs.length}</span>)
+                            <span style="font-weight: 400; color: #666;">— Ordena, edita o agrega</span>
+                        </div>
+                        <button type="button" class="add-photo-inline-btn">
+                            <i class="fa-solid fa-plus"></i> Agregar foto(s)
+                        </button>
+                        <input type="file" class="add-photo-file-input" multiple accept="image/*" style="display: none;">
+                    </div>
+                    <div class="images-organizer-list" data-target="${targetType}">
+                        ${imgs.length === 0
+                            ? `<div class="empty-imgs-hint" style="font-size: 0.78rem; color: #888; padding: 10px;">Sin fotos aún. Pulsa "+ Agregar foto(s)".</div>`
+                            : imgs.map((url, idx) => buildSingleImageOrgItemHtml(url, idx, imgs.length)).join("")}
+                    </div>
+                </div>
+            `;
+        }
+
+        function refreshCardCoverThumbnail(productCard) {
+            if (!productCard) return;
+            const metaImg = productCard.querySelector(".product-meta img");
+            if (!metaImg) return;
+
+            const firstProdImg = productCard.querySelector('.images-organizer-list[data-target="product"] .image-org-item');
+            if (firstProdImg?.dataset?.url) {
+                metaImg.src = firstProdImg.dataset.url;
+                return;
+            }
+            const firstVarImg = productCard.querySelector('.images-organizer-list[data-target="variant"] .image-org-item');
+            if (firstVarImg?.dataset?.url) {
+                metaImg.src = firstVarImg.dataset.url;
+            }
+        }
+
         function refreshOrganizerBadgesAndButtons(listEl, productCard) {
             const items = Array.from(listEl.querySelectorAll(".image-org-item"));
+            const sectionEl = listEl.closest(".images-organizer-section");
+            const countSpan = sectionEl?.querySelector(".imgs-count-num");
+            if (countSpan) countSpan.textContent = items.length;
+
+            const hint = listEl.querySelector(".empty-imgs-hint");
+            if (items.length === 0 && !hint) {
+                listEl.innerHTML = `<div class="empty-imgs-hint" style="font-size: 0.78rem; color: #888; padding: 10px;">Sin fotos aún. Pulsa "+ Agregar foto(s)".</div>`;
+            } else if (items.length > 0 && hint) {
+                hint.remove();
+            }
+
             items.forEach((item, idx) => {
                 const badge = item.querySelector(".image-org-badge");
                 if (badge) badge.textContent = idx === 0 ? "★ #1 Portada" : `#${idx + 1}`;
@@ -1763,11 +2208,7 @@
                 if (nextBtn) nextBtn.disabled = (idx === items.length - 1);
             });
 
-            if (listEl.dataset.target === "product" && items.length > 0 && productCard) {
-                const firstUrl = items[0].dataset.url;
-                const metaImg = productCard.querySelector(".product-meta img");
-                if (metaImg && firstUrl) metaImg.src = firstUrl;
-            }
+            refreshCardCoverThumbnail(productCard);
         }
 
         function getDragAfterHorizontalElement(container, x) {
@@ -1783,27 +2224,94 @@
             }, { offset: Number.NEGATIVE_INFINITY }).element;
         }
 
-        function setupImageOrganizers(productCard, productId) {
-            productCard.querySelectorAll(".images-organizer-list").forEach(listEl => {
+        function setupImageOrganizers(productCard, productId, onDirty) {
+            const markDirty = onDirty || (() => {
+                dirtyProducts.add(productId);
+                updateUnsavedWarning();
+            });
+
+            productCard.querySelectorAll(".images-organizer-section").forEach(sectionEl => {
+                if (sectionEl.dataset.wired === "1") return;
+                sectionEl.dataset.wired = "1";
+
+                const listEl = sectionEl.querySelector(".images-organizer-list");
+                const addBtn = sectionEl.querySelector(".add-photo-inline-btn");
+                const fileInput = sectionEl.querySelector(".add-photo-file-input");
+
+                if (addBtn && fileInput) {
+                    addBtn.addEventListener("click", () => fileInput.click());
+
+                    fileInput.addEventListener("change", async (ev) => {
+                        const files = Array.from(ev.target.files || []);
+                        ev.target.value = "";
+                        if (files.length === 0) return;
+
+                        const origHtml = addBtn.innerHTML;
+                        addBtn.disabled = true;
+
+                        const prodObj = allProducts.find(p => p.id === productId);
+                        const catSelect = productCard.querySelector(".draft-category-select");
+                        const category = catSelect ? catSelect.value : (prodObj?.category || "general");
+
+                        try {
+                            for (let i = 0; i < files.length; i++) {
+                                const file = files[i];
+                                const ext = (file.name.split(".").pop() || "jpg").replace(/[^a-zA-Z0-9]/g, "");
+                                const safeId = String(productId).replace(/[^a-zA-Z0-9_-]/g, "_");
+                                const filePath = `${category}/${safeId}_${Date.now()}_${i}.${ext}`;
+                                addBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> ${i + 1}/${files.length}...`;
+
+                                const { error: uploadError } = await window.supabaseClient.storage
+                                    .from("products")
+                                    .upload(filePath, file);
+                                if (uploadError) throw uploadError;
+
+                                const { data: { publicUrl } } = window.supabaseClient.storage
+                                    .from("products")
+                                    .getPublicUrl(filePath);
+
+                                listEl.querySelector(".empty-imgs-hint")?.remove();
+                                const tempWrap = document.createElement("div");
+                                tempWrap.innerHTML = buildSingleImageOrgItemHtml(publicUrl, 0, 1).trim();
+                                listEl.appendChild(tempWrap.firstElementChild);
+                            }
+
+                            refreshOrganizerBadgesAndButtons(listEl, productCard);
+                            markDirty();
+                            showToast(`${files.length} foto(s) agregada(s). Recuerda guardar o dejar en borrador.`);
+                        } catch (err) {
+                            showToast("Error al subir foto: " + (err.message || err), "error");
+                        } finally {
+                            addBtn.disabled = false;
+                            addBtn.innerHTML = origHtml;
+                        }
+                    });
+                }
+
                 listEl.addEventListener("click", (e) => {
                     const prevBtn = e.target.closest(".prev-img-btn");
                     const nextBtn = e.target.closest(".next-img-btn");
-                    if (!prevBtn && !nextBtn) return;
-
+                    const removeBtn = e.target.closest(".remove-img-btn");
+                    const editBtn = e.target.closest(".edit-img-btn");
                     const item = e.target.closest(".image-org-item");
                     if (!item) return;
 
                     if (prevBtn && item.previousElementSibling) {
                         listEl.insertBefore(item, item.previousElementSibling);
+                        refreshOrganizerBadgesAndButtons(listEl, productCard);
+                        markDirty();
                     } else if (nextBtn && item.nextElementSibling) {
                         listEl.insertBefore(item.nextElementSibling, item);
-                    } else {
-                        return;
+                        refreshOrganizerBadgesAndButtons(listEl, productCard);
+                        markDirty();
+                    } else if (removeBtn) {
+                        if (!confirm("¿Quitar esta foto del producto?")) return;
+                        item.remove();
+                        refreshOrganizerBadgesAndButtons(listEl, productCard);
+                        markDirty();
+                    } else if (editBtn) {
+                        openCardImageEditor(item, listEl, productCard, productId, markDirty);
                     }
-
-                    refreshOrganizerBadgesAndButtons(listEl, productCard);
-                    dirtyProducts.add(productId);
-                    updateUnsavedWarning();
                 });
 
                 let draggedItem = null;
@@ -1820,8 +2328,7 @@
                         draggedItem.classList.remove("dragging");
                         draggedItem = null;
                         refreshOrganizerBadgesAndButtons(listEl, productCard);
-                        dirtyProducts.add(productId);
-                        updateUnsavedWarning();
+                        markDirty();
                     }
                 });
 
@@ -1838,6 +2345,204 @@
             });
         }
 
+        function buildSingleVariantGroupHtml(vKey, vData) {
+            const vStock = (vData.stock !== undefined && vData.stock !== null) ? Number(vData.stock) : 1;
+            const vPrice = (vData.price !== undefined && vData.price !== null) ? vData.price : 0;
+            const vAgotada = vStock <= 0;
+            const vBadge = vAgotada
+                ? `<span class="stock-badge agotado" style="font-size: 0.7rem; padding: 1px 6px;">Agotado</span>`
+                : `<span class="stock-badge disponible" style="font-size: 0.7rem; padding: 1px 6px;">Stock: ${vStock}</span>`;
+
+            return `
+                <div class="variant-group" data-variant-key="${escapeAttr(vKey)}">
+                    <div class="variant-title-wrapper" style="margin-bottom: 8px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; gap: 6px; flex-wrap: wrap;">
+                            <div class="editor-label"><i class="fa-solid fa-palette"></i> Nombre de la Variante</div>
+                            <div style="display: flex; align-items: center; gap: 6px;">
+                                ${vBadge}
+                                <button type="button" class="remove-variant-btn" title="Quitar esta variante">
+                                    <i class="fa-solid fa-trash-can"></i> Quitar
+                                </button>
+                            </div>
+                        </div>
+                        <input type="text" class="variant-label-input" value="${escapeAttr(cleanAgotado(vData.label || ""))}" placeholder="Ej. Dorado, Modelo 01...">
+                    </div>
+                    <div class="editor-row">
+                        <div class="editor-label">Precio ($)</div>
+                        <div class="price-input-wrapper">
+                            <span>$</span>
+                            <input type="number" class="price-input" value="${vPrice}" min="0">
+                        </div>
+                    </div>
+                    <div class="editor-row">
+                        <div class="editor-label">Stock</div>
+                        <div class="stock-control">
+                            <button class="qty-btn-minus" type="button">−</button>
+                            <input type="number" class="stock-input" value="${vStock}" min="0">
+                            <button class="qty-btn-plus" type="button">+</button>
+                        </div>
+                    </div>
+                    ${buildImagesOrganizerHtml(vData.images || [], "variant")}
+                </div>
+            `;
+        }
+
+        function buildPricingAndVariantsZoneHtml(product) {
+            const hasVariants = product.variants && typeof product.variants === "object" && Object.keys(product.variants).length > 0;
+            if (hasVariants) {
+                const entries = Object.entries(product.variants);
+                return `
+                    <div class="variants-header-row">
+                        <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-border);">
+                            <i class="fa-solid fa-layer-group"></i> Variantes (<span class="variants-count-num">${entries.length}</span>)
+                        </span>
+                        <button type="button" class="add-variant-btn">
+                            <i class="fa-solid fa-plus"></i> Agregar Variante
+                        </button>
+                    </div>
+                    <div class="variants-list-container">
+                        ${entries.map(([vKey, vData]) => buildSingleVariantGroupHtml(vKey, vData)).join("")}
+                    </div>
+                `;
+            } else {
+                const prodPrice = (product.price !== undefined && product.price !== null) ? product.price : 0;
+                const prodStock = (product.stock !== undefined && product.stock !== null) ? product.stock : 1;
+                return `
+                    <div class="variants-header-row" style="background: #f8f9fa; border-color: #e9ecef;">
+                        <span style="font-size: 0.82rem; font-weight: 700; color: #555;">
+                            <i class="fa-solid fa-box"></i> Producto Individual (sin variantes)
+                        </span>
+                        <button type="button" class="convert-to-variants-btn">
+                            <i class="fa-solid fa-layer-group"></i> + Agregar Variantes
+                        </button>
+                    </div>
+                    <div class="editor-row">
+                        <div class="editor-label">Precio ($)</div>
+                        <div class="price-input-wrapper">
+                            <span>$</span>
+                            <input type="number" class="price-input" value="${prodPrice}" min="0">
+                        </div>
+                    </div>
+                    <div class="editor-row">
+                        <div class="editor-label">Stock</div>
+                        <div class="stock-control">
+                            <button class="qty-btn-minus" type="button">−</button>
+                            <input type="number" class="stock-input" value="${prodStock}" min="0">
+                            <button class="qty-btn-plus" type="button">+</button>
+                        </div>
+                    </div>
+                    ${buildImagesOrganizerHtml(product.images || [], "product")}
+                `;
+            }
+        }
+
+        function setupVariantsControls(productCard, productId, onDirty) {
+            const markDirty = onDirty || (() => {
+                dirtyProducts.add(productId);
+                updateUnsavedWarning();
+            });
+
+            const zoneEl = productCard.querySelector(".pricing-variants-zone");
+            if (!zoneEl || zoneEl.dataset.wired === "1") return;
+            zoneEl.dataset.wired = "1";
+
+            zoneEl.addEventListener("click", (e) => {
+                const convertBtn = e.target.closest(".convert-to-variants-btn");
+                const addVarBtn = e.target.closest(".add-variant-btn");
+                const removeVarBtn = e.target.closest(".remove-variant-btn");
+
+                if (convertBtn) {
+                    const curPrice = parseFloat(zoneEl.querySelector(".price-input")?.value) || 0;
+                    const curStock = parseInt(zoneEl.querySelector(".stock-input")?.value);
+                    const safeStock = isNaN(curStock) ? 1 : curStock;
+                    const curImgs = Array.from(zoneEl.querySelectorAll('.images-organizer-list[data-target="product"] .image-org-item')).map(el => el.dataset.url);
+
+                    const now = Date.now();
+                    const tempProd = {
+                        variants: {
+                            [`var_1_${now}`]: { label: "Variante 1", price: curPrice, stock: safeStock, images: [...curImgs] },
+                            [`var_2_${now}`]: { label: "Variante 2", price: curPrice, stock: 1, images: [...curImgs] }
+                        }
+                    };
+                    zoneEl.innerHTML = buildPricingAndVariantsZoneHtml(tempProd);
+                    setupStockButtons(productCard);
+                    setupImageOrganizers(productCard, productId, markDirty);
+                    refreshCardCoverThumbnail(productCard);
+                    markDirty();
+                    const firstLabel = zoneEl.querySelector(".variant-label-input");
+                    if (firstLabel) { firstLabel.focus(); firstLabel.select(); }
+                    return;
+                }
+
+                if (addVarBtn) {
+                    const listContainer = zoneEl.querySelector(".variants-list-container");
+                    if (!listContainer) return;
+                    const existingGroups = listContainer.querySelectorAll(".variant-group");
+                    let defPrice = 0;
+                    let defImgs = [];
+                    if (existingGroups.length > 0) {
+                        const lastG = existingGroups[existingGroups.length - 1];
+                        defPrice = parseFloat(lastG.querySelector(".price-input")?.value) || 0;
+                        defImgs = Array.from(lastG.querySelectorAll('.images-organizer-list[data-target="variant"] .image-org-item')).map(el => el.dataset.url);
+                    }
+                    const newKey = `var_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
+                    const tempWrap = document.createElement("div");
+                    tempWrap.innerHTML = buildSingleVariantGroupHtml(newKey, {
+                        label: "",
+                        price: defPrice,
+                        stock: 1,
+                        images: defImgs
+                    }).trim();
+                    const newGroupEl = tempWrap.firstElementChild;
+                    listContainer.appendChild(newGroupEl);
+
+                    const countEl = zoneEl.querySelector(".variants-count-num");
+                    if (countEl) countEl.textContent = listContainer.querySelectorAll(".variant-group").length;
+
+                    setupStockButtons(productCard);
+                    setupImageOrganizers(productCard, productId, markDirty);
+                    markDirty();
+                    const newLabelInput = newGroupEl.querySelector(".variant-label-input");
+                    if (newLabelInput) newLabelInput.focus();
+                    return;
+                }
+
+                if (removeVarBtn) {
+                    const groupEl = removeVarBtn.closest(".variant-group");
+                    const listContainer = zoneEl.querySelector(".variants-list-container");
+                    if (!groupEl || !listContainer) return;
+
+                    const allGroups = listContainer.querySelectorAll(".variant-group");
+                    const vName = groupEl.querySelector(".variant-label-input")?.value || "esta variante";
+
+                    if (allGroups.length > 1) {
+                        if (!confirm(`¿Seguro que deseas quitar la variante "${vName}"?`)) return;
+                        groupEl.remove();
+                        const countEl = zoneEl.querySelector(".variants-count-num");
+                        if (countEl) countEl.textContent = listContainer.querySelectorAll(".variant-group").length;
+                        refreshCardCoverThumbnail(productCard);
+                        markDirty();
+                    } else {
+                        if (!confirm(`Al quitar la última variante ("${vName}"), el producto pasará a ser un producto individual conservando su precio, stock y fotos. ¿Continuar?`)) return;
+                        const lastPrice = parseFloat(groupEl.querySelector(".price-input")?.value) || 0;
+                        const lastStock = parseInt(groupEl.querySelector(".stock-input")?.value);
+                        const lastImgs = Array.from(groupEl.querySelectorAll('.images-organizer-list[data-target="variant"] .image-org-item')).map(el => el.dataset.url);
+
+                        zoneEl.innerHTML = buildPricingAndVariantsZoneHtml({
+                            variants: null,
+                            price: lastPrice,
+                            stock: isNaN(lastStock) ? 1 : lastStock,
+                            images: lastImgs
+                        });
+                        setupStockButtons(productCard);
+                        setupImageOrganizers(productCard, productId, markDirty);
+                        refreshCardCoverThumbnail(productCard);
+                        markDirty();
+                    }
+                }
+            });
+        }
+
         function renderProducts() {
             if (filteredProducts.length === 0) {
                 productsContainer.innerHTML = `<div style="text-align: center; padding: 40px; color: #888; font-weight: 600;">No se encontraron productos.</div>`;
@@ -1851,132 +2556,72 @@
                 itemDiv.className = "product-item";
                 itemDiv.dataset.id = product.id;
 
-                let coverImg = "diamond.svg";
-                if (product.images && product.images.length > 0) {
-                    coverImg = product.images[0];
-                } else if (product.variants) {
-                    const firstVar = Object.values(product.variants)[0];
-                    if (firstVar?.images?.length > 0) coverImg = firstVar.images[0];
-                }
+                const coverImg = getProductCoverImage(product);
 
                 let inDraftBadge = "";
                 for (let dId in drafts) {
                     if (drafts[dId]?.items?.[product.id]) {
-                        inDraftBadge = `<span class="in-draft-badge" title="Tiene cambios guardados en este borrador"><i class="fa-solid fa-bookmark"></i> En borrador: <strong>${drafts[dId].name}</strong></span>`;
+                        inDraftBadge = `<span class="in-draft-badge" style="cursor: pointer;" onclick="openDraftEditModal('${dId}', '${escapeAttr(product.id)}')" title="Haz clic para editar la versión guardada en este borrador"><i class="fa-solid fa-bookmark"></i> En borrador: <strong>${escapeAttr(drafts[dId].name)}</strong> <i class="fa-solid fa-pen" style="font-size:0.65rem;"></i></span>`;
                         break;
                     }
                 }
 
                 let stockBadge = "";
-                if (!product.variants) {
+                if (!product.variants || Object.keys(product.variants).length === 0) {
                     const isAgotado = Number(product.stock) <= 0;
                     stockBadge = isAgotado 
                         ? `<span class="stock-badge agotado"><i class="fa-solid fa-circle-xmark"></i> Agotado (Stock 0)</span>`
                         : `<span class="stock-badge disponible"><i class="fa-solid fa-circle-check"></i> Stock: ${product.stock}</span>`;
                 }
 
-                let editorHtml = "";
-                if (product.variants) {
-                    editorHtml = Object.entries(product.variants).map(([vKey, vData]) => {
-                        const vStock = (vData.stock !== undefined && vData.stock !== null) ? Number(vData.stock) : 1;
-                        const vAgotada = vStock <= 0;
-                        const vBadge = vAgotada 
-                            ? `<span class="stock-badge agotado" style="font-size: 0.7rem; padding: 1px 6px;">Agotado</span>`
-                            : `<span class="stock-badge disponible" style="font-size: 0.7rem; padding: 1px 6px;">Stock: ${vStock}</span>`;
-
-                        return `
-                        <div class="variant-group" data-variant-key="${vKey}">
-                            <div class="variant-title-wrapper" style="margin-bottom: 8px;">
-                                <div style="display: flex; justify-content: space-between; align-items: center;">
-                                    <div class="editor-label"><i class="fa-solid fa-palette"></i> Nombre de la Variante</div>
-                                    ${vBadge}
-                                </div>
-                                <input type="text" class="variant-label-input" value="${cleanAgotado(vData.label)}" placeholder="Nombre de la variante">
-                            </div>
-                            <div class="editor-row">
-                                <div class="editor-label">Precio ($)</div>
-                                <div class="price-input-wrapper">
-                                    <span>$</span>
-                                    <input type="number" class="price-input" value="${vData.price}" min="0">
-                                </div>
-                            </div>
-                            <div class="editor-row">
-                                <div class="editor-label">Stock</div>
-                                <div class="stock-control">
-                                    <button class="qty-btn-minus" type="button">−</button>
-                                    <input type="number" class="stock-input" value="${vStock}" min="0">
-                                    <button class="qty-btn-plus" type="button">+</button>
-                                </div>
-                            </div>
-                            ${buildImagesOrganizerHtml(vData.images, "variant")}
-                        </div>
-                    `;
-                    }).join("");
-                } else {
-                    editorHtml = `
-                        <div class="editor-row">
-                            <div class="editor-label">Precio ($)</div>
-                            <div class="price-input-wrapper">
-                                <span>$</span>
-                                <input type="number" class="price-input" value="${product.price}" min="0">
-                            </div>
-                        </div>
-                        <div class="editor-row">
-                            <div class="editor-label">Stock</div>
-                            <div class="stock-control">
-                                <button class="qty-btn-minus" type="button">−</button>
-                                <input type="number" class="stock-input" value="${product.stock}" min="0">
-                                <button class="qty-btn-plus" type="button">+</button>
-                            </div>
-                        </div>
-                        ${buildImagesOrganizerHtml(product.images, "product")}
-                    `;
-                }
-
-                editorHtml += `
-                    <div class="desc-input-wrapper">
-                        <div class="editor-label">Descripción (Opcional)</div>
-                        <textarea class="desc-input" rows="2" placeholder="Describe el producto...">${product.description || ""}</textarea>
-                    </div>
-                `;
-
                 itemDiv.innerHTML = `
                     <div class="product-meta">
-                        <img src="${coverImg}" alt="${product.title}">
+                        <img src="${escapeAttr(coverImg)}" alt="${escapeAttr(product.title)}">
                         <div class="product-info-text" style="flex: 1;">
                             <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-                                <p class="sub-label" style="margin: 0;">ID: <strong>${product.id}</strong></p>
+                                <p class="sub-label" style="margin: 0;">ID: <strong>${escapeAttr(product.id)}</strong></p>
                                 ${inDraftBadge}
                                 ${stockBadge}
                             </div>
-                            <p class="sub-label" style="margin-top: 4px;">Categoría: <strong>${product.category}</strong>${product.subcategory ? ` > ${product.subcategory}` : ""}</p>
+                            <p class="sub-label" style="margin-top: 4px;">Categoría: <strong>${escapeAttr(product.category)}</strong>${product.subcategory ? ` > ${escapeAttr(product.subcategory)}` : ""}</p>
                         </div>
+                        <button type="button" class="delete-product-btn" onclick="deleteProductCompletely('${escapeAttr(product.id)}')" title="Eliminar este producto permanentemente de la tienda">
+                            <i class="fa-solid fa-trash-can"></i> Eliminar
+                        </button>
                     </div>
                     <div class="product-editor">
                         <div class="title-edit-wrapper" style="margin-bottom: 10px;">
                             <div class="editor-label"><i class="fa-solid fa-tag"></i> Nombre del Producto</div>
-                            <input type="text" class="product-title-input" value="${cleanAgotado(product.title)}" placeholder="Nombre del producto">
+                            <input type="text" class="product-title-input" value="${escapeAttr(cleanAgotado(product.title))}" placeholder="Nombre del producto">
                         </div>
-                        ${editorHtml}
+                        <div class="pricing-variants-zone">
+                            ${buildPricingAndVariantsZoneHtml(product)}
+                        </div>
+                        <div class="desc-input-wrapper">
+                            <div class="editor-label">Descripción (Opcional)</div>
+                            <textarea class="desc-input" rows="2" placeholder="Describe el producto...">${escapeAttr(product.description || "")}</textarea>
+                        </div>
                         <div class="save-actions-row">
-                            <button class="save-btn direct-save-btn" onclick="saveProduct('${product.id}', 'direct')">
+                            <button class="save-btn direct-save-btn" onclick="saveProduct('${escapeAttr(product.id)}', 'direct')">
                                 <i class="fa-solid fa-bolt"></i> Publicar de Inmediato
                             </button>
-                            <button class="draft-btn" onclick="openDraftModalForProduct('${product.id}')">
+                            <button class="draft-btn" onclick="openDraftModalForProduct('${escapeAttr(product.id)}')">
                                 <i class="fa-solid fa-bookmark"></i> Guardar en Borrador...
                             </button>
                         </div>
                     </div>
                 `;
 
-                setupStockButtons(itemDiv);
-                setupImageOrganizers(itemDiv, product.id);
-
-                // Detectar edición para advertencia de cambios sin guardar
-                itemDiv.addEventListener("input", () => {
+                const markDirty = () => {
                     dirtyProducts.add(product.id);
                     updateUnsavedWarning();
-                });
+                };
+
+                setupStockButtons(itemDiv);
+                setupImageOrganizers(itemDiv, product.id, markDirty);
+                setupVariantsControls(itemDiv, product.id, markDirty);
+
+                itemDiv.addEventListener("input", markDirty);
 
                 productsContainer.appendChild(itemDiv);
             });
@@ -1984,6 +2629,9 @@
 
         function setupStockButtons(container) {
             container.querySelectorAll(".stock-control").forEach(control => {
+                if (control.dataset.wired === "1") return;
+                control.dataset.wired = "1";
+
                 const minusBtn = control.querySelector(".qty-btn-minus");
                 const plusBtn = control.querySelector(".qty-btn-plus");
                 const input = control.querySelector(".stock-input");
@@ -2004,48 +2652,89 @@
             });
         }
 
-        // Extraer valores editados de un producto y aplicar reglas de "- AGOTADO" y orden de fotos
+        function makeVariantSlugKey(label, usedKeysObj) {
+            let base = cleanAgotado(label)
+                .toLowerCase()
+                .replace(/[áäâà]/g, "a")
+                .replace(/[éëêè]/g, "e")
+                .replace(/[íïîì]/g, "i")
+                .replace(/[óöôò]/g, "o")
+                .replace(/[úüûù]/g, "u")
+                .replace(/ñ/g, "n")
+                .replace(/[^a-z0-9\s_-]/g, "")
+                .trim()
+                .replace(/\s+/g, " ") || "variante";
+            let key = base;
+            let n = 2;
+            while (Object.prototype.hasOwnProperty.call(usedKeysObj, key)) {
+                key = `${base}_${n++}`;
+            }
+            return key;
+        }
+
+        // Extraer valores editados de un producto (soporta agregar/quitar variantes, fotos y reglas AGOTADO)
         function extractProductFormValues(productCard, originalProduct) {
             const titleInput = productCard.querySelector(".product-title-input");
             const descInput = productCard.querySelector(".desc-input");
-            const rawTitle = titleInput ? titleInput.value.trim() : originalProduct.title;
-            
+            const rawTitle = titleInput ? titleInput.value.trim() : (originalProduct?.title || "");
+
+            if (!rawTitle) {
+                throw new Error("El nombre del producto no puede estar vacío.");
+            }
+
             let updatePayload = {
-                description: descInput ? (descInput.value.trim() || null) : (originalProduct.description || null)
+                description: descInput ? (descInput.value.trim() || null) : (originalProduct?.description || null)
             };
 
-            if (originalProduct.variants) {
-                let updatedVariants = JSON.parse(JSON.stringify(originalProduct.variants));
-                const variantGroups = productCard.querySelectorAll(".variant-group");
-                
+            const variantGroups = productCard.querySelectorAll(".variant-group");
+
+            if (variantGroups.length > 0) {
+                let updatedVariants = {};
+
                 variantGroups.forEach(group => {
-                    const vKey = group.dataset.variantKey;
+                    let vKey = group.dataset.variantKey;
                     const labelInput = group.querySelector(".variant-label-input");
                     const priceInput = group.querySelector(".price-input");
                     const stockInput = group.querySelector(".stock-input");
 
-                    const rawLabel = labelInput ? labelInput.value.trim() : (updatedVariants[vKey]?.label || "");
+                    const rawLabel = labelInput ? cleanAgotado(labelInput.value.trim()) : "";
+                    if (!rawLabel) {
+                        throw new Error("Todas las variantes deben tener un nombre.");
+                    }
+
                     const newPrice = parseFloat(priceInput.value);
                     const newStock = parseInt(stockInput.value);
 
                     if (isNaN(newPrice) || isNaN(newStock) || newPrice < 0 || newStock < 0) {
-                        throw new Error("Precios o stock de variante inválidos.");
+                        throw new Error(`Precio o stock inválido en la variante "${rawLabel}".`);
                     }
 
-                    if (!updatedVariants[vKey]) updatedVariants[vKey] = {};
-                    updatedVariants[vKey].price = newPrice;
-                    updatedVariants[vKey].stock = newStock;
-                    // Agregar automáticamente "- AGOTADO" a la variante si stock === 0 (o remover si stock > 0)
-                    updatedVariants[vKey].label = formatAgotadoText(rawLabel, newStock);
-
-                    // Guardar orden de fotos de esta variante
                     const varImgItems = group.querySelectorAll('.images-organizer-list[data-target="variant"] .image-org-item');
-                    if (varImgItems.length > 0) {
-                        updatedVariants[vKey].images = Array.from(varImgItems).map(el => el.dataset.url);
+                    const varImgs = Array.from(varImgItems).map(el => el.dataset.url).filter(Boolean);
+                    if (varImgs.length === 0) {
+                        throw new Error(`La variante "${rawLabel}" debe tener al menos 1 foto.`);
                     }
+
+                    if (!vKey || vKey.startsWith("var_") || Object.prototype.hasOwnProperty.call(updatedVariants, vKey)) {
+                        if (originalProduct?.variants && Object.prototype.hasOwnProperty.call(originalProduct.variants, vKey) && !Object.prototype.hasOwnProperty.call(updatedVariants, vKey)) {
+                            // Conservar key existente
+                        } else {
+                            vKey = makeVariantSlugKey(rawLabel, updatedVariants);
+                        }
+                    }
+
+                    updatedVariants[vKey] = {
+                        label: formatAgotadoText(rawLabel, newStock),
+                        price: newPrice,
+                        stock: newStock,
+                        images: varImgs
+                    };
                 });
 
                 updatePayload.variants = updatedVariants;
+                updatePayload.price = null;
+                updatePayload.stock = null;
+                updatePayload.images = null;
                 updatePayload.title = cleanAgotado(rawTitle);
             } else {
                 const priceInput = productCard.querySelector(".price-input");
@@ -2058,16 +2747,17 @@
                     throw new Error("Precio o stock inválidos.");
                 }
 
+                const prodImgItems = productCard.querySelectorAll('.images-organizer-list[data-target="product"] .image-org-item');
+                const prodImgs = Array.from(prodImgItems).map(el => el.dataset.url).filter(Boolean);
+                if (prodImgs.length === 0) {
+                    throw new Error("El producto debe tener al menos 1 foto.");
+                }
+
+                updatePayload.variants = null;
                 updatePayload.price = newPrice;
                 updatePayload.stock = newStock;
-                // Agregar automáticamente "- AGOTADO" al nombre del producto si stock === 0 (o remover si stock > 0)
+                updatePayload.images = prodImgs;
                 updatePayload.title = formatAgotadoText(rawTitle, newStock);
-
-                // Guardar orden de fotos del producto individual
-                const prodImgItems = productCard.querySelectorAll('.images-organizer-list[data-target="product"] .image-org-item');
-                if (prodImgItems.length > 0) {
-                    updatePayload.images = Array.from(prodImgItems).map(el => el.dataset.url);
-                }
             }
 
             return updatePayload;
@@ -2075,7 +2765,7 @@
 
         // Guardar Producto (Publicación Inmediata)
         async function saveProduct(productId, mode = 'direct') {
-            const productCard = document.querySelector(`.product-item[data-id="${productId}"]`);
+            const productCard = productsContainer.querySelector(`.product-item[data-id="${CSS.escape(productId)}"]`);
             if (!productCard) return;
 
             const directBtn = productCard.querySelector(".direct-save-btn");
@@ -2121,22 +2811,91 @@
             }
         }
 
-        // ==========================================
-        // GESTIÓN DE BORRADORES (DRAFTS)
-        // ==========================================
-        function loadDrafts() {
-            try {
-                const stored = localStorage.getItem(DRAFTS_STORAGE_KEY);
-                if (stored) {
-                    drafts = JSON.parse(stored);
-                }
-            } catch (e) {
-                console.error("Error loading drafts:", e);
-                drafts = {};
-            }
+        // Eliminar Producto Totalmente de la Tienda
+        window.deleteProductCompletely = async function(productId) {
+            const product = allProducts.find(p => p.id === productId);
+            if (!product) return;
 
-            if (!drafts || Object.keys(drafts).length === 0) {
-                drafts = {
+            const confirmDelete = confirm(
+                `¿Estás SEGURO de eliminar PERMANENTEMENTE el producto "${product.title}" (ID: ${productId})?\n\nSe borrará del catálogo en vivo, de las secciones de portada y de los borradores. Esta acción no se puede deshacer.`
+            );
+            if (!confirmDelete) return;
+
+            try {
+                const { error } = await window.supabaseClient
+                    .from("products")
+                    .delete()
+                    .eq("id", productId);
+
+                if (error) throw error;
+
+                // Limpiar referencias en secciones de portada si las hubiera
+                try {
+                    const { data: secs } = await window.supabaseClient
+                        .from("homepage_sections")
+                        .select("id, product_ids");
+                    if (Array.isArray(secs)) {
+                        for (const sec of secs) {
+                            if (Array.isArray(sec.product_ids) && sec.product_ids.includes(productId)) {
+                                const cleaned = sec.product_ids.filter(id => id !== productId);
+                                await window.supabaseClient
+                                    .from("homepage_sections")
+                                    .update({ product_ids: cleaned })
+                                    .eq("id", sec.id);
+                            }
+                        }
+                    }
+                } catch (secErr) {
+                    console.warn("Aviso limpiando secciones tras borrar producto:", secErr);
+                }
+
+                // Limpiar de borradores si estaba en alguno
+                let removedFromDrafts = false;
+                for (const dId in drafts) {
+                    if (drafts[dId]?.items?.[productId]) {
+                        delete drafts[dId].items[productId];
+                        removedFromDrafts = true;
+                    }
+                }
+                if (removedFromDrafts) {
+                    saveDrafts();
+                }
+
+                dirtyProducts.delete(productId);
+                updateUnsavedWarning();
+                allProducts = allProducts.filter(p => p.id !== productId);
+                applyFilters();
+                showToast(`Producto "${product.title}" eliminado permanentemente.`, "success");
+            } catch (err) {
+                showToast("Error al eliminar producto: " + (err.message || err), "error");
+            }
+        };
+
+        // ==========================================
+        // GESTIÓN DE BORRADORES EN LA NUBE (CLOUD DRAFTS)
+        // ==========================================
+        const CLOUD_DRAFTS_FOLDER = "_admin_drafts";
+        const LOCAL_MIGRATED_KEY = "musami_drafts_cloud_migrated_v1";
+        let cloudSaveChain = Promise.resolve();
+
+        function setCloudSyncStatus(mode, label) {
+            const el = document.getElementById("cloud-sync-status");
+            if (!el) return;
+            if (mode === "syncing") {
+                el.className = "cloud-sync-pill syncing";
+                el.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> ${label || "Sincronizando nube..."}`;
+            } else if (mode === "error") {
+                el.className = "cloud-sync-pill error";
+                el.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i> ${label || "Sin conexión nube"}`;
+            } else {
+                el.className = "cloud-sync-pill";
+                el.innerHTML = `<i class="fa-solid fa-cloud"></i> ${label || "Sincronizado en la nube"}`;
+            }
+        }
+
+        function ensureDefaultDraft(draftsMap) {
+            if (!draftsMap || typeof draftsMap !== "object" || Object.keys(draftsMap).length === 0) {
+                return {
                     "draft_default": {
                         id: "draft_default",
                         name: "Borrador Principal",
@@ -2145,22 +2904,209 @@
                     }
                 };
             }
+            for (const k of Object.keys(draftsMap)) {
+                if (!draftsMap[k].items || typeof draftsMap[k].items !== "object") {
+                    draftsMap[k].items = {};
+                }
+            }
+            return draftsMap;
+        }
 
+        function loadDrafts() {
+            try {
+                const stored = localStorage.getItem(DRAFTS_STORAGE_KEY);
+                if (stored) {
+                    drafts = JSON.parse(stored);
+                }
+            } catch (e) {
+                console.error("Error loading local cached drafts:", e);
+                drafts = {};
+            }
+
+            drafts = ensureDefaultDraft(drafts);
             if (!drafts[activeDraftId]) {
                 activeDraftId = Object.keys(drafts)[0];
             }
-
             updateDraftsBadge();
         }
+
+        function hasAnyLocalDraftData(localMap) {
+            if (!localMap || typeof localMap !== "object") return false;
+            for (const k of Object.keys(localMap)) {
+                if (k !== "draft_default") return true;
+                if (localMap[k]?.name && localMap[k].name !== "Borrador Principal") return true;
+                if (Object.keys(localMap[k]?.items || {}).length > 0) return true;
+            }
+            return false;
+        }
+
+        function mergeDraftMaps(cloudMap, localMap) {
+            const merged = JSON.parse(JSON.stringify(cloudMap || {}));
+            for (const [dId, lDraft] of Object.entries(localMap || {})) {
+                if (!lDraft || typeof lDraft !== "object") continue;
+                if (!merged[dId]) {
+                    merged[dId] = JSON.parse(JSON.stringify(lDraft));
+                    if (!merged[dId].items) merged[dId].items = {};
+                } else {
+                    if (!merged[dId].items) merged[dId].items = {};
+                    for (const [prodId, lItem] of Object.entries(lDraft.items || {})) {
+                        const existing = merged[dId].items[prodId];
+                        if (!existing || (lItem.stagedAt || 0) > (existing.stagedAt || 0)) {
+                            merged[dId].items[prodId] = JSON.parse(JSON.stringify(lItem));
+                        }
+                    }
+                }
+            }
+            return ensureDefaultDraft(merged);
+        }
+
+        async function persistDraftsToCloudNow(snapshot) {
+            if (!window.supabaseClient) return;
+            const { data: { session } } = await window.supabaseClient.auth.getSession();
+            if (!session) return;
+
+            setCloudSyncStatus("syncing", "Guardando en nube...");
+            const fileName = `drafts_${Date.now()}_${Math.floor(100 + Math.random() * 900)}.json`;
+            const filePath = `${CLOUD_DRAFTS_FOLDER}/${fileName}`;
+            const blob = new Blob([JSON.stringify(snapshot)], { type: "application/json" });
+
+            const { error: upErr } = await window.supabaseClient.storage
+                .from("products")
+                .upload(filePath, blob, { contentType: "application/json", cacheControl: "0", upsert: true });
+
+            if (upErr) throw upErr;
+
+            // Limpiar versiones antiguas dejando las 2 más recientes como respaldo
+            const { data: listData } = await window.supabaseClient.storage
+                .from("products")
+                .list(CLOUD_DRAFTS_FOLDER, { limit: 50 });
+
+            if (Array.isArray(listData)) {
+                const draftFiles = listData
+                    .filter(f => f.name && /^drafts_\d+/.test(f.name) && f.name.endsWith(".json"))
+                    .sort((a, b) => b.name.localeCompare(a.name));
+                if (draftFiles.length > 2) {
+                    const toRemove = draftFiles.slice(2).map(f => `${CLOUD_DRAFTS_FOLDER}/${f.name}`);
+                    await window.supabaseClient.storage.from("products").remove(toRemove);
+                }
+            }
+
+            setCloudSyncStatus("ok", "Sincronizado en la nube");
+        }
+
+        async function loadDraftsFromCloud({ silent = false } = {}) {
+            if (!window.supabaseClient) return;
+            try {
+                const { data: { session } } = await window.supabaseClient.auth.getSession();
+                if (!session) return;
+
+                setCloudSyncStatus("syncing", "Sincronizando...");
+
+                const { data: listData, error: listErr } = await window.supabaseClient.storage
+                    .from("products")
+                    .list(CLOUD_DRAFTS_FOLDER, { limit: 50 });
+
+                if (listErr) throw listErr;
+
+                const draftFiles = (listData || [])
+                    .filter(f => f.name && /^drafts_\d+/.test(f.name) && f.name.endsWith(".json"))
+                    .sort((a, b) => b.name.localeCompare(a.name));
+
+                let cloudDrafts = {};
+                if (draftFiles.length > 0) {
+                    const latestPath = `${CLOUD_DRAFTS_FOLDER}/${draftFiles[0].name}`;
+                    const { data: fileBlob, error: dlErr } = await window.supabaseClient.storage
+                        .from("products")
+                        .download(latestPath);
+                    if (dlErr) throw dlErr;
+                    const text = await fileBlob.text();
+                    cloudDrafts = JSON.parse(text || "{}");
+                }
+
+                // Migrar automáticamente borradores locales previos de este computador sin pisar los de otro PC
+                const alreadyMigrated = localStorage.getItem(LOCAL_MIGRATED_KEY) === "true";
+                let needsInitialUpload = (draftFiles.length === 0);
+
+                if (!alreadyMigrated) {
+                    let localDrafts = {};
+                    try {
+                        localDrafts = JSON.parse(localStorage.getItem(DRAFTS_STORAGE_KEY) || "{}");
+                    } catch (_) {}
+
+                    if (hasAnyLocalDraftData(localDrafts)) {
+                        cloudDrafts = mergeDraftMaps(cloudDrafts, localDrafts);
+                        needsInitialUpload = true;
+                    }
+                    localStorage.setItem(LOCAL_MIGRATED_KEY, "true");
+                }
+
+                drafts = ensureDefaultDraft(cloudDrafts);
+                if (!drafts[activeDraftId]) {
+                    activeDraftId = Object.keys(drafts)[0];
+                }
+
+                localStorage.setItem(DRAFTS_STORAGE_KEY, JSON.stringify(drafts));
+                updateDraftsBadge();
+                populateActiveDraftDropdown();
+                if (draftsSection && draftsSection.style.display !== "none") {
+                    renderDraftsView();
+                }
+                if (catalogSection && catalogSection.style.display !== "none" && dirtyProducts.size === 0) {
+                    renderProducts();
+                }
+
+                if (needsInitialUpload) {
+                    await persistDraftsToCloudNow(drafts);
+                } else {
+                    setCloudSyncStatus("ok", "Sincronizado en la nube");
+                }
+
+                if (!silent) {
+                    showToast("Borradores sincronizados con la nube", "success");
+                }
+            } catch (err) {
+                console.error("Error sincronizando borradores en la nube:", err);
+                setCloudSyncStatus("error", "Modo local (error nube)");
+                if (!silent) {
+                    showToast("Error al sincronizar con la nube: " + (err.message || err), "error");
+                }
+            }
+        }
+
+        window.syncDraftsFromCloudManual = function() {
+            loadDraftsFromCloud({ silent: false });
+        };
+
+        window.addEventListener("focus", () => {
+            const anyModalOpen =
+                document.getElementById("draft-edit-modal")?.style.display === "flex" ||
+                document.getElementById("image-editor-modal")?.style.display === "flex" ||
+                document.getElementById("draft-modal")?.style.display === "flex" ||
+                document.getElementById("move-draft-modal")?.style.display === "flex";
+            if (!anyModalOpen && dirtyProducts.size === 0) {
+                loadDraftsFromCloud({ silent: true });
+            }
+        });
 
         function saveDrafts() {
             try {
                 localStorage.setItem(DRAFTS_STORAGE_KEY, JSON.stringify(drafts));
+                localStorage.setItem(LOCAL_MIGRATED_KEY, "true");
             } catch (e) {
-                console.error("Error saving drafts:", e);
+                console.error("Error saving drafts locally:", e);
             }
             updateDraftsBadge();
             populateActiveDraftDropdown();
+
+            const snapshot = JSON.parse(JSON.stringify(drafts));
+            cloudSaveChain = cloudSaveChain
+                .then(() => persistDraftsToCloudNow(snapshot))
+                .catch(err => {
+                    console.error("Error guardando borradores en la nube:", err);
+                    setCloudSyncStatus("error", "Error al subir a nube");
+                    showToast("Aviso: no se pudo sincronizar el borrador en la nube (" + (err.message || err) + ")", "error");
+                });
+            return cloudSaveChain;
         }
 
         function updateDraftsBadge() {
@@ -2182,8 +3128,8 @@
             const select = document.getElementById("active-draft-select");
             if (!select) return;
             select.innerHTML = Object.keys(drafts).map(k => `
-                <option value="${k}" ${k === activeDraftId ? "selected" : ""}>
-                    ${drafts[k].name} (${Object.keys(drafts[k].items || {}).length} productos)
+                <option value="${escapeAttr(k)}" ${k === activeDraftId ? "selected" : ""}>
+                    ${escapeAttr(drafts[k].name)} (${Object.keys(drafts[k].items || {}).length} productos)
                 </option>
             `).join("");
         }
@@ -2208,7 +3154,7 @@
             activeDraftId = newId;
             saveDrafts();
             renderDraftsView();
-            showToast(`Borrador "${name.trim()}" creado`);
+            showToast(`Borrador "${name.trim()}" creado en la nube`);
         }
 
         function promptRenameDraft() {
@@ -2245,6 +3191,7 @@
 
         function removeDraftItem(draftId, productId) {
             if (drafts[draftId]?.items?.[productId]) {
+                if (!confirm("¿Quitar este producto del borrador?")) return;
                 delete drafts[draftId].items[productId];
                 saveDrafts();
                 renderDraftsView();
@@ -2286,46 +3233,339 @@
 
                 let detailsHtml = "";
                 if (item.type === "create") {
+                    let subInfo = "";
+                    if (item.payload.variants && Object.keys(item.payload.variants).length > 0) {
+                        const vLabels = Object.values(item.payload.variants).map(v => `${v.label} ($${v.price} / Stock: ${v.stock})`).join(", ");
+                        subInfo = `Variantes: ${escapeAttr(vLabels)}`;
+                    } else {
+                        subInfo = `Precio: $${item.payload.price} | Stock: ${item.payload.stock}`;
+                    }
                     detailsHtml = `
-                        <div style="flex: 1;">
+                        <div style="flex: 1; min-width: 180px;">
                             <span class="stock-badge disponible" style="margin-bottom: 5px;"><i class="fa-solid fa-plus-circle"></i> Nuevo Producto</span>
-                            <h4 style="margin: 2px 0 4px; color: var(--color-border);">${item.title}</h4>
-                            <p style="margin: 0; font-size: 0.8rem; color: #666;">ID: <strong>${item.productId}</strong> | Precio: $${item.payload.price} | Stock: ${item.payload.stock}</p>
+                            <h4 style="margin: 2px 0 4px; color: var(--color-border);">${escapeAttr(item.title)}</h4>
+                            <p style="margin: 0; font-size: 0.8rem; color: #666;">ID: <strong>${escapeAttr(item.productId)}</strong> | ${subInfo}</p>
                         </div>
                     `;
                 } else {
                     let changes = [];
-                    if (item.payload.title) changes.push(`Nombre: <strong>${item.payload.title}</strong>`);
-                    if (item.payload.price !== undefined) changes.push(`Precio: $${item.payload.price}`);
-                    if (item.payload.stock !== undefined) changes.push(`Stock: ${item.payload.stock}`);
+                    if (item.payload.title) changes.push(`Nombre: <strong>${escapeAttr(item.payload.title)}</strong>`);
+                    if (item.payload.price !== undefined && item.payload.price !== null) changes.push(`Precio: $${item.payload.price}`);
+                    if (item.payload.stock !== undefined && item.payload.stock !== null) changes.push(`Stock: ${item.payload.stock}`);
                     if (item.payload.variants) {
-                        const vLabels = Object.values(item.payload.variants).map(v => `${v.label} (Stock: ${v.stock})`).join(", ");
+                        const vLabels = Object.values(item.payload.variants).map(v => `${escapeAttr(v.label)} (Stock: ${v.stock})`).join(", ");
                         changes.push(`Variantes: ${vLabels}`);
                     }
-                    if (item.payload.images) changes.push(`Orden de fotos actualizado`);
+                    if (item.payload.images) changes.push(`Fotos (${item.payload.images.length})`);
                     if (item.payload.description !== undefined) changes.push(`Descripción actualizada`);
 
                     detailsHtml = `
-                        <div style="flex: 1;">
+                        <div style="flex: 1; min-width: 180px;">
                             <span class="in-draft-badge" style="margin-bottom: 5px;"><i class="fa-solid fa-pen"></i> Edición de Producto</span>
-                            <h4 style="margin: 2px 0 4px; color: var(--color-border);">${item.title}</h4>
-                            <p style="margin: 0; font-size: 0.8rem; color: #666;">ID: <strong>${item.productId}</strong></p>
+                            <h4 style="margin: 2px 0 4px; color: var(--color-border);">${escapeAttr(item.title)}</h4>
+                            <p style="margin: 0; font-size: 0.8rem; color: #666;">ID: <strong>${escapeAttr(item.productId)}</strong></p>
                             <p style="margin: 4px 0 0; font-size: 0.8rem; color: #444; line-height: 1.3;">${changes.join(" | ")}</p>
                         </div>
                     `;
                 }
 
+                const coverImg = item.coverImg || getProductCoverImage(item.payload);
+
                 itemDiv.innerHTML = `
-                    <img src="${item.coverImg || 'diamond.svg'}" alt="${item.title}">
+                    <img src="${escapeAttr(coverImg)}" alt="${escapeAttr(item.title)}">
                     ${detailsHtml}
-                    <button onclick="removeDraftItem('${activeDraftId}', '${item.productId}')" title="Quitar de este borrador" style="background: #fee; border: 1px solid #fcc; color: var(--color-danger); padding: 8px 12px; border-radius: 8px; cursor: pointer; margin-left: auto;">
-                        <i class="fa-solid fa-xmark"></i> Quitar
-                    </button>
+                    <div class="draft-item-actions">
+                        <button type="button" class="draft-action-btn edit" onclick="openDraftEditModal('${escapeAttr(activeDraftId)}', '${escapeAttr(item.productId)}')" title="Editar este producto dentro del borrador">
+                            <i class="fa-solid fa-pen-to-square"></i> Editar
+                        </button>
+                        <button type="button" class="draft-action-btn move" onclick="openMoveDraftModal('${escapeAttr(activeDraftId)}', '${escapeAttr(item.productId)}')" title="Mover a otro borrador">
+                            <i class="fa-solid fa-right-left"></i> Mover
+                        </button>
+                        <button type="button" class="draft-action-btn remove" onclick="removeDraftItem('${escapeAttr(activeDraftId)}', '${escapeAttr(item.productId)}')" title="Quitar de este borrador">
+                            <i class="fa-solid fa-xmark"></i> Quitar
+                        </button>
+                    </div>
                 `;
 
                 container.appendChild(itemDiv);
             });
         }
+
+        // Mover Producto de un Borrador a Otro
+        let moveDraftContext = null;
+
+        window.openMoveDraftModal = function(sourceDraftId, productId) {
+            const item = drafts[sourceDraftId]?.items?.[productId];
+            if (!item) return;
+
+            moveDraftContext = { sourceDraftId, productId };
+            document.getElementById("move-draft-product-name").textContent =
+                `Producto: ${item.title} (desde "${drafts[sourceDraftId].name}")`;
+
+            const select = document.getElementById("move-draft-target-select");
+            const otherKeys = Object.keys(drafts).filter(k => k !== sourceDraftId);
+
+            select.innerHTML = otherKeys.map(k => `
+                <option value="${escapeAttr(k)}">${escapeAttr(drafts[k].name)} (${Object.keys(drafts[k].items || {}).length} productos)</option>
+            `).join("") + `<option value="__new__">+ Crear nuevo borrador...</option>`;
+
+            document.getElementById("move-new-draft-name").value = "";
+            toggleMoveNewDraftInput();
+            document.getElementById("move-draft-modal").style.display = "flex";
+        };
+
+        window.closeMoveDraftModal = function() {
+            document.getElementById("move-draft-modal").style.display = "none";
+            moveDraftContext = null;
+        };
+
+        window.toggleMoveNewDraftInput = function() {
+            const select = document.getElementById("move-draft-target-select");
+            const row = document.getElementById("move-new-draft-row");
+            if (select.value === "__new__") {
+                row.style.display = "block";
+                document.getElementById("move-new-draft-name").focus();
+            } else {
+                row.style.display = "none";
+            }
+        };
+
+        window.confirmMoveDraftItem = function() {
+            if (!moveDraftContext) return;
+            const { sourceDraftId, productId } = moveDraftContext;
+            const item = drafts[sourceDraftId]?.items?.[productId];
+            if (!item) {
+                closeMoveDraftModal();
+                return;
+            }
+
+            const select = document.getElementById("move-draft-target-select");
+            let targetDraftId = select.value;
+
+            if (targetDraftId === "__new__") {
+                const newName = document.getElementById("move-new-draft-name").value.trim();
+                if (!newName) {
+                    showToast("Ingresa el nombre del nuevo borrador destino", "error");
+                    return;
+                }
+                targetDraftId = "draft_" + Date.now();
+                drafts[targetDraftId] = {
+                    id: targetDraftId,
+                    name: newName,
+                    createdAt: Date.now(),
+                    items: {}
+                };
+            }
+
+            if (drafts[targetDraftId].items[productId]) {
+                if (!confirm(`El borrador "${drafts[targetDraftId].name}" ya contiene una versión de este producto. ¿Reemplazarla?`)) {
+                    return;
+                }
+            }
+
+            drafts[targetDraftId].items[productId] = JSON.parse(JSON.stringify(item));
+            delete drafts[sourceDraftId].items[productId];
+
+            saveDrafts();
+            closeMoveDraftModal();
+            renderDraftsView();
+            renderProducts();
+            showToast(`Producto movido al borrador "${drafts[targetDraftId].name}"`, "success");
+        };
+
+        // Editar Producto Guardado en Borrador
+        let draftEditContext = null;
+
+        window.openDraftEditModal = function(draftId, productId) {
+            const item = drafts[draftId]?.items?.[productId];
+            if (!item) return;
+
+            const originalProduct = allProducts.find(p => p.id === productId) || null;
+            let effectiveProduct;
+
+            if (item.type === "create") {
+                effectiveProduct = JSON.parse(JSON.stringify(item.payload));
+            } else {
+                effectiveProduct = Object.assign(
+                    {},
+                    originalProduct ? JSON.parse(JSON.stringify(originalProduct)) : { id: productId, title: item.title, category: "Bisuteria" },
+                    JSON.parse(JSON.stringify(item.payload))
+                );
+                if (Object.prototype.hasOwnProperty.call(item.payload, "variants")) {
+                    effectiveProduct.variants = item.payload.variants ? JSON.parse(JSON.stringify(item.payload.variants)) : null;
+                }
+            }
+
+            draftEditContext = { draftId, productId, itemType: item.type, effectiveProduct };
+
+            const container = document.getElementById("draft-edit-card-container");
+            container.innerHTML = "";
+
+            const cardDiv = document.createElement("div");
+            cardDiv.className = "product-item";
+            cardDiv.style.border = "1px solid #ddd";
+            cardDiv.style.boxShadow = "none";
+            cardDiv.dataset.id = productId;
+
+            const coverImg = getProductCoverImage(effectiveProduct);
+            const curCat = effectiveProduct.category || "Bisuteria";
+            const curSubs = SUBCATEGORIES_MAP[curCat] || [];
+            const curSub = effectiveProduct.subcategory || curSubs[0] || "";
+
+            const extraMetaHtml = item.type === "create" ? `
+                <div class="form-row" style="margin-bottom: 8px;">
+                    <div class="form-group">
+                        <label>Categoría</label>
+                        <select class="draft-category-select">
+                            ${Object.keys(SUBCATEGORIES_MAP).map(c => `<option value="${c}" ${c === curCat ? "selected" : ""}>${c}</option>`).join("")}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Subcategoría</label>
+                        <select class="draft-subcategory-select">
+                            ${curSubs.map(s => `<option value="${s}" ${s === curSub ? "selected" : ""}>${s}</option>`).join("")}
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 8px;">
+                    <label>Marca (Opcional)</label>
+                    <input type="text" class="draft-brand-input" value="${escapeAttr(effectiveProduct.brand || "")}" placeholder="Ej. Kleancolor">
+                </div>
+            ` : `
+                <div class="form-group" style="margin-bottom: 8px;">
+                    <label>Marca (Opcional)</label>
+                    <input type="text" class="draft-brand-input" value="${escapeAttr(effectiveProduct.brand || "")}" placeholder="Ej. Kleancolor">
+                </div>
+            `;
+
+            cardDiv.innerHTML = `
+                <div class="product-meta">
+                    <img src="${escapeAttr(coverImg)}" alt="${escapeAttr(effectiveProduct.title)}">
+                    <div class="product-info-text" style="flex: 1;">
+                        <span class="in-draft-badge"><i class="fa-solid fa-bookmark"></i> Borrador: ${escapeAttr(drafts[draftId].name)}</span>
+                        <p class="sub-label" style="margin-top: 4px;">ID: <strong>${escapeAttr(productId)}</strong> (${item.type === "create" ? "Nuevo Producto" : "Edición"})</p>
+                    </div>
+                </div>
+                <div class="product-editor">
+                    <div class="title-edit-wrapper" style="margin-bottom: 8px;">
+                        <div class="editor-label"><i class="fa-solid fa-tag"></i> Nombre del Producto</div>
+                        <input type="text" class="product-title-input" value="${escapeAttr(cleanAgotado(effectiveProduct.title))}" placeholder="Nombre del producto">
+                    </div>
+                    ${extraMetaHtml}
+                    <div class="pricing-variants-zone">
+                        ${buildPricingAndVariantsZoneHtml(effectiveProduct)}
+                    </div>
+                    <div class="desc-input-wrapper">
+                        <div class="editor-label">Descripción (Opcional)</div>
+                        <textarea class="desc-input" rows="2" placeholder="Describe el producto...">${escapeAttr(effectiveProduct.description || "")}</textarea>
+                    </div>
+                </div>
+            `;
+
+            const catSel = cardDiv.querySelector(".draft-category-select");
+            const subSel = cardDiv.querySelector(".draft-subcategory-select");
+            if (catSel && subSel) {
+                catSel.addEventListener("change", () => {
+                    const subs = SUBCATEGORIES_MAP[catSel.value] || [];
+                    subSel.innerHTML = subs.map(s => `<option value="${s}">${s}</option>`).join("");
+                });
+            }
+
+            const noopDirty = () => {};
+            setupStockButtons(cardDiv);
+            setupImageOrganizers(cardDiv, productId, noopDirty);
+            setupVariantsControls(cardDiv, productId, noopDirty);
+
+            container.appendChild(cardDiv);
+            document.getElementById("draft-edit-modal").style.display = "flex";
+        };
+
+        window.closeDraftEditModal = function() {
+            document.getElementById("draft-edit-modal").style.display = "none";
+            document.getElementById("draft-edit-card-container").innerHTML = "";
+            draftEditContext = null;
+        };
+
+        function buildPayloadFromDraftEditCard() {
+            if (!draftEditContext) return null;
+            const { draftId, productId, itemType, effectiveProduct } = draftEditContext;
+            const cardDiv = document.querySelector("#draft-edit-card-container .product-item");
+            if (!cardDiv) return null;
+
+            const extracted = extractProductFormValues(cardDiv, effectiveProduct);
+            const brandVal = cardDiv.querySelector(".draft-brand-input")?.value.trim() || null;
+            extracted.brand = brandVal;
+
+            if (itemType === "create") {
+                const catVal = cardDiv.querySelector(".draft-category-select")?.value || effectiveProduct.category || "Bisuteria";
+                const subVal = cardDiv.querySelector(".draft-subcategory-select")?.value || effectiveProduct.subcategory || null;
+                return {
+                    id: productId,
+                    category: catVal,
+                    subcategory: subVal,
+                    ...extracted
+                };
+            }
+            return extracted;
+        }
+
+        window.saveDraftEditedItem = function() {
+            if (!draftEditContext) return;
+            const { draftId, productId, itemType, effectiveProduct } = draftEditContext;
+            const item = drafts[draftId]?.items?.[productId];
+            if (!item) return;
+
+            try {
+                const newPayload = buildPayloadFromDraftEditCard();
+                const mergedPreview = Object.assign({}, effectiveProduct, newPayload);
+
+                item.payload = newPayload;
+                item.title = newPayload.title;
+                item.coverImg = getProductCoverImage(mergedPreview);
+                item.stagedAt = Date.now();
+
+                saveDrafts();
+                closeDraftEditModal();
+                renderDraftsView();
+                renderProducts();
+                showToast("Cambios guardados en el borrador", "success");
+            } catch (err) {
+                showToast(err.message || String(err), "error");
+            }
+        };
+
+        window.publishDraftEditedItemNow = async function() {
+            if (!draftEditContext) return;
+            const { draftId, productId, itemType } = draftEditContext;
+            const pubBtn = document.getElementById("draft-edit-publish-now-btn");
+            const origHtml = pubBtn.innerHTML;
+
+            try {
+                const newPayload = buildPayloadFromDraftEditCard();
+                pubBtn.disabled = true;
+                pubBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Publicando...`;
+
+                if (itemType === "create") {
+                    const { error } = await window.supabaseClient.from("products").insert(newPayload);
+                    if (error) throw error;
+                } else {
+                    const { error } = await window.supabaseClient.from("products").update(newPayload).eq("id", productId);
+                    if (error) throw error;
+                }
+
+                delete drafts[draftId].items[productId];
+                saveDrafts();
+                closeDraftEditModal();
+                await loadProductsFromSupabase();
+                renderDraftsView();
+                showToast("¡Producto publicado en vivo y quitado del borrador!", "success");
+            } catch (err) {
+                showToast("Error al publicar: " + (err.message || err), "error");
+            } finally {
+                pubBtn.disabled = false;
+                pubBtn.innerHTML = origHtml;
+            }
+        };
 
         // Publicar Todo el Borrador Masivamente
         async function publishActiveDraft() {
@@ -2410,7 +3650,7 @@
             const draftKeys = Object.keys(drafts);
             
             select.innerHTML = draftKeys.map(k => `
-                <option value="${k}" ${k === activeDraftId ? "selected" : ""}>${drafts[k].name} (${Object.keys(drafts[k].items || {}).length} productos)</option>
+                <option value="${escapeAttr(k)}" ${k === activeDraftId ? "selected" : ""}>${escapeAttr(drafts[k].name)} (${Object.keys(drafts[k].items || {}).length} productos)</option>
             `).join("") + `<option value="__new__">+ Crear nuevo borrador...</option>`;
 
             toggleNewDraftInput();
@@ -2459,7 +3699,7 @@
                     type: "create",
                     productId: payload.id,
                     title: payload.title,
-                    coverImg: payload.images?.[0] || "diamond.svg",
+                    coverImg: getProductCoverImage(payload),
                     payload: payload,
                     stagedAt: Date.now()
                 };
@@ -2477,18 +3717,19 @@
                 return;
             }
 
-            const productCard = document.querySelector(`.product-item[data-id="${currentModalProductId}"]`);
+            const productCard = productsContainer.querySelector(`.product-item[data-id="${CSS.escape(currentModalProductId)}"]`);
             const originalProduct = allProducts.find(p => p.id === currentModalProductId);
             if (!productCard || !originalProduct) return;
 
             try {
                 const payload = extractProductFormValues(productCard, originalProduct);
+                const mergedPreview = Object.assign({}, originalProduct, payload);
 
                 drafts[targetDraftId].items[currentModalProductId] = {
                     type: "update",
                     productId: currentModalProductId,
                     title: payload.title,
-                    coverImg: payload.images?.[0] || originalProduct.images?.[0] || "diamond.svg",
+                    coverImg: getProductCoverImage(mergedPreview),
                     payload: payload,
                     stagedAt: Date.now()
                 };
@@ -2504,6 +3745,58 @@
             } catch (err) {
                 showToast("Error al guardar en borrador: " + (err.message || err), "error");
             }
+        }
+
+        async function uploadCreateSelectedFilesToStorage(productId, category, onProgress) {
+            const imagesUrls = [];
+            for (let i = 0; i < createSelectedFiles.length; i++) {
+                const item = createSelectedFiles[i];
+                const file = item.file;
+                const fileExt = (file.name.split(".").pop() || "jpg").replace(/[^a-zA-Z0-9]/g, "");
+                const safeId = String(productId).replace(/[^a-zA-Z0-9_-]/g, "_");
+                const filePath = `${category}/${safeId}_${Date.now()}_${i}.${fileExt}`;
+
+                if (onProgress) onProgress(i + 1, createSelectedFiles.length);
+
+                const { error: uploadError } = await window.supabaseClient.storage
+                    .from("products")
+                    .upload(filePath, file);
+                if (uploadError) throw uploadError;
+
+                const { data: { publicUrl } } = window.supabaseClient.storage
+                    .from("products")
+                    .getPublicUrl(filePath);
+
+                // Si la imagen fue editada con el editor simple, guardar su archivo base y metadatos .edit.json para futura reedición
+                if (item.editorState && item.baseFile) {
+                    try {
+                        const baseExt = (item.baseFile.name.split(".").pop() || "jpg").replace(/[^a-zA-Z0-9]/g, "");
+                        const basePath = `edited_bases/${safeId}_${Date.now()}_${i}.${baseExt}`;
+                        const { error: baseUpErr } = await window.supabaseClient.storage
+                            .from("products")
+                            .upload(basePath, item.baseFile);
+                        if (!baseUpErr) {
+                            const { data: { publicUrl: basePublicUrl } } = window.supabaseClient.storage
+                                .from("products")
+                                .getPublicUrl(basePath);
+                            const metaPayload = {
+                                baseImageUrl: basePublicUrl,
+                                border: item.editorState.border,
+                                objects: item.editorState.objects
+                            };
+                            const metaBlob = new Blob([JSON.stringify(metaPayload)], { type: "application/json" });
+                            await window.supabaseClient.storage
+                                .from("products")
+                                .upload(`${filePath}.edit.json`, metaBlob, { contentType: "application/json", upsert: true });
+                        }
+                    } catch (metaErr) {
+                        console.warn("Aviso guardando metadatos de edición:", metaErr);
+                    }
+                }
+
+                imagesUrls.push(publicUrl);
+            }
+            return imagesUrls;
         }
 
         // Crear Producto (Publicación Inmediata)
@@ -2534,31 +3827,10 @@
             submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Publicando...`;
 
             try {
-                const files = createSelectedFiles.map(item => item.file);
-                const imagesUrls = [];
+                const imagesUrls = await uploadCreateSelectedFilesToStorage(productId, category, (cur, tot) => {
+                    submitBtn.innerHTML = `<i class="fa-solid fa-cloud-arrow-up"></i> Subiendo imagen ${cur} de ${tot}...`;
+                });
 
-                for (let i = 0; i < files.length; i++) {
-                    const file = files[i];
-                    const fileExt = file.name.split('.').pop();
-                    const fileName = `${productId}_${Date.now()}_${i}.${fileExt}`;
-                    const filePath = `${category}/${fileName}`;
-
-                    submitBtn.innerHTML = `<i class="fa-solid fa-cloud-arrow-up"></i> Subiendo imagen ${i+1} de ${files.length}...`;
-
-                    const { error: uploadError } = await window.supabaseClient.storage
-                        .from("products")
-                        .upload(filePath, file);
-
-                    if (uploadError) throw uploadError;
-
-                    const { data: { publicUrl } } = window.supabaseClient.storage
-                        .from("products")
-                        .getPublicUrl(filePath);
-
-                    imagesUrls.push(publicUrl);
-                }
-
-                // Formatear automáticamente "- AGOTADO" si stock === 0
                 const finalTitle = formatAgotadoText(title, stock);
 
                 const { error: insertError } = await window.supabaseClient
@@ -2623,31 +3895,10 @@
             draftBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Preparando imágenes...`;
 
             try {
-                const files = createSelectedFiles.map(item => item.file);
-                const imagesUrls = [];
+                const imagesUrls = await uploadCreateSelectedFilesToStorage(productId, category, (cur, tot) => {
+                    draftBtn.innerHTML = `<i class="fa-solid fa-cloud-arrow-up"></i> Subiendo imagen ${cur} de ${tot}...`;
+                });
 
-                for (let i = 0; i < files.length; i++) {
-                    const file = files[i];
-                    const fileExt = file.name.split('.').pop();
-                    const fileName = `${productId}_${Date.now()}_${i}.${fileExt}`;
-                    const filePath = `${category}/${fileName}`;
-
-                    draftBtn.innerHTML = `<i class="fa-solid fa-cloud-arrow-up"></i> Subiendo imagen ${i+1} de ${files.length}...`;
-
-                    const { error: uploadError } = await window.supabaseClient.storage
-                        .from("products")
-                        .upload(filePath, file);
-
-                    if (uploadError) throw uploadError;
-
-                    const { data: { publicUrl } } = window.supabaseClient.storage
-                        .from("products")
-                        .getPublicUrl(filePath);
-
-                    imagesUrls.push(publicUrl);
-                }
-
-                // Formatear automáticamente "- AGOTADO" si stock === 0
                 const finalTitle = formatAgotadoText(title, stock);
 
                 window.__pendingNewProductPayload = {
@@ -2675,6 +3926,879 @@
                 draftBtn.innerHTML = `<i class="fa-solid fa-bookmark"></i> Guardar en Borrador...`;
             }
         }
+
+        // ==========================================================
+        // EDITOR SIMPLE DE IMÁGENES (TEXTOS, 3 FUENTES, BORDES, FLECHAS Y LÍNEAS)
+        // ==========================================================
+        const IMG_EDITOR_FONTS = [
+            { id: "Montserrat", label: "Moderna", css: "700 __PX__px 'Montserrat', sans-serif", btnFont: "'Montserrat', sans-serif" },
+            { id: "Playfair Display", label: "Elegante", css: "700 __PX__px 'Playfair Display', serif", btnFont: "'Playfair Display', serif" },
+            { id: "Dancing Script", label: "Manuscrita", css: "700 __PX__px 'Dancing Script', cursive", btnFont: "'Dancing Script', cursive" }
+        ];
+
+        let imgEditorCtx = null; // { mode: 'create'|'card', createIdx, itemEl, listEl, productCard, productId, markDirty, baseImg, baseImageUrl, border, objects, selectedId, dragState, tempObjUrl }
+
+        function loadImageForCanvasSafe(src) {
+            return new Promise(async (resolve, reject) => {
+                let objectUrlToClean = null;
+                try {
+                    const img = new Image();
+                    if (/^https?:\/\//i.test(src)) {
+                        const resp = await fetch(src, { mode: "cors" });
+                        if (!resp.ok) throw new Error("No se pudo descargar la imagen para edición");
+                        const blob = await resp.blob();
+                        objectUrlToClean = URL.createObjectURL(blob);
+                        img.onload = () => resolve({ img, tempObjUrl: objectUrlToClean });
+                        img.onerror = (e) => {
+                            if (objectUrlToClean) URL.revokeObjectURL(objectUrlToClean);
+                            reject(new Error("Error decodificando imagen"));
+                        };
+                        img.src = objectUrlToClean;
+                    } else {
+                        img.onload = () => resolve({ img, tempObjUrl: null });
+                        img.onerror = () => reject(new Error("No se pudo abrir la imagen local"));
+                        img.src = src;
+                    }
+                } catch (err) {
+                    if (objectUrlToClean) URL.revokeObjectURL(objectUrlToClean);
+                    reject(err);
+                }
+            });
+        }
+
+        function createDefaultBorderState() {
+            return { enabled: false, color: "#4648bb", widthRatio: 0.025 };
+        }
+
+        window.openCreateImageEditor = async function(idx) {
+            const entry = createSelectedFiles[idx];
+            if (!entry) return;
+
+            try {
+                if (document.fonts?.ready) await document.fonts.ready;
+                const srcUrl = entry.basePreviewUrl || entry.previewUrl;
+                const { img, tempObjUrl } = await loadImageForCanvasSafe(srcUrl);
+                const savedState = entry.editorState
+                    ? JSON.parse(JSON.stringify(entry.editorState))
+                    : { border: createDefaultBorderState(), objects: [] };
+
+                startImageEditorSession({
+                    mode: "create",
+                    createIdx: idx,
+                    baseImg: img,
+                    baseImageUrl: srcUrl,
+                    tempObjUrl,
+                    border: savedState.border || createDefaultBorderState(),
+                    objects: savedState.objects || []
+                });
+            } catch (err) {
+                showToast("Error abriendo editor: " + (err.message || err), "error");
+            }
+        };
+
+        window.openCardImageEditor = async function(itemEl, listEl, productCard, productId, markDirty) {
+            const currentUrl = itemEl.dataset.url;
+            if (!currentUrl) return;
+
+            try {
+                if (document.fonts?.ready) await document.fonts.ready;
+
+                let baseImageUrl = currentUrl;
+                let border = createDefaultBorderState();
+                let objects = [];
+
+                // Intentar cargar metadatos editables previos (.edit.json) si ya fue editada antes
+                if (/^https?:\/\//i.test(currentUrl) && currentUrl.includes("/storage/v1/object/public/products/")) {
+                    try {
+                        const metaResp = await fetch(currentUrl + ".edit.json", { cache: "no-store" });
+                        if (metaResp.ok) {
+                            const meta = await metaResp.json();
+                            if (meta && meta.baseImageUrl) {
+                                baseImageUrl = meta.baseImageUrl;
+                                if (meta.border) border = meta.border;
+                                if (Array.isArray(meta.objects)) objects = meta.objects;
+                            }
+                        }
+                    } catch (_) {}
+                }
+
+                const { img, tempObjUrl } = await loadImageForCanvasSafe(baseImageUrl);
+
+                startImageEditorSession({
+                    mode: "card",
+                    itemEl,
+                    listEl,
+                    productCard,
+                    productId,
+                    markDirty,
+                    baseImg: img,
+                    baseImageUrl,
+                    tempObjUrl,
+                    border,
+                    objects
+                });
+            } catch (err) {
+                showToast("No se pudo abrir la foto en el editor: " + (err.message || err), "error");
+            }
+        };
+
+        function startImageEditorSession(sessionData) {
+            const canvas = document.getElementById("img-editor-canvas");
+            const natW = sessionData.baseImg.naturalWidth || sessionData.baseImg.width || 800;
+            const natH = sessionData.baseImg.naturalHeight || sessionData.baseImg.height || 800;
+            const maxPreview = 900;
+            const scale = Math.min(1, maxPreview / Math.max(natW, natH));
+            canvas.width = Math.max(1, Math.round(natW * scale));
+            canvas.height = Math.max(1, Math.round(natH * scale));
+
+            imgEditorCtx = {
+                ...sessionData,
+                selectedId: sessionData.objects.length > 0 ? sessionData.objects[sessionData.objects.length - 1].id : (sessionData.border.enabled ? "__frame__" : null),
+                dragState: null,
+                measuredBoxes: {}
+            };
+
+            document.getElementById("image-editor-modal").style.display = "flex";
+            renderImgEditorAll();
+        }
+
+        window.closeImageEditorModal = function() {
+            if (imgEditorCtx?.tempObjUrl) {
+                URL.revokeObjectURL(imgEditorCtx.tempObjUrl);
+            }
+            imgEditorCtx = null;
+            document.getElementById("image-editor-modal").style.display = "none";
+        };
+
+        window.restoreOriginalInImageEditor = function() {
+            if (!imgEditorCtx) return;
+            if (imgEditorCtx.objects.length === 0 && !imgEditorCtx.border.enabled) return;
+            if (!confirm("¿Quitar todos los textos, flechas, líneas y bordes de esta foto?")) return;
+            imgEditorCtx.objects = [];
+            imgEditorCtx.border = createDefaultBorderState();
+            imgEditorCtx.selectedId = null;
+            renderImgEditorAll();
+        };
+
+        window.addImgEditorText = function() {
+            if (!imgEditorCtx) return;
+            const offset = (imgEditorCtx.objects.length % 5) * 0.04;
+            const newObj = {
+                id: "txt_" + Date.now() + "_" + Math.floor(Math.random() * 100),
+                type: "text",
+                text: "Texto aquí",
+                fontFamily: "Montserrat",
+                color: "#ffffff",
+                hasStroke: true,
+                strokeColor: "#4648bb",
+                strokeRatio: 0.18,
+                sizeRatio: 0.075,
+                x: Math.min(0.8, 0.5 + offset - 0.06),
+                y: Math.min(0.85, 0.22 + offset)
+            };
+            imgEditorCtx.objects.push(newObj);
+            imgEditorCtx.selectedId = newObj.id;
+            renderImgEditorAll();
+            setTimeout(() => {
+                const inp = document.getElementById("img-prop-text-input");
+                if (inp) { inp.focus(); inp.select(); }
+            }, 30);
+        };
+
+        window.addImgEditorShape = function(shapeType) {
+            if (!imgEditorCtx) return;
+            const offset = (imgEditorCtx.objects.length % 5) * 0.04;
+            const newObj = {
+                id: "shp_" + Date.now() + "_" + Math.floor(Math.random() * 100),
+                type: shapeType === "line" ? "line" : "arrow",
+                color: "#e74c3c",
+                widthRatio: 0.012,
+                x1: 0.22 + offset,
+                y1: 0.72 - offset * 0.5,
+                x2: 0.52 + offset,
+                y2: 0.45 - offset * 0.5
+            };
+            imgEditorCtx.objects.push(newObj);
+            imgEditorCtx.selectedId = newObj.id;
+            renderImgEditorAll();
+        };
+
+        window.selectImgEditorFrame = function() {
+            if (!imgEditorCtx) return;
+            if (!imgEditorCtx.border.enabled) {
+                imgEditorCtx.border.enabled = true;
+            }
+            imgEditorCtx.selectedId = "__frame__";
+            renderImgEditorAll();
+        };
+
+        window.duplicateSelectedImgObject = function() {
+            if (!imgEditorCtx || !imgEditorCtx.selectedId || imgEditorCtx.selectedId === "__frame__") return;
+            const orig = imgEditorCtx.objects.find(o => o.id === imgEditorCtx.selectedId);
+            if (!orig) return;
+            const copy = JSON.parse(JSON.stringify(orig));
+            copy.id = orig.type + "_" + Date.now() + "_" + Math.floor(Math.random() * 100);
+            if (copy.type === "text") {
+                copy.x = Math.min(0.9, copy.x + 0.05);
+                copy.y = Math.min(0.9, copy.y + 0.06);
+            } else {
+                copy.x1 = Math.min(0.92, copy.x1 + 0.05);
+                copy.y1 = Math.min(0.92, copy.y1 + 0.05);
+                copy.x2 = Math.min(0.95, copy.x2 + 0.05);
+                copy.y2 = Math.min(0.95, copy.y2 + 0.05);
+            }
+            imgEditorCtx.objects.push(copy);
+            imgEditorCtx.selectedId = copy.id;
+            renderImgEditorAll();
+        };
+
+        window.deleteSelectedImgObject = function() {
+            if (!imgEditorCtx || !imgEditorCtx.selectedId) return;
+            if (imgEditorCtx.selectedId === "__frame__") {
+                imgEditorCtx.border.enabled = false;
+                imgEditorCtx.selectedId = imgEditorCtx.objects[imgEditorCtx.objects.length - 1]?.id || null;
+                renderImgEditorAll();
+                return;
+            }
+            imgEditorCtx.objects = imgEditorCtx.objects.filter(o => o.id !== imgEditorCtx.selectedId);
+            imgEditorCtx.selectedId = imgEditorCtx.objects[imgEditorCtx.objects.length - 1]?.id || null;
+            renderImgEditorAll();
+        };
+
+        function drawImgEditorScene(canvasEl, state, showHandles) {
+            const ctx = canvasEl.getContext("2d");
+            const W = canvasEl.width;
+            const H = canvasEl.height;
+            const minDim = Math.min(W, H);
+
+            ctx.clearRect(0, 0, W, H);
+            ctx.drawImage(state.baseImg, 0, 0, W, H);
+
+            // 1. Marco / Borde exterior de foto
+            if (state.border && state.border.enabled && state.border.widthRatio > 0) {
+                const bw = Math.max(2, state.border.widthRatio * minDim);
+                ctx.save();
+                ctx.strokeStyle = state.border.color || "#4648bb";
+                ctx.lineWidth = bw;
+                ctx.strokeRect(bw / 2, bw / 2, W - bw, H - bw);
+                ctx.restore();
+            }
+
+            const measured = {};
+
+            // 2. Objetos (Textos, Flechas, Líneas)
+            for (const obj of state.objects) {
+                if (obj.type === "text") {
+                    const fontDef = IMG_EDITOR_FONTS.find(f => f.id === obj.fontFamily) || IMG_EDITOR_FONTS[0];
+                    const px = Math.max(12, Math.round((obj.sizeRatio || 0.07) * minDim));
+                    ctx.save();
+                    ctx.font = fontDef.css.replace("__PX__", String(px));
+                    ctx.textAlign = "center";
+                    ctx.textBaseline = "middle";
+                    ctx.lineJoin = "round";
+                    ctx.miterLimit = 2;
+
+                    const lines = String(obj.text || "").split("\n");
+                    const lineHeight = px * 1.18;
+                    const totalH = lines.length * lineHeight;
+                    const cx = obj.x * W;
+                    const cy = obj.y * H;
+
+                    let maxLineW = 20;
+                    lines.forEach((ln, idx) => {
+                        const ly = cy - totalH / 2 + lineHeight * (idx + 0.5);
+                        const metrics = ctx.measureText(ln || " ");
+                        if (metrics.width > maxLineW) maxLineW = metrics.width;
+
+                        if (obj.hasStroke) {
+                            ctx.strokeStyle = obj.strokeColor || "#000000";
+                            ctx.lineWidth = Math.max(2, px * (obj.strokeRatio ?? 0.18));
+                            ctx.strokeText(ln, cx, ly);
+                        }
+                        ctx.fillStyle = obj.color || "#ffffff";
+                        ctx.fillText(ln, cx, ly);
+                    });
+
+                    const pad = Math.max(8, px * 0.22);
+                    measured[obj.id] = {
+                        x: cx - maxLineW / 2 - pad,
+                        y: cy - totalH / 2 - pad,
+                        w: maxLineW + pad * 2,
+                        h: totalH + pad * 2
+                    };
+
+                    if (showHandles && state.selectedId === obj.id) {
+                        const b = measured[obj.id];
+                        ctx.strokeStyle = "#4648bb";
+                        ctx.lineWidth = Math.max(2, minDim * 0.004);
+                        ctx.setLineDash([6, 4]);
+                        ctx.strokeRect(b.x, b.y, b.w, b.h);
+                    }
+                    ctx.restore();
+                } else if (obj.type === "arrow" || obj.type === "line") {
+                    const x1 = obj.x1 * W;
+                    const y1 = obj.y1 * H;
+                    const x2 = obj.x2 * W;
+                    const y2 = obj.y2 * H;
+                    const lw = Math.max(2, (obj.widthRatio || 0.012) * minDim);
+
+                    ctx.save();
+                    ctx.strokeStyle = obj.color || "#e74c3c";
+                    ctx.fillStyle = obj.color || "#e74c3c";
+                    ctx.lineWidth = lw;
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+
+                    ctx.beginPath();
+                    ctx.moveTo(x1, y1);
+                    ctx.lineTo(x2, y2);
+                    ctx.stroke();
+
+                    if (obj.type === "arrow") {
+                        const angle = Math.atan2(y2 - y1, x2 - x1);
+                        const headLen = Math.max(12, lw * 3.6);
+                        ctx.beginPath();
+                        ctx.moveTo(x2, y2);
+                        ctx.lineTo(x2 - headLen * Math.cos(angle - Math.PI / 6), y2 - headLen * Math.sin(angle - Math.PI / 6));
+                        ctx.lineTo(x2 - headLen * Math.cos(angle + Math.PI / 6), y2 - headLen * Math.sin(angle + Math.PI / 6));
+                        ctx.closePath();
+                        ctx.fill();
+                    }
+
+                    if (showHandles && state.selectedId === obj.id) {
+                        const r = Math.max(7, minDim * 0.018);
+                        // Punto inicial (blanco con borde azul)
+                        ctx.beginPath();
+                        ctx.arc(x1, y1, r, 0, Math.PI * 2);
+                        ctx.fillStyle = "#ffffff";
+                        ctx.fill();
+                        ctx.lineWidth = 3;
+                        ctx.strokeStyle = "#4648bb";
+                        ctx.stroke();
+
+                        // Punto final / punta (azul con borde blanco)
+                        ctx.beginPath();
+                        ctx.arc(x2, y2, r, 0, Math.PI * 2);
+                        ctx.fillStyle = "#4648bb";
+                        ctx.fill();
+                        ctx.lineWidth = 3;
+                        ctx.strokeStyle = "#ffffff";
+                        ctx.stroke();
+                    }
+                    ctx.restore();
+                }
+            }
+
+            if (showHandles) {
+                state.measuredBoxes = measured;
+            }
+        }
+
+        function renderImgEditorLayers() {
+            const layersEl = document.getElementById("img-editor-layers");
+            const frameBtn = document.getElementById("img-tool-frame-btn");
+            if (!layersEl || !imgEditorCtx) return;
+
+            if (frameBtn) {
+                frameBtn.classList.toggle("active", imgEditorCtx.selectedId === "__frame__" || imgEditorCtx.border.enabled);
+            }
+
+            const chips = [];
+            if (imgEditorCtx.border.enabled) {
+                chips.push(`
+                    <button type="button" class="img-layer-chip ${imgEditorCtx.selectedId === "__frame__" ? "selected" : ""}" onclick="selectImgLayer('__frame__')">
+                        <i class="fa-regular fa-square"></i> Borde Foto
+                    </button>
+                `);
+            }
+
+            imgEditorCtx.objects.forEach((obj, i) => {
+                const isSel = imgEditorCtx.selectedId === obj.id;
+                if (obj.type === "text") {
+                    const shortTxt = (obj.text || "Texto").slice(0, 14);
+                    chips.push(`
+                        <button type="button" class="img-layer-chip ${isSel ? "selected" : ""}" onclick="selectImgLayer('${obj.id}')">
+                            <i class="fa-solid fa-font"></i> ${escapeAttr(shortTxt)}
+                        </button>
+                    `);
+                } else {
+                    const icon = obj.type === "arrow" ? "fa-arrow-trend-up" : "fa-slash";
+                    const lbl = obj.type === "arrow" ? `Flecha ${i + 1}` : `Línea ${i + 1}`;
+                    chips.push(`
+                        <button type="button" class="img-layer-chip ${isSel ? "selected" : ""}" onclick="selectImgLayer('${obj.id}')">
+                            <i class="fa-solid ${icon}"></i> ${lbl}
+                        </button>
+                    `);
+                }
+            });
+
+            layersEl.innerHTML = chips.length > 0
+                ? chips.join("")
+                : `<span style="font-size: 0.78rem; color: #888;">Usa los botones de arriba para agregar textos, flechas, líneas o un borde de color.</span>`;
+        }
+
+        window.selectImgLayer = function(id) {
+            if (!imgEditorCtx) return;
+            imgEditorCtx.selectedId = id;
+            renderImgEditorAll();
+        };
+
+        function renderImgEditorProps() {
+            const propsEl = document.getElementById("img-editor-props");
+            if (!propsEl || !imgEditorCtx) return;
+
+            const selId = imgEditorCtx.selectedId;
+            if (!selId) {
+                propsEl.style.display = "none";
+                propsEl.innerHTML = "";
+                return;
+            }
+            propsEl.style.display = "flex";
+
+            if (selId === "__frame__") {
+                const b = imgEditorCtx.border;
+                propsEl.innerHTML = `
+                    <div class="prop-inline-row" style="justify-content: space-between;">
+                        <label>
+                            <input type="checkbox" id="img-prop-frame-enabled" ${b.enabled ? "checked" : ""}>
+                            Activar borde de color en la foto
+                        </label>
+                        <button type="button" class="remove-variant-btn" onclick="deleteSelectedImgObject()">
+                            <i class="fa-solid fa-trash-can"></i> Quitar borde
+                        </button>
+                    </div>
+                    <div class="prop-inline-row">
+                        <label>Color: <input type="color" id="img-prop-frame-color" value="${escapeAttr(b.color || "#4648bb")}"></label>
+                        <label style="flex: 1;">Grosor: <input type="range" id="img-prop-frame-width" min="0.005" max="0.08" step="0.002" value="${b.widthRatio || 0.025}"></label>
+                    </div>
+                `;
+                document.getElementById("img-prop-frame-enabled")?.addEventListener("change", (e) => {
+                    b.enabled = e.target.checked;
+                    renderImgEditorCanvasOnly();
+                    renderImgEditorLayers();
+                });
+                document.getElementById("img-prop-frame-color")?.addEventListener("input", (e) => {
+                    b.color = e.target.value;
+                    b.enabled = true;
+                    renderImgEditorCanvasOnly();
+                });
+                document.getElementById("img-prop-frame-width")?.addEventListener("input", (e) => {
+                    b.widthRatio = parseFloat(e.target.value);
+                    b.enabled = true;
+                    renderImgEditorCanvasOnly();
+                });
+                return;
+            }
+
+            const obj = imgEditorCtx.objects.find(o => o.id === selId);
+            if (!obj) {
+                propsEl.style.display = "none";
+                return;
+            }
+
+            if (obj.type === "text") {
+                propsEl.innerHTML = `
+                    <div style="display: flex; gap: 8px; align-items: center;">
+                        <input type="text" id="img-prop-text-input" value="${escapeAttr(obj.text)}" placeholder="Escribe el texto..." style="flex: 1; padding: 8px 10px; border: 2px solid #ccc; border-radius: 8px; font-size: 0.9rem; font-weight: 600;">
+                        <button type="button" class="add-variant-btn" onclick="duplicateSelectedImgObject()" title="Duplicar texto">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                        <button type="button" class="remove-variant-btn" onclick="deleteSelectedImgObject()" title="Eliminar este texto">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.78rem; font-weight: 700; color: #555; margin-bottom: 5px;">Fuente (3 estilos):</div>
+                        <div class="font-choice-row">
+                            ${IMG_EDITOR_FONTS.map(f => `
+                                <button type="button" class="font-choice-btn ${obj.fontFamily === f.id ? "active" : ""}" data-font="${f.id}" style="font-family: ${f.btnFont}; font-weight: 700;">
+                                    ${f.label}
+                                </button>
+                            `).join("")}
+                        </div>
+                    </div>
+                    <div class="prop-inline-row">
+                        <label>Color texto: <input type="color" id="img-prop-text-color" value="${escapeAttr(obj.color || "#ffffff")}"></label>
+                        <label style="flex: 1;">Tamaño: <input type="range" id="img-prop-text-size" min="0.03" max="0.18" step="0.003" value="${obj.sizeRatio || 0.075}"></label>
+                    </div>
+                    <div class="prop-inline-row" style="border-top: 1px solid #e4e7f2; padding-top: 8px;">
+                        <label>
+                            <input type="checkbox" id="img-prop-text-stroke-chk" ${obj.hasStroke ? "checked" : ""}>
+                            Borde de color
+                        </label>
+                        <label>Color borde: <input type="color" id="img-prop-text-stroke-color" value="${escapeAttr(obj.strokeColor || "#4648bb")}"></label>
+                        <label style="flex: 1;">Grosor: <input type="range" id="img-prop-text-stroke-width" min="0.06" max="0.35" step="0.01" value="${obj.strokeRatio ?? 0.18}"></label>
+                    </div>
+                `;
+
+                document.getElementById("img-prop-text-input")?.addEventListener("input", (e) => {
+                    obj.text = e.target.value;
+                    renderImgEditorCanvasOnly();
+                    renderImgEditorLayers();
+                });
+                propsEl.querySelectorAll(".font-choice-btn").forEach(btn => {
+                    btn.addEventListener("click", () => {
+                        obj.fontFamily = btn.dataset.font;
+                        renderImgEditorAll();
+                    });
+                });
+                document.getElementById("img-prop-text-color")?.addEventListener("input", (e) => {
+                    obj.color = e.target.value;
+                    renderImgEditorCanvasOnly();
+                });
+                document.getElementById("img-prop-text-size")?.addEventListener("input", (e) => {
+                    obj.sizeRatio = parseFloat(e.target.value);
+                    renderImgEditorCanvasOnly();
+                });
+                document.getElementById("img-prop-text-stroke-chk")?.addEventListener("change", (e) => {
+                    obj.hasStroke = e.target.checked;
+                    renderImgEditorCanvasOnly();
+                });
+                document.getElementById("img-prop-text-stroke-color")?.addEventListener("input", (e) => {
+                    obj.strokeColor = e.target.value;
+                    obj.hasStroke = true;
+                    const chk = document.getElementById("img-prop-text-stroke-chk");
+                    if (chk) chk.checked = true;
+                    renderImgEditorCanvasOnly();
+                });
+                document.getElementById("img-prop-text-stroke-width")?.addEventListener("input", (e) => {
+                    obj.strokeRatio = parseFloat(e.target.value);
+                    obj.hasStroke = true;
+                    const chk = document.getElementById("img-prop-text-stroke-chk");
+                    if (chk) chk.checked = true;
+                    renderImgEditorCanvasOnly();
+                });
+            } else {
+                propsEl.innerHTML = `
+                    <div class="prop-inline-row" style="justify-content: space-between;">
+                        <div style="display: flex; gap: 6px;">
+                            <button type="button" class="font-choice-btn ${obj.type === "arrow" ? "active" : ""}" id="img-prop-type-arrow" style="padding: 5px 10px; font-size: 0.8rem; font-weight: 700;">
+                                <i class="fa-solid fa-arrow-trend-up"></i> Flecha
+                            </button>
+                            <button type="button" class="font-choice-btn ${obj.type === "line" ? "active" : ""}" id="img-prop-type-line" style="padding: 5px 10px; font-size: 0.8rem; font-weight: 700;">
+                                <i class="fa-solid fa-slash"></i> Línea
+                            </button>
+                        </div>
+                        <div style="display: flex; gap: 6px;">
+                            <button type="button" class="add-variant-btn" onclick="duplicateSelectedImgObject()" title="Duplicar">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                            <button type="button" class="remove-variant-btn" onclick="deleteSelectedImgObject()" title="Eliminar">
+                                <i class="fa-solid fa-trash-can"></i> Eliminar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="prop-inline-row">
+                        <label>Color: <input type="color" id="img-prop-shape-color" value="${escapeAttr(obj.color || "#e74c3c")}"></label>
+                        <label style="flex: 1;">Grosor: <input type="range" id="img-prop-shape-width" min="0.004" max="0.035" step="0.001" value="${obj.widthRatio || 0.012}"></label>
+                    </div>
+                    <div style="font-size: 0.75rem; color: #666;">
+                        Arrastra los círculos de los extremos en la imagen para cambiar dirección/largo, o arrastra el centro para moverla.
+                    </div>
+                `;
+
+                document.getElementById("img-prop-type-arrow")?.addEventListener("click", () => {
+                    obj.type = "arrow";
+                    renderImgEditorAll();
+                });
+                document.getElementById("img-prop-type-line")?.addEventListener("click", () => {
+                    obj.type = "line";
+                    renderImgEditorAll();
+                });
+                document.getElementById("img-prop-shape-color")?.addEventListener("input", (e) => {
+                    obj.color = e.target.value;
+                    renderImgEditorCanvasOnly();
+                });
+                document.getElementById("img-prop-shape-width")?.addEventListener("input", (e) => {
+                    obj.widthRatio = parseFloat(e.target.value);
+                    renderImgEditorCanvasOnly();
+                });
+            }
+        }
+
+        function renderImgEditorCanvasOnly() {
+            if (!imgEditorCtx) return;
+            const canvas = document.getElementById("img-editor-canvas");
+            if (canvas) drawImgEditorScene(canvas, imgEditorCtx, true);
+        }
+
+        function renderImgEditorAll() {
+            renderImgEditorCanvasOnly();
+            renderImgEditorLayers();
+            renderImgEditorProps();
+        }
+
+        function distPointToSegment(px, py, x1, y1, x2, y2) {
+            const dx = x2 - x1;
+            const dy = y2 - y1;
+            const lenSq = dx * dx + dy * dy;
+            if (lenSq === 0) return Math.hypot(px - x1, py - y1);
+            let t = ((px - x1) * dx + (py - y1) * dy) / lenSq;
+            t = Math.max(0, Math.min(1, t));
+            return Math.hypot(px - (x1 + t * dx), py - (y1 + t * dy));
+        }
+
+        // Interacción táctil y con ratón sobre el Canvas del Editor
+        (function setupImageEditorCanvasEvents() {
+            const getCanvasCoords = (canvas, clientX, clientY) => {
+                const rect = canvas.getBoundingClientRect();
+                const scaleX = canvas.width / rect.width;
+                const scaleY = canvas.height / rect.height;
+                return {
+                    cx: (clientX - rect.left) * scaleX,
+                    cy: (clientY - rect.top) * scaleY,
+                    nx: Math.max(0, Math.min(1, (clientX - rect.left) / rect.width)),
+                    ny: Math.max(0, Math.min(1, (clientY - rect.top) / rect.height)),
+                    pxScale: Math.max(scaleX, scaleY)
+                };
+            };
+
+            const onPointerDown = (clientX, clientY, ev) => {
+                if (!imgEditorCtx) return;
+                const canvas = document.getElementById("img-editor-canvas");
+                if (!canvas) return;
+                const { cx, cy, nx, ny, pxScale } = getCanvasCoords(canvas, clientX, clientY);
+                const W = canvas.width;
+                const H = canvas.height;
+                const handleHitR = 22 * pxScale;
+
+                // 1. Revisar si tocó los extremos de una flecha/línea ya seleccionada
+                if (imgEditorCtx.selectedId && imgEditorCtx.selectedId !== "__frame__") {
+                    const selObj = imgEditorCtx.objects.find(o => o.id === imgEditorCtx.selectedId);
+                    if (selObj && (selObj.type === "arrow" || selObj.type === "line")) {
+                        if (Math.hypot(cx - selObj.x2 * W, cy - selObj.y2 * H) <= handleHitR) {
+                            ev.preventDefault();
+                            imgEditorCtx.dragState = { mode: "p2", obj: selObj };
+                            return;
+                        }
+                        if (Math.hypot(cx - selObj.x1 * W, cy - selObj.y1 * H) <= handleHitR) {
+                            ev.preventDefault();
+                            imgEditorCtx.dragState = { mode: "p1", obj: selObj };
+                            return;
+                        }
+                    }
+                }
+
+                // 2. Buscar objeto de arriba hacia abajo
+                for (let i = imgEditorCtx.objects.length - 1; i >= 0; i--) {
+                    const obj = imgEditorCtx.objects[i];
+                    if (obj.type === "text") {
+                        const box = imgEditorCtx.measuredBoxes?.[obj.id];
+                        if (box && cx >= box.x && cx <= box.x + box.w && cy >= box.y && cy <= box.y + box.h) {
+                            ev.preventDefault();
+                            const changedSel = (imgEditorCtx.selectedId !== obj.id);
+                            imgEditorCtx.selectedId = obj.id;
+                            imgEditorCtx.dragState = {
+                                mode: "move-text",
+                                obj,
+                                offsetX: obj.x - nx,
+                                offsetY: obj.y - ny
+                            };
+                            if (changedSel) renderImgEditorAll();
+                            else renderImgEditorCanvasOnly();
+                            return;
+                        }
+                    } else if (obj.type === "arrow" || obj.type === "line") {
+                        const x1 = obj.x1 * W, y1 = obj.y1 * H;
+                        const x2 = obj.x2 * W, y2 = obj.y2 * H;
+                        if (Math.hypot(cx - x2, cy - y2) <= handleHitR) {
+                            ev.preventDefault();
+                            imgEditorCtx.selectedId = obj.id;
+                            imgEditorCtx.dragState = { mode: "p2", obj };
+                            renderImgEditorAll();
+                            return;
+                        }
+                        if (Math.hypot(cx - x1, cy - y1) <= handleHitR) {
+                            ev.preventDefault();
+                            imgEditorCtx.selectedId = obj.id;
+                            imgEditorCtx.dragState = { mode: "p1", obj };
+                            renderImgEditorAll();
+                            return;
+                        }
+                        const segDist = distPointToSegment(cx, cy, x1, y1, x2, y2);
+                        if (segDist <= 18 * pxScale) {
+                            ev.preventDefault();
+                            const changedSel = (imgEditorCtx.selectedId !== obj.id);
+                            imgEditorCtx.selectedId = obj.id;
+                            imgEditorCtx.dragState = {
+                                mode: "move-shape",
+                                obj,
+                                startNx: nx,
+                                startNy: ny,
+                                origX1: obj.x1,
+                                origY1: obj.y1,
+                                origX2: obj.x2,
+                                origY2: obj.y2
+                            };
+                            if (changedSel) renderImgEditorAll();
+                            else renderImgEditorCanvasOnly();
+                            return;
+                        }
+                    }
+                }
+
+                imgEditorCtx.selectedId = null;
+                renderImgEditorAll();
+            };
+
+            const onPointerMove = (clientX, clientY, ev) => {
+                if (!imgEditorCtx || !imgEditorCtx.dragState) return;
+                const canvas = document.getElementById("img-editor-canvas");
+                if (!canvas) return;
+                ev.preventDefault();
+                const { nx, ny } = getCanvasCoords(canvas, clientX, clientY);
+                const ds = imgEditorCtx.dragState;
+
+                if (ds.mode === "move-text") {
+                    ds.obj.x = Math.max(0.03, Math.min(0.97, nx + ds.offsetX));
+                    ds.obj.y = Math.max(0.03, Math.min(0.97, ny + ds.offsetY));
+                } else if (ds.mode === "p1") {
+                    ds.obj.x1 = Math.max(0.01, Math.min(0.99, nx));
+                    ds.obj.y1 = Math.max(0.01, Math.min(0.99, ny));
+                } else if (ds.mode === "p2") {
+                    ds.obj.x2 = Math.max(0.01, Math.min(0.99, nx));
+                    ds.obj.y2 = Math.max(0.01, Math.min(0.99, ny));
+                } else if (ds.mode === "move-shape") {
+                    const dx = nx - ds.startNx;
+                    const dy = ny - ds.startNy;
+                    ds.obj.x1 = Math.max(0.01, Math.min(0.99, ds.origX1 + dx));
+                    ds.obj.y1 = Math.max(0.01, Math.min(0.99, ds.origY1 + dy));
+                    ds.obj.x2 = Math.max(0.01, Math.min(0.99, ds.origX2 + dx));
+                    ds.obj.y2 = Math.max(0.01, Math.min(0.99, ds.origY2 + dy));
+                }
+                renderImgEditorCanvasOnly();
+            };
+
+            const onPointerUp = () => {
+                if (imgEditorCtx) imgEditorCtx.dragState = null;
+            };
+
+            window.addEventListener("DOMContentLoaded", () => {
+                const canvas = document.getElementById("img-editor-canvas");
+                if (!canvas) return;
+
+                canvas.addEventListener("mousedown", (e) => onPointerDown(e.clientX, e.clientY, e));
+                window.addEventListener("mousemove", (e) => onPointerMove(e.clientX, e.clientY, e));
+                window.addEventListener("mouseup", onPointerUp);
+
+                canvas.addEventListener("touchstart", (e) => {
+                    if (e.touches.length > 0) onPointerDown(e.touches[0].clientX, e.touches[0].clientY, e);
+                }, { passive: false });
+                canvas.addEventListener("touchmove", (e) => {
+                    if (e.touches.length > 0) onPointerMove(e.touches[0].clientX, e.touches[0].clientY, e);
+                }, { passive: false });
+                window.addEventListener("touchend", onPointerUp);
+            });
+        })();
+
+        window.saveImageEditorChanges = async function() {
+            if (!imgEditorCtx) return;
+            const saveBtn = document.getElementById("img-editor-save-btn");
+            const origHtml = saveBtn.innerHTML;
+            saveBtn.disabled = true;
+            saveBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Procesando...`;
+
+            try {
+                // Exportar en alta resolución (hasta 1600px) sin guías de selección
+                const natW = imgEditorCtx.baseImg.naturalWidth || imgEditorCtx.baseImg.width || 1000;
+                const natH = imgEditorCtx.baseImg.naturalHeight || imgEditorCtx.baseImg.height || 1000;
+                const maxExport = 1600;
+                const scale = Math.min(1, maxExport / Math.max(natW, natH));
+                const offCanvas = document.createElement("canvas");
+                offCanvas.width = Math.max(1, Math.round(natW * scale));
+                offCanvas.height = Math.max(1, Math.round(natH * scale));
+
+                drawImgEditorScene(offCanvas, imgEditorCtx, false);
+
+                const blob = await new Promise((resolve, reject) => {
+                    offCanvas.toBlob(b => b ? resolve(b) : reject(new Error("No se pudo exportar la imagen")), "image/jpeg", 0.92);
+                });
+
+                const hasAnyEdits = imgEditorCtx.objects.length > 0 || (imgEditorCtx.border && imgEditorCtx.border.enabled);
+
+                if (imgEditorCtx.mode === "create") {
+                    const entry = createSelectedFiles[imgEditorCtx.createIdx];
+                    if (entry) {
+                        if (entry.previewUrl && entry.previewUrl !== entry.basePreviewUrl) {
+                            URL.revokeObjectURL(entry.previewUrl);
+                        }
+                        if (!hasAnyEdits) {
+                            entry.file = entry.baseFile;
+                            entry.previewUrl = entry.basePreviewUrl;
+                            entry.editorState = null;
+                        } else {
+                            const editedFile = new File([blob], `editada_${Date.now()}.jpg`, { type: "image/jpeg" });
+                            entry.file = editedFile;
+                            entry.previewUrl = URL.createObjectURL(editedFile);
+                            entry.editorState = {
+                                border: JSON.parse(JSON.stringify(imgEditorCtx.border)),
+                                objects: JSON.parse(JSON.stringify(imgEditorCtx.objects))
+                            };
+                        }
+                        createFormDirty = true;
+                        updateUnsavedWarning();
+                        renderCreateImagesOrganizer();
+                        showToast("Imagen actualizada en el formulario");
+                    }
+                    closeImageEditorModal();
+                    return;
+                }
+
+                // Modo tarjeta (producto existente o producto en borrador)
+                const { itemEl, listEl, productCard, productId, markDirty } = imgEditorCtx;
+                let finalBaseUrl = imgEditorCtx.baseImageUrl;
+
+                // Si restauró todo a vacío y la base ya era una URL válida, volver directo a la foto original limpia
+                if (!hasAnyEdits && finalBaseUrl) {
+                    itemEl.dataset.url = finalBaseUrl;
+                    const imgTag = itemEl.querySelector("img");
+                    if (imgTag) imgTag.src = finalBaseUrl;
+                    refreshOrganizerBadgesAndButtons(listEl, productCard);
+                    if (markDirty) markDirty();
+                    closeImageEditorModal();
+                    showToast("Foto restaurada a su versión original. Recuerda guardar los cambios.");
+                    return;
+                }
+
+                saveBtn.innerHTML = `<i class="fa-solid fa-cloud-arrow-up"></i> Subiendo...`;
+                const safeId = String(productId || "prod").replace(/[^a-zA-Z0-9_-]/g, "_");
+                const filePath = `edited/${safeId}_${Date.now()}_${Math.floor(100 + Math.random() * 900)}.jpg`;
+
+                const { error: upErr } = await window.supabaseClient.storage
+                    .from("products")
+                    .upload(filePath, blob, { contentType: "image/jpeg" });
+                if (upErr) throw upErr;
+
+                const { data: { publicUrl } } = window.supabaseClient.storage
+                    .from("products")
+                    .getPublicUrl(filePath);
+
+                // Guardar proyecto editable (.edit.json) junto a la imagen para que siempre pueda volver a editarse
+                const metaPayload = {
+                    baseImageUrl: finalBaseUrl,
+                    border: imgEditorCtx.border,
+                    objects: imgEditorCtx.objects
+                };
+                const metaBlob = new Blob([JSON.stringify(metaPayload)], { type: "application/json" });
+                await window.supabaseClient.storage
+                    .from("products")
+                    .upload(`${filePath}.edit.json`, metaBlob, { contentType: "application/json", upsert: true });
+
+                itemEl.dataset.url = publicUrl;
+                const imgTag = itemEl.querySelector("img");
+                if (imgTag) imgTag.src = publicUrl;
+                refreshOrganizerBadgesAndButtons(listEl, productCard);
+                if (markDirty) markDirty();
+
+                closeImageEditorModal();
+                showToast("¡Imagen editada! Recuerda publicar o guardar en borrador.");
+            } catch (err) {
+                showToast("Error al guardar imagen editada: " + (err.message || err), "error");
+            } finally {
+                saveBtn.disabled = false;
+                saveBtn.innerHTML = origHtml;
+            }
+        };
 
         // Advertencia beforeunload: previene cerrar si hay cambios sin guardar ni dejar en borrador
         window.addEventListener("beforeunload", (e) => {
@@ -2758,7 +4882,7 @@
                         chipsHtml = productsList.map((pid, pIdx) => {
                             const prod = allProducts.find(p => p.id === pid);
                             const title = prod ? prod.title : pid;
-                            const img = (prod && prod.images && prod.images.length > 0) ? prod.images[0] : "diamond.svg";
+                            const img = getProductCoverImage(prod);
 
                             return `
                                 <div class="section-product-row">
@@ -2849,10 +4973,10 @@
             } else {
                 dropdown.innerHTML = matches.map(p => `
                     <div class="search-item-row" onclick="addProductToSection('${sectionId}', '${p.id}')" style="display:flex; align-items:center; gap:10px; padding:8px; cursor:pointer; border-bottom:1px solid #eee; transition:background-color 0.15s;">
-                        <img src="${p.images[0] || 'diamond.svg'}" style="width:30px; height:30px; border-radius:4px; object-fit:cover;">
+                        <img src="${escapeAttr(getProductCoverImage(p))}" style="width:30px; height:30px; border-radius:4px; object-fit:cover;">
                         <div>
-                            <div style="font-size:0.85rem; font-weight:600; color:#333;">${p.title}</div>
-                            <div style="font-size:0.7rem; color:#777;">ID: ${p.id}</div>
+                            <div style="font-size:0.85rem; font-weight:600; color:#333;">${escapeAttr(p.title)}</div>
+                            <div style="font-size:0.7rem; color:#777;">ID: ${escapeAttr(p.id)}</div>
                         </div>
                     </div>
                 `).join("");
@@ -3129,6 +5253,100 @@
             <div class="modal-footer" style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px;">
                 <button type="button" class="btn-cancel" onclick="closeDraftModal()" style="padding: 10px 16px; border-radius: 8px; border: 1px solid #ccc; background: #eee; cursor: pointer; font-weight: 600;">Cancelar</button>
                 <button type="button" class="btn-confirm" onclick="confirmSaveToDraft()" style="padding: 10px 18px; border-radius: 8px; border: none; background: #f39c12; color: white; cursor: pointer; font-weight: 700;">Confirmar y Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Mover un Producto entre Borradores -->
+    <div id="move-draft-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-right-left" style="color: #d35400;"></i> Mover a otro Borrador</h3>
+                <button type="button" class="modal-close-btn" onclick="closeMoveDraftModal()">&times;</button>
+            </div>
+            <div class="modal-body" style="margin-top: 15px;">
+                <p id="move-draft-product-name" style="font-size: 0.95rem; font-weight: 700; color: var(--color-border); margin: 0 0 10px;"></p>
+                <div class="form-group" style="margin-bottom: 12px;">
+                    <label style="font-size: 0.85rem; font-weight: 700; color: #444; display: block; margin-bottom: 5px;">Mover al borrador:</label>
+                    <select id="move-draft-target-select" onchange="toggleMoveNewDraftInput()" style="width: 100%; padding: 10px; border-radius: 8px; border: 2px solid #ddd; font-family: inherit;">
+                    </select>
+                </div>
+                <div id="move-new-draft-row" style="display: none; margin-bottom: 12px;">
+                    <label style="font-size: 0.85rem; font-weight: 700; color: #444; display: block; margin-bottom: 5px;">Nombre del nuevo borrador:</label>
+                    <input type="text" id="move-new-draft-name" placeholder="Ej. Lanzamiento Viernes..." style="width: 100%; padding: 10px; border-radius: 8px; border: 2px solid #ddd; font-family: inherit;">
+                </div>
+            </div>
+            <div class="modal-footer" style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px;">
+                <button type="button" onclick="closeMoveDraftModal()" style="padding: 10px 16px; border-radius: 8px; border: 1px solid #ccc; background: #eee; cursor: pointer; font-weight: 600;">Cancelar</button>
+                <button type="button" onclick="confirmMoveDraftItem()" style="padding: 10px 18px; border-radius: 8px; border: none; background: #d35400; color: white; cursor: pointer; font-weight: 700;">Mover Producto</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Editar Producto Guardado en Borrador -->
+    <div id="draft-edit-modal" class="modal-overlay" style="display: none; z-index: 10010;">
+        <div class="modal-card" style="max-width: 620px; max-height: 92vh; overflow-y: auto; padding: 18px;">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-pen-to-square" style="color: var(--color-border);"></i> Editar Producto en Borrador</h3>
+                <button type="button" class="modal-close-btn" onclick="closeDraftEditModal()">&times;</button>
+            </div>
+            <div id="draft-edit-card-container" style="margin-top: 12px;">
+            </div>
+            <div class="modal-footer" style="display: flex; gap: 8px; justify-content: flex-end; margin-top: 16px; flex-wrap: wrap;">
+                <button type="button" onclick="closeDraftEditModal()" style="padding: 10px 14px; border-radius: 8px; border: 1px solid #ccc; background: #eee; cursor: pointer; font-weight: 600;">Cancelar</button>
+                <button type="button" id="draft-edit-publish-now-btn" onclick="publishDraftEditedItemNow()" style="padding: 10px 14px; border-radius: 8px; border: none; background: var(--color-border); color: white; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+                    <i class="fa-solid fa-bolt"></i> Publicar Ahora
+                </button>
+                <button type="button" id="draft-edit-save-btn" onclick="saveDraftEditedItem()" style="padding: 10px 16px; border-radius: 8px; border: none; background: #f39c12; color: white; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+                    <i class="fa-solid fa-floppy-disk"></i> Guardar en Borrador
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Editor Simple de Imágenes (Textos, 3 Fuentes, Bordes de Color, Flechas, Líneas) -->
+    <div id="image-editor-modal" class="modal-overlay" style="display: none; z-index: 10050;">
+        <div class="modal-card img-editor-modal-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-wand-magic-sparkles" style="color: var(--color-border);"></i> Editor de Imagen</h3>
+                <button type="button" class="modal-close-btn" onclick="closeImageEditorModal()">&times;</button>
+            </div>
+
+            <div class="img-editor-toolbar">
+                <button type="button" class="img-tool-btn" onclick="addImgEditorText()">
+                    <i class="fa-solid fa-font"></i> + Texto
+                </button>
+                <button type="button" class="img-tool-btn" onclick="addImgEditorShape('arrow')">
+                    <i class="fa-solid fa-arrow-trend-up"></i> + Flecha
+                </button>
+                <button type="button" class="img-tool-btn" onclick="addImgEditorShape('line')">
+                    <i class="fa-solid fa-slash"></i> + Línea
+                </button>
+                <button type="button" class="img-tool-btn" id="img-tool-frame-btn" onclick="selectImgEditorFrame()">
+                    <i class="fa-regular fa-square"></i> Borde Foto
+                </button>
+            </div>
+
+            <div class="img-editor-canvas-wrap">
+                <canvas id="img-editor-canvas"></canvas>
+            </div>
+            <div style="font-size: 0.75rem; color: #666; text-align: center; margin-top: 4px;">
+                Toca o haz clic sobre cualquier texto, flecha o línea para seleccionarlo, arrastrarlo o editarlo.
+            </div>
+
+            <div id="img-editor-layers" class="img-editor-layers"></div>
+            <div id="img-editor-props" class="img-editor-props"></div>
+
+            <div class="modal-footer" style="display: flex; gap: 8px; justify-content: space-between; align-items: center; margin-top: 16px; flex-wrap: wrap;">
+                <button type="button" id="img-editor-restore-btn" onclick="restoreOriginalInImageEditor()" style="padding: 8px 12px; border-radius: 8px; border: 1px solid #fcc; background: #fee; color: var(--color-danger); cursor: pointer; font-weight: 700; font-size: 0.8rem;">
+                    <i class="fa-solid fa-rotate-left"></i> Limpiar Todo
+                </button>
+                <div style="display: flex; gap: 8px; margin-left: auto;">
+                    <button type="button" onclick="closeImageEditorModal()" style="padding: 10px 14px; border-radius: 8px; border: 1px solid #ccc; background: #eee; cursor: pointer; font-weight: 600;">Cancelar</button>
+                    <button type="button" id="img-editor-save-btn" onclick="saveImageEditorChanges()" style="padding: 10px 18px; border-radius: 8px; border: none; background: var(--color-success); color: white; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+                        <i class="fa-solid fa-check"></i> Guardar Imagen
+                    </button>
+                </div>
             </div>
         </div>
     </div>
