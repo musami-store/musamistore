@@ -1498,17 +1498,6 @@
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="create-price">Precio ($) *</label>
-                                <input type="number" id="create-price" required min="0" placeholder="Ej. 1990">
-                            </div>
-                            <div class="form-group">
-                                <label for="create-stock">Stock Inicial *</label>
-                                <input type="number" id="create-stock" required min="0" value="1">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
                                 <label for="create-category">Categoría *</label>
                                 <select id="create-category" required onchange="updateSubcategoriesDropdown()">
                                     <option value="Bisuteria">Bisutería</option>
@@ -1525,20 +1514,61 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="create-description">Descripción (Opcional)</label>
-                            <textarea id="create-description" rows="3" placeholder="Detalles de materiales, medidas, uso, etc."></textarea>
+                        <!-- MODO INDIVIDUAL (por defecto) -->
+                        <div id="create-individual-mode-box">
+                            <div class="variants-header-row" style="background: #f8f9fa; border-color: #e9ecef; margin-bottom: 12px;">
+                                <span style="font-size: 0.85rem; font-weight: 700; color: #555;">
+                                    <i class="fa-solid fa-box"></i> Producto Individual (sin variantes)
+                                </span>
+                                <button type="button" class="convert-to-variants-btn" onclick="enableCreateVariantsMode()">
+                                    <i class="fa-solid fa-layer-group"></i> + Agregar Variantes
+                                </button>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="create-price">Precio ($) *</label>
+                                    <input type="number" id="create-price" required min="0" placeholder="Ej. 1990">
+                                </div>
+                                <div class="form-group">
+                                    <label for="create-stock">Stock Inicial *</label>
+                                    <input type="number" id="create-stock" required min="0" value="1">
+                                </div>
+                            </div>
+
+                            <div class="form-group" style="margin-top: 10px;">
+                                <label for="create-images">Imágenes del Producto * (Puedes seleccionar varias y organizar su orden)</label>
+                                <input type="file" id="create-images" multiple accept="image/*">
+                                <div id="create-images-organizer-wrapper" class="images-organizer-section" style="display: none; margin-top: 8px;">
+                                    <div class="editor-label" style="margin-bottom: 6px; font-size: 0.8rem; color: var(--color-border);">
+                                        <i class="fa-solid fa-arrows-left-right"></i> Organiza el orden de las fotos (La #1 será la portada):
+                                    </div>
+                                    <div id="create-images-organizer" class="images-organizer-list"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MODO CON VARIANTES -->
+                        <div id="create-variants-mode-box" style="display: none;">
+                            <div class="variants-header-row">
+                                <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-border);">
+                                    <i class="fa-solid fa-layer-group"></i> Variantes del Producto (<span id="create-variants-count">0</span>)
+                                </span>
+                                <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                                    <button type="button" class="add-variant-btn" onclick="addCreateVariantRow()">
+                                        <i class="fa-solid fa-plus"></i> Agregar Variante
+                                    </button>
+                                    <button type="button" class="remove-variant-btn" onclick="disableCreateVariantsMode()" title="Volver a producto individual">
+                                        <i class="fa-solid fa-rotate-left"></i> Volver a Individual
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="create-variants-list" class="variants-list-container"></div>
                         </div>
 
                         <div class="form-group">
-                            <label for="create-images">Imágenes del Producto * (Puedes seleccionar varias y organizar su orden)</label>
-                            <input type="file" id="create-images" multiple accept="image/*">
-                            <div id="create-images-organizer-wrapper" class="images-organizer-section" style="display: none; margin-top: 8px;">
-                                <div class="editor-label" style="margin-bottom: 6px; font-size: 0.8rem; color: var(--color-border);">
-                                    <i class="fa-solid fa-arrows-left-right"></i> Organiza el orden de las fotos (La #1 será la portada):
-                                </div>
-                                <div id="create-images-organizer" class="images-organizer-list"></div>
-                            </div>
+                            <label for="create-description">Descripción (Opcional)</label>
+                            <textarea id="create-description" rows="3" placeholder="Detalles de materiales, medidas, uso, etc."></textarea>
                         </div>
 
                         <div class="form-actions-row" style="display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap;">
@@ -1815,16 +1845,323 @@
             });
         });
 
-        // Gestión, orden y edición de fotos para Nuevo Producto
+        // Gestión, orden y edición de fotos y variantes para Nuevo Producto
         let createSelectedFiles = [];
+        let createHasVariants = false;
+        let createVariantsState = [];
+
+        function cloneCreateFileEntry(item) {
+            const previewUrl = URL.createObjectURL(item.file);
+            const basePreviewUrl = (item.baseFile && item.baseFile !== item.file)
+                ? URL.createObjectURL(item.baseFile)
+                : previewUrl;
+            return {
+                file: item.file,
+                baseFile: item.baseFile || item.file,
+                previewUrl,
+                basePreviewUrl,
+                editorState: item.editorState ? JSON.parse(JSON.stringify(item.editorState)) : null
+            };
+        }
+
+        function revokeCreateFileEntryUrls(item) {
+            if (!item) return;
+            if (item.previewUrl) URL.revokeObjectURL(item.previewUrl);
+            if (item.basePreviewUrl && item.basePreviewUrl !== item.previewUrl) URL.revokeObjectURL(item.basePreviewUrl);
+        }
+
+        function syncCreateModeVisibility() {
+            const indivBox = document.getElementById("create-individual-mode-box");
+            const varsBox = document.getElementById("create-variants-mode-box");
+            const priceInput = document.getElementById("create-price");
+            const stockInput = document.getElementById("create-stock");
+
+            if (createHasVariants) {
+                if (indivBox) indivBox.style.display = "none";
+                if (varsBox) varsBox.style.display = "block";
+                if (priceInput) priceInput.required = false;
+                if (stockInput) stockInput.required = false;
+                renderCreateVariantsList();
+            } else {
+                if (indivBox) indivBox.style.display = "block";
+                if (varsBox) varsBox.style.display = "none";
+                if (priceInput) priceInput.required = true;
+                if (stockInput) stockInput.required = true;
+                renderCreateImagesOrganizer();
+            }
+        }
 
         function resetCreateImages() {
-            createSelectedFiles.forEach(item => {
-                if (item.previewUrl) URL.revokeObjectURL(item.previewUrl);
-                if (item.basePreviewUrl && item.basePreviewUrl !== item.previewUrl) URL.revokeObjectURL(item.basePreviewUrl);
-            });
+            createSelectedFiles.forEach(revokeCreateFileEntryUrls);
             createSelectedFiles = [];
-            renderCreateImagesOrganizer();
+            createVariantsState.forEach(v => (v.files || []).forEach(revokeCreateFileEntryUrls));
+            createVariantsState = [];
+            createHasVariants = false;
+            syncCreateModeVisibility();
+        }
+
+        window.enableCreateVariantsMode = function() {
+            const curPrice = document.getElementById("create-price")?.value || "";
+            const curStockVal = parseInt(document.getElementById("create-stock")?.value);
+            const safeStock = isNaN(curStockVal) ? 1 : curStockVal;
+            const clonedFiles1 = createSelectedFiles.map(cloneCreateFileEntry);
+
+            createVariantsState.forEach(v => (v.files || []).forEach(revokeCreateFileEntryUrls));
+            createVariantsState = [
+                {
+                    id: "cvar_1_" + Date.now(),
+                    label: "Variante 1",
+                    price: curPrice,
+                    stock: safeStock,
+                    files: clonedFiles1
+                },
+                {
+                    id: "cvar_2_" + Date.now(),
+                    label: "Variante 2",
+                    price: curPrice,
+                    stock: 1,
+                    files: []
+                }
+            ];
+            createHasVariants = true;
+            createFormDirty = true;
+            updateUnsavedWarning();
+            syncCreateModeVisibility();
+
+            const firstInput = document.querySelector("#create-variants-list .variant-label-input");
+            if (firstInput) {
+                firstInput.focus();
+                firstInput.select();
+            }
+        };
+
+        window.disableCreateVariantsMode = function(skipConfirm = false) {
+            if (!skipConfirm && createVariantsState.length > 0) {
+                if (!confirm("¿Volver a modo Producto Individual? Se conservará el precio, stock y fotos de la primera variante.")) {
+                    return;
+                }
+            }
+            const firstVar = createVariantsState[0];
+            if (firstVar) {
+                const priceEl = document.getElementById("create-price");
+                const stockEl = document.getElementById("create-stock");
+                if (priceEl && firstVar.price !== "" && firstVar.price !== undefined) priceEl.value = firstVar.price;
+                if (stockEl && firstVar.stock !== undefined) stockEl.value = firstVar.stock;
+
+                if (firstVar.files && firstVar.files.length > 0) {
+                    createSelectedFiles.forEach(revokeCreateFileEntryUrls);
+                    createSelectedFiles = firstVar.files.map(cloneCreateFileEntry);
+                }
+            }
+            createVariantsState.forEach(v => (v.files || []).forEach(revokeCreateFileEntryUrls));
+            createVariantsState = [];
+            createHasVariants = false;
+            syncCreateModeVisibility();
+        };
+
+        window.addCreateVariantRow = function() {
+            const lastVar = createVariantsState[createVariantsState.length - 1];
+            const defPrice = lastVar ? lastVar.price : (document.getElementById("create-price")?.value || "");
+            createVariantsState.push({
+                id: "cvar_" + Date.now() + "_" + Math.floor(Math.random() * 1000),
+                label: "",
+                price: defPrice,
+                stock: 1,
+                files: []
+            });
+            createFormDirty = true;
+            updateUnsavedWarning();
+            renderCreateVariantsList();
+
+            const inputs = document.querySelectorAll("#create-variants-list .variant-label-input");
+            const lastInput = inputs[inputs.length - 1];
+            if (lastInput) lastInput.focus();
+        };
+
+        window.removeCreateVariantRow = function(vIdx) {
+            const v = createVariantsState[vIdx];
+            if (!v) return;
+            const vName = v.label || `Variante #${vIdx + 1}`;
+
+            if (createVariantsState.length <= 1) {
+                if (!confirm(`Al quitar la última variante ("${vName}"), el producto volverá a modo Individual conservando su precio, stock y fotos. ¿Continuar?`)) {
+                    return;
+                }
+                disableCreateVariantsMode(true);
+                return;
+            }
+
+            if (!confirm(`¿Quitar la variante "${vName}"?`)) return;
+            (v.files || []).forEach(revokeCreateFileEntryUrls);
+            createVariantsState.splice(vIdx, 1);
+            createFormDirty = true;
+            updateUnsavedWarning();
+            renderCreateVariantsList();
+        };
+
+        window.updateCreateVariantField = function(vIdx, field, val) {
+            if (!createVariantsState[vIdx]) return;
+            createVariantsState[vIdx][field] = val;
+            createFormDirty = true;
+            updateUnsavedWarning();
+        };
+
+        window.adjustCreateVariantStock = function(vIdx, delta) {
+            const v = createVariantsState[vIdx];
+            if (!v) return;
+            const cur = parseInt(v.stock) || 0;
+            v.stock = Math.max(0, cur + delta);
+            createFormDirty = true;
+            updateUnsavedWarning();
+            renderCreateVariantsList();
+        };
+
+        window.triggerCreateVariantFileInput = function(vIdx) {
+            const inp = document.getElementById(`create-var-file-${vIdx}`);
+            if (inp) inp.click();
+        };
+
+        window.handleCreateVariantFiles = function(vIdx, inputEl) {
+            const v = createVariantsState[vIdx];
+            const files = Array.from(inputEl.files || []);
+            inputEl.value = "";
+            if (!v || files.length === 0) return;
+
+            files.forEach(file => {
+                const url = URL.createObjectURL(file);
+                v.files.push({
+                    file,
+                    baseFile: file,
+                    previewUrl: url,
+                    basePreviewUrl: url,
+                    editorState: null
+                });
+            });
+
+            createFormDirty = true;
+            updateUnsavedWarning();
+            renderCreateVariantsList();
+        };
+
+        window.moveCreateVariantImage = function(vIdx, fIdx, dir) {
+            const v = createVariantsState[vIdx];
+            if (!v) return;
+            const targetIdx = fIdx + dir;
+            if (targetIdx < 0 || targetIdx >= v.files.length) return;
+            const tmp = v.files[fIdx];
+            v.files[fIdx] = v.files[targetIdx];
+            v.files[targetIdx] = tmp;
+            renderCreateVariantsList();
+        };
+
+        window.removeCreateVariantImage = function(vIdx, fIdx) {
+            const v = createVariantsState[vIdx];
+            if (!v || !v.files[fIdx]) return;
+            revokeCreateFileEntryUrls(v.files[fIdx]);
+            v.files.splice(fIdx, 1);
+            renderCreateVariantsList();
+        };
+
+        function renderCreateVariantsList() {
+            const listEl = document.getElementById("create-variants-list");
+            const countEl = document.getElementById("create-variants-count");
+            if (countEl) countEl.textContent = createVariantsState.length;
+            if (!listEl) return;
+
+            listEl.innerHTML = createVariantsState.map((v, vIdx) => {
+                const imgsHtml = v.files.length === 0
+                    ? `<div class="empty-imgs-hint" style="font-size: 0.78rem; color: #888; padding: 10px;">Sin fotos aún. Pulsa "+ Agregar foto(s)".</div>`
+                    : v.files.map((item, fIdx) => `
+                        <div class="image-org-item" draggable="true" data-vidx="${vIdx}" data-fidx="${fIdx}">
+                            <span class="image-org-badge">${fIdx === 0 ? "★ #1 Portada" : `#${fIdx + 1}`}</span>
+                            <img src="${item.previewUrl}" alt="Foto ${fIdx + 1}">
+                            <div class="image-org-controls">
+                                <button type="button" class="img-move-btn" onclick="moveCreateVariantImage(${vIdx}, ${fIdx}, -1)" ${fIdx === 0 ? "disabled" : ""} title="Mover antes">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </button>
+                                <button type="button" class="img-move-btn" onclick="moveCreateVariantImage(${vIdx}, ${fIdx}, 1)" ${fIdx === v.files.length - 1 ? "disabled" : ""} title="Mover después">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
+                                <button type="button" class="img-edit-btn" onclick="openCreateImageEditor(${fIdx}, ${vIdx})" title="Editar foto (textos, flechas, bordes)">
+                                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                </button>
+                                <button type="button" class="img-remove-btn" onclick="removeCreateVariantImage(${vIdx}, ${fIdx})" title="Quitar foto">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </button>
+                            </div>
+                        </div>
+                    `).join("");
+
+                return `
+                    <div class="variant-group" data-create-var-idx="${vIdx}">
+                        <div class="variant-title-wrapper" style="margin-bottom: 8px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; gap: 6px; flex-wrap: wrap;">
+                                <div class="editor-label"><i class="fa-solid fa-palette"></i> Nombre de la Variante #${vIdx + 1} *</div>
+                                <button type="button" class="remove-variant-btn" onclick="removeCreateVariantRow(${vIdx})" title="Quitar esta variante">
+                                    <i class="fa-solid fa-trash-can"></i> Quitar
+                                </button>
+                            </div>
+                            <input type="text" class="variant-label-input" value="${escapeAttr(v.label)}" oninput="updateCreateVariantField(${vIdx}, 'label', this.value)" placeholder="Ej. Dorado, Plateado, Modelo 01...">
+                        </div>
+                        <div class="editor-row">
+                            <div class="editor-label">Precio ($) *</div>
+                            <div class="price-input-wrapper">
+                                <span>$</span>
+                                <input type="number" class="price-input" value="${escapeAttr(v.price)}" min="0" placeholder="Ej. 1990" oninput="updateCreateVariantField(${vIdx}, 'price', this.value)">
+                            </div>
+                        </div>
+                        <div class="editor-row">
+                            <div class="editor-label">Stock Inicial *</div>
+                            <div class="stock-control">
+                                <button class="qty-btn-minus" type="button" onclick="adjustCreateVariantStock(${vIdx}, -1)">−</button>
+                                <input type="number" class="stock-input" value="${escapeAttr(v.stock)}" min="0" oninput="updateCreateVariantField(${vIdx}, 'stock', this.value)">
+                                <button class="qty-btn-plus" type="button" onclick="adjustCreateVariantStock(${vIdx}, 1)">+</button>
+                            </div>
+                        </div>
+                        <div class="images-organizer-section">
+                            <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px;">
+                                <div class="editor-label" style="font-size: 0.8rem; margin: 0;">
+                                    <i class="fa-solid fa-images"></i> Fotos de Variante (${v.files.length})
+                                    <span style="font-weight: 400; color: #666;">— Ordena, edita o agrega</span>
+                                </div>
+                                <button type="button" class="add-photo-inline-btn" onclick="triggerCreateVariantFileInput(${vIdx})">
+                                    <i class="fa-solid fa-plus"></i> Agregar foto(s)
+                                </button>
+                                <input type="file" id="create-var-file-${vIdx}" multiple accept="image/*" style="display: none;" onchange="handleCreateVariantFiles(${vIdx}, this)">
+                            </div>
+                            <div class="images-organizer-list" data-create-var-list="${vIdx}">
+                                ${imgsHtml}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join("");
+
+            // Habilitar arrastrar y soltar fotos dentro de cada variante del creador
+            listEl.querySelectorAll(".images-organizer-list[data-create-var-list]").forEach(orgEl => {
+                const vIdx = parseInt(orgEl.dataset.createVarList);
+                let dragFromIdx = null;
+                orgEl.querySelectorAll(".image-org-item").forEach(itemEl => {
+                    itemEl.addEventListener("dragstart", (ev) => {
+                        dragFromIdx = parseInt(itemEl.dataset.fidx);
+                        itemEl.classList.add("dragging");
+                        ev.dataTransfer.effectAllowed = "move";
+                    });
+                    itemEl.addEventListener("dragend", () => {
+                        itemEl.classList.remove("dragging");
+                        dragFromIdx = null;
+                    });
+                    itemEl.addEventListener("dragover", (ev) => ev.preventDefault());
+                    itemEl.addEventListener("drop", (ev) => {
+                        ev.preventDefault();
+                        const targetIdx = parseInt(itemEl.dataset.fidx);
+                        if (dragFromIdx === null || dragFromIdx === targetIdx || !createVariantsState[vIdx]) return;
+                        const [moved] = createVariantsState[vIdx].files.splice(dragFromIdx, 1);
+                        createVariantsState[vIdx].files.splice(targetIdx, 0, moved);
+                        renderCreateVariantsList();
+                    });
+                });
+            });
         }
 
         document.getElementById("create-images").addEventListener("change", (e) => {
@@ -1916,9 +2253,7 @@
         };
 
         window.removeCreateImage = function(index) {
-            const item = createSelectedFiles[index];
-            if (item?.previewUrl) URL.revokeObjectURL(item.previewUrl);
-            if (item?.basePreviewUrl && item.basePreviewUrl !== item.previewUrl) URL.revokeObjectURL(item.basePreviewUrl);
+            revokeCreateFileEntryUrls(createSelectedFiles[index]);
             createSelectedFiles.splice(index, 1);
             renderCreateImagesOrganizer();
         };
@@ -1953,7 +2288,7 @@
         // Rastrear si el formulario de nuevo producto tiene datos
         createForm.addEventListener("input", () => {
             const title = document.getElementById("create-title").value.trim();
-            createFormDirty = title.length > 0 || createSelectedFiles.length > 0;
+            createFormDirty = title.length > 0 || createSelectedFiles.length > 0 || createHasVariants;
             updateUnsavedWarning();
         });
 
@@ -3747,16 +4082,16 @@
             }
         }
 
-        async function uploadCreateSelectedFilesToStorage(productId, category, onProgress) {
+        async function uploadCreateFileEntriesToStorage(fileEntries, productId, category, onSingleFileUploaded) {
             const imagesUrls = [];
-            for (let i = 0; i < createSelectedFiles.length; i++) {
-                const item = createSelectedFiles[i];
+            for (let i = 0; i < fileEntries.length; i++) {
+                const item = fileEntries[i];
                 const file = item.file;
                 const fileExt = (file.name.split(".").pop() || "jpg").replace(/[^a-zA-Z0-9]/g, "");
                 const safeId = String(productId).replace(/[^a-zA-Z0-9_-]/g, "_");
-                const filePath = `${category}/${safeId}_${Date.now()}_${i}.${fileExt}`;
+                const filePath = `${category}/${safeId}_${Date.now()}_${Math.floor(100 + Math.random() * 900)}_${i}.${fileExt}`;
 
-                if (onProgress) onProgress(i + 1, createSelectedFiles.length);
+                if (onSingleFileUploaded) onSingleFileUploaded();
 
                 const { error: uploadError } = await window.supabaseClient.storage
                     .from("products")
@@ -3799,53 +4134,127 @@
             return imagesUrls;
         }
 
-        // Crear Producto (Publicación Inmediata)
-        async function handleCreateProduct(e) {
-            e.preventDefault();
-
+        async function buildAndUploadNewProductPayload(onProgress) {
             const title = document.getElementById("create-title").value.trim();
             const productId = document.getElementById("create-id").value.trim();
             const brand = document.getElementById("create-brand").value.trim();
-            const price = parseFloat(document.getElementById("create-price").value);
-            const stock = parseInt(document.getElementById("create-stock").value);
             const category = document.getElementById("create-category").value;
             const subcategory = document.getElementById("create-subcategory").value;
             const description = document.getElementById("create-description").value.trim();
-            const submitBtn = document.getElementById("create-submit-btn");
 
-            if (!title || !productId || isNaN(price) || isNaN(stock) || price < 0 || stock < 0 || createSelectedFiles.length === 0) {
-                showToast("Completa todos los campos obligatorios (incluyendo al menos 1 imagen)", "error");
-                return;
+            if (!title || !productId) {
+                throw new Error("Completa el nombre y el ID del producto.");
             }
 
             if (allProducts.some(p => p.id === productId)) {
-                showToast("El ID ya existe para otro producto.", "error");
-                return;
+                throw new Error("El ID ya existe para otro producto.");
             }
+
+            if (createHasVariants) {
+                if (createVariantsState.length === 0) {
+                    throw new Error("Agrega al menos 1 variante o vuelve a modo Producto Individual.");
+                }
+
+                for (let i = 0; i < createVariantsState.length; i++) {
+                    const v = createVariantsState[i];
+                    const rawLabel = cleanAgotado((v.label || "").trim());
+                    if (!rawLabel) {
+                        throw new Error(`Ingresa el nombre de la Variante #${i + 1}.`);
+                    }
+                    const vPrice = parseFloat(v.price);
+                    const vStock = parseInt(v.stock);
+                    if (isNaN(vPrice) || isNaN(vStock) || vPrice < 0 || vStock < 0) {
+                        throw new Error(`Precio o stock inválido en la variante "${rawLabel}".`);
+                    }
+                    if (!v.files || v.files.length === 0) {
+                        throw new Error(`La variante "${rawLabel}" debe tener al menos 1 foto.`);
+                    }
+                }
+
+                const totalFiles = createVariantsState.reduce((acc, v) => acc + v.files.length, 0);
+                let uploadedCount = 0;
+                const variantsObj = {};
+
+                for (let i = 0; i < createVariantsState.length; i++) {
+                    const v = createVariantsState[i];
+                    const rawLabel = cleanAgotado(v.label.trim());
+                    const vPrice = parseFloat(v.price);
+                    const vStock = parseInt(v.stock);
+                    const vKey = makeVariantSlugKey(rawLabel, variantsObj);
+
+                    const varUrls = await uploadCreateFileEntriesToStorage(v.files, `${productId}_${vKey}`, category, () => {
+                        uploadedCount++;
+                        if (onProgress) onProgress(uploadedCount, totalFiles);
+                    });
+
+                    variantsObj[vKey] = {
+                        label: formatAgotadoText(rawLabel, vStock),
+                        price: vPrice,
+                        stock: vStock,
+                        images: varUrls
+                    };
+                }
+
+                return {
+                    id: productId,
+                    title: cleanAgotado(title),
+                    brand: brand || null,
+                    price: null,
+                    stock: null,
+                    category,
+                    subcategory: subcategory || null,
+                    description: description || null,
+                    images: null,
+                    variants: variantsObj
+                };
+            } else {
+                const price = parseFloat(document.getElementById("create-price").value);
+                const stock = parseInt(document.getElementById("create-stock").value);
+
+                if (isNaN(price) || isNaN(stock) || price < 0 || stock < 0 || createSelectedFiles.length === 0) {
+                    throw new Error("Completa todos los campos obligatorios (incluyendo precio, stock y al menos 1 imagen).");
+                }
+
+                const totalFiles = createSelectedFiles.length;
+                let uploadedCount = 0;
+                const imagesUrls = await uploadCreateFileEntriesToStorage(createSelectedFiles, productId, category, () => {
+                    uploadedCount++;
+                    if (onProgress) onProgress(uploadedCount, totalFiles);
+                });
+
+                const finalTitle = formatAgotadoText(title, stock);
+
+                return {
+                    id: productId,
+                    title: finalTitle,
+                    brand: brand || null,
+                    price,
+                    stock,
+                    category,
+                    subcategory: subcategory || null,
+                    description: description || null,
+                    images: imagesUrls,
+                    variants: null
+                };
+            }
+        }
+
+        // Crear Producto (Publicación Inmediata)
+        async function handleCreateProduct(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById("create-submit-btn");
 
             submitBtn.disabled = true;
             submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Publicando...`;
 
             try {
-                const imagesUrls = await uploadCreateSelectedFilesToStorage(productId, category, (cur, tot) => {
+                const payload = await buildAndUploadNewProductPayload((cur, tot) => {
                     submitBtn.innerHTML = `<i class="fa-solid fa-cloud-arrow-up"></i> Subiendo imagen ${cur} de ${tot}...`;
                 });
 
-                const finalTitle = formatAgotadoText(title, stock);
-
                 const { error: insertError } = await window.supabaseClient
                     .from("products")
-                    .insert({
-                        id: productId,
-                        title: finalTitle,
-                        brand: brand || null,
-                        price,
-                        stock,
-                        category,
-                        subcategory: subcategory || null,
-                        description: description || null,
-                        images: imagesUrls
-                    });
+                    .insert(payload);
 
                 if (insertError) throw insertError;
 
@@ -3860,7 +4269,7 @@
                 
                 loadProductsFromSupabase();
             } catch (err) {
-                showToast("Fallo al crear producto: " + err.message, "error");
+                showToast(err.message || String(err), "error");
             } finally {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = `<i class="fa-solid fa-bolt"></i> Publicar de Inmediato`;
@@ -3870,57 +4279,26 @@
         // Crear Producto (Guardar en Borrador)
         async function handleCreateProductDraft(e) {
             e.preventDefault();
-
-            const title = document.getElementById("create-title").value.trim();
-            const productId = document.getElementById("create-id").value.trim();
-            const brand = document.getElementById("create-brand").value.trim();
-            const price = parseFloat(document.getElementById("create-price").value);
-            const stock = parseInt(document.getElementById("create-stock").value);
-            const category = document.getElementById("create-category").value;
-            const subcategory = document.getElementById("create-subcategory").value;
-            const description = document.getElementById("create-description").value.trim();
             const draftBtn = document.getElementById("create-draft-btn");
-
-            if (!title || !productId || isNaN(price) || isNaN(stock) || price < 0 || stock < 0 || createSelectedFiles.length === 0) {
-                showToast("Completa todos los campos obligatorios (incluyendo al menos 1 imagen) para guardar el borrador", "error");
-                return;
-            }
-
-            if (allProducts.some(p => p.id === productId)) {
-                showToast("El ID ya existe para otro producto.", "error");
-                return;
-            }
 
             draftBtn.disabled = true;
             draftBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Preparando imágenes...`;
 
             try {
-                const imagesUrls = await uploadCreateSelectedFilesToStorage(productId, category, (cur, tot) => {
+                const payload = await buildAndUploadNewProductPayload((cur, tot) => {
                     draftBtn.innerHTML = `<i class="fa-solid fa-cloud-arrow-up"></i> Subiendo imagen ${cur} de ${tot}...`;
                 });
 
-                const finalTitle = formatAgotadoText(title, stock);
-
-                window.__pendingNewProductPayload = {
-                    id: productId,
-                    title: finalTitle,
-                    brand: brand || null,
-                    price,
-                    stock,
-                    category,
-                    subcategory: subcategory || null,
-                    description: description || null,
-                    images: imagesUrls
-                };
+                window.__pendingNewProductPayload = payload;
 
                 currentModalProductId = "__new_product__";
                 const nameEl = document.getElementById("draft-modal-product-name");
-                nameEl.textContent = `Nuevo Producto: ${finalTitle} (${productId})`;
+                nameEl.textContent = `Nuevo Producto: ${payload.title} (${payload.id})`;
                 populateDraftModalDropdown();
                 document.getElementById("draft-modal").style.display = "flex";
 
             } catch (err) {
-                showToast("Fallo al preparar imágenes del producto: " + err.message, "error");
+                showToast(err.message || String(err), "error");
             } finally {
                 draftBtn.disabled = false;
                 draftBtn.innerHTML = `<i class="fa-solid fa-bookmark"></i> Guardar en Borrador...`;
@@ -3970,8 +4348,10 @@
             return { enabled: false, color: "#4648bb", widthRatio: 0.025 };
         }
 
-        window.openCreateImageEditor = async function(idx) {
-            const entry = createSelectedFiles[idx];
+        window.openCreateImageEditor = async function(idx, variantIdx = null) {
+            const isVar = (variantIdx !== null && variantIdx !== undefined);
+            const filesList = isVar ? createVariantsState[variantIdx]?.files : createSelectedFiles;
+            const entry = filesList?.[idx];
             if (!entry) return;
 
             try {
@@ -3985,6 +4365,7 @@
                 startImageEditorSession({
                     mode: "create",
                     createIdx: idx,
+                    createVariantIdx: isVar ? variantIdx : null,
                     baseImg: img,
                     baseImageUrl: srcUrl,
                     tempObjUrl,
@@ -4717,7 +5098,9 @@
                 const hasAnyEdits = imgEditorCtx.objects.length > 0 || (imgEditorCtx.border && imgEditorCtx.border.enabled);
 
                 if (imgEditorCtx.mode === "create") {
-                    const entry = createSelectedFiles[imgEditorCtx.createIdx];
+                    const isVar = (imgEditorCtx.createVariantIdx !== null && imgEditorCtx.createVariantIdx !== undefined);
+                    const filesList = isVar ? createVariantsState[imgEditorCtx.createVariantIdx]?.files : createSelectedFiles;
+                    const entry = filesList?.[imgEditorCtx.createIdx];
                     if (entry) {
                         if (entry.previewUrl && entry.previewUrl !== entry.basePreviewUrl) {
                             URL.revokeObjectURL(entry.previewUrl);
@@ -4737,7 +5120,8 @@
                         }
                         createFormDirty = true;
                         updateUnsavedWarning();
-                        renderCreateImagesOrganizer();
+                        if (isVar) renderCreateVariantsList();
+                        else renderCreateImagesOrganizer();
                         showToast("Imagen actualizada en el formulario");
                     }
                     closeImageEditorModal();
